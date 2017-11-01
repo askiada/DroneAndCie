@@ -9,15 +9,15 @@ public class MainBoard : MonoBehaviour
     public MonoBehaviour[] ThrustSignalBus;
     public MonoBehaviour[] ControlSignalBus;
     public MultiLayer mlp;
-    public Gyro gyro;
+    //public Gyro gyro;
     public float[,] inputMLP = new float[1, 6] { { 0.0f, 0.0f, 0.0f , 0.0f, 0.0f, 0.0f} };
     public Vector3 rotate;
     public Vector3 position;
 
     void Start()
     {
-        initMLP();
-        gyro = new Gyro(this);
+        //initMLP();
+        //gyro = new Gyro(this);
 
     }
 
@@ -42,7 +42,7 @@ public class MainBoard : MonoBehaviour
             Transform obj = this.gameObject.transform.GetChild(0).GetChild(0);
             rotate = obj.localEulerAngles;
             //inputMLP = gyro.complete3(rotate);
-            inputMLP = new float[1, 6] { { obj.position.x / 1000, obj.position.y /1000, obj.position.z /1000, WrapAngle(rotate.x), WrapAngle(rotate.y), WrapAngle(rotate.z) } };
+            inputMLP = new float[1, 6] { { obj.position.x, obj.position.y, obj.position.z, rotate.x, rotate.y, rotate.z } };
             result = component.ProcessSignal(result);
 
         }

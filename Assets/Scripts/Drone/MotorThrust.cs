@@ -11,10 +11,12 @@ public class MotorThrust : MonoBehaviour {
 	// Use this for initialization
 	void Start () {
 		rigid = GetComponent<Rigidbody>();
-	}
+        //Debug.Log("rigid " + rigid.ToString());
+    }
 	
 	public void ApplyTorque(float percent) {
 		Thrust = Mathf.Clamp01(percent) * MaxThrust;
+        //Debug.Log("ApplyTorque : " + transform.up * (Thrust * Physics.gravity.magnitude));
 		rigid.AddForce(transform.up * (Thrust * Physics.gravity.magnitude));
 		rigid.AddForce(-transform.forward * (Thrust * Physics.gravity.magnitude));
 	}

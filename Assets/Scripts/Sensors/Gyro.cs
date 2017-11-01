@@ -11,7 +11,7 @@ public class Gyro  {
     public Gyro(MainBoard obj)
     {            
         //currentAngle = obj.transform.eulerAngles;
-        Debug.Log("Euler : " + currentAngle.x + " " + currentAngle.y + " " + currentAngle.z);
+        //Debug.Log("Euler : " + currentAngle.x + " " + currentAngle.y + " " + currentAngle.z);
     }
 
     public float[,] complete3(Vector3 rotate)

@@ -20,7 +20,7 @@ public class Gene  {
     private float bestIndividualsRate;
     private int bestIndividualIndex;
     private Vector<float> bestIndividual;
-    private int[] permutations;
+    //private int[] permutations;
 
 
     public float bestScore;
@@ -33,18 +33,23 @@ public class Gene  {
         this.seed = seed;
         this.populationSize = populationSize;
         this.individualSize = individualSize;
+        //UnityEngine.Random.InitState(seed);
 
-        population = Matrix<float>.Build.Random(individualSize, populationSize, seed);
+        population = Matrix<float>.Build.Random(individualSize, populationSize);//, seed);
         evaluations = Vector<float>.Build.Dense(populationSize);
         sumEvaluations = 0.0f;
-        Debug.Log("Population " + population);
-        UnityEngine.Random.InitState(seed);
+        //Debug.Log("Population " + population);
 
-        permutations = new int[populationSize];
+
+        this.mutationRate = mutationRate;
+        this.randomIndividualsRate = randomIndividualsRate;
+        this.bestIndividualsRate = bestIndividualsRate;
+
+        /*permutations = new int[populationSize];
         for(int i = 0; i < populationSize; i++)
         {
             permutations[i] = i;
-        }
+        }*/
 
     }
 
@@ -57,8 +62,10 @@ public class Gene  {
         for(int i = 0; i < populationSize; i++)
         {
             current += evaluations[i];
-            if(current > pick)
+            //Debug.Log()
+            if(current >= pick)
             {
+                
                 return  population.Column(i, 0, individualSize);
             }
         }
@@ -70,7 +77,7 @@ public class Gene  {
     {
         int randomIndividualsNumber = Mathf.RoundToInt(randomIndividualsRate * populationSize);
         int bestIndividualsNumber = Mathf.RoundToInt(bestIndividualsRate * populationSize);
-        Matrix<float> tmp = Matrix<float>.Build.Dense(individualSize, populationSize, seed);
+        Matrix<float> tmp = Matrix<float>.Build.Dense(individualSize, populationSize);//, seed);
 
         for(int i = 0; i < randomIndividualsNumber; i++)
         {
@@ -84,6 +91,7 @@ public class Gene  {
 
         for (int i = randomIndividualsNumber + bestIndividualsNumber; i < populationSize - randomIndividualsNumber - bestIndividualsNumber; i++)
         {
+            //Debug.Log(i, SelectionOneElement());
             tmp.SetColumn(i, SelectionOneElement());
         }
         tmp.PermuteColumns(new Permutation(Combinatorics.GeneratePermutation(populationSize)));
@@ -92,8 +100,8 @@ public class Gene  {
 
     public void CrossoverSliceTwoIndividuals(int idFirst, int idSecond)
     {
-        int sliceIndexA = UnityEngine.Random.Range(0, individualSize);
-        int sliceIndexB = UnityEngine.Random.Range(0, individualSize);
+        int sliceIndexA = UnityEngine.Random.Range(1, individualSize - 1);
+        int sliceIndexB = UnityEngine.Random.Range(1, individualSize - 1);
 
         if(sliceIndexA > sliceIndexB)
         {
@@ -103,23 +111,23 @@ public class Gene  {
         }
 
         Matrix<float> sliceA = population.SubMatrix(0, sliceIndexA, idFirst, 1);
-        Matrix<float> sliceB = population.SubMatrix(sliceIndexB, individualSize - 1 , idFirst, 1);
+        Matrix<float> sliceB = population.SubMatrix(sliceIndexB, individualSize - sliceIndexB, idFirst, 1);
 
         population.SetSubMatrix(0, sliceIndexA, idFirst, 1, population.SubMatrix(0, sliceIndexA, idSecond, 1));
-        population.SetSubMatrix(sliceIndexB, individualSize - 1, idFirst, 1, population.SubMatrix(sliceIndexB, individualSize - 1, idSecond, 1));
+        population.SetSubMatrix(sliceIndexB, individualSize - 1 - sliceIndexB, idFirst, 1, population.SubMatrix(sliceIndexB, individualSize - 1 - sliceIndexB, idSecond, 1));
         population.SetSubMatrix(0, sliceIndexA, idSecond, 1, sliceA);
-        population.SetSubMatrix(sliceIndexB, individualSize - 1, idSecond, 1, sliceB);
+        population.SetSubMatrix(sliceIndexB, individualSize - 1 - sliceIndexB, idSecond, 1, sliceB);
     }
 
     public void CrossOver()
     {
-        for(int i = 0; i <populationSize; i = i + 2)
+        for(int i = 0; i <populationSize - 1; i = i + 2)
         {
             CrossoverSliceTwoIndividuals(i, i + 1);
         }
     }
 
-    Vector<float> getIndividual(int i)
+    public Vector<float> GetIndividual(int i)
     {
         return population.Column(i);
     }
@@ -131,6 +139,10 @@ public class Gene  {
         bestIndividualIndex = evaluations.MaximumIndex();
         bestIndividual = population.Column(bestIndividualIndex);
         bestScore = evaluations[bestIndividualIndex];
+        //var M = Matrix<float>.Build;
+        
+
+        //Debug.Log(evaluations);
     }
 
 
@@ -154,6 +166,7 @@ public class Gene  {
     {
 
         Evaluation(externalEvaluations);
+        Debug.Log("Best Score : " + bestScore);
         Selection();
         CrossOver();
         Mutation();

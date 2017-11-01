@@ -19,7 +19,7 @@ public class DroneManager : MonoBehaviour {
 
         foreach(GameObject motor in motors)
         {
-            Debug.Log("Motor " + motor.name);
+            //Debug.Log("Motor " + motor.name);
             motor.GetComponent<MotorThrust>().MaxThrust = val;
         }
     }

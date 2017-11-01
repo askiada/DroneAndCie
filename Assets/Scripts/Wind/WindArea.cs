@@ -15,10 +15,10 @@ public class WindArea : MonoBehaviour
     public int numSelectors = 5;
     public GameObject[] selectorArr;
     public GameObject selector; //selected in the editor
-    private float windDirectionX = 0.0f;
+    /*private float windDirectionX = 0.0f;
     private float windDirectionY = 0.0f;
     private float windDirectionZ = 0.0f;
-    private float windValue = 0.0f;
+    private float windValue = 0.0f;*/
     /*ParticleSystem wind;
     ParticleSystem.Particle[] wind_array;
     private float strength = 0.0f;*/

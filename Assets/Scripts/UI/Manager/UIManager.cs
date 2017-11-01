@@ -24,7 +24,6 @@ public class UIManager : MonoBehaviour
     // Use this for initialization
     void Start()
     {
-        Gene g = new Gene(10, 100, 50);
         //WM = new WindManager();
         GetComponentInChildren<Canvas>().enabled = false;
         _windSlider = GameObject.Find("Wind Slider").GetComponent<Slider>();
@@ -112,7 +111,7 @@ public class UIManager : MonoBehaviour
     {
         if (myInputField.isActiveAndEnabled)
         {
-            Debug.Log("InputField Active");
+            //Debug.Log("InputField Active");
             myInputField.text = mySlider.value.ToString();
         }      
     }
