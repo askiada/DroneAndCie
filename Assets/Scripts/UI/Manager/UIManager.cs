@@ -24,7 +24,7 @@ public class UIManager : MonoBehaviour
     // Use this for initialization
     void Start()
     {
-        //GM = new GameManager();
+        Debug.Log("Mat: " + A);
         //WM = new WindManager();
         GetComponentInChildren<Canvas>().enabled = false;
         _windSlider = GameObject.Find("Wind Slider").GetComponent<Slider>();
