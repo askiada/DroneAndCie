@@ -2379,15 +2379,15 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1dfee0f02ad14374897a53b35f87a0ee, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  prefabDrone: {fileID: 1000014232985086, guid: 31b2363e6e3d7e3488934ca8569600b1,
+  prefabDrone: {fileID: 1000013570345144, guid: 869affcf50af1054190ecfe04de1110c,
     type: 2}
-  seed: 25
-  populationSize: 60
-  individualSize: 55
+  seed: 1564
+  populationSize: 300
   mutationRate: 0.05
   randomIndividualsRate: 0.05
-  bestIndividualsRate: 0.02
-  spacing: 2
+  bestIndividualsRate: 0.01
+  spacing: 5
+  shapes: 060000000500000004000000
 --- !u!4 &991526459
 Transform:
   m_ObjectHideFlags: 0
@@ -2463,6 +2463,38 @@ Prefab:
         type: 2}
       propertyPath: manual
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4000012913155746, guid: 31b2363e6e3d7e3488934ca8569600b1, type: 2}
+      propertyPath: m_LocalPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4000012913155746, guid: 31b2363e6e3d7e3488934ca8569600b1, type: 2}
+      propertyPath: m_LocalPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4000012913155746, guid: 31b2363e6e3d7e3488934ca8569600b1, type: 2}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 153000012632739336, guid: 31b2363e6e3d7e3488934ca8569600b1,
+        type: 2}
+      propertyPath: m_ConnectedAnchor.y
+      value: 0.061438017
+      objectReference: {fileID: 0}
+    - target: {fileID: 153000011265460688, guid: 31b2363e6e3d7e3488934ca8569600b1,
+        type: 2}
+      propertyPath: m_ConnectedAnchor.y
+      value: 0.061438017
+      objectReference: {fileID: 0}
+    - target: {fileID: 153000013091875956, guid: 31b2363e6e3d7e3488934ca8569600b1,
+        type: 2}
+      propertyPath: m_ConnectedAnchor.y
+      value: 0.061438017
+      objectReference: {fileID: 0}
+    - target: {fileID: 153000010309104554, guid: 31b2363e6e3d7e3488934ca8569600b1,
+        type: 2}
+      propertyPath: m_ConnectedAnchor.y
+      value: 0.061438017
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 31b2363e6e3d7e3488934ca8569600b1, type: 2}

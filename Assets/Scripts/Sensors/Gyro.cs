@@ -6,7 +6,7 @@ public class Gyro  {
 
     public Vector3 targetAngle = new Vector3(0f, 0f, 0f);
     private Vector3 currentAngle;
-    private MainBoard m;
+    //private MainBoard m;
 
     public Gyro(MainBoard obj)
     {            

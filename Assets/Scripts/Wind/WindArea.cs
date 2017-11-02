@@ -116,18 +116,21 @@ public class WindArea : MonoBehaviour
                 windDirection = new Vector3(windDirectionX, windDirectionY, windDirectionZ);*/
                 //windValue = Mathf.PerlinNoise(rigid.position.y, rigid.position.z);
                 //Debug.Log("X - Z  : " + rigid.position.x + " - " + rigid.position.z);
-                float a = Perlin.Noise(rigid.position);
-                //Debug.Log("a : " + a);
-                Vector3 tmp = new Vector3(a,a,a);
-                float coeff = 1.0f;
-                if (rigid.CompareTag("DroneMotor"))
+                if (rigid != null)
                 {
-                    coeff = rigid.mass;
+                    float a = Perlin.Noise(rigid.position);
+                    //Debug.Log("a : " + a);
+                    Vector3 tmp = new Vector3(a, a, a);
+                    float coeff = 1.0f;
+                    if (rigid.CompareTag("DroneMotor"))
+                    {
+                        coeff = rigid.mass;
+                    }
+                    Vector3 wind = WindFunction.linear(windDirection + tmp, windStrength * coeff);
+                    //Debug.Log("a : " + a);
+                    //Debug.Log("wind : " + wind);
+                    rigid.AddForce(wind, ForceMode.Force);
                 }
-                Vector3 wind = WindFunction.linear(windDirection + tmp, windStrength * coeff);
-                //Debug.Log("a : " + a);
-                //Debug.Log("wind : " + wind);
-                rigid.AddForce(wind, ForceMode.Force);
             }
         }
     }

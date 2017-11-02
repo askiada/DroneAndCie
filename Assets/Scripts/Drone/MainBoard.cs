@@ -59,15 +59,15 @@ public class MainBoard : MonoBehaviour
 
 
 
-    public void initMLP()
+    /*public void initMLP()
     {
         List<int> shapes = new List<int>() { 6,5, 4, 6 };
 
-        mlp = new MultiLayer(shapes, 35165, 0, true);
+        mlp = new MultiLayer(shapes, 35165, 0, rndGenerator, true);
         mlp.Reset(0.01f, true);
 
-        /*float[] data = new float[10] { 0.0f, 1.0f, 2.0f, 3.0f, 4.0f, 5.0f, 6.0f, 7.0f, 8.0f, 9.0f };
-        mlp.PropagateForward(data);*/
-    }
+        float[] data = new float[10] { 0.0f, 1.0f, 2.0f, 3.0f, 4.0f, 5.0f, 6.0f, 7.0f, 8.0f, 9.0f };
+        mlp.PropagateForward(data);
+    }*/
 }
 

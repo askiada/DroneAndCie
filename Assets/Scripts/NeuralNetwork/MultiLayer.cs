@@ -3,6 +3,8 @@ using System.Collections;
 using System.Collections.Generic;
 using System.IO;
 using System;
+using MathNet.Numerics.Random;
+using MathNet.Numerics.Distributions;
 
 public class MultiLayer {
 
@@ -12,8 +14,9 @@ public class MultiLayer {
     List<int> shapes;
     public int shapesSize;
     bool saveInfos;
+    SystemRandomSource rndGenerator;
 
-    public MultiLayer(List<int> shapeList, int seed, int batchSize, bool save = false)
+    public MultiLayer(List<int> shapeList, int seed, int batchSize, SystemRandomSource rndGenerator, bool save = false)
     {
         saveInfos = save;
         shapes = shapeList;
@@ -42,7 +45,15 @@ public class MultiLayer {
             weights.Add(new float[layers[i].GetLength(1), layers[i+1].GetLength(1)]);
             dw.Add(new float[layers[i].GetLength(1), layers[i + 1].GetLength(1)]);
         }
-        UnityEngine.Random.InitState(seed);
+        if(rndGenerator  != null)
+        {
+            this.rndGenerator = rndGenerator;
+        }else
+        {
+            rndGenerator = new SystemRandomSource(seed);
+        }
+
+       
     }
 
 
@@ -65,7 +76,7 @@ public class MultiLayer {
                     }
                     else
                     {
-                        weights[i][j, k] = UnityEngine.Random.Range(-initialValueWeights, initialValueWeights);
+                        weights[i][j, k] = (float)ContinuousUniform.Sample(rndGenerator, -initialValueWeights, initialValueWeights);
                     }
                     
                     dw[i][j, k] = 0.0f;
