@@ -26,6 +26,7 @@ public static class Activation {
         return tmp;
     }
 
+
     static float[,]  Sigmoid(float[,] values, bool reverse = true)
     {
         if (reverse)

@@ -50,7 +50,7 @@ public class MultiLayer {
             this.rndGenerator = rndGenerator;
         }else
         {
-            rndGenerator = new SystemRandomSource(seed);
+            this.rndGenerator = new SystemRandomSource(seed);
         }
 
        

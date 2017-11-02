@@ -39,12 +39,13 @@ public class InputControl : MonoBehaviour
             }
             else
             {
-                //Debug.Log("hhhhhhhhhhhhhhhhhhhhh" + MainBoard.mlp.layers[MainBoard.mlp.shapesSize - 1][0, 3]);
-                signal.Throttle = 0.02f + MainBoard.mlp.layers[MainBoard.mlp.shapesSize - 1][0, 3];
+                //Debug.Log("hhhhhhhhhhhhhhhhhhhhh" + MainBoard.mlp.layers[MainBoard.mlp.shapesSize - 1]);
+                
+                signal.Throttle = MainBoard.mlp.layers[MainBoard.mlp.shapesSize - 1][3, 0];
                 signal.Rudder = MainBoard.mlp.layers[MainBoard.mlp.shapesSize - 1][0, 0];
-                signal.Elevator = MainBoard.mlp.layers[MainBoard.mlp.shapesSize - 1][0, 1];
-                signal.Aileron = MainBoard.mlp.layers[MainBoard.mlp.shapesSize - 1][0, 2];
-
+                signal.Elevator = MainBoard.mlp.layers[MainBoard.mlp.shapesSize - 1][1, 0];
+                signal.Aileron = MainBoard.mlp.layers[MainBoard.mlp.shapesSize - 1][2, 0];
+                
 
 
                 /*float[,] tmp = MainBoard.inputMLP;

@@ -2,20 +2,23 @@ using UnityEngine;
 using System.Collections;
 using Drone.Hardware;
 using System.Collections.Generic;
+using MathNet.Numerics.LinearAlgebra;
+using MathNet.Numerics.LinearAlgebra.Double;
 
 public class MainBoard : MonoBehaviour
 {
 
     public MonoBehaviour[] ThrustSignalBus;
     public MonoBehaviour[] ControlSignalBus;
-    public MultiLayer mlp;
+    public MultiLayerMathsNet mlp;
     //public Gyro gyro;
-    public float[,] inputMLP = new float[1, 6] { { 0.0f, 0.0f, 0.0f , 0.0f, 0.0f, 0.0f} };
+    public Vector<float> inputMLP;
     public Vector3 rotate;
     public Vector3 position;
 
-    void Start()
+    void Awake()
     {
+        inputMLP = Vector<float>.Build.Dense(6);
         //initMLP();
         //gyro = new Gyro(this);
 
@@ -42,7 +45,7 @@ public class MainBoard : MonoBehaviour
             Transform obj = this.gameObject.transform.GetChild(0).GetChild(0);
             rotate = obj.localEulerAngles;
             //inputMLP = gyro.complete3(rotate);
-            inputMLP = new float[1, 6] { { obj.position.x, obj.position.y, obj.position.z, rotate.x, rotate.y, rotate.z } };
+            inputMLP = Vector<float>.Build.DenseOfArray( new float[] {obj.position.x, obj.position.y, obj.position.z, rotate.x, rotate.y, rotate.z});
             result = component.ProcessSignal(result);
 
         }

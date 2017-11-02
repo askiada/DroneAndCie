@@ -35,7 +35,7 @@ public class Gene  {
 
     public Gene(int seed, SystemRandomSource rndGenerator, int populationSize, int individualSize, float mutationRate = 0.1f, float randomIndividualsRate = 0.05f, float bestIndividualsRate = 0.05f)
     {
-        this.bestScore = 1000000000000.0f;
+        this.bestScore = 0.0f;
         this.generation = 1;
         this.seed = seed;
         if(rndGenerator != null)
