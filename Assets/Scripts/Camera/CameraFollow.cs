@@ -11,6 +11,12 @@ public class CameraFollow : MonoBehaviour
     public bool follow = true;
     // Update is called once per frame
 
+
+    void Start()
+    {
+        Target = GameObject.FindGameObjectsWithTag("Drone")[0].GetComponentInChildren<Rigidbody>().transform;
+    }
+
     float Det(float A, float B, float C)
     {
         float tmp = B * B - 4 * A * C;
@@ -86,72 +92,78 @@ public class CameraFollow : MonoBehaviour
 
 
 
-    void Update()
+    void FixedUpdate()
     {
-        if (follow)
+        if (Target != null)
         {
-            O1.x = Target.transform.position.x;
-            O1.y = Target.transform.position.z;
-            O1.z = Target.transform.position.y;
-            // O1.z = 5.0f * Mathf.Cos(Mathf.Deg2Rad*Target.transform.eulerAngles.y);
-            O1.w = distance;
+            if (follow)
+            {
+                O1.x = Target.transform.position.x;
+                O1.y = Target.transform.position.z;
+                O1.z = Target.transform.position.y;
+                // O1.z = 5.0f * Mathf.Cos(Mathf.Deg2Rad*Target.transform.eulerAngles.y);
+                O1.w = distance;
 
-            O2.x = Target.transform.position.x;
-            O2.y = Target.transform.position.z - (distance / Mathf.Cos(Mathf.Deg2Rad * Target.transform.eulerAngles.y));
-            O2.z = Target.transform.position.y;
-            O2.w = Mathf.Sin(Mathf.Deg2Rad * Target.transform.eulerAngles.y) * (distance / Mathf.Cos(Mathf.Deg2Rad * Target.transform.eulerAngles.y));
-
-
-            /*Vector3 Otmp = I(O1, O2, Target.transform.position.y + 2.0f, 1, Target.transform.eulerAngles.y);
-
-
-            Vector4 O3;
-            O3.x = Target.transform.position.y;
-            O3.y = Target.transform.position.z;
-            O3.z = Target.transform.position.x;
-            O3.w = distance;
-
-            Vector4 O4;
-            O4.x = Target.transform.position.y;
-            O4.y = Target.transform.position.z - (distance / Mathf.Cos(Mathf.Deg2Rad * Target.transform.eulerAngles.x)); ;
-            O4.z = Target.transform.position.x;
-            O4.w = Mathf.Sin(Mathf.Deg2Rad * Target.transform.eulerAngles.x) * (distance / Mathf.Cos(Mathf.Deg2Rad * Target.transform.eulerAngles.x)); ;
-            Vector3 Of = I(O3, O4, Target.transform.position.x , 0, Target.transform.eulerAngles.x);
-            */
-            transform.eulerAngles = new Vector3(0.0f, Target.transform.eulerAngles.y, Target.transform.eulerAngles.z);
-            transform.position = I(O1, O2, Target.transform.position.y + 2.0f, 1, Target.transform.eulerAngles.y);
-            //transform.position = new Vector3(Of.x, Of.y, Of.z);
-
-            /*O1.x = Target.transform.position.x;
-            O1.y = Target.transform.position.z;
-            // O1.z = 5.0f * Mathf.Cos(Mathf.Deg2Rad*Target.transform.eulerAngles.y);
-            O1.z = distance;
-
-            O2.x = Target.transform.position.x;
-            O2.y = Target.transform.position.z - (distance / Mathf.Cos(Mathf.Deg2Rad * Target.transform.eulerAngles.y));
-            //O2.z = 5.0f * Mathf.Sin(Mathf.Deg2Rad*Target.transform.eulerAngles.y);
-            O2.z = Mathf.Sin(Mathf.Deg2Rad * Target.transform.eulerAngles.y) * (distance / Mathf.Cos(Mathf.Deg2Rad * Target.transform.eulerAngles.y));
+                O2.x = Target.transform.position.x;
+                O2.y = Target.transform.position.z - (distance / Mathf.Cos(Mathf.Deg2Rad * Target.transform.eulerAngles.y));
+                O2.z = Target.transform.position.y;
+                O2.w = Mathf.Sin(Mathf.Deg2Rad * Target.transform.eulerAngles.y) * (distance / Mathf.Cos(Mathf.Deg2Rad * Target.transform.eulerAngles.y));
 
 
-            Vector3 Otmp = I(O1, O2, Target.transform.position.y + 2.0f, Target.transform.eulerAngles.y);
+                /*Vector3 Otmp = I(O1, O2, Target.transform.position.y + 2.0f, 1, Target.transform.eulerAngles.y);
 
-            Vector3 O3;
-            O3.x= Otmp.x;
-            O3.y = Otmp.y - (distance / Mathf.Cos(Mathf.Deg2Rad * Target.transform.eulerAngles.z)); ;
-            O3.z = Mathf.Sin(Mathf.Deg2Rad * Target.transform.eulerAngles.z) * (distance / Mathf.Cos(Mathf.Deg2Rad * Target.transform.eulerAngles.z));
 
-            Vector3 Of = I(O1, O2, Otmp.z, Target.transform.eulerAngles.z);
+                Vector4 O3;
+                O3.x = Target.transform.position.y;
+                O3.y = Target.transform.position.z;
+                O3.z = Target.transform.position.x;
+                O3.w = distance;
 
-            transform.eulerAngles = new Vector3(0.0f, Target.transform.eulerAngles.y, 0.0f);
-            //transform.position = I(O1, O2, Target.transform.position.y + 2.0f, Target.transform.eulerAngles.y);
-            transform.position = new Vector3(Of.x, Of.y, Of.z);*/
+                Vector4 O4;
+                O4.x = Target.transform.position.y;
+                O4.y = Target.transform.position.z - (distance / Mathf.Cos(Mathf.Deg2Rad * Target.transform.eulerAngles.x)); ;
+                O4.z = Target.transform.position.x;
+                O4.w = Mathf.Sin(Mathf.Deg2Rad * Target.transform.eulerAngles.x) * (distance / Mathf.Cos(Mathf.Deg2Rad * Target.transform.eulerAngles.x)); ;
+                Vector3 Of = I(O3, O4, Target.transform.position.x , 0, Target.transform.eulerAngles.x);
+                */
+                transform.eulerAngles = new Vector3(0.0f, Target.transform.eulerAngles.y, Target.transform.eulerAngles.z);
+                transform.position = I(O1, O2, Target.transform.position.y + 2.0f, 1, Target.transform.eulerAngles.y);
+                //transform.position = new Vector3(Of.x, Of.y, Of.z);
 
+                /*O1.x = Target.transform.position.x;
+                O1.y = Target.transform.position.z;
+                // O1.z = 5.0f * Mathf.Cos(Mathf.Deg2Rad*Target.transform.eulerAngles.y);
+                O1.z = distance;
+
+                O2.x = Target.transform.position.x;
+                O2.y = Target.transform.position.z - (distance / Mathf.Cos(Mathf.Deg2Rad * Target.transform.eulerAngles.y));
+                //O2.z = 5.0f * Mathf.Sin(Mathf.Deg2Rad*Target.transform.eulerAngles.y);
+                O2.z = Mathf.Sin(Mathf.Deg2Rad * Target.transform.eulerAngles.y) * (distance / Mathf.Cos(Mathf.Deg2Rad * Target.transform.eulerAngles.y));
+
+
+                Vector3 Otmp = I(O1, O2, Target.transform.position.y + 2.0f, Target.transform.eulerAngles.y);
+
+                Vector3 O3;
+                O3.x= Otmp.x;
+                O3.y = Otmp.y - (distance / Mathf.Cos(Mathf.Deg2Rad * Target.transform.eulerAngles.z)); ;
+                O3.z = Mathf.Sin(Mathf.Deg2Rad * Target.transform.eulerAngles.z) * (distance / Mathf.Cos(Mathf.Deg2Rad * Target.transform.eulerAngles.z));
+
+                Vector3 Of = I(O1, O2, Otmp.z, Target.transform.eulerAngles.z);
+
+                transform.eulerAngles = new Vector3(0.0f, Target.transform.eulerAngles.y, 0.0f);
+                //transform.position = I(O1, O2, Target.transform.position.y + 2.0f, Target.transform.eulerAngles.y);
+                transform.position = new Vector3(Of.x, Of.y, Of.z);*/
+
+            }
+            else
+            {
+                transform.position = new Vector3(Target.transform.position.x, Target.transform.position.y + 2.0f, Target.transform.position.z - 5.0f);
+            }
         }
         else
         {
-            transform.position = new Vector3(Target.transform.position.x, Target.transform.position.y + 2.0f, Target.transform.position.z - 5.0f);
+            Target = GameObject.FindGameObjectsWithTag("Drone")[0].GetComponentInChildren<Rigidbody>().transform;
         }
-
         //transform.LookAt(Target);
     }
 }

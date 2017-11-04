@@ -23,7 +23,7 @@ public class Gene  {
     private Vector<float> bestIndividual;
     public SystemRandomSource rndGenerator;
     //private int[] permutations;
-
+    float initialValueWeights;
 
     public float bestScore;
     public int generation;
@@ -33,11 +33,12 @@ public class Gene  {
         return population;
     }
 
-    public Gene(int seed, SystemRandomSource rndGenerator, int populationSize, int individualSize, float mutationRate = 0.1f, float randomIndividualsRate = 0.05f, float bestIndividualsRate = 0.05f)
+    public Gene(int seed, SystemRandomSource rndGenerator, int populationSize, int individualSize, float initialValueWeights, float mutationRate = 0.1f, float randomIndividualsRate = 0.05f, float bestIndividualsRate = 0.05f)
     {
         this.bestScore = 0.0f;
         this.generation = 1;
         this.seed = seed;
+        this.initialValueWeights = initialValueWeights;
         if(rndGenerator != null)
         {
             this.rndGenerator = rndGenerator;
@@ -51,7 +52,7 @@ public class Gene  {
         this.individualSize = individualSize;
         //UnityEngine.Random.InitState(seed);
 
-        population = Matrix<float>.Build.Random(individualSize, populationSize, new ContinuousUniform(-1.0f, 1.0f, rndGenerator));
+        population = Matrix<float>.Build.Random(individualSize, populationSize, new ContinuousUniform(-initialValueWeights, initialValueWeights, rndGenerator));
         evaluations = Vector<float>.Build.Dense(populationSize);
         sumEvaluations = 0.0f;
         //Debug.Log("Population " + population);
@@ -105,7 +106,7 @@ public class Gene  {
 
         for (int i = bestIndividualsNumber; i < bestIndividualsNumber + randomIndividualsNumber; i++)
         {
-            tmp.SetColumn(i, Vector<float>.Build.Random(individualSize, new ContinuousUniform(-1.0f, 1.0f, rndGenerator)));
+            tmp.SetColumn(i, Vector<float>.Build.Random(individualSize, new ContinuousUniform(-initialValueWeights, initialValueWeights, rndGenerator)));
         }
 
         //Debug.Log("liugliyg  " + (randomIndividualsNumber + bestIndividualsNumber) + "   " + (populationSize - randomIndividualsNumber - bestIndividualsNumber));
@@ -243,11 +244,12 @@ public class Gene  {
         population.MapInplace(MutationOneElement);
     }
 
-    public Vector<float> Run(Vector<float> externalEvaluations)
+    public Vector<float> Run(Vector<float> externalEvaluations, float theoricBestScore)
     {
 
         Evaluation(externalEvaluations, "max");
-        Debug.Log("Best Score : " + bestScore + " | Index : "+ bestIndividualIndex);
+        //Debug.Log(evaluations);
+        Debug.Log(generation + "  | Best Score : " + bestScore + "/" + theoricBestScore + " | Index : "+ bestIndividualIndex);
         Selection();
         CrossOver();
         Mutation();

@@ -24,12 +24,11 @@ public class WindArea : MonoBehaviour
     private float strength = 0.0f;*/
 
 
-    void Start()
+    void Awake()
     {
         if (show)
         {
             int cubeWidth = (int)Mathf.Floor(Mathf.Sqrt(numSelectors));
-
 
 
             GameObject firstObject = Instantiate(selector, new Vector3(0, 0, 0), Quaternion.identity) as GameObject;
@@ -118,10 +117,13 @@ public class WindArea : MonoBehaviour
                 //Debug.Log("X - Z  : " + rigid.position.x + " - " + rigid.position.z);
                 if (rigid != null)
                 {
+                    
                     float a = Perlin.Noise(rigid.position);
                     //Debug.Log("a : " + a);
                     Vector3 tmp = new Vector3(a, a, a);
+                    
                     float coeff = 1.0f;
+                    //Debug.Log(rigid.position + "   " + (windDirection + tmp) + " -------- " + windStrength + "   " + WindFunction.linear(windDirection + tmp, windStrength * coeff));
                     if (rigid.CompareTag("DroneMotor"))
                     {
                         coeff = rigid.mass;

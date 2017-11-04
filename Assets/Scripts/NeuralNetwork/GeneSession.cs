@@ -28,7 +28,12 @@ public class GeneSession : MonoBehaviour {
 
     private float nextUpdate;
     public float initialValueWeights;
-    private float intervalUpdate = 4.0f;
+    public float initialY = 3.0f;
+    public float intervalUpdate = 4.0f;
+    float theoricBestScore;
+    HUDManager hudManager;
+
+    public float timeScale = 1.0f;
     SystemRandomSource rndGenerator;
 
     private static T[,] Make2DArray<T>(T[] input, int height, int width)
@@ -66,7 +71,7 @@ public class GeneSession : MonoBehaviour {
     Matrix<float> Make2DMatrix(Vector<float> V, int height, int width)
     {
         Matrix<float> tmp = Matrix<float>.Build.Dense(height, width);
-        for(int i =0; i < width - 1; i++)
+        for(int i =0; i < width; i++)
         {
             //Debug.Log(tmp + "  " + V.SubVector(height * i, height));
             tmp.SetColumn(i, V.SubVector(height * i, height));
@@ -90,11 +95,12 @@ public class GeneSession : MonoBehaviour {
             }*/
             if (i == 0)
             {
+                //Debug.Log(individual.SubVector(0, (shapes[i] + 1) * shapes[i + 1]));
                 tmp.Add(Make2DMatrix(individual.SubVector(0, (shapes[i] + 1) * shapes[i + 1]),  shapes[i + 1], shapes[i] + 1));
             }
             else
             {
-                tmp.Add(Make2DMatrix(individual.SubVector((shapes[i - 1] + 1) * shapes[i], shapes[i] * shapes[i + 1]), shapes[i + 1], shapes[i]));
+                tmp.Add(Make2DMatrix(individual.SubVector((shapes[i - 1] + 1) * shapes[i], (shapes[i] + 1) * shapes[i + 1]), shapes[i + 1], shapes[i] + 1));
             }
             
 
@@ -116,15 +122,20 @@ public class GeneSession : MonoBehaviour {
 
 
     void Awake () {
+        hudManager = new HUDManager() as HUDManager;
+        hudManager.AddTextLayout("Best Drone Info", "Best Drone Info");
+        hudManager.AddTextLayout("Position", "--------");
+        hudManager.AddTextLayout("MLP Input", "--------");
+        Time.timeScale = timeScale;
         nextUpdate = intervalUpdate;
         rndGenerator = new SystemRandomSource(seed);
-        individualSize = (shapes[0] + 1) * shapes[1];
-        for(int i = 1; i< shapes.Count - 1; i++)
+        individualSize = 0;
+        for(int i = 0; i< shapes.Count - 1; i++)
         {
-            individualSize += shapes[i] * shapes[i + 1];
+            individualSize += (shapes[i]+1) * shapes[i + 1];
         }
-        //Debug.Log(individualSize);
-        gene = new Gene(seed, rndGenerator, populationSize, individualSize, mutationRate, randomIndividualsRate, bestIndividualsRate);
+        Debug.Log("Init Random Generator : " + rndGenerator);
+        gene = new Gene(seed, rndGenerator, populationSize, individualSize, initialValueWeights, mutationRate, randomIndividualsRate, bestIndividualsRate);
 
         
         //mlp = new MultiLayer(shape, seed, 1);
@@ -140,8 +151,10 @@ public class GeneSession : MonoBehaviour {
     {
         for (int i = 0; i < populationSize; i++)
         {
-            dronePopulation[i] = Instantiate(prefabDrone, new Vector3(i * spacing, 0.1f, 0.0f), Quaternion.identity) as GameObject;
+            dronePopulation[i] = Instantiate(prefabDrone, new Vector3(i * spacing, initialY, 0.0f), Quaternion.identity) as GameObject;
             dronePopulation[i].name = "Drone " + i;
+            //Debug.Log(shapes[0]);
+            dronePopulation[i].GetComponent<MainBoard>().inputSize = shapes[0];
             mlpPopulation[i] = new MultiLayerMathsNet(seed, rndGenerator, shapes, 1, initialValueWeights);
             dronePopulation[i].GetComponent<MainBoard>().mlp = mlpPopulation[i];
 
@@ -168,7 +181,7 @@ public class GeneSession : MonoBehaviour {
         
 
         //Transform obj dronePopulation[i].GetComponent<MainBoard>.gameObject.transform.GetChild(0).GetChild(0);
-        Transform t = dronePopulation[i].GetComponent<MainBoard>().gameObject.transform.GetChild(0).GetChild(0);
+        //Transform t = dronePopulation[i].GetComponent<MainBoard>().gameObject.transform.GetChild(0).GetChild(0);
         Rigidbody r = dronePopulation[i].GetComponentInChildren<Rigidbody>();
         //rotate = t.localEulerAngles;
 
@@ -177,42 +190,59 @@ public class GeneSession : MonoBehaviour {
 
         inputMLP = new float[1, 6] { { obj.position.x, obj.position.y, obj.position.z, rotate.x, rotate.y, rotate.z } };*/
 
-        float tmp = (t.position.z*t.position.z) - (r.transform.eulerAngles.x * r.transform.eulerAngles.x) / 129600 - (r.transform.eulerAngles.z * r.transform.eulerAngles.z) / 129600 - (r.transform.eulerAngles.y * r.transform.eulerAngles.y) / 129600;
+        //Debug.Log(r.position.y);
+        float tmp2 = Mathf.Abs((Mathf.Abs(r.position.y)) + r.transform.eulerAngles.x + r.transform.eulerAngles.z + r.transform.eulerAngles.y + r.angularVelocity.x + r.angularVelocity.z);
+        float tmp = 1/ (1 + tmp2);
 
         //float final = (tmp < 0) ? 0 : tmp;
 
         return tmp;
     }
 
-	void Update () {
-        /*for (int i = 0; i < populationSize; i++)
+	void FixedUpdate () {
+        theoricBestScore += 1;
+        for (int i = 0; i < populationSize; i++)
         {
-            Rigidbody r = dronePopulation[i].GetComponentInChildren<Rigidbody>();
-            tmpVelo[i] += r.velocity.x + r.velocity.x + r.velocity.z ;
-        }*/
+            //Rigidbody r = dronePopulation[i].GetComponentInChildren<Rigidbody>();
+            tmpVelo[i] += EvaluateIndividual(i);
+        }
+        //Debug.Log(tmpVelo);
+
+        if(droneBest != null)
+        {
+            hudManager.UpdateTextLayout("Position", "Position : " + droneBest.GetComponentInChildren<Rigidbody>().transform.position.ToString());
+
+            MultiLayerMathsNet mlp = droneBest.GetComponent<MainBoard>().mlp;
+            //Debug.Log(mlp.shapesSize);
+            hudManager.UpdateTextLayout("MLP Input", "MLP Input : " + mlp.layers[0] + " - " + mlp.layers[mlp.shapesSize - 1]);
+        }
+
         if (Time.time >= nextUpdate)
         {
+           
             Destroy(droneBest);
             //Debug.Log(Time.time + ">=" + nextUpdate);
             // Change the next update (current second+1)
             nextUpdate = Mathf.FloorToInt(Time.time) + intervalUpdate;
 
-            for (int i = 0; i < populationSize; i++)
+            /*for (int i = 0; i < populationSize; i++)
             {
                 externalEvaluations[i] = EvaluateIndividual(i);
-            }
-            //externalEvaluations = 100000 - tmpVelo * tmpVelo;
+            }*/
+            externalEvaluations = tmpVelo ;
 
-            gene.Run(externalEvaluations);
-            droneBest = Instantiate(prefabDrone,new Vector3(-spacing - 2.0f, 0.0f, 0.0f),Quaternion.identity) as GameObject;
+            gene.Run(externalEvaluations, theoricBestScore);
+            droneBest = Instantiate(prefabDrone,new Vector3(-spacing - 2.0f, initialY, 0.0f),Quaternion.identity) as GameObject;
 
             //droneBest.GetComponent<MainBoard>().gameObject.transform.GetChild(0).GetChild(0).position = new Vector3(-spacing - 2.0f, 0.0f, 0.0f);
 
             droneBest.GetComponent<MainBoard>().mlp = new MultiLayerMathsNet(seed, rndGenerator, shapes, 1, initialValueWeights);
 
+            droneBest.GetComponent<MainBoard>().inputSize = shapes[0];
 
             droneBest.GetComponent<MainBoard>().mlp.Reset(false, BuildCustomWeights(gene.GetBestIndividual()));
             
+
             DestroyAll();
 
             //nextUpdate = Mathf.FloorToInt(Time.time) + intervalUpdate;
@@ -223,7 +253,8 @@ public class GeneSession : MonoBehaviour {
             {
                 mlpPopulation[i].Reset(0.0f, false, BuildCustomWeights(gene.GetIndividual(i)));
             }*/
-            
+            theoricBestScore = 0;
+
         }
 	}
 }

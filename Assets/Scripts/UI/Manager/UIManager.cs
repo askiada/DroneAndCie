@@ -27,21 +27,25 @@ public class UIManager : MonoBehaviour
         //WM = new WindManager();
         GetComponentInChildren<Canvas>().enabled = false;
         _windSlider = GameObject.Find("Wind Slider").GetComponent<Slider>();
+        _windSlider.value = GameObject.Find("WindArea").GetComponent<WindArea>().windStrength;
         _windSliderInput = GameObject.Find("Wind Slider Input").GetComponent<InputField>();
         _windSliderInput.text = _windSlider.value.ToString();
 
         _droneMassSlider = GameObject.Find("Mass Slider").GetComponent<Slider>();
+        _droneMassSlider.value = GameObject.FindGameObjectsWithTag("Frame")[0].GetComponent<Rigidbody>().mass;
         _droneMassSliderInput = GameObject.Find("Mass Slider Input").GetComponent<InputField>();
         _droneMassSliderInput.text = _droneMassSlider.value.ToString();
-        _droneMassSlider.value = 1.0f;
+        //Debug.Log(GameObject.FindGameObjectsWithTag("Frame")[0].GetComponent<Rigidbody>().mass);
+        
 
         _droneDragSlider = GameObject.Find("Drag Slider").GetComponent<Slider>();
+        _droneDragSlider.value = GameObject.FindGameObjectsWithTag("Frame")[0].GetComponent<Rigidbody>().drag;
         _droneDragSliderInput = GameObject.Find("Drag Slider Input").GetComponent<InputField>();
         _droneDragSliderInput.text = _droneDragSlider.value.ToString();
-        _droneDragSlider.value = 1.0f;
+        
 
         _droneMotorsMaxThrust = GameObject.Find("MaxThrust Input").GetComponent<InputField>();
-        _droneMotorsMaxThrust.text = "0.5";
+        _droneMotorsMaxThrust.text = GameObject.FindGameObjectsWithTag("DroneMotor")[0].GetComponent<MotorThrust>().MaxThrust.ToString();
     }
 
     // Update is called once per frame
@@ -109,7 +113,7 @@ public class UIManager : MonoBehaviour
 
     public void UpdateSliderValueFromFloat(Slider mySlider, InputField myInputField)
     {
-        if (myInputField.isActiveAndEnabled)
+        if (myInputField != null)
         {
             //Debug.Log("InputField Active");
             myInputField.text = mySlider.value.ToString();

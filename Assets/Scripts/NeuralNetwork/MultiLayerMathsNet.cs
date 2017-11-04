@@ -13,7 +13,7 @@ public class MultiLayerMathsNet {
     public List<Matrix<float>> layers;
     public List<Matrix<float>> weights;
     List<Matrix<float>> dw;
-    List<int> shapes;
+    public List<int> shapes;
     public int shapesSize;
     bool save;
     int seed;
@@ -54,12 +54,15 @@ public class MultiLayerMathsNet {
 
         this.cu = new ContinuousUniform(-initialValueWeights, initialValueWeights, rndGenerator);
 
-        layers.Add(Matrix<float>.Build.Dense(shapes[0] + 1, batchSize));
+        //layers.Add(Matrix<float>.Build.Dense(shapes[0] + 1, batchSize));
 
-        for (int i = 1; i < shapesSize; i++)
+        for (int i = 0; i < shapesSize - 1; i++)
         {
-            layers.Add(Matrix<float>.Build.Dense(shapes[i], batchSize));
+            layers.Add(Matrix<float>.Build.Dense(shapes[i] + 1, batchSize));
+            layers[i].SetRow(shapes[i], Vector<float>.Build.Dense(batchSize, 1.0f));
         }
+
+        layers.Add(Matrix<float>.Build.Dense(shapes[shapesSize - 1], batchSize));
 
         for (int i = 0; i < shapesSize - 1; i++)
         {
@@ -68,7 +71,7 @@ public class MultiLayerMathsNet {
 
         }
 
-        layers[0].SetRow(shapes[0], Vector<float>.Build.Dense(batchSize, 1.0f));
+        //layers[0].SetRow(shapes[0], Vector<float>.Build.Dense(batchSize, 1.0f));
     }
 
 
@@ -92,7 +95,7 @@ public class MultiLayerMathsNet {
             {
                 weights[i].MapInplace(fillWeights);
                 dw[i].Clear();
-
+                //Debug.Log(weights);
             }
         }
 
@@ -102,6 +105,7 @@ public class MultiLayerMathsNet {
             {
                 //Debug.Log(weights.Count + "        " + customWeights.Count);
                 weights[i] = customWeights[i];
+                //Debug.Log(weights[i]);
                 //customWeights[i].CopyTo(weights[i]);
                 dw[i].Clear();
             }
@@ -118,7 +122,12 @@ public class MultiLayerMathsNet {
         return (float)System.Math.Tanh(value);
     }
 
-    public void PropagateForward2(Vector<float> data)
+    public float SigExp(float value)
+    {
+        return (float)(1 / (1 + System.Math.Exp((float)(-value))));
+    }
+
+    public void PropagateForward(Vector<float> data)
     {
         for(int i=0; i < layers[0].ColumnCount; i++)
         {
@@ -127,18 +136,20 @@ public class MultiLayerMathsNet {
 
         for (int i = 1; i < shapesSize - 1; i++)
         {
-            weights[i - 1].Multiply(layers[i - 1], layers[i]);
+            layers[i].SetSubMatrix(0,0, weights[i - 1].Multiply(layers[i - 1]));
             //layers[i] = Matrix<float>.Build.DenseOfArray(Multiplication.FalkScheme(weights[i - 1].AsArray(), layers[i - 1].AsArray()));
 
             layers[i].PointwiseTanh();
         }
         weights[shapesSize - 2].Multiply(layers[shapesSize - 2], layers[shapesSize - 1]);
         //layers[shapesSize - 1] = Matrix<float>.Build.DenseOfArray(Multiplication.FalkScheme(weights[shapesSize - 2].AsArray(), layers[shapesSize - 2].AsArray()));
-        layers[shapesSize - 1].PointwiseTanh();
+        layers[shapesSize - 1].MapInplace(SigExp);
     }
 
-    public void PropagateForward(Vector<float> data)
+    public void PropagateForward2(Vector<float> data)
     {
+        //Debug.Log(data);
+        //Debug.Log(layers[0].RowCount + "" +data.Count);
         for (int i = 0; i < layers[0].ColumnCount; i++)
         {
             layers[0].SetColumn(i, 0, shapes[0], data);
@@ -154,7 +165,7 @@ public class MultiLayerMathsNet {
         //weights[shapesSize - 2].Multiply(layers[shapesSize - 2], layers[shapesSize - 1]);
         layers[shapesSize - 1] = Matrix<float>.Build.DenseOfArray(Multiplication.FalkScheme(weights[shapesSize - 2].ToArray(), layers[shapesSize - 2].ToArray()));
         //layers[shapesSize - 1].MapInplace(Tanh);
-        layers[shapesSize - 1].PointwiseTanh();
+        layers[shapesSize - 1].MapInplace(SigExp);
     }
 
 

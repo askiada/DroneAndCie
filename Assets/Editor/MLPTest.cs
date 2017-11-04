@@ -19,7 +19,7 @@ public class MLPTest
     public void Init()
     {
         this.seed = 42;
-        this.shapes = new List<int>() { 6, 80, 60, 5};
+        this.shapes = new List<int>() { 9, 20, 10, 5, 4};
         this.initialValueWeights = 1.0f;
     }
 
@@ -174,8 +174,8 @@ public class MLPTest
         /*SystemRandomSource rndGenerator = new SystemRandomSource(seed);
         ContinuousUniform cu = new ContinuousUniform(-initialValueWeights, initialValueWeights, rndGenerator);
         */
-        Vector<float> data = Vector<float>.Build.DenseOfArray(new float[] { 1,2,3,4,5,6}); ;
-        int iter = 1000;
+        Vector<float> data = Vector<float>.Build.DenseOfArray(new float[] { 1,2,3,4,5,6,7,8,9}); ;
+        int iter = 10000;
 
 
         var watch = System.Diagnostics.Stopwatch.StartNew();
@@ -187,9 +187,21 @@ public class MLPTest
         watch.Stop();
         var elapsedMs = watch.ElapsedMilliseconds;
 
-        Debug.Log("PropagateForward Time MathNet: " + elapsedMs);
+        Debug.Log("PropagateForward Array Time MathNet: " + elapsedMs);
 
-        float[,] dataArr  = new float[,] { { 1,2,3,4,5,6 } };
+
+
+        watch = System.Diagnostics.Stopwatch.StartNew();
+        for (int i = 0; i < iter; i++)
+        {
+            mlpMN.PropagateForward(data);
+        }
+        watch.Stop();
+        elapsedMs = watch.ElapsedMilliseconds;
+
+        Debug.Log("PropagateForward2 Multiply Time MathNet: " + elapsedMs);
+
+        float[,] dataArr  = new float[,] { { 1,2,3,4,5,6,7,8,9 } };
         watch = System.Diagnostics.Stopwatch.StartNew();
         for (int i = 0; i < iter; i++)
         {

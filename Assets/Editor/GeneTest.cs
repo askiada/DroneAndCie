@@ -11,7 +11,7 @@ public class GeneTest
     int seed;
     Gene geneSeed;
     Gene geneRndGenerator;
-
+    float initialValueWeights;
     [TestFixtureSetUp]
     public void Init()
     {
@@ -31,11 +31,12 @@ public class GeneTest
     {
         seed = 65;
         geneSeed = new Gene(seed, null, 2, 10, 1.0f);
+        initialValueWeights = 1.0f;
         //Debug.Log(geneSeed.ToString());
         //System.Threading.Thread.Sleep(10000);
         SystemRandomSource rndGenerator = new SystemRandomSource(seed);
 
-        geneRndGenerator = new Gene(seed, rndGenerator, 2, 10);
+        geneRndGenerator = new Gene(seed, rndGenerator, 2, 10, initialValueWeights);
     }
 
     [TearDown]

@@ -11,14 +11,16 @@ public class MainBoard : MonoBehaviour
     public MonoBehaviour[] ThrustSignalBus;
     public MonoBehaviour[] ControlSignalBus;
     public MultiLayerMathsNet mlp;
+    public int inputSize;
     //public Gyro gyro;
     public Vector<float> inputMLP;
     public Vector3 rotate;
     public Vector3 position;
 
-    void Awake()
+    void Start()
     {
-        inputMLP = Vector<float>.Build.Dense(6);
+        //Debug.Log("InputSize " + name + inputSize);
+        inputMLP = Vector<float>.Build.Dense(inputSize);
         //initMLP();
         //gyro = new Gyro(this);
 
@@ -43,9 +45,12 @@ public class MainBoard : MonoBehaviour
             //Debug.Log("Signal : " + component.GetComponent<MotorsController>().MotorFR.transform.eulerAngles.ToString());
             //rotate = component.GetComponent<MotorsController>().MotorFR.transform.eulerAngles;
             Transform obj = this.gameObject.transform.GetChild(0).GetChild(0);
-            rotate = obj.localEulerAngles;
+            rotate = obj.eulerAngles;
+            Rigidbody rigid = this.gameObject.GetComponentInChildren<Rigidbody>();
+            //Debug.Log(angularVelocity.x + "  " + angularVelocity.y + "  " + angularVelocity.z);
             //inputMLP = gyro.complete3(rotate);
-            inputMLP = Vector<float>.Build.DenseOfArray( new float[] {obj.position.x, obj.position.y, obj.position.z, rotate.x, rotate.y, rotate.z});
+            inputMLP = Vector<float>.Build.DenseOfArray(new float[] {rotate.x, rotate.y, rotate.z, rigid.angularVelocity.x, rigid.angularVelocity.y, rigid.angularVelocity.z, rigid.velocity.x, rigid.velocity.y, rigid.velocity.z});
+            //Debug.Log(name + " " + inputMLP);
             result = component.ProcessSignal(result);
 
         }
