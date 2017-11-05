@@ -5,12 +5,13 @@ using MathNet.Numerics.LinearAlgebra;
 using MathNet.Numerics.LinearAlgebra.Double;
 using MathNet.Numerics.Random;
 using MathNet.Numerics.Distributions;
+using Lexmou.MachineLearning.Evolutionary;
 
 public class GeneTest
 {
     int seed;
-    Gene geneSeed;
-    Gene geneRndGenerator;
+    Genetic geneSeed;
+    Genetic geneRndGenerator;
     float initialValueWeights;
     [TestFixtureSetUp]
     public void Init()
@@ -30,13 +31,13 @@ public class GeneTest
     public void SetUp()
     {
         seed = 65;
-        geneSeed = new Gene(seed, null, 2, 10, 1.0f);
+        geneSeed = new Genetic(seed, null, 2, 10, 1.0f);
         initialValueWeights = 1.0f;
         //Debug.Log(geneSeed.ToString());
         //System.Threading.Thread.Sleep(10000);
         SystemRandomSource rndGenerator = new SystemRandomSource(seed);
 
-        geneRndGenerator = new Gene(seed, rndGenerator, 2, 10, initialValueWeights);
+        geneRndGenerator = new Genetic(seed, rndGenerator, 2, 10, initialValueWeights);
     }
 
     [TearDown]
@@ -158,7 +159,7 @@ public class GeneTest
         arr[size - 1] = 2.0f;
         Vector<float> externalEvaluations = Vector<float>.Build.DenseOfArray(arr);
 
-        Gene gene = new Gene(seed, null, size, 3, 0.1f, 0.34f, 0.34f);
+        Genetic gene = new Genetic(seed, null, size, 3, 0.1f, 0.34f, 0.34f);
         gene.Evaluation(externalEvaluations, "max");
         Debug.Log(gene.GetPopulation());
         gene.Selection();
