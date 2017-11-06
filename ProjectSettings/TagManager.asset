@@ -8,6 +8,7 @@ TagManager:
   - windArea
   - Frame
   - Drone
+  - FrameBest
   layers:
   - Default
   - TransparentFX

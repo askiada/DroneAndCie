@@ -7,6 +7,7 @@ using MathNet.Numerics.Random;
 using MathNet.Numerics.Distributions;
 using System.Collections.Generic;
 using System.Linq;
+using Lexmou.MachineLearning.NeuralNetwork.FeedForward;
 
 public class MLPTest
 {

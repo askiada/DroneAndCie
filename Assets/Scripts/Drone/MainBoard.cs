@@ -5,6 +5,9 @@ using System.Collections.Generic;
 using MathNet.Numerics.LinearAlgebra;
 using MathNet.Numerics.LinearAlgebra.Double;
 using Lexmou.Utils;
+using Lexmou.MachineLearning.NeuralNetwork.FeedForward;
+
+
 public class MainBoard : MonoBehaviour
 {
 
@@ -49,7 +52,7 @@ public class MainBoard : MonoBehaviour
             Rigidbody rigid = this.gameObject.GetComponentInChildren<Rigidbody>();
             //Debug.Log(angularVelocity.x + "  " + angularVelocity.y + "  " + angularVelocity.z);
             //inputMLP = gyro.complete3(rotate);
-            inputMLP = Vector<float>.Build.DenseOfArray(new float[] { Angle.SteerAngle(rotate.x), Angle.SteerAngle(rotate.y), Angle.SteerAngle(rotate.z), rigid.angularVelocity.x, rigid.angularVelocity.y, rigid.angularVelocity.z, rigid.velocity.x, rigid.velocity.y, rigid.velocity.z});
+            inputMLP = Vector<float>.Build.DenseOfArray(new float[] { UAngle.SteerAngle(rotate.x), UAngle.SteerAngle(rotate.y), UAngle.SteerAngle(rotate.z), rigid.angularVelocity.x, rigid.angularVelocity.y, rigid.angularVelocity.z, rigid.velocity.x, rigid.velocity.y, rigid.velocity.z});
             //Debug.Log(name + " " + inputMLP);
             result = component.ProcessSignal(result);
 

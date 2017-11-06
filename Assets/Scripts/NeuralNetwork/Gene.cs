@@ -201,7 +201,9 @@ namespace Lexmou.MachineLearning.Evolutionary
         public string Run(Vector<float> externalEvaluations, float theoricBestScore)
         {
             string generationInfos;
+
             Evaluation(externalEvaluations, "max");
+
             generationInfos = generation + "  | Best Score : " + bestScore + "/" + theoricBestScore + " | Index : " + bestIndividualIndex;
             Selection();
             CrossOver();

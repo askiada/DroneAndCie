@@ -6,6 +6,8 @@ using System;
 using MathNet.Numerics.Random;
 using MathNet.Numerics.Distributions;
 
+using Lexmou.Utils;
+
 public class MultiLayer {
 
     public List<float[,]> layers;
@@ -104,11 +106,11 @@ public class MultiLayer {
 
         for(int i = 1; i < shapesSize - 1; i++)
         {
-            layers[i] = Activation.InternalActivation(Multiplication.FalkScheme(layers[i-1], weights[i-1]), "Sigmoid", false);
+            layers[i] = UActivation.InternalActivation(Multiplication.FalkScheme(layers[i-1], weights[i-1]), "Sigmoid", false);
         }
         //Debug.Log("output  " + layers[shapesSize - 2].GetLength(0) +" -- " + layers[shapesSize - 2].GetLength(1));
         //Debug.Log("outputscsd  " + weights[shapesSize - 2].GetLength(0) + " -- " + weights[shapesSize - 2].GetLength(1));
-        layers[shapesSize - 1] = Activation.OutputActivation(Multiplication.FalkScheme(layers[shapesSize - 2], weights[shapesSize - 2]), "Sigmoid", false);
+        layers[shapesSize - 1] = UActivation.OutputActivation(Multiplication.FalkScheme(layers[shapesSize - 2], weights[shapesSize - 2]), "Sigmoid", false);
 
         //Debug.Log("output" + layers[shapesSize - 1][0,0]);
         WriteListArray("Layers", "propagate", layers);
@@ -138,7 +140,7 @@ public class MultiLayer {
         //Debug.Log("Error " + error.GetLength(0) + "-" + error.GetLength(1));
         //Debug.Log("layers[shapesSize - 1] " + DerivativeActivation(layers[shapesSize - 1]).GetLength(0) + "-" + DerivativeActivation(layers[shapesSize - 1]).GetLength(1));
 
-        delta = Multiplication.ElementWise(error, Activation.OutputDerivativeActivation(layers[shapesSize - 1], "Sigmoid"));
+        delta = Multiplication.ElementWise(error, UActivation.OutputDerivativeActivation(layers[shapesSize - 1], "Sigmoid"));
         deltas.Add(delta);
         for (int i = shapesSize - 2; i > 0; i--)
         {
@@ -146,7 +148,7 @@ public class MultiLayer {
             //Debug.Log("Deltas " + weights[i].GetLength(0) + "-" + weights[i].GetLength(1));
             //float[,] tmp = Multiplication.ElementWise(Multiplication.ElementWise(deltas[deltas.Count - 1], weights[i]), DerivativeActivation(layers[i]));
             //float[,] tmp = weights[i].TransposeRowsAndColumns();
-            deltas.Add(Multiplication.ElementWise(Multiplication.FalkScheme(deltas[deltas.Count - 1], weights[i], false, true), Activation.InternalDerivativeActivation(layers[i], "Sigmoid")));
+            deltas.Add(Multiplication.ElementWise(Multiplication.FalkScheme(deltas[deltas.Count - 1], weights[i], false, true), UActivation.InternalDerivativeActivation(layers[i], "Sigmoid")));
         }
         WriteListArray("Deltas", "deltas", deltas);
         return deltas;
