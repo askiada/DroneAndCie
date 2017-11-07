@@ -53,6 +53,7 @@ public class UIManager : MonoBehaviour
     {
         ScanForKeyStroke();
         ScanForKeyRestart();
+        ScanForKeyStabilization();
     }
 
     void ScanForKeyStroke()
@@ -68,6 +69,22 @@ public class UIManager : MonoBehaviour
         {
             GM.TogglePauseMenu();
         }
+    }
+
+    void ScanForKeyStabilization()
+    {
+        for (int i = 0; i < 20; i++)
+        {
+            if (Input.GetKeyDown("joystick 1 button " + i))
+            {
+                print("joystick 1 button " + i);
+            }
+        }
+
+        /*if (Input.GetKeyDown("escape") || Input.GetKeyDown("joystick 1 button 7"))
+        {
+            GM.TogglePauseMenu();
+        }*/
     }
 
 

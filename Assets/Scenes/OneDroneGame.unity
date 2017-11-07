@@ -248,7 +248,7 @@ Prefab:
         type: 2}
       propertyPath: prefabDrone
       value: 
-      objectReference: {fileID: 1000014138249408, guid: ba5d22bbf99772b4b8b2f90fa8c9615e,
+      objectReference: {fileID: 1000012061608460, guid: 0f06f3e9f7c8ae642a88d305314c667a,
         type: 2}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 1ef898e54e6a66346ae52aad7c35a690, type: 2}

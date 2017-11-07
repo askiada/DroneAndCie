@@ -8,13 +8,28 @@ namespace Lexmou.Utils
     public static class UMatrix
     {
 
-        public static Matrix<float> Make2DMatrix(Vector<float> V, int height, int width)
+        public static Matrix<float> Make2DMatrix(Vector<float> V, int height, int width, bool colMode = true)
         {
-            Matrix<float> tmp = Matrix<float>.Build.Dense(height, width);
-            for (int i = 0; i < width; i++)
+            if(height * width < V.Count)
             {
-                tmp.SetColumn(i, V.SubVector(height * i, height));
+                throw new System.ArgumentOutOfRangeException("The size of V is not compatible with the shape of the matrix !");
             }
+            Matrix<float> tmp = Matrix<float>.Build.Dense(height, width);
+            if (colMode)
+            {
+                for (int i = 0; i < width; i++)
+                {
+                    tmp.SetColumn(i, V.SubVector(height * i, height));
+                }
+            }
+            else
+            {
+                for (int i = 0; i < height; i++)
+                {
+                    tmp.SetRow(i, V.SubVector(width * i, width));
+                }
+            }
+            
             return tmp;
         }
     }

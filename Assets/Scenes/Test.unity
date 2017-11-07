@@ -323,18 +323,25 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   prefabDrone: {fileID: 1000012061608460, guid: 0f06f3e9f7c8ae642a88d305314c667a,
     type: 2}
-  seed: 242
+  seed: 13
   populationSize: 100
-  mutationRate: 0.03
+  mutationRate: 0.01
   randomIndividualsRate: 0.02
-  bestIndividualsRate: 0.03
+  bestIndividualsRate: 0.05
+  emptyRate: 0.93
   spacing: 5
-  shapes: 09000000070000000500000004000000
-  initialValueWeights: 0.01
+  shapes: 0900000004000000
+  initialValueWeights: 1
   initialY: 5
   intervalUpdate: 5
-  randomRotation: 1
+  randomRotation: 0
+  scoreActiveWind: 120
+  _windStrength: 0
+  scoreActiveRandomRotation: 215
+  _angleRandomRotation: 0
   hudManager: {fileID: 0}
+  intervalSave: 0
+  loadGeneration: 1300
   timeScale: 2
 --- !u!4 &991526459
 Transform:

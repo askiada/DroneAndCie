@@ -16,6 +16,7 @@ public class MLPTest
     MultiLayer mlp;
     MultiLayerMathsNet mlpMN;
     float initialValueWeights;
+
     [TestFixtureSetUp]
     public void Init()
     {

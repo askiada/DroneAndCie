@@ -22,7 +22,7 @@ public class DroneManager : MonoBehaviour {
             drone.GetComponent<MainBoard>().GetComponentInChildren<Rigidbody>().drag = mass;
             */
             SetMass(mass);
-            //SetDrag(drag);
+            SetDrag(drag);
             setMaxThrust(maxThrust);
         }
     }

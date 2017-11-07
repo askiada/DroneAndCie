@@ -132,12 +132,12 @@ public class WindArea : MonoBehaviour
                     //Debug.Log(rigid.tag);
                     Vector3 wind = WindFunction.linear(windDirection + tmp, windStrength * coeff);
 
-                    /*
+                    
                     if (rigid.tag == "FrameBest")
                     {
                         GameObject.Find("GeneSession").GetComponent<Lexmou.MachineLearning.Session.Quadcopter.GeneSession>().hudManager.UpdateTextLayout("Wind", wind.ToString());
                     }
-                    */
+                    
                     //Debug.Log("a : " + a);
                     //Debug.Log("wind : " + wind);
                     rigid.AddForce(wind, ForceMode.Force);

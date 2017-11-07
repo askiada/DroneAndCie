@@ -6,21 +6,22 @@ using MathNet.Numerics.LinearAlgebra.Double;
 using MathNet.Numerics.Random;
 using MathNet.Numerics.Distributions;
 using System.Collections.Generic;
-
+using System.IO;
+using Lexmou.Utils;
 
 namespace Lexmou.MachineLearning.Evolutionary
 {
 
     public class Genetic
     {
-
+        private string path;
         private Matrix<float> population;
         private int seed;
-        private int populationSize;
-        private int individualSize;
+        public int populationSize;
+        public int individualSize;
         private float mutationRate;
         private Vector<float> evaluations;
-        private float sumEvaluations;
+        public float sumEvaluations;
         private float randomIndividualsRate;
         private float bestIndividualsRate;
         private int bestIndividualIndex;
@@ -28,16 +29,30 @@ namespace Lexmou.MachineLearning.Evolutionary
         public SystemRandomSource rndGenerator;
         float initialValueWeights;
 
+        public Tuple<float, float> meanStd;
+        public float median;
+
         public float bestScore;
         public int generation;
         ContinuousUniform distribution;
+        ContinuousUniform subDistribution;
+        ContinuousUniform drawDistribution;
+        public StreamWriter writer;
+        Vector<float> sliceA;
+        Vector<float> sliceB;
+        Matrix<float> tmp;
+        float emptyRate;
+        bool[] distEmpty;
+
         public Matrix<float> GetPopulation()
         {
             return population;
         }
 
-        public Genetic(int seed, SystemRandomSource rndGenerator, int populationSize, int individualSize, float initialValueWeights, float mutationRate = 0.1f, float randomIndividualsRate = 0.05f, float bestIndividualsRate = 0.05f)
+        public Genetic(int seed, SystemRandomSource rndGenerator, int populationSize, int individualSize, float initialValueWeights, float mutationRate = 0.1f, float randomIndividualsRate = 0.05f, float bestIndividualsRate = 0.05f, float emptyRate = 0.0f, string path = "")
         {
+            tmp = Matrix<float>.Build.Dense(individualSize, populationSize);
+            this.path = path;
             this.bestScore = 0.0f;
             this.generation = 1;
             this.seed = seed;
@@ -52,11 +67,30 @@ namespace Lexmou.MachineLearning.Evolutionary
             }
 
             distribution = new ContinuousUniform(-initialValueWeights, initialValueWeights, rndGenerator);
-
+            subDistribution = new ContinuousUniform(-0.01, 0.01, rndGenerator);
+            drawDistribution = new ContinuousUniform(0.0f, 1.0f, rndGenerator);
             this.populationSize = populationSize;
             this.individualSize = individualSize;
 
             this.population = Matrix<float>.Build.Random(individualSize, populationSize, distribution);
+            for(int i =0; i < populationSize;i++)
+            {
+                distEmpty = Combinatorics.GenerateCombination(individualSize, Mathf.RoundToInt(emptyRate * individualSize), rndGenerator);
+                //Debug.Log(dist);
+                for (int j = 0; j < individualSize; j++)
+                {
+                    if(distEmpty[j])
+                    {
+                        //Debug.Log(dist[j]);
+                        //population[j,i] = (float)subDistribution.Sample();
+                        population[j, i] = 0;
+                    }
+                    
+                }
+            }
+
+            //Debug.Log(population.ToString("G40"));
+
             this.evaluations = Vector<float>.Build.Dense(populationSize);
             this.sumEvaluations = 0.0f;
 
@@ -64,6 +98,11 @@ namespace Lexmou.MachineLearning.Evolutionary
             this.mutationRate = mutationRate;
             this.randomIndividualsRate = randomIndividualsRate;
             this.bestIndividualsRate = bestIndividualsRate;
+            this.emptyRate = emptyRate;
+
+            writer = UIO.CreateStreamWriter(GeneratePath(), "GeneticResults.csv", false);
+            UIO.WriteLine(writer, "Generation;Best;Mean;Std Deviation;Median");
+
 
         }
 
@@ -88,7 +127,7 @@ namespace Lexmou.MachineLearning.Evolutionary
         {
             int randomIndividualsNumber = Mathf.RoundToInt(randomIndividualsRate * populationSize);
             int bestIndividualsNumber = Mathf.RoundToInt(bestIndividualsRate * populationSize);
-            Matrix<float> tmp = Matrix<float>.Build.Dense(individualSize, populationSize);
+            
 
             for (int i = 0; i < bestIndividualsNumber; i++)
             {
@@ -98,6 +137,16 @@ namespace Lexmou.MachineLearning.Evolutionary
             for (int i = bestIndividualsNumber; i < bestIndividualsNumber + randomIndividualsNumber; i++)
             {
                 tmp.SetColumn(i, Vector<float>.Build.Random(individualSize, distribution));
+                distEmpty = Combinatorics.GenerateCombination(individualSize, Mathf.RoundToInt(emptyRate * individualSize), rndGenerator);
+                //Debug.Log(dist);
+                for (int j = 0; j < individualSize; j++)
+                {
+                    if (distEmpty[j])
+                    {
+                        //Debug.Log(dist[j]);
+                        population[j, i] = 0;
+                    }
+                }
             }
 
             for (int i = randomIndividualsNumber + bestIndividualsNumber; i < populationSize; i++)
@@ -109,7 +158,7 @@ namespace Lexmou.MachineLearning.Evolutionary
 
             tmp.PermuteColumns(new Permutation(p));
 
-            population = tmp;
+            tmp.CopyTo(population);
         }
 
 
@@ -128,8 +177,8 @@ namespace Lexmou.MachineLearning.Evolutionary
                 sliceIndexB = tmp;
             }
 
-            Vector<float> sliceA = population.Column(idFirst, 0, sliceIndexA);
-            Vector<float> sliceB = population.Column(idFirst, sliceIndexB, individualSize - sliceIndexB);
+            sliceA = population.Column(idFirst, 0, sliceIndexA);
+            sliceB = population.Column(idFirst, sliceIndexB, individualSize - sliceIndexB);
 
             population.SetColumn(idFirst, 0, sliceIndexA, population.Column(idSecond, 0, sliceIndexA));
             population.SetColumn(idFirst, sliceIndexB, individualSize - sliceIndexB, population.Column(idSecond, sliceIndexB, individualSize - sliceIndexB));
@@ -168,6 +217,8 @@ namespace Lexmou.MachineLearning.Evolutionary
             }
             bestIndividual = population.Column(bestIndividualIndex);
             bestScore = evaluations[bestIndividualIndex];
+            meanStd = UVector.BuildMeanStdVariation(evaluations);
+            median = UVector.BuildMedian(evaluations);
         }
 
         public Vector<float> GetBestIndividual()
@@ -183,11 +234,11 @@ namespace Lexmou.MachineLearning.Evolutionary
         float MutationOneElement(float value)
         {
 
-            float draw = (float)ContinuousUniform.Sample(rndGenerator, 0.0f, 1.0f);
+            float draw = (float)drawDistribution.Sample();
 
             if (draw <= mutationRate)
             {
-                return (float)ContinuousUniform.Sample(rndGenerator, -1.0f, 1.0f);
+                return (float) distribution.Sample();
             }
             return value;
 
@@ -197,20 +248,56 @@ namespace Lexmou.MachineLearning.Evolutionary
         {
             population.MapInplace(MutationOneElement);
         }
+        
+        string GeneratePath()
+        {
+            return this.path + "Seed-"+ this.seed + "/";
+        }
 
-        public string Run(Vector<float> externalEvaluations, float theoricBestScore)
+        public void SaveGeneration()
+        {
+                UIO.SaveFloatArray(GeneratePath() + generation, "population.gene", population.ToArray());
+                UIO.SaveFloatArray(GeneratePath() + generation, "best.gene", GetBestIndividual().ToArray());
+        }
+
+        public void LoadGeneration(int generationIndex, float[,] floatArr)
+        {
+            UIO.LoadFloatArray(GeneratePath() + generationIndex , "/population.gene", floatArr);
+            population = Matrix<float>.Build.DenseOfArray(floatArr);
+        }
+
+        public void LoadBest(int generationIndex, float[] floatArr)
+        {
+            UIO.LoadFloatArray(GeneratePath() + generationIndex, "/best.gene", floatArr);
+
+        }
+
+
+        public string Run(Vector<float> externalEvaluations, float theoricBestScore, int intervalSave = 0)
         {
             string generationInfos;
 
             Evaluation(externalEvaluations, "max");
-
-            generationInfos = generation + "  | Best Score : " + bestScore + "/" + theoricBestScore + " | Index : " + bestIndividualIndex;
+            UIO.WriteLine(writer, generation +";" +bestScore+";"+meanStd.Item1+";"+meanStd.Item2+";"+median);
+            if (intervalSave > 0 && generation % intervalSave == 0)
+            {
+                Debug.Log("Save in Progress");
+                SaveGeneration();
+            }
+            generationInfos = generation + "  | Best Score : " + bestScore + "/" + theoricBestScore + " | Index : " + bestIndividualIndex
+                                + "\r\n" + "Score Mean : " + (sumEvaluations/populationSize);
+            Debug.Log(UMatrix.Make2DMatrix(bestIndividual, 4, 10).ToString("G40"));
             Selection();
             CrossOver();
             Mutation();
             generation += 1;
 
             return generationInfos;
+        }
+
+        ~Genetic()
+        {
+            UIO.CloseStreamWriter(writer);
         }
     }
 }

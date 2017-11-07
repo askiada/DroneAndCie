@@ -166,5 +166,28 @@ public class GeneTest
         
     }
 
+    [Test]
+
+    public void SaveTest()
+    {
+        Vector<float> externalEvaluations = Vector<float>.Build.DenseOfArray(new float[2] { 0.0f, 1.0f });
+        geneRndGenerator.Evaluation(externalEvaluations, "max");
+        geneRndGenerator.SaveGeneration();
+        float[,] floatArr = new float[geneRndGenerator.individualSize, geneRndGenerator.populationSize];
+
+        float[] floatArrBest = new float[geneRndGenerator.individualSize];
+
+        geneRndGenerator.LoadGeneration(1, floatArr);
+        geneRndGenerator.LoadBest(1, floatArrBest);
+
+        Matrix<float> result = Matrix<float>.Build.DenseOfArray(floatArr);
+        Vector<float> resultBest = Vector<float>.Build.DenseOfArray(floatArrBest);
+
+        Assert.AreEqual(geneRndGenerator.GetPopulation(), result);
+        Assert.AreEqual(geneRndGenerator.GetBestIndividual(), resultBest);
+        Debug.Log(geneRndGenerator.GetPopulation());
+        Debug.Log(result);
+    }
+
 
 }
