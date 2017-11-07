@@ -73,18 +73,15 @@ public class UIManager : MonoBehaviour
 
     void ScanForKeyStabilization()
     {
-        for (int i = 0; i < 20; i++)
+        if (Input.GetKey("joystick 1 button 5"))
         {
-            if (Input.GetKeyDown("joystick 1 button " + i))
-            {
-                print("joystick 1 button " + i);
-            }
+            DM.drone.GetComponent<InputControl>().stabilization = true;
+            DM.Stabilization();
+        }else
+        {
+            if (DM.drone.GetComponent<InputControl>().stabilization)
+                DM.drone.GetComponent<InputControl>().stabilization = false;
         }
-
-        /*if (Input.GetKeyDown("escape") || Input.GetKeyDown("joystick 1 button 7"))
-        {
-            GM.TogglePauseMenu();
-        }*/
     }
 
 

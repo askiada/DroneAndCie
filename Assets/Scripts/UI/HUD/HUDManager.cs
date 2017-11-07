@@ -8,7 +8,7 @@ public class HUDManager : MonoBehaviour {
     public Text prefabText;
 
 
-    public void AddGraph(string name, List<int> list)
+    /*public void AddGraph(string name, List<int> list)
     {
         GameObject go = new GameObject();
         LayoutElement le = go.AddComponent<LayoutElement>();
@@ -21,7 +21,7 @@ public class HUDManager : MonoBehaviour {
         
         graph.Draw(list);
         go.transform.SetParent(GameObject.Find("DroneInfo").transform, false);
-    }
+    }*/
 
     public void AddTextLayout(string name, string value)
     {

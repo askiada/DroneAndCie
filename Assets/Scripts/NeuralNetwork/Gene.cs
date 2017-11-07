@@ -43,14 +43,16 @@ namespace Lexmou.MachineLearning.Evolutionary
         Matrix<float> tmp;
         float emptyRate;
         bool[] distEmpty;
-
+        bool save;
+         
         public Matrix<float> GetPopulation()
         {
             return population;
         }
 
-        public Genetic(int seed, SystemRandomSource rndGenerator, int populationSize, int individualSize, float initialValueWeights, float mutationRate = 0.1f, float randomIndividualsRate = 0.05f, float bestIndividualsRate = 0.05f, float emptyRate = 0.0f, string path = "")
+        public Genetic(int seed, SystemRandomSource rndGenerator, int populationSize, int individualSize, float initialValueWeights, float mutationRate = 0.1f, float randomIndividualsRate = 0.05f, float bestIndividualsRate = 0.05f, float emptyRate = 0.0f, string path = "",bool save = true)
         {
+            this.save = save;
             tmp = Matrix<float>.Build.Dense(individualSize, populationSize);
             this.path = path;
             this.bestScore = 0.0f;
@@ -99,9 +101,11 @@ namespace Lexmou.MachineLearning.Evolutionary
             this.randomIndividualsRate = randomIndividualsRate;
             this.bestIndividualsRate = bestIndividualsRate;
             this.emptyRate = emptyRate;
-
-            writer = UIO.CreateStreamWriter(GeneratePath(), "GeneticResults.csv", false);
-            UIO.WriteLine(writer, "Generation;Best;Mean;Std Deviation;Median");
+            if (save)
+            {
+                writer = UIO.CreateStreamWriter(GeneratePath(), "GeneticResults.csv", false);
+                UIO.WriteLine(writer, "Generation;Best;Mean;Std Deviation;Median");
+            }
 
 
         }
@@ -278,7 +282,8 @@ namespace Lexmou.MachineLearning.Evolutionary
             string generationInfos;
 
             Evaluation(externalEvaluations, "max");
-            UIO.WriteLine(writer, generation +";" +bestScore+";"+meanStd.Item1+";"+meanStd.Item2+";"+median);
+            if (save)
+                UIO.WriteLine(writer, generation +";" +bestScore+";"+meanStd.Item1+";"+meanStd.Item2+";"+median);
             if (intervalSave > 0 && generation % intervalSave == 0)
             {
                 Debug.Log("Save in Progress");
@@ -297,7 +302,8 @@ namespace Lexmou.MachineLearning.Evolutionary
 
         ~Genetic()
         {
-            UIO.CloseStreamWriter(writer);
+            if(save)
+                UIO.CloseStreamWriter(writer);
         }
     }
 }

@@ -1,18 +1,59 @@
 ﻿using UnityEngine;
 using System.Collections;
-
+using Lexmou.MachineLearning.NeuralNetwork.FeedForward;
+using Lexmou.MachineLearning.Evolutionary;
+using System.Collections.Generic;
+using Lexmou.Utils;
+using MathNet.Numerics.LinearAlgebra;
+using MathNet.Numerics.LinearAlgebra.Double;
 public class DroneManager : MonoBehaviour {
 
     public GameObject prefabDrone;
 
-    GameObject drone;
+    public int stabilizationSeed;
+    public int stabilizationGeneration;
+    Genetic gene;
+
+    public GameObject drone;
     public float initialY = 3.0f;
+    List<Matrix<float>> tmpBuildCustomWeights;
+    List<int> shapes = new List<int>() { 9, 4 };
+
+    void BuildCustomWeights(Vector<float> individual)
+    {
+        tmpBuildCustomWeights.Clear();
+        for (int i = 0; i < shapes.Count - 1; i++)
+        {
+            if (i == 0)
+            {
+                tmpBuildCustomWeights.Add(UMatrix.Make2DMatrix(individual.SubVector(0, (shapes[i] + 1) * shapes[i + 1]), shapes[i + 1], shapes[i] + 1));
+            }
+            else
+            {
+                tmpBuildCustomWeights.Add(UMatrix.Make2DMatrix(individual.SubVector((shapes[i - 1] + 1) * shapes[i], (shapes[i] + 1) * shapes[i + 1]), shapes[i + 1], shapes[i] + 1));
+            }
+        }
+    }
+
 
     public void Restart(float mass = -1.0f, float drag = -1.0f, float maxThrust = 1.0f)
     {
         drone = Instantiate(prefabDrone, new Vector3(0.0f, initialY, -10.0f), Quaternion.identity) as GameObject;
-        drone.GetComponent<MainBoard>().inputSize = 1;
+        drone.GetComponent<MainBoard>().inputSize = 9;
         drone.GetComponent<InputControl>().manual = true;
+        
+
+        if (stabilizationGeneration != 0)
+        {
+            float[] floatArr = new float[40];
+            gene.LoadBest(stabilizationGeneration, floatArr);
+            gene.generation = stabilizationGeneration;
+            drone.GetComponent<MainBoard>().mlp = new MultiLayerMathsNet(stabilizationSeed, null, shapes, 1, 0);
+            BuildCustomWeights(Vector<float>.Build.DenseOfArray(floatArr));
+            drone.GetComponent<MainBoard>().mlp.Reset(false, tmpBuildCustomWeights);
+        }
+
+        
         drone.name = "Drone";
 
         if(mass >= 0 && drag >= 0 && maxThrust >= 0)
@@ -27,8 +68,16 @@ public class DroneManager : MonoBehaviour {
         }
     }
 
+    public void Stabilization()
+    {
+        //Debug.Log(drone.GetComponent<MainBoard>().inputMLP);
+        drone.GetComponent<MainBoard>().mlp.PropagateForward(drone.GetComponent<MainBoard>().inputMLP);
+    }
+
     void Awake()
     {
+        tmpBuildCustomWeights = new List<Matrix<float>>();
+        gene = new Genetic(stabilizationSeed, null, 100, 40, 1.0f, 0.1f, 0.1f, 0.1f, 0.1f, "Save/GeneSession/",false);
         Restart();
     }
 

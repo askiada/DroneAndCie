@@ -1,1 +1,0 @@
-Seed : 13;Population Size : 100;Individual Size : 40;Mutation Rate : 0.01;Random Rate : 0.02;Best Individual Rate : 0.05;Empty Coeff Individual Rate : 0.93 (37);MLP layers : [9-4] ; Intitial Value Weights :  [-1,1]
