@@ -250,6 +250,16 @@ Prefab:
       value: 
       objectReference: {fileID: 1000012061608460, guid: 0f06f3e9f7c8ae642a88d305314c667a,
         type: 2}
+    - target: {fileID: 114000014040321786, guid: 1ef898e54e6a66346ae52aad7c35a690,
+        type: 2}
+      propertyPath: stabilizationSeed
+      value: 13
+      objectReference: {fileID: 0}
+    - target: {fileID: 114000014040321786, guid: 1ef898e54e6a66346ae52aad7c35a690,
+        type: 2}
+      propertyPath: stabilizationGeneration
+      value: 1300
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 1ef898e54e6a66346ae52aad7c35a690, type: 2}
   m_IsPrefabParent: 0
@@ -358,7 +368,7 @@ Prefab:
     - target: {fileID: 114000011977449662, guid: 047c37bb4dc2c974c9a57d65335e4bc4,
         type: 2}
       propertyPath: windStrength
-      value: 0.1
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 047c37bb4dc2c974c9a57d65335e4bc4, type: 2}

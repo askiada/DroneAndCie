@@ -291,7 +291,7 @@ namespace Lexmou.MachineLearning.Evolutionary
             }
             generationInfos = generation + "  | Best Score : " + bestScore + "/" + theoricBestScore + " | Index : " + bestIndividualIndex
                                 + "\r\n" + "Score Mean : " + (sumEvaluations/populationSize);
-            Debug.Log(UMatrix.Make2DMatrix(bestIndividual, 4, 10).ToString("G40"));
+            //Debug.Log(UMatrix.Make2DMatrix(bestIndividual, 4, 10).ToString("G40"));
             Selection();
             CrossOver();
             Mutation();

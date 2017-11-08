@@ -12,6 +12,8 @@ namespace Lexmou.Utils
         {
             if(height * width < V.Count)
             {
+                Debug.Log((height * width));
+                Debug.Log(V.Count);
                 throw new System.ArgumentOutOfRangeException("The size of V is not compatible with the shape of the matrix !");
             }
             Matrix<float> tmp = Matrix<float>.Build.Dense(height, width);

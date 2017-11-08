@@ -112,6 +112,7 @@ namespace Lexmou.MachineLearning.NeuralNetwork.FeedForward
 
         public void PropagateForward(Vector<float> data)
         {
+            //Debug.Log(data);
             for (int i = 0; i < layers[0].ColumnCount; i++)
             {
                 layers[0].SetColumn(i, 0, shapes[0], data);

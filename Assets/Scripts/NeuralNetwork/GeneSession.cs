@@ -14,8 +14,12 @@ namespace Lexmou.MachineLearning.Session.Quadcopter
 {
     public class GeneSession : MonoBehaviour
     {
+        Rigidbody rigid;
         public StreamWriter writer;
         public StreamWriter writerSession;
+
+        public string task = "stabilization";
+
         public GameObject prefabDrone;
         private Genetic gene;
         public int seed;
@@ -40,7 +44,7 @@ namespace Lexmou.MachineLearning.Session.Quadcopter
         public float intervalUpdate = 4.0f;
         public bool randomRotation = false;
         public float scoreActiveWind = 120.0f;
-        public float _windStrength = 0.3f;
+        public float _windStrength = 0.0f;
         public float scoreActiveRandomRotation = 200.0f;
         public float _angleRandomRotation = 60.0f;
         float[] angleRandomRotationArr = new float[7] {2, 10, 20, 30, 40, 50, 60};
@@ -79,6 +83,7 @@ namespace Lexmou.MachineLearning.Session.Quadcopter
         public float timeScale = 1.0f;
         SystemRandomSource rndGenerator;
         ContinuousUniform distribution;
+        ContinuousUniform deltaDistribution;
 
 
         List<Matrix<float>> tmpBuildCustomWeights;
@@ -131,31 +136,47 @@ namespace Lexmou.MachineLearning.Session.Quadcopter
         {
             if(seed == -1)
             {
-                return "Save/GeneSession/";
+                return "Save/GeneSession/" + "Task-" + task + "/";
             }
             else
             {
-                return "Save/GeneSession/Seed-" + seed + "/";
+                return "Save/GeneSession/" + "Task-" + task + "/Seed-" + seed + "/";
             }
         }
 
         void Awake()
         {
+            if(task == "stabilization")
+            {
+                shapes = new List<int> {9, 4};
+                Debug.Log("Stabilization Task with MLP [" + string.Join(" - ", shapes.Select(x => x.ToString()).ToArray()) +  "]");
+            } else if(task == "move")
+            {
+                shapes = new List<int> { 12, 4 };
+                Debug.Log("Move Task with MLP [" + string.Join(" - ", shapes.Select(x => x.ToString()).ToArray()) + "]");
+            }
+            else
+            {
+                throw new System.ArgumentException("Task is not valid !");
+            }
+
             tmpBuildCustomWeights = new List<Matrix<float>>();
             hudManager = this.gameObject.AddComponent<HUDManager>() as HUDManager;
             
             hudManager.AddTextLayout("Best Drone Info", "Best Drone Info");
             hudManager.AddTextLayout("Position", "--------");
+            hudManager.AddTextLayout("Position with delta", "--------");
             hudManager.AddTextLayout("MLP Input", "--------");
-            hudManager.AddTextLayout("Score Cond Active RR", "Score Cond Active RR " + scoreActiveRandomRotation.ToString());
-            hudManager.AddTextLayout("Random rotation", "--------");
-            hudManager.AddTextLayout("Wind", "--------");
+            hudManager.AddTextLayout("Score Cond Active RR", "Condition Active Random Rotation (RR) " + scoreActiveRandomRotation.ToString());
+            hudManager.AddTextLayout("Random rotation", "RR : --------");
+            hudManager.AddTextLayout("Wind", "Wind (Force) : --------");
             Time.timeScale = timeScale;
             hudManager.AddTextLayout("Time Scale", "Time Scale : " + Time.timeScale.ToString() + "x");
             hudManager.AddTextLayout("Generation : ", "--------");
 
 
             nextUpdate = intervalUpdate;
+
             rndGenerator = new SystemRandomSource(seed);
             individualSize = 0;
             for (int i = 0; i < shapes.Count - 1; i++)
@@ -176,6 +197,8 @@ namespace Lexmou.MachineLearning.Session.Quadcopter
             mlpPopulation = new MultiLayerMathsNet[populationSize];
 
             distribution = new ContinuousUniform(-AngleRandomRotation, AngleRandomRotation, rndGenerator);
+            deltaDistribution = new ContinuousUniform(-1, 1, rndGenerator);
+
 
             hudManager.AddTextLayout("Infos", "Seed : " + seed + "\r\n" + 
                                      "Pop Size : " + populationSize + "\r\n" +
@@ -218,7 +241,12 @@ namespace Lexmou.MachineLearning.Session.Quadcopter
                 {
                     dronePopulation[i] = Instantiate(prefabDrone, new Vector3(i * spacing, initialY, 0.0f), Quaternion.identity) as GameObject;
                 }
-                
+
+                //dronePopulation[i].GetComponent<MainBoard>().initPosition = new Vector3(i * spacing, initialY, 0.0f);
+                if (task == "move")
+                {
+                    dronePopulation[i].GetComponent<MainBoard>().initDeltaPosition = new Vector3((float)deltaDistribution.Sample(), (float)deltaDistribution.Sample(), (float)deltaDistribution.Sample());
+                }
                 dronePopulation[i].name = "Drone " + i;
 
                 dronePopulation[i].GetComponent<MainBoard>().inputSize = shapes[0];
@@ -241,31 +269,68 @@ namespace Lexmou.MachineLearning.Session.Quadcopter
         }
 
 
-        float EvaluateIndividual(int i)
+        float EvaluateIndividualStabilization(int i)
         {
-            Rigidbody r = dronePopulation[i].GetComponentInChildren<Rigidbody>();
+            /*Debug.Log("Velo " + rigid.velocity.ToString());
+            Debug.Log("Euler " + rigid.transform.eulerAngles.ToString());
+            Debug.Log("Angular Velo " + rigid.angularVelocity);*/
+            return 1 / (1 + Mathf.Abs(rigid.velocity.y) + Mathf.Abs(UAngle.SteerAngle(rigid.transform.eulerAngles.x)) + Mathf.Abs(UAngle.SteerAngle(rigid.transform.eulerAngles.y)) + Mathf.Abs(UAngle.SteerAngle(rigid.transform.eulerAngles.z)) + Mathf.Abs(rigid.angularVelocity.x) + Mathf.Abs(rigid.angularVelocity.z) + Mathf.Abs(rigid.angularVelocity.y));
+        }
 
-            float tmp2 = Mathf.Abs(r.velocity.y) + Mathf.Abs(UAngle.SteerAngle(r.transform.eulerAngles.x)) + Mathf.Abs(UAngle.SteerAngle(r.transform.eulerAngles.z)) + Mathf.Abs(UAngle.SteerAngle(r.transform.eulerAngles.y)) + Mathf.Abs(r.angularVelocity.x) + Mathf.Abs(r.angularVelocity.z) + Mathf.Abs(r.angularVelocity.y);
-            float tmp = 1 / (1 + tmp2);
+        float EvaluateIndividualMove(int i)
+        {
+            
 
-            return tmp;
+            return 1 / (1 + Mathf.Abs(dronePopulation[i].GetComponent<MainBoard>().deltaPosition.x) + Mathf.Abs(dronePopulation[i].GetComponent<MainBoard>().deltaPosition.y) + Mathf.Abs(dronePopulation[i].GetComponent<MainBoard>().deltaPosition.z));
+        }
+
+
+        void ConfigureDrone(GameObject drone, Vector<float> input)
+        {
+            drone.GetComponent<MainBoard>().inputMLP = input;
+            drone.GetComponent<InputControl>().SendSignalWithMLP();
         }
 
 
         void FixedUpdate()
         {
+            //Debug.Log("FixedUpdate GeneSession");
             CloseApp();
 
             theoricBestScore += 1;
             for (int i = 0; i < populationSize; i++)
             {
-                tmpVelo[i] += EvaluateIndividual(i);
+                rigid = dronePopulation[i].GetComponentInChildren<Rigidbody>();
+                if (task == "stabilization")
+                {
+                    ConfigureDrone(dronePopulation[i], Vector<float>.Build.DenseOfArray(new float[] { UAngle.SteerAngle(rigid.transform.eulerAngles.x), UAngle.SteerAngle(rigid.transform.eulerAngles.y), UAngle.SteerAngle(rigid.transform.eulerAngles.z), rigid.angularVelocity.x, rigid.angularVelocity.y, rigid.angularVelocity.z, rigid.velocity.x, rigid.velocity.y, rigid.velocity.z }));
+                    tmpVelo[i] += EvaluateIndividualStabilization(i);
+                } else if(task == "move")
+                {
+                    //Debug.Log(rigid.transform.localPosition.x - dronePopulation[i].GetComponent<MainBoard>().initDeltaPosition.x);
+                    dronePopulation[i].GetComponent<MainBoard>().deltaPosition = new Vector3(rigid.transform.localPosition.x - dronePopulation[i].GetComponent<MainBoard>().initDeltaPosition.x, rigid.transform.localPosition.y - dronePopulation[i].GetComponent<MainBoard>().initDeltaPosition.y, rigid.transform.localPosition.z - dronePopulation[i].GetComponent<MainBoard>().initDeltaPosition.z);
+                    ConfigureDrone(dronePopulation[i], Vector<float>.Build.DenseOfArray(new float[] { dronePopulation[i].GetComponent<MainBoard>().deltaPosition.x, dronePopulation[i].GetComponent<MainBoard>().deltaPosition.y, dronePopulation[i].GetComponent<MainBoard>().deltaPosition.z, UAngle.SteerAngle(rigid.transform.eulerAngles.x), UAngle.SteerAngle(rigid.transform.eulerAngles.y), UAngle.SteerAngle(rigid.transform.eulerAngles.z), rigid.angularVelocity.x, rigid.angularVelocity.y, rigid.angularVelocity.z, rigid.velocity.x, rigid.velocity.y, rigid.velocity.z }));
+                    tmpVelo[i] += EvaluateIndividualMove(i);
+                }
+
+               
+
             }
 
             if (droneBest != null)
             {
+                rigid = droneBest.GetComponentInChildren<Rigidbody>();
                 hudManager.UpdateTextLayout("Position", "Position : " + droneBest.GetComponentInChildren<Rigidbody>().transform.position.ToString());
-
+                if (task == "stabilization")
+                {
+                    ConfigureDrone(droneBest, Vector<float>.Build.DenseOfArray(new float[] { UAngle.SteerAngle(rigid.transform.eulerAngles.x), UAngle.SteerAngle(rigid.transform.eulerAngles.y), UAngle.SteerAngle(rigid.transform.eulerAngles.z), rigid.angularVelocity.x, rigid.angularVelocity.y, rigid.angularVelocity.z, rigid.velocity.x, rigid.velocity.y, rigid.velocity.z }));
+                }
+                else if (task == "move")
+                {
+                    droneBest.GetComponent<MainBoard>().deltaPosition = new Vector3(rigid.transform.localPosition.x - droneBest.GetComponent<MainBoard>().initDeltaPosition.x, rigid.transform.localPosition.y - droneBest.GetComponent<MainBoard>().initDeltaPosition.y, rigid.transform.localPosition.z - droneBest.GetComponent<MainBoard>().initDeltaPosition.z);
+                    ConfigureDrone(droneBest, Vector<float>.Build.DenseOfArray(new float[] { droneBest.GetComponent<MainBoard>().deltaPosition.x, droneBest.GetComponent<MainBoard>().deltaPosition.y, droneBest.GetComponent<MainBoard>().deltaPosition.z, UAngle.SteerAngle(rigid.transform.eulerAngles.x), UAngle.SteerAngle(rigid.transform.eulerAngles.y), UAngle.SteerAngle(rigid.transform.eulerAngles.z), rigid.angularVelocity.x, rigid.angularVelocity.y, rigid.angularVelocity.z, rigid.velocity.x, rigid.velocity.y, rigid.velocity.z }));
+                    hudManager.UpdateTextLayout("Position with delta", "Position (delta) : " + droneBest.GetComponent<MainBoard>().deltaPosition.ToString());
+                }
                 MultiLayerMathsNet mlp = droneBest.GetComponent<MainBoard>().mlp;
                 hudManager.UpdateTextLayout("MLP Input", "MLP Output : " + mlp.layers[mlp.shapesSize - 1].ToString(4 , 1,"G2"));
             }
@@ -297,17 +362,25 @@ namespace Lexmou.MachineLearning.Session.Quadcopter
 
 
                 hudManager.UpdateTextLayout("Generation : ", generationInfos);
+
                 if (randomRotation)
                 {
                     droneBest = Instantiate(prefabDrone, new Vector3(-spacing - 10.0f, initialY, 0.0f), Quaternion.identity) as GameObject;
                     Vector3 rndRotation = new Vector3(UAngle.ReverseSteerAngle((float)distribution.Sample()), UAngle.ReverseSteerAngle((float)distribution.Sample()), UAngle.ReverseSteerAngle((float)distribution.Sample()));
                     droneBest.GetComponentInChildren<Rigidbody>().transform.eulerAngles = rndRotation;
-                    hudManager.UpdateTextLayout("Random rotation", "Random rotation : " + rndRotation.ToString());
+                    hudManager.UpdateTextLayout("Random rotation", "RR : " + rndRotation.ToString());
+
                 } else
                 {
                     droneBest = Instantiate(prefabDrone, new Vector3(-spacing - 10.0f, initialY, 0.0f), Quaternion.identity) as GameObject;
+                    //droneBest.GetComponent<MainBoard>().initPosition = new Vector3(-spacing - 10.0f, initialY, 0.0f);
+
                 }
-                
+
+                if (task == "move")
+                {
+                    droneBest.GetComponent<MainBoard>().initDeltaPosition = new Vector3((float)deltaDistribution.Sample(), (float)deltaDistribution.Sample(), (float)deltaDistribution.Sample());
+                }
 
                 droneBest.GetComponent<MainBoard>().mlp = new MultiLayerMathsNet(seed, rndGenerator, shapes, 1, initialValueWeights);
 
