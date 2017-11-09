@@ -7,22 +7,6 @@ public class HUDManager : MonoBehaviour {
 
     public Text prefabText;
 
-
-    /*public void AddGraph(string name, List<int> list)
-    {
-        GameObject go = new GameObject();
-        LayoutElement le = go.AddComponent<LayoutElement>();
-        LineRenderer lr = go.AddComponent<LineRenderer>();
-        lr.name = "LR";
-        //go.AddComponent<RectTransform>();
-        le.name = name;
-        Graph graph = go.AddComponent<Graph>();
-        //LineRenderer lr = graph.gameObject.AddComponent<LineRenderer>();
-        
-        graph.Draw(list);
-        go.transform.SetParent(GameObject.Find("DroneInfo").transform, false);
-    }*/
-
     public void AddTextLayout(string name, string value)
     {
         GameObject go = new GameObject();

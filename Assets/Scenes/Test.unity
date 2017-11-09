@@ -321,9 +321,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1dfee0f02ad14374897a53b35f87a0ee, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _task: move
   prefabDrone: {fileID: 1000012061608460, guid: 0f06f3e9f7c8ae642a88d305314c667a,
     type: 2}
-  seed: 13
+  _seed: 0
   populationSize: 100
   mutationRate: 0.01
   randomIndividualsRate: 0.02
@@ -340,9 +341,9 @@ MonoBehaviour:
   scoreActiveRandomRotation: 215
   _angleRandomRotation: 0
   hudManager: {fileID: 0}
-  intervalSave: 0
-  loadGeneration: 1300
-  timeScale: 2
+  _intervalSave: 0
+  _loadGeneration: 0
+  _timeScale: 2
 --- !u!4 &991526459
 Transform:
   m_ObjectHideFlags: 0

@@ -94,9 +94,5 @@ public class ControlReceiver : Drone.Hardware.Component <ControlSignal>
 	}
     #endregion
 
-    /*public override float[,] gyro()
-    {
-        return new float[,] { { 0.0f, 0.0f } };
-    }*/
 
 }

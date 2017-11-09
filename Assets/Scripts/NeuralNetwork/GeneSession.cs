@@ -13,6 +13,35 @@ using System.Linq;
 using System.IO;
 using System.Reflection;
 
+/*! \mainpage Drone et Compagnie
+
+
+##Présentation
+
+La robotique est un enjeu majeur des années à venir. Que cela soit en matière de développement technologique ou d'éthique, il est clair que la période actuelle fera office de charnière pour les années à venir. Actuellement, les robots les plus pointus sont situés aux extrêmes des domaines d'applications. En effet, les avancées du robot Rosa ont fait des miracles en chirurgie tandis que les poupées sexy Japonaise relève de l'exploit niveau reproduction humaine. Pour autant, le champ est encore large et il reste probablement plus à découvrir que tout ce qui a été fait jusqu'à maintenant.
+
+Après cette introduction un peu pompeuse, il est temps de rentrer dans le vif du sujet. Dans le cadre d'un GROS projet personnel, il m'est venu à l'esprit qu'il serait utile d'avoir à ma disposition un quadcopter autonome fiable et peu cher. Et donc c'est ainsi qu'est né ce projet sans informations sur sa date de décès. En effet, l'enjeu est de taille et il est tout à fait possible que l'idée soit mise de côté à plus ou moins long terme. Trêve de discussion, il est grand temps d'exposer le plan de jeu.
+
+##Objectifs
+
+1. Modéliser un Quadcopter dans Unity3D. La simulation physique doit être "réaliste".
+2. Créer un système de pilotage manuel (utilisation d'un gamepad)
+3. Mettre en place une aide :
+     - Stabilisation
+     - Détection des obstacles et correction		
+4. Autonomie en milieu connu
+5. Autonomie en milieu inconnu
+
+##Environnement de travail
+
+Les goûts et les couleurs...
+Il est très probable que le développement du projet révèle un grands nombres de points faibles à l'environnement de travail choisi. Mais, pour des raisons de simplicité de mise en place du début de projet, Unity3D a semblé la solution la plus aisée (déjà réalisé un systême multi-agents dessus).
+Au moment de l'écriture de cette article, tout a été réalisé sur Windows 10 avec Unity 5.6.4.
+
+A priori, il faudra mettre en place un serveur sur linux afin de faire tourner les longues simulations sans bloquer le pc de travail. Il est possible de facilement désactiver l'affichage sous Ubuntu.
+*/
+
+
 namespace Lexmou.MachineLearning.Session.Quadcopter
 {
     public class GeneSession : MonoBehaviour
@@ -99,10 +128,6 @@ namespace Lexmou.MachineLearning.Session.Quadcopter
         {
             get
             {
-                // probably faster without reflection:
-                // like:  
-                // instead of the following
-                //return Properties.Settings.Default.PropertyValues[propertyName]
                 Type myType = typeof(GeneSession);
                 PropertyInfo myPropInfo = myType.GetProperty(propertyName);
                 return myPropInfo.GetValue(this, null);
@@ -140,11 +165,6 @@ namespace Lexmou.MachineLearning.Session.Quadcopter
 
         void SetParametersFromCommandLine()
         {
-            /*string taskCL = UIO.GetCommandLineArguments("-task");
-            string seedCL = UIO.GetCommandLineArguments("-seed");
-            string intervalSaveCL = UIO.GetCommandLineArguments("-intervalSave");
-            string loadGenerationCL= UIO.GetCommandLineArguments("-loadGeneration");
-            string timeScaleCL =*/
             CheckNullOrReplace("task");
             CheckNullOrReplace("seed");
             CheckNullOrReplace("intervalSave");

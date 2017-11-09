@@ -6,6 +6,8 @@ using System.Collections.Generic;
 using Lexmou.Utils;
 using MathNet.Numerics.LinearAlgebra;
 using MathNet.Numerics.LinearAlgebra.Double;
+
+
 public class DroneManager : MonoBehaviour {
 
     public GameObject prefabDrone;

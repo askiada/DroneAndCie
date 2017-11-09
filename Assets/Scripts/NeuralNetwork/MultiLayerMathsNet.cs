@@ -125,7 +125,7 @@ namespace Lexmou.MachineLearning.NeuralNetwork.FeedForward
                 layers[i].MapInplace(UActivation.Tanh);
             }
             weights[shapesSize - 2].Multiply(layers[shapesSize - 2], layers[shapesSize - 1]);
-            //layers[shapesSize - 1].MapInplace(UActivation.SigExp);
+
             layers[shapesSize - 1].MapInplace(UActivation.Tanh);
         }
 
@@ -145,7 +145,6 @@ namespace Lexmou.MachineLearning.NeuralNetwork.FeedForward
 
             layers[shapesSize - 1] = Matrix<float>.Build.DenseOfArray(Multiplication.FalkScheme(weights[shapesSize - 2].ToArray(), layers[shapesSize - 2].ToArray()));
 
-            //layers[shapesSize - 1].MapInplace(UActivation.SigExp);
             layers[shapesSize - 1].PointwiseTanh();
         }
     }

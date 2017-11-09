@@ -1,0 +1,4 @@
+var namespace_lexmou_1_1_machine_learning_1_1_neural_network_1_1_feed_forward =
+[
+    [ "MultiLayerMathsNet", "class_lexmou_1_1_machine_learning_1_1_neural_network_1_1_feed_forward_1_1_multi_layer_maths_net.html", "class_lexmou_1_1_machine_learning_1_1_neural_network_1_1_feed_forward_1_1_multi_layer_maths_net" ]
+];
