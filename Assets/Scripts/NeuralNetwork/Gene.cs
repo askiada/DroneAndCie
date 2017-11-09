@@ -85,7 +85,7 @@ namespace Lexmou.MachineLearning.Evolutionary
                     {
                         //Debug.Log(dist[j]);
                         //population[j,i] = (float)subDistribution.Sample();
-                        population[j, i] = 0;
+                        population[j, i] = 0.000f;
                     }
                     
                 }
@@ -291,7 +291,7 @@ namespace Lexmou.MachineLearning.Evolutionary
             }
             generationInfos = generation + "  | Best Score : " + bestScore + "/" + theoricBestScore + " | Index : " + bestIndividualIndex
                                 + "\r\n" + "Score Mean : " + (sumEvaluations/populationSize);
-            //Debug.Log(UMatrix.Make2DMatrix(bestIndividual, 4, 10).ToString("G40"));
+            //Debug.Log(UMatrix.Make2DMatrix(bestIndividual, 4, 13).ToString(4,13, "G3"));
             Selection();
             CrossOver();
             Mutation();

@@ -7,6 +7,22 @@ namespace Lexmou.Utils
     public static class UIO
     {
 
+        public static string GetCommandLineArguments(string name)
+        {
+            var args = System.Environment.GetCommandLineArgs();
+            if(args != null)
+            {
+                for (int i = 0; i < args.Length; i++)
+                {
+                    if (args[i] == name && args.Length > i + 1)
+                    {
+                        return args[i + 1];
+                    }
+                }
+            }
+            return null;
+        }
+
         public static void CreateDirectory(string path)
         {
             try

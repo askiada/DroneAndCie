@@ -135,7 +135,7 @@ public class WindArea : MonoBehaviour
                     
                     if (rigid.tag == "FrameBest")
                     {
-                        GameObject.Find("GeneSession").GetComponent<Lexmou.MachineLearning.Session.Quadcopter.GeneSession>().hudManager.UpdateTextLayout("Wind", "Wind (Force) : " + wind.ToString());
+                        GameObject.Find("GeneSession").GetComponent<Lexmou.MachineLearning.Session.Quadcopter.GeneSession>().hudManager.UpdateTextLayout("Wind", wind.ToString());
                     }
                     
                     //Debug.Log("a : " + a);

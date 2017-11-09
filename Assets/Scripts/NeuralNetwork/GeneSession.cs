@@ -1,4 +1,5 @@
 ﻿using UnityEngine;
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using MathNet.Numerics.LinearAlgebra;
@@ -10,6 +11,8 @@ using Lexmou.Utils;
 using Lexmou.MachineLearning.NeuralNetwork.FeedForward;
 using System.Linq;
 using System.IO;
+using System.Reflection;
+
 namespace Lexmou.MachineLearning.Session.Quadcopter
 {
     public class GeneSession : MonoBehaviour
@@ -17,12 +20,13 @@ namespace Lexmou.MachineLearning.Session.Quadcopter
         Rigidbody rigid;
         public StreamWriter writer;
         public StreamWriter writerSession;
-
-        public string task = "stabilization";
+        public string _task;
+        public string task { get { return _task; } set { _task = value; } }
 
         public GameObject prefabDrone;
         private Genetic gene;
-        public int seed;
+        public int _seed;
+        public int seed { get { return _seed; } set { _seed = value; } }
         public int populationSize;
         private int individualSize;
         public float mutationRate = 0.1f;
@@ -76,17 +80,77 @@ namespace Lexmou.MachineLearning.Session.Quadcopter
 
         float theoricBestScore;
         public HUDManager hudManager;
-        public int intervalSave = 10;
+        public int _intervalSave;
+        public int intervalSave { get { return _intervalSave; } set { _intervalSave = value; } }
+        public int _loadGeneration;
+        public int loadGeneration { get { return _loadGeneration; } set { _loadGeneration = value; } }
 
-        public int loadGeneration = 0;
-
-        public float timeScale = 1.0f;
+        public float _timeScale;
+        public float timeScale { get { return _timeScale; } set { _timeScale = value; } }
         SystemRandomSource rndGenerator;
         ContinuousUniform distribution;
         ContinuousUniform deltaDistribution;
 
 
         List<Matrix<float>> tmpBuildCustomWeights;
+
+
+        public object this[string propertyName]
+        {
+            get
+            {
+                // probably faster without reflection:
+                // like:  
+                // instead of the following
+                //return Properties.Settings.Default.PropertyValues[propertyName]
+                Type myType = typeof(GeneSession);
+                PropertyInfo myPropInfo = myType.GetProperty(propertyName);
+                return myPropInfo.GetValue(this, null);
+            }
+            set
+            {
+                Type myType = typeof(GeneSession);
+                PropertyInfo myPropInfo = myType.GetProperty(propertyName);
+                Debug.Log(value);
+                myPropInfo.SetValue(this, value, null);
+
+            }
+
+        }
+
+        void CheckNullOrReplace(string propertyName)
+        {
+            string valueCL = UIO.GetCommandLineArguments("-"+ propertyName);
+
+            if (valueCL != null)
+            {
+                if(this[propertyName] is int)
+                {
+                    this[propertyName] = int.Parse(valueCL);
+                }else if(this[propertyName] is float)
+                {
+                    this[propertyName] = float.Parse(valueCL); 
+                }else
+                {
+                    this[propertyName] = valueCL;
+                }
+                
+            }
+        }
+
+        void SetParametersFromCommandLine()
+        {
+            /*string taskCL = UIO.GetCommandLineArguments("-task");
+            string seedCL = UIO.GetCommandLineArguments("-seed");
+            string intervalSaveCL = UIO.GetCommandLineArguments("-intervalSave");
+            string loadGenerationCL= UIO.GetCommandLineArguments("-loadGeneration");
+            string timeScaleCL =*/
+            CheckNullOrReplace("task");
+            CheckNullOrReplace("seed");
+            CheckNullOrReplace("intervalSave");
+            CheckNullOrReplace("loadGeneration");
+            CheckNullOrReplace("timeScale");
+        }
 
 
         void CloseApp()
@@ -144,9 +208,16 @@ namespace Lexmou.MachineLearning.Session.Quadcopter
             }
         }
 
+
+
         void Awake()
         {
-            if(task == "stabilization")
+            /*timeScale = 2;
+            loadGeneration = 0;
+            intervalSave = 0;*/
+            SetParametersFromCommandLine();
+
+            if (task == "stabilization")
             {
                 shapes = new List<int> {9, 4};
                 Debug.Log("Stabilization Task with MLP [" + string.Join(" - ", shapes.Select(x => x.ToString()).ToArray()) +  "]");
@@ -162,17 +233,18 @@ namespace Lexmou.MachineLearning.Session.Quadcopter
 
             tmpBuildCustomWeights = new List<Matrix<float>>();
             hudManager = this.gameObject.AddComponent<HUDManager>() as HUDManager;
-            
-            hudManager.AddTextLayout("Best Drone Info", "Best Drone Info");
+
+            hudManager.AddTextLayout("Task", task);
+            hudManager.AddTextLayout("Best Drone Info", "");
             hudManager.AddTextLayout("Position", "--------");
             hudManager.AddTextLayout("Position with delta", "--------");
-            hudManager.AddTextLayout("MLP Input", "--------");
-            hudManager.AddTextLayout("Score Cond Active RR", "Condition Active Random Rotation (RR) " + scoreActiveRandomRotation.ToString());
-            hudManager.AddTextLayout("Random rotation", "RR : --------");
-            hudManager.AddTextLayout("Wind", "Wind (Force) : --------");
+            hudManager.AddTextLayout("Commands", "--------");
+            hudManager.AddTextLayout("Score Cond Active RR", scoreActiveRandomRotation.ToString());
+            hudManager.AddTextLayout("Random rotation", "--------");
+            hudManager.AddTextLayout("Wind", "--------");
             Time.timeScale = timeScale;
-            hudManager.AddTextLayout("Time Scale", "Time Scale : " + Time.timeScale.ToString() + "x");
-            hudManager.AddTextLayout("Generation : ", "--------");
+            hudManager.AddTextLayout("Time Scale", Time.timeScale.ToString() + "x");
+            hudManager.AddTextLayout("Generation", "--------");
 
 
             nextUpdate = intervalUpdate;
@@ -197,7 +269,7 @@ namespace Lexmou.MachineLearning.Session.Quadcopter
             mlpPopulation = new MultiLayerMathsNet[populationSize];
 
             distribution = new ContinuousUniform(-AngleRandomRotation, AngleRandomRotation, rndGenerator);
-            deltaDistribution = new ContinuousUniform(-1, 1, rndGenerator);
+            deltaDistribution = new ContinuousUniform(-4, 4, rndGenerator);
 
 
             hudManager.AddTextLayout("Infos", "Seed : " + seed + "\r\n" + 
@@ -212,11 +284,12 @@ namespace Lexmou.MachineLearning.Session.Quadcopter
 
             ResetAll(rndGenerator, randomRotation);
 
-            writer = UIO.CreateStreamWriter(GeneratePath(this.seed), "GeneSessionResults.csv", false);
+            writer = UIO.CreateStreamWriter(GeneratePath(seed), "GeneSessionResults.csv", false);
             UIO.WriteLine(writer, "Generation;Angle Random Rotation;Wind");
 
-            writerSession = UIO.CreateStreamWriter(GeneratePath(this.seed), "GeneSessionParams.csv", false);
-            UIO.WriteLine(writerSession, "Seed : " + seed + ";" +
+            writerSession = UIO.CreateStreamWriter(GeneratePath(seed), "GeneSessionParams.csv", false);
+            UIO.WriteLine(writerSession, "Task : " + task + ";" +
+                                     "Seed : " + seed + ";" +
                                      "Population Size : " + populationSize + ";" +
                                      "Individual Size : " + individualSize + ";" +
                                      "Mutation Rate : " + mutationRate + ";" +
@@ -320,7 +393,7 @@ namespace Lexmou.MachineLearning.Session.Quadcopter
             if (droneBest != null)
             {
                 rigid = droneBest.GetComponentInChildren<Rigidbody>();
-                hudManager.UpdateTextLayout("Position", "Position : " + droneBest.GetComponentInChildren<Rigidbody>().transform.position.ToString());
+                hudManager.UpdateTextLayout("Position", droneBest.GetComponentInChildren<Rigidbody>().transform.position.ToString());
                 if (task == "stabilization")
                 {
                     ConfigureDrone(droneBest, Vector<float>.Build.DenseOfArray(new float[] { UAngle.SteerAngle(rigid.transform.eulerAngles.x), UAngle.SteerAngle(rigid.transform.eulerAngles.y), UAngle.SteerAngle(rigid.transform.eulerAngles.z), rigid.angularVelocity.x, rigid.angularVelocity.y, rigid.angularVelocity.z, rigid.velocity.x, rigid.velocity.y, rigid.velocity.z }));
@@ -329,10 +402,10 @@ namespace Lexmou.MachineLearning.Session.Quadcopter
                 {
                     droneBest.GetComponent<MainBoard>().deltaPosition = new Vector3(rigid.transform.localPosition.x - droneBest.GetComponent<MainBoard>().initDeltaPosition.x, rigid.transform.localPosition.y - droneBest.GetComponent<MainBoard>().initDeltaPosition.y, rigid.transform.localPosition.z - droneBest.GetComponent<MainBoard>().initDeltaPosition.z);
                     ConfigureDrone(droneBest, Vector<float>.Build.DenseOfArray(new float[] { droneBest.GetComponent<MainBoard>().deltaPosition.x, droneBest.GetComponent<MainBoard>().deltaPosition.y, droneBest.GetComponent<MainBoard>().deltaPosition.z, UAngle.SteerAngle(rigid.transform.eulerAngles.x), UAngle.SteerAngle(rigid.transform.eulerAngles.y), UAngle.SteerAngle(rigid.transform.eulerAngles.z), rigid.angularVelocity.x, rigid.angularVelocity.y, rigid.angularVelocity.z, rigid.velocity.x, rigid.velocity.y, rigid.velocity.z }));
-                    hudManager.UpdateTextLayout("Position with delta", "Position (delta) : " + droneBest.GetComponent<MainBoard>().deltaPosition.ToString());
+                    hudManager.UpdateTextLayout("Position with delta", droneBest.GetComponent<MainBoard>().deltaPosition.ToString());
                 }
                 MultiLayerMathsNet mlp = droneBest.GetComponent<MainBoard>().mlp;
-                hudManager.UpdateTextLayout("MLP Input", "MLP Output : " + mlp.layers[mlp.shapesSize - 1].ToString(4 , 1,"G2"));
+                hudManager.UpdateTextLayout("Commands", mlp.layers[mlp.shapesSize - 1].ToString(4 , 1,"G2"));
             }
 
 
@@ -361,14 +434,14 @@ namespace Lexmou.MachineLearning.Session.Quadcopter
                 }
 
 
-                hudManager.UpdateTextLayout("Generation : ", generationInfos);
+                hudManager.UpdateTextLayout("Generation", generationInfos);
 
                 if (randomRotation)
                 {
                     droneBest = Instantiate(prefabDrone, new Vector3(-spacing - 10.0f, initialY, 0.0f), Quaternion.identity) as GameObject;
                     Vector3 rndRotation = new Vector3(UAngle.ReverseSteerAngle((float)distribution.Sample()), UAngle.ReverseSteerAngle((float)distribution.Sample()), UAngle.ReverseSteerAngle((float)distribution.Sample()));
                     droneBest.GetComponentInChildren<Rigidbody>().transform.eulerAngles = rndRotation;
-                    hudManager.UpdateTextLayout("Random rotation", "RR : " + rndRotation.ToString());
+                    hudManager.UpdateTextLayout("Random rotation", rndRotation.ToString());
 
                 } else
                 {
