@@ -22,6 +22,12 @@
 <script type="text/javascript">
   $(document).ready(function() { init_search(); });
 </script>
+<script type="text/x-mathjax-config">
+  MathJax.Hub.Config({
+    extensions: ["tex2jax.js"],
+    jax: ["input/TeX","output/HTML-CSS"],
+});
+</script><script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.2/MathJax.js?config=TeX-MML-AM_CHTML/MathJax.js"></script>
 <link href="doxygen.css" rel="stylesheet" type="text/css" />
 <link href="customdoxygen.css" rel="stylesheet" type="text/css"/>
 <link href="jquery.smartmenus.bootstrap.css" rel="stylesheet" type="text/css"/>
@@ -136,33 +142,6 @@ Private Attributes</h2></td></tr>
 <div class="textblock">
 <p>Definition at line <a class="el" href="_ball_8cs_source.html#l00005">5</a> of file <a class="el" href="_ball_8cs_source.html">Ball.cs</a>.</p>
 </div><h2 class="groupheader">Member Function Documentation</h2>
-<a id="a836442a6a10f1eebe6f5abde5e707d4e"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a836442a6a10f1eebe6f5abde5e707d4e">&sect;&nbsp;</a></span>Destruction()</h2>
-
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">void Ball.Destruction </td>
-          <td>(</td>
-          <td class="paramname"></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">private</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-<p>Definition at line <a class="el" href="_ball_8cs_source.html#l00043">43</a> of file <a class="el" href="_ball_8cs_source.html">Ball.cs</a>.</p>
-
-</div>
-</div>
 <a id="a99b273b68b3e68e7ecc547781c00f23a"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a99b273b68b3e68e7ecc547781c00f23a">&sect;&nbsp;</a></span>Start()</h2>
 
@@ -217,23 +196,34 @@ Private Attributes</h2></td></tr>
 
 </div>
 </div>
-<h2 class="groupheader">Member Data Documentation</h2>
-<a id="a9304091e1fed4a8855782964360c7d1e"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a9304091e1fed4a8855782964360c7d1e">&sect;&nbsp;</a></span>initialY</h2>
+<a id="a836442a6a10f1eebe6f5abde5e707d4e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a836442a6a10f1eebe6f5abde5e707d4e">&sect;&nbsp;</a></span>Destruction()</h2>
 
 <div class="memitem">
 <div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">float Ball.initialY = 5.0f</td>
+          <td class="memname">void Ball.Destruction </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
         </tr>
       </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="_ball_8cs_source.html#l00009">9</a> of file <a class="el" href="_ball_8cs_source.html">Ball.cs</a>.</p>
+<p>Definition at line <a class="el" href="_ball_8cs_source.html#l00043">43</a> of file <a class="el" href="_ball_8cs_source.html">Ball.cs</a>.</p>
 
 </div>
 </div>
+<h2 class="groupheader">Member Data Documentation</h2>
 <a id="a3dfad519f5efb396677ea8ab6b409939"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a3dfad519f5efb396677ea8ab6b409939">&sect;&nbsp;</a></span>lifeTime</h2>
 
@@ -250,27 +240,19 @@ Private Attributes</h2></td></tr>
 
 </div>
 </div>
-<a id="a42a85b181e738f42f97578499840ba6f"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a42a85b181e738f42f97578499840ba6f">&sect;&nbsp;</a></span>origin</h2>
+<a id="a9304091e1fed4a8855782964360c7d1e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a9304091e1fed4a8855782964360c7d1e">&sect;&nbsp;</a></span>initialY</h2>
 
 <div class="memitem">
 <div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">Vector3 Ball.origin</td>
+          <td class="memname">float Ball.initialY = 5.0f</td>
         </tr>
       </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">private</span></span>  </td>
-  </tr>
-</table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="_ball_8cs_source.html#l00013">13</a> of file <a class="el" href="_ball_8cs_source.html">Ball.cs</a>.</p>
+<p>Definition at line <a class="el" href="_ball_8cs_source.html#l00009">9</a> of file <a class="el" href="_ball_8cs_source.html">Ball.cs</a>.</p>
 
 </div>
 </div>
@@ -295,6 +277,30 @@ Private Attributes</h2></td></tr>
 </div><div class="memdoc">
 
 <p>Definition at line <a class="el" href="_ball_8cs_source.html#l00011">11</a> of file <a class="el" href="_ball_8cs_source.html">Ball.cs</a>.</p>
+
+</div>
+</div>
+<a id="a42a85b181e738f42f97578499840ba6f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a42a85b181e738f42f97578499840ba6f">&sect;&nbsp;</a></span>origin</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">Vector3 Ball.origin</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Definition at line <a class="el" href="_ball_8cs_source.html#l00013">13</a> of file <a class="el" href="_ball_8cs_source.html">Ball.cs</a>.</p>
 
 </div>
 </div>

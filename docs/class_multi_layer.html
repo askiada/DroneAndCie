@@ -22,6 +22,12 @@
 <script type="text/javascript">
   $(document).ready(function() { init_search(); });
 </script>
+<script type="text/x-mathjax-config">
+  MathJax.Hub.Config({
+    extensions: ["tex2jax.js"],
+    jax: ["input/TeX","output/HTML-CSS"],
+});
+</script><script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.2/MathJax.js?config=TeX-MML-AM_CHTML/MathJax.js"></script>
 <link href="doxygen.css" rel="stylesheet" type="text/css" />
 <link href="customdoxygen.css" rel="stylesheet" type="text/css"/>
 <link href="jquery.smartmenus.bootstrap.css" rel="stylesheet" type="text/css"/>
@@ -195,23 +201,59 @@ Private Attributes</h2></td></tr>
 </div>
 </div>
 <h2 class="groupheader">Member Function Documentation</h2>
-<a id="aa8cf3af7486911af3a63103f9bd96ac9"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#aa8cf3af7486911af3a63103f9bd96ac9">&sect;&nbsp;</a></span>Delta()</h2>
+<a id="a7faebfc8be99293b6652aa241091052b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a7faebfc8be99293b6652aa241091052b">&sect;&nbsp;</a></span>Reset()</h2>
 
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">List&lt;float[,]&gt; MultiLayer.Delta </td>
+          <td class="memname">void MultiLayer.Reset </td>
           <td>(</td>
           <td class="paramtype">float&#160;</td>
-          <td class="paramname"><em>error</em>[,]</td><td>)</td>
+          <td class="paramname"><em>initialValueWeights</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">bool&#160;</td>
+          <td class="paramname"><em>firstReset</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">List&lt; float[,]&gt;&#160;</td>
+          <td class="paramname"><em>customWeights</em> = <code>null</code>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Definition at line <a class="el" href="_multi_layer_8cs_source.html#l00065">65</a> of file <a class="el" href="_multi_layer_8cs_source.html">MultiLayer.cs</a>.</p>
+
+</div>
+</div>
+<a id="a5cf43fd072d0b481ad66c6c81d40b781"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a5cf43fd072d0b481ad66c6c81d40b781">&sect;&nbsp;</a></span>PropagateForward()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void MultiLayer.PropagateForward </td>
+          <td>(</td>
+          <td class="paramtype">float&#160;</td>
+          <td class="paramname"><em>data</em>[,]</td><td>)</td>
           <td></td>
         </tr>
       </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="_multi_layer_8cs_source.html#l00135">135</a> of file <a class="el" href="_multi_layer_8cs_source.html">MultiLayer.cs</a>.</p>
+<p>Definition at line <a class="el" href="_multi_layer_8cs_source.html#l00094">94</a> of file <a class="el" href="_multi_layer_8cs_source.html">MultiLayer.cs</a>.</p>
 
 </div>
 </div>
@@ -242,6 +284,26 @@ Private Attributes</h2></td></tr>
 </div><div class="memdoc">
 
 <p>Definition at line <a class="el" href="_multi_layer_8cs_source.html#l00119">119</a> of file <a class="el" href="_multi_layer_8cs_source.html">MultiLayer.cs</a>.</p>
+
+</div>
+</div>
+<a id="aa8cf3af7486911af3a63103f9bd96ac9"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aa8cf3af7486911af3a63103f9bd96ac9">&sect;&nbsp;</a></span>Delta()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">List&lt;float[,]&gt; MultiLayer.Delta </td>
+          <td>(</td>
+          <td class="paramtype">float&#160;</td>
+          <td class="paramname"><em>error</em>[,]</td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Definition at line <a class="el" href="_multi_layer_8cs_source.html#l00135">135</a> of file <a class="el" href="_multi_layer_8cs_source.html">MultiLayer.cs</a>.</p>
 
 </div>
 </div>
@@ -293,62 +355,6 @@ Private Attributes</h2></td></tr>
 
 </div>
 </div>
-<a id="a5cf43fd072d0b481ad66c6c81d40b781"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a5cf43fd072d0b481ad66c6c81d40b781">&sect;&nbsp;</a></span>PropagateForward()</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">void MultiLayer.PropagateForward </td>
-          <td>(</td>
-          <td class="paramtype">float&#160;</td>
-          <td class="paramname"><em>data</em>[,]</td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-<p>Definition at line <a class="el" href="_multi_layer_8cs_source.html#l00094">94</a> of file <a class="el" href="_multi_layer_8cs_source.html">MultiLayer.cs</a>.</p>
-
-</div>
-</div>
-<a id="a7faebfc8be99293b6652aa241091052b"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a7faebfc8be99293b6652aa241091052b">&sect;&nbsp;</a></span>Reset()</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">void MultiLayer.Reset </td>
-          <td>(</td>
-          <td class="paramtype">float&#160;</td>
-          <td class="paramname"><em>initialValueWeights</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">bool&#160;</td>
-          <td class="paramname"><em>firstReset</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">List&lt; float[,]&gt;&#160;</td>
-          <td class="paramname"><em>customWeights</em> = <code>null</code>&#160;</td>
-        </tr>
-        <tr>
-          <td></td>
-          <td>)</td>
-          <td></td><td></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-<p>Definition at line <a class="el" href="_multi_layer_8cs_source.html#l00065">65</a> of file <a class="el" href="_multi_layer_8cs_source.html">MultiLayer.cs</a>.</p>
-
-</div>
-</div>
 <a id="ad062f2b5edf5dd15599d4c689348cb86"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#ad062f2b5edf5dd15599d4c689348cb86">&sect;&nbsp;</a></span>WriteListArray()</h2>
 
@@ -394,6 +400,38 @@ Private Attributes</h2></td></tr>
 </div>
 </div>
 <h2 class="groupheader">Member Data Documentation</h2>
+<a id="addc3312d8df0596b35860d21180f69f7"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#addc3312d8df0596b35860d21180f69f7">&sect;&nbsp;</a></span>layers</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">List&lt;float[,]&gt; MultiLayer.layers</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Definition at line <a class="el" href="_multi_layer_8cs_source.html#l00013">13</a> of file <a class="el" href="_multi_layer_8cs_source.html">MultiLayer.cs</a>.</p>
+
+</div>
+</div>
+<a id="ab0cddb87142ae6ca621cdf72acb39958"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ab0cddb87142ae6ca621cdf72acb39958">&sect;&nbsp;</a></span>weights</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">List&lt;float[,]&gt; MultiLayer.weights</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Definition at line <a class="el" href="_multi_layer_8cs_source.html#l00014">14</a> of file <a class="el" href="_multi_layer_8cs_source.html">MultiLayer.cs</a>.</p>
+
+</div>
+</div>
 <a id="acf14ca01fc3aa491cfc24a5ebe94f198"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#acf14ca01fc3aa491cfc24a5ebe94f198">&sect;&nbsp;</a></span>dw</h2>
 
@@ -415,70 +453,6 @@ Private Attributes</h2></td></tr>
 </div><div class="memdoc">
 
 <p>Definition at line <a class="el" href="_multi_layer_8cs_source.html#l00015">15</a> of file <a class="el" href="_multi_layer_8cs_source.html">MultiLayer.cs</a>.</p>
-
-</div>
-</div>
-<a id="addc3312d8df0596b35860d21180f69f7"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#addc3312d8df0596b35860d21180f69f7">&sect;&nbsp;</a></span>layers</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">List&lt;float[,]&gt; MultiLayer.layers</td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-<p>Definition at line <a class="el" href="_multi_layer_8cs_source.html#l00013">13</a> of file <a class="el" href="_multi_layer_8cs_source.html">MultiLayer.cs</a>.</p>
-
-</div>
-</div>
-<a id="a33c53fd00f86c65d83fa2f0ba01bb6d6"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a33c53fd00f86c65d83fa2f0ba01bb6d6">&sect;&nbsp;</a></span>rndGenerator</h2>
-
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">SystemRandomSource MultiLayer.rndGenerator</td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">private</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-<p>Definition at line <a class="el" href="_multi_layer_8cs_source.html#l00019">19</a> of file <a class="el" href="_multi_layer_8cs_source.html">MultiLayer.cs</a>.</p>
-
-</div>
-</div>
-<a id="a5caa338e9e0a8def6f5b74cc0bcae1c1"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a5caa338e9e0a8def6f5b74cc0bcae1c1">&sect;&nbsp;</a></span>saveInfos</h2>
-
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">bool MultiLayer.saveInfos</td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">private</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-<p>Definition at line <a class="el" href="_multi_layer_8cs_source.html#l00018">18</a> of file <a class="el" href="_multi_layer_8cs_source.html">MultiLayer.cs</a>.</p>
 
 </div>
 </div>
@@ -522,19 +496,51 @@ Private Attributes</h2></td></tr>
 
 </div>
 </div>
-<a id="ab0cddb87142ae6ca621cdf72acb39958"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ab0cddb87142ae6ca621cdf72acb39958">&sect;&nbsp;</a></span>weights</h2>
+<a id="a5caa338e9e0a8def6f5b74cc0bcae1c1"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a5caa338e9e0a8def6f5b74cc0bcae1c1">&sect;&nbsp;</a></span>saveInfos</h2>
 
 <div class="memitem">
 <div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">List&lt;float[,]&gt; MultiLayer.weights</td>
+          <td class="memname">bool MultiLayer.saveInfos</td>
         </tr>
       </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="_multi_layer_8cs_source.html#l00014">14</a> of file <a class="el" href="_multi_layer_8cs_source.html">MultiLayer.cs</a>.</p>
+<p>Definition at line <a class="el" href="_multi_layer_8cs_source.html#l00018">18</a> of file <a class="el" href="_multi_layer_8cs_source.html">MultiLayer.cs</a>.</p>
+
+</div>
+</div>
+<a id="a33c53fd00f86c65d83fa2f0ba01bb6d6"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a33c53fd00f86c65d83fa2f0ba01bb6d6">&sect;&nbsp;</a></span>rndGenerator</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">SystemRandomSource MultiLayer.rndGenerator</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Definition at line <a class="el" href="_multi_layer_8cs_source.html#l00019">19</a> of file <a class="el" href="_multi_layer_8cs_source.html">MultiLayer.cs</a>.</p>
 
 </div>
 </div>

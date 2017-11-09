@@ -22,6 +22,12 @@
 <script type="text/javascript">
   $(document).ready(function() { init_search(); });
 </script>
+<script type="text/x-mathjax-config">
+  MathJax.Hub.Config({
+    extensions: ["tex2jax.js"],
+    jax: ["input/TeX","output/HTML-CSS"],
+});
+</script><script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.2/MathJax.js?config=TeX-MML-AM_CHTML/MathJax.js"></script>
 <link href="doxygen.css" rel="stylesheet" type="text/css" />
 <link href="customdoxygen.css" rel="stylesheet" type="text/css"/>
 <link href="jquery.smartmenus.bootstrap.css" rel="stylesheet" type="text/css"/>
@@ -151,56 +157,6 @@ Private Attributes</h2></td></tr>
 </div>
 </div>
 <h2 class="groupheader">Member Function Documentation</h2>
-<a id="ab08816ea4bc52584831dec2e1f6bdbce"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ab08816ea4bc52584831dec2e1f6bdbce">&sect;&nbsp;</a></span>complete()</h2>
-
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">static Vector2 Gyro.complete </td>
-          <td>(</td>
-          <td class="paramtype">Vector3&#160;</td>
-          <td class="paramname"><em>A</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">Vector3&#160;</td>
-          <td class="paramname"><em>B</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">Vector3&#160;</td>
-          <td class="paramname"><em>C</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">Vector3&#160;</td>
-          <td class="paramname"><em>D</em>&#160;</td>
-        </tr>
-        <tr>
-          <td></td>
-          <td>)</td>
-          <td></td><td></td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">static</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-<p>Definition at line <a class="el" href="_gyro_8cs_source.html#l00032">32</a> of file <a class="el" href="_gyro_8cs_source.html">Gyro.cs</a>.</p>
-
-</div>
-</div>
 <a id="a6bfd6c3a4c7a9a51b4c0e1dfee6119d9"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a6bfd6c3a4c7a9a51b4c0e1dfee6119d9">&sect;&nbsp;</a></span>complete3()</h2>
 
@@ -259,7 +215,73 @@ Private Attributes</h2></td></tr>
 
 </div>
 </div>
+<a id="ab08816ea4bc52584831dec2e1f6bdbce"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ab08816ea4bc52584831dec2e1f6bdbce">&sect;&nbsp;</a></span>complete()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">static Vector2 Gyro.complete </td>
+          <td>(</td>
+          <td class="paramtype">Vector3&#160;</td>
+          <td class="paramname"><em>A</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">Vector3&#160;</td>
+          <td class="paramname"><em>B</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">Vector3&#160;</td>
+          <td class="paramname"><em>C</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">Vector3&#160;</td>
+          <td class="paramname"><em>D</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Definition at line <a class="el" href="_gyro_8cs_source.html#l00032">32</a> of file <a class="el" href="_gyro_8cs_source.html">Gyro.cs</a>.</p>
+
+</div>
+</div>
 <h2 class="groupheader">Member Data Documentation</h2>
+<a id="a919d6b9b882b5b60b0945e3ed76376b8"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a919d6b9b882b5b60b0945e3ed76376b8">&sect;&nbsp;</a></span>targetAngle</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">Vector3 Gyro.targetAngle = new Vector3(0f, 0f, 0f)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Definition at line <a class="el" href="_gyro_8cs_source.html#l00007">7</a> of file <a class="el" href="_gyro_8cs_source.html">Gyro.cs</a>.</p>
+
+</div>
+</div>
 <a id="a8d00ad051ba2d782d03b17906b1d74a5"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a8d00ad051ba2d782d03b17906b1d74a5">&sect;&nbsp;</a></span>currentAngle</h2>
 
@@ -281,22 +303,6 @@ Private Attributes</h2></td></tr>
 </div><div class="memdoc">
 
 <p>Definition at line <a class="el" href="_gyro_8cs_source.html#l00008">8</a> of file <a class="el" href="_gyro_8cs_source.html">Gyro.cs</a>.</p>
-
-</div>
-</div>
-<a id="a919d6b9b882b5b60b0945e3ed76376b8"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a919d6b9b882b5b60b0945e3ed76376b8">&sect;&nbsp;</a></span>targetAngle</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">Vector3 Gyro.targetAngle = new Vector3(0f, 0f, 0f)</td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-<p>Definition at line <a class="el" href="_gyro_8cs_source.html#l00007">7</a> of file <a class="el" href="_gyro_8cs_source.html">Gyro.cs</a>.</p>
 
 </div>
 </div>

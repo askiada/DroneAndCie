@@ -72,7 +72,7 @@ public class DroneManager : MonoBehaviour {
 
     public void Stabilization()
     {
-        //Debug.Log(drone.GetComponent<MainBoard>().inputMLP);
+        Debug.Log(drone.GetComponent<MainBoard>().inputMLP);
         drone.GetComponent<MainBoard>().mlp.PropagateForward(drone.GetComponent<MainBoard>().inputMLP);
     }
 

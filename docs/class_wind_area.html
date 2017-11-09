@@ -22,6 +22,12 @@
 <script type="text/javascript">
   $(document).ready(function() { init_search(); });
 </script>
+<script type="text/x-mathjax-config">
+  MathJax.Hub.Config({
+    extensions: ["tex2jax.js"],
+    jax: ["input/TeX","output/HTML-CSS"],
+});
+</script><script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.2/MathJax.js?config=TeX-MML-AM_CHTML/MathJax.js"></script>
 <link href="doxygen.css" rel="stylesheet" type="text/css" />
 <link href="customdoxygen.css" rel="stylesheet" type="text/css"/>
 <link href="jquery.smartmenus.bootstrap.css" rel="stylesheet" type="text/css"/>
@@ -175,33 +181,6 @@ Private Attributes</h2></td></tr>
 
 </div>
 </div>
-<a id="a0e9ee73d231d867b2e425b7964f8e3e5"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a0e9ee73d231d867b2e425b7964f8e3e5">&sect;&nbsp;</a></span>FixedUpdate()</h2>
-
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">void WindArea.FixedUpdate </td>
-          <td>(</td>
-          <td class="paramname"></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">private</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-<p>Definition at line <a class="el" href="_wind_area_8cs_source.html#l00089">89</a> of file <a class="el" href="_wind_area_8cs_source.html">WindArea.cs</a>.</p>
-
-</div>
-</div>
 <a id="a9b85d3741f46796113937b487972cb7d"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a9b85d3741f46796113937b487972cb7d">&sect;&nbsp;</a></span>OnTriggerEnter()</h2>
 
@@ -258,55 +237,34 @@ Private Attributes</h2></td></tr>
 
 </div>
 </div>
+<a id="a0e9ee73d231d867b2e425b7964f8e3e5"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a0e9ee73d231d867b2e425b7964f8e3e5">&sect;&nbsp;</a></span>FixedUpdate()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void WindArea.FixedUpdate </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Definition at line <a class="el" href="_wind_area_8cs_source.html#l00089">89</a> of file <a class="el" href="_wind_area_8cs_source.html">WindArea.cs</a>.</p>
+
+</div>
+</div>
 <h2 class="groupheader">Member Data Documentation</h2>
-<a id="a961a72892d3e30a523b7c2aad9da4643"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a961a72892d3e30a523b7c2aad9da4643">&sect;&nbsp;</a></span>cubeDepth</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">int WindArea.cubeDepth = 1</td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-<p>Definition at line <a class="el" href="_wind_area_8cs_source.html#l00014">14</a> of file <a class="el" href="_wind_area_8cs_source.html">WindArea.cs</a>.</p>
-
-</div>
-</div>
-<a id="a375790acc6fac3d3e3db9ce894eea45d"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a375790acc6fac3d3e3db9ce894eea45d">&sect;&nbsp;</a></span>initialY</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">float WindArea.initialY</td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-<p>Definition at line <a class="el" href="_wind_area_8cs_source.html#l00013">13</a> of file <a class="el" href="_wind_area_8cs_source.html">WindArea.cs</a>.</p>
-
-</div>
-</div>
-<a id="a678dfdbb8097ab7fe0f42661cad945bf"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a678dfdbb8097ab7fe0f42661cad945bf">&sect;&nbsp;</a></span>numSelectors</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">int WindArea.numSelectors = 5</td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-<p>Definition at line <a class="el" href="_wind_area_8cs_source.html#l00015">15</a> of file <a class="el" href="_wind_area_8cs_source.html">WindArea.cs</a>.</p>
-
-</div>
-</div>
 <a id="a663e2ff6258566a52b6bda39fb0d6cda"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a663e2ff6258566a52b6bda39fb0d6cda">&sect;&nbsp;</a></span>rigidbodiesInWindzoneList</h2>
 
@@ -331,35 +289,19 @@ Private Attributes</h2></td></tr>
 
 </div>
 </div>
-<a id="a13168f78b58a34068d9cd6ae8c6d48a0"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a13168f78b58a34068d9cd6ae8c6d48a0">&sect;&nbsp;</a></span>selector</h2>
+<a id="a356b5c662216dd68bf731d04d0744b7a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a356b5c662216dd68bf731d04d0744b7a">&sect;&nbsp;</a></span>windDirection</h2>
 
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">GameObject WindArea.selector</td>
+          <td class="memname">Vector3 WindArea.windDirection = Vector3.left</td>
         </tr>
       </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="_wind_area_8cs_source.html#l00017">17</a> of file <a class="el" href="_wind_area_8cs_source.html">WindArea.cs</a>.</p>
-
-</div>
-</div>
-<a id="ac6455eb961ce3cc92d509a314a3b862e"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ac6455eb961ce3cc92d509a314a3b862e">&sect;&nbsp;</a></span>selectorArr</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">GameObject [] WindArea.selectorArr</td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-<p>Definition at line <a class="el" href="_wind_area_8cs_source.html#l00016">16</a> of file <a class="el" href="_wind_area_8cs_source.html">WindArea.cs</a>.</p>
+<p>Definition at line <a class="el" href="_wind_area_8cs_source.html#l00009">9</a> of file <a class="el" href="_wind_area_8cs_source.html">WindArea.cs</a>.</p>
 
 </div>
 </div>
@@ -379,22 +321,6 @@ Private Attributes</h2></td></tr>
 
 </div>
 </div>
-<a id="a356b5c662216dd68bf731d04d0744b7a"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a356b5c662216dd68bf731d04d0744b7a">&sect;&nbsp;</a></span>windDirection</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">Vector3 WindArea.windDirection = Vector3.left</td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-<p>Definition at line <a class="el" href="_wind_area_8cs_source.html#l00009">9</a> of file <a class="el" href="_wind_area_8cs_source.html">WindArea.cs</a>.</p>
-
-</div>
-</div>
 <a id="a7615b7a22d4b41dc1d8999ab97180338"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a7615b7a22d4b41dc1d8999ab97180338">&sect;&nbsp;</a></span>windStrength</h2>
 
@@ -408,6 +334,86 @@ Private Attributes</h2></td></tr>
 </div><div class="memdoc">
 
 <p>Definition at line <a class="el" href="_wind_area_8cs_source.html#l00012">12</a> of file <a class="el" href="_wind_area_8cs_source.html">WindArea.cs</a>.</p>
+
+</div>
+</div>
+<a id="a375790acc6fac3d3e3db9ce894eea45d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a375790acc6fac3d3e3db9ce894eea45d">&sect;&nbsp;</a></span>initialY</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">float WindArea.initialY</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Definition at line <a class="el" href="_wind_area_8cs_source.html#l00013">13</a> of file <a class="el" href="_wind_area_8cs_source.html">WindArea.cs</a>.</p>
+
+</div>
+</div>
+<a id="a961a72892d3e30a523b7c2aad9da4643"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a961a72892d3e30a523b7c2aad9da4643">&sect;&nbsp;</a></span>cubeDepth</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int WindArea.cubeDepth = 1</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Definition at line <a class="el" href="_wind_area_8cs_source.html#l00014">14</a> of file <a class="el" href="_wind_area_8cs_source.html">WindArea.cs</a>.</p>
+
+</div>
+</div>
+<a id="a678dfdbb8097ab7fe0f42661cad945bf"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a678dfdbb8097ab7fe0f42661cad945bf">&sect;&nbsp;</a></span>numSelectors</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int WindArea.numSelectors = 5</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Definition at line <a class="el" href="_wind_area_8cs_source.html#l00015">15</a> of file <a class="el" href="_wind_area_8cs_source.html">WindArea.cs</a>.</p>
+
+</div>
+</div>
+<a id="ac6455eb961ce3cc92d509a314a3b862e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ac6455eb961ce3cc92d509a314a3b862e">&sect;&nbsp;</a></span>selectorArr</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">GameObject [] WindArea.selectorArr</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Definition at line <a class="el" href="_wind_area_8cs_source.html#l00016">16</a> of file <a class="el" href="_wind_area_8cs_source.html">WindArea.cs</a>.</p>
+
+</div>
+</div>
+<a id="a13168f78b58a34068d9cd6ae8c6d48a0"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a13168f78b58a34068d9cd6ae8c6d48a0">&sect;&nbsp;</a></span>selector</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">GameObject WindArea.selector</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Definition at line <a class="el" href="_wind_area_8cs_source.html#l00017">17</a> of file <a class="el" href="_wind_area_8cs_source.html">WindArea.cs</a>.</p>
 
 </div>
 </div>

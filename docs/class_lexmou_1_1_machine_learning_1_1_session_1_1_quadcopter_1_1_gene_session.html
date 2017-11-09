@@ -22,6 +22,12 @@
 <script type="text/javascript">
   $(document).ready(function() { init_search(); });
 </script>
+<script type="text/x-mathjax-config">
+  MathJax.Hub.Config({
+    extensions: ["tex2jax.js"],
+    jax: ["input/TeX","output/HTML-CSS"],
+});
+</script><script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.2/MathJax.js?config=TeX-MML-AM_CHTML/MathJax.js"></script>
 <link href="doxygen.css" rel="stylesheet" type="text/css" />
 <link href="customdoxygen.css" rel="stylesheet" type="text/css"/>
 <link href="jquery.smartmenus.bootstrap.css" rel="stylesheet" type="text/css"/>
@@ -250,8 +256,8 @@ Private Attributes</h2></td></tr>
 <div class="textblock">
 <p>Definition at line <a class="el" href="_gene_session_8cs_source.html#l00047">47</a> of file <a class="el" href="_gene_session_8cs_source.html">GeneSession.cs</a>.</p>
 </div><h2 class="groupheader">Member Function Documentation</h2>
-<a id="ae6710198d40ada1c02a504af6bac0f5e"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ae6710198d40ada1c02a504af6bac0f5e">&sect;&nbsp;</a></span>Awake()</h2>
+<a id="aa028fa1b9367cecb03a1cdb6d82b340a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aa028fa1b9367cecb03a1cdb6d82b340a">&sect;&nbsp;</a></span>CheckNullOrReplace()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -260,7 +266,35 @@ Private Attributes</h2></td></tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">void Lexmou.MachineLearning.Session.Quadcopter.GeneSession.Awake </td>
+          <td class="memname">void Lexmou.MachineLearning.Session.Quadcopter.GeneSession.CheckNullOrReplace </td>
+          <td>(</td>
+          <td class="paramtype">string&#160;</td>
+          <td class="paramname"><em>propertyName</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Definition at line <a class="el" href="_gene_session_8cs_source.html#l00146">146</a> of file <a class="el" href="_gene_session_8cs_source.html">GeneSession.cs</a>.</p>
+
+</div>
+</div>
+<a id="a7514a05534be0943917577e0d9f6ebe3"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a7514a05534be0943917577e0d9f6ebe3">&sect;&nbsp;</a></span>SetParametersFromCommandLine()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void Lexmou.MachineLearning.Session.Quadcopter.GeneSession.SetParametersFromCommandLine </td>
           <td>(</td>
           <td class="paramname"></td><td>)</td>
           <td></td>
@@ -273,7 +307,61 @@ Private Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="_gene_session_8cs_source.html#l00233">233</a> of file <a class="el" href="_gene_session_8cs_source.html">GeneSession.cs</a>.</p>
+<p>Definition at line <a class="el" href="_gene_session_8cs_source.html#l00166">166</a> of file <a class="el" href="_gene_session_8cs_source.html">GeneSession.cs</a>.</p>
+
+</div>
+</div>
+<a id="a31cf053208c4cffa5c6e8304609c7ea6"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a31cf053208c4cffa5c6e8304609c7ea6">&sect;&nbsp;</a></span>CloseApp()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void Lexmou.MachineLearning.Session.Quadcopter.GeneSession.CloseApp </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Definition at line <a class="el" href="_gene_session_8cs_source.html#l00176">176</a> of file <a class="el" href="_gene_session_8cs_source.html">GeneSession.cs</a>.</p>
+
+</div>
+</div>
+<a id="aeba3b793eb0b99c70f8da7bbe82c1591"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aeba3b793eb0b99c70f8da7bbe82c1591">&sect;&nbsp;</a></span>OnDestroy()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void Lexmou.MachineLearning.Session.Quadcopter.GeneSession.OnDestroy </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Definition at line <a class="el" href="_gene_session_8cs_source.html#l00186">186</a> of file <a class="el" href="_gene_session_8cs_source.html">GeneSession.cs</a>.</p>
 
 </div>
 </div>
@@ -305,99 +393,6 @@ Private Attributes</h2></td></tr>
 
 </div>
 </div>
-<a id="aa028fa1b9367cecb03a1cdb6d82b340a"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#aa028fa1b9367cecb03a1cdb6d82b340a">&sect;&nbsp;</a></span>CheckNullOrReplace()</h2>
-
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">void Lexmou.MachineLearning.Session.Quadcopter.GeneSession.CheckNullOrReplace </td>
-          <td>(</td>
-          <td class="paramtype">string&#160;</td>
-          <td class="paramname"><em>propertyName</em></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">private</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-<p>Definition at line <a class="el" href="_gene_session_8cs_source.html#l00146">146</a> of file <a class="el" href="_gene_session_8cs_source.html">GeneSession.cs</a>.</p>
-
-</div>
-</div>
-<a id="a31cf053208c4cffa5c6e8304609c7ea6"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a31cf053208c4cffa5c6e8304609c7ea6">&sect;&nbsp;</a></span>CloseApp()</h2>
-
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">void Lexmou.MachineLearning.Session.Quadcopter.GeneSession.CloseApp </td>
-          <td>(</td>
-          <td class="paramname"></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">private</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-<p>Definition at line <a class="el" href="_gene_session_8cs_source.html#l00176">176</a> of file <a class="el" href="_gene_session_8cs_source.html">GeneSession.cs</a>.</p>
-
-</div>
-</div>
-<a id="ab6f4abece00d994d87b565acc41dd19e"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ab6f4abece00d994d87b565acc41dd19e">&sect;&nbsp;</a></span>ConfigureDrone()</h2>
-
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">void Lexmou.MachineLearning.Session.Quadcopter.GeneSession.ConfigureDrone </td>
-          <td>(</td>
-          <td class="paramtype">GameObject&#160;</td>
-          <td class="paramname"><em>drone</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">Vector&lt; float &gt;&#160;</td>
-          <td class="paramname"><em>input</em>&#160;</td>
-        </tr>
-        <tr>
-          <td></td>
-          <td>)</td>
-          <td></td><td></td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">private</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-<p>Definition at line <a class="el" href="_gene_session_8cs_source.html#l00381">381</a> of file <a class="el" href="_gene_session_8cs_source.html">GeneSession.cs</a>.</p>
-
-</div>
-</div>
 <a id="a564b1351d1baeee08b07c9800532d9dd"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a564b1351d1baeee08b07c9800532d9dd">&sect;&nbsp;</a></span>DestroyAll()</h2>
 
@@ -422,89 +417,6 @@ Private Attributes</h2></td></tr>
 </div><div class="memdoc">
 
 <p>Definition at line <a class="el" href="_gene_session_8cs_source.html#l00209">209</a> of file <a class="el" href="_gene_session_8cs_source.html">GeneSession.cs</a>.</p>
-
-</div>
-</div>
-<a id="ad2534da8d87d38e96b83634f3e0e7635"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ad2534da8d87d38e96b83634f3e0e7635">&sect;&nbsp;</a></span>EvaluateIndividualMove()</h2>
-
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">float Lexmou.MachineLearning.Session.Quadcopter.GeneSession.EvaluateIndividualMove </td>
-          <td>(</td>
-          <td class="paramtype">int&#160;</td>
-          <td class="paramname"><em>i</em></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">private</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-<p>Definition at line <a class="el" href="_gene_session_8cs_source.html#l00373">373</a> of file <a class="el" href="_gene_session_8cs_source.html">GeneSession.cs</a>.</p>
-
-</div>
-</div>
-<a id="a80c2d2698bdf8e6e581207d564c42f80"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a80c2d2698bdf8e6e581207d564c42f80">&sect;&nbsp;</a></span>EvaluateIndividualStabilization()</h2>
-
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">float Lexmou.MachineLearning.Session.Quadcopter.GeneSession.EvaluateIndividualStabilization </td>
-          <td>(</td>
-          <td class="paramtype">int&#160;</td>
-          <td class="paramname"><em>i</em></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">private</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-<p>Definition at line <a class="el" href="_gene_session_8cs_source.html#l00365">365</a> of file <a class="el" href="_gene_session_8cs_source.html">GeneSession.cs</a>.</p>
-
-</div>
-</div>
-<a id="a1d2b6ac593de9ffe7c38bb2eb840a25c"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a1d2b6ac593de9ffe7c38bb2eb840a25c">&sect;&nbsp;</a></span>FixedUpdate()</h2>
-
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">void Lexmou.MachineLearning.Session.Quadcopter.GeneSession.FixedUpdate </td>
-          <td>(</td>
-          <td class="paramname"></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">private</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-<p>Definition at line <a class="el" href="_gene_session_8cs_source.html#l00388">388</a> of file <a class="el" href="_gene_session_8cs_source.html">GeneSession.cs</a>.</p>
 
 </div>
 </div>
@@ -536,8 +448,8 @@ Private Attributes</h2></td></tr>
 
 </div>
 </div>
-<a id="aeba3b793eb0b99c70f8da7bbe82c1591"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#aeba3b793eb0b99c70f8da7bbe82c1591">&sect;&nbsp;</a></span>OnDestroy()</h2>
+<a id="ae6710198d40ada1c02a504af6bac0f5e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ae6710198d40ada1c02a504af6bac0f5e">&sect;&nbsp;</a></span>Awake()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -546,7 +458,7 @@ Private Attributes</h2></td></tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">void Lexmou.MachineLearning.Session.Quadcopter.GeneSession.OnDestroy </td>
+          <td class="memname">void Lexmou.MachineLearning.Session.Quadcopter.GeneSession.Awake </td>
           <td>(</td>
           <td class="paramname"></td><td>)</td>
           <td></td>
@@ -559,7 +471,7 @@ Private Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="_gene_session_8cs_source.html#l00186">186</a> of file <a class="el" href="_gene_session_8cs_source.html">GeneSession.cs</a>.</p>
+<p>Definition at line <a class="el" href="_gene_session_8cs_source.html#l00233">233</a> of file <a class="el" href="_gene_session_8cs_source.html">GeneSession.cs</a>.</p>
 
 </div>
 </div>
@@ -607,8 +519,8 @@ Private Attributes</h2></td></tr>
 
 </div>
 </div>
-<a id="a7514a05534be0943917577e0d9f6ebe3"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a7514a05534be0943917577e0d9f6ebe3">&sect;&nbsp;</a></span>SetParametersFromCommandLine()</h2>
+<a id="a80c2d2698bdf8e6e581207d564c42f80"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a80c2d2698bdf8e6e581207d564c42f80">&sect;&nbsp;</a></span>EvaluateIndividualStabilization()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -617,7 +529,101 @@ Private Attributes</h2></td></tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">void Lexmou.MachineLearning.Session.Quadcopter.GeneSession.SetParametersFromCommandLine </td>
+          <td class="memname">float Lexmou.MachineLearning.Session.Quadcopter.GeneSession.EvaluateIndividualStabilization </td>
+          <td>(</td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>i</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Definition at line <a class="el" href="_gene_session_8cs_source.html#l00365">365</a> of file <a class="el" href="_gene_session_8cs_source.html">GeneSession.cs</a>.</p>
+
+</div>
+</div>
+<a id="ad2534da8d87d38e96b83634f3e0e7635"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ad2534da8d87d38e96b83634f3e0e7635">&sect;&nbsp;</a></span>EvaluateIndividualMove()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">float Lexmou.MachineLearning.Session.Quadcopter.GeneSession.EvaluateIndividualMove </td>
+          <td>(</td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>i</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Definition at line <a class="el" href="_gene_session_8cs_source.html#l00373">373</a> of file <a class="el" href="_gene_session_8cs_source.html">GeneSession.cs</a>.</p>
+
+</div>
+</div>
+<a id="ab6f4abece00d994d87b565acc41dd19e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ab6f4abece00d994d87b565acc41dd19e">&sect;&nbsp;</a></span>ConfigureDrone()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void Lexmou.MachineLearning.Session.Quadcopter.GeneSession.ConfigureDrone </td>
+          <td>(</td>
+          <td class="paramtype">GameObject&#160;</td>
+          <td class="paramname"><em>drone</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">Vector&lt; float &gt;&#160;</td>
+          <td class="paramname"><em>input</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Definition at line <a class="el" href="_gene_session_8cs_source.html#l00381">381</a> of file <a class="el" href="_gene_session_8cs_source.html">GeneSession.cs</a>.</p>
+
+</div>
+</div>
+<a id="a1d2b6ac593de9ffe7c38bb2eb840a25c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a1d2b6ac593de9ffe7c38bb2eb840a25c">&sect;&nbsp;</a></span>FixedUpdate()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void Lexmou.MachineLearning.Session.Quadcopter.GeneSession.FixedUpdate </td>
           <td>(</td>
           <td class="paramname"></td><td>)</td>
           <td></td>
@@ -630,72 +636,64 @@ Private Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="_gene_session_8cs_source.html#l00166">166</a> of file <a class="el" href="_gene_session_8cs_source.html">GeneSession.cs</a>.</p>
+<p>Definition at line <a class="el" href="_gene_session_8cs_source.html#l00388">388</a> of file <a class="el" href="_gene_session_8cs_source.html">GeneSession.cs</a>.</p>
 
 </div>
 </div>
 <h2 class="groupheader">Member Data Documentation</h2>
-<a id="a2510cee3616d053c9fc585c65bbd6344"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a2510cee3616d053c9fc585c65bbd6344">&sect;&nbsp;</a></span>_angleRandomRotation</h2>
+<a id="abc747e05c381fec4aaf7824b7cc49a1e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#abc747e05c381fec4aaf7824b7cc49a1e">&sect;&nbsp;</a></span>rigid</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">Rigidbody Lexmou.MachineLearning.Session.Quadcopter.GeneSession.rigid</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Definition at line <a class="el" href="_gene_session_8cs_source.html#l00049">49</a> of file <a class="el" href="_gene_session_8cs_source.html">GeneSession.cs</a>.</p>
+
+</div>
+</div>
+<a id="a4c7fcc1e6c025b4f7da9e81ae622edd4"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a4c7fcc1e6c025b4f7da9e81ae622edd4">&sect;&nbsp;</a></span>writer</h2>
 
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">float Lexmou.MachineLearning.Session.Quadcopter.GeneSession._angleRandomRotation = 60.0f</td>
+          <td class="memname">StreamWriter Lexmou.MachineLearning.Session.Quadcopter.GeneSession.writer</td>
         </tr>
       </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="_gene_session_8cs_source.html#l00082">82</a> of file <a class="el" href="_gene_session_8cs_source.html">GeneSession.cs</a>.</p>
+<p>Definition at line <a class="el" href="_gene_session_8cs_source.html#l00050">50</a> of file <a class="el" href="_gene_session_8cs_source.html">GeneSession.cs</a>.</p>
 
 </div>
 </div>
-<a id="aa7ac35ebe67b93136fdb3c1419b7aaa9"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#aa7ac35ebe67b93136fdb3c1419b7aaa9">&sect;&nbsp;</a></span>_intervalSave</h2>
+<a id="a8379035e4591318ea7dc8fe084386720"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a8379035e4591318ea7dc8fe084386720">&sect;&nbsp;</a></span>writerSession</h2>
 
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">int Lexmou.MachineLearning.Session.Quadcopter.GeneSession._intervalSave</td>
+          <td class="memname">StreamWriter Lexmou.MachineLearning.Session.Quadcopter.GeneSession.writerSession</td>
         </tr>
       </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="_gene_session_8cs_source.html#l00112">112</a> of file <a class="el" href="_gene_session_8cs_source.html">GeneSession.cs</a>.</p>
-
-</div>
-</div>
-<a id="a0cbb77dbdc687b28b39778ecb530ca27"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a0cbb77dbdc687b28b39778ecb530ca27">&sect;&nbsp;</a></span>_loadGeneration</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">int Lexmou.MachineLearning.Session.Quadcopter.GeneSession._loadGeneration</td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-<p>Definition at line <a class="el" href="_gene_session_8cs_source.html#l00114">114</a> of file <a class="el" href="_gene_session_8cs_source.html">GeneSession.cs</a>.</p>
-
-</div>
-</div>
-<a id="ad3467c91d30e8b5ecf20821090167e6c"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ad3467c91d30e8b5ecf20821090167e6c">&sect;&nbsp;</a></span>_seed</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">int Lexmou.MachineLearning.Session.Quadcopter.GeneSession._seed</td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-<p>Definition at line <a class="el" href="_gene_session_8cs_source.html#l00057">57</a> of file <a class="el" href="_gene_session_8cs_source.html">GeneSession.cs</a>.</p>
+<p>Definition at line <a class="el" href="_gene_session_8cs_source.html#l00051">51</a> of file <a class="el" href="_gene_session_8cs_source.html">GeneSession.cs</a>.</p>
 
 </div>
 </div>
@@ -715,211 +713,19 @@ Private Attributes</h2></td></tr>
 
 </div>
 </div>
-<a id="a494c61fb3514da960366cf0070a6f388"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a494c61fb3514da960366cf0070a6f388">&sect;&nbsp;</a></span>_timeScale</h2>
+<a id="a763d3ce79c285cd732fa7c4ff7adc9be"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a763d3ce79c285cd732fa7c4ff7adc9be">&sect;&nbsp;</a></span>prefabDrone</h2>
 
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">float Lexmou.MachineLearning.Session.Quadcopter.GeneSession._timeScale</td>
+          <td class="memname">GameObject Lexmou.MachineLearning.Session.Quadcopter.GeneSession.prefabDrone</td>
         </tr>
       </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="_gene_session_8cs_source.html#l00117">117</a> of file <a class="el" href="_gene_session_8cs_source.html">GeneSession.cs</a>.</p>
-
-</div>
-</div>
-<a id="ac03e7139ee6dbe0e88f546fcb64e4d1c"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ac03e7139ee6dbe0e88f546fcb64e4d1c">&sect;&nbsp;</a></span>_windStrength</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">float Lexmou.MachineLearning.Session.Quadcopter.GeneSession._windStrength = 0.0f</td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-<p>Definition at line <a class="el" href="_gene_session_8cs_source.html#l00080">80</a> of file <a class="el" href="_gene_session_8cs_source.html">GeneSession.cs</a>.</p>
-
-</div>
-</div>
-<a id="ad4fd0e22f9f533be1d5ecae519389706"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ad4fd0e22f9f533be1d5ecae519389706">&sect;&nbsp;</a></span>angleRandomRotationArr</h2>
-
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">float [] Lexmou.MachineLearning.Session.Quadcopter.GeneSession.angleRandomRotationArr = new float[7] {2, 10, 20, 30, 40, 50, 60}</td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">private</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-<p>Definition at line <a class="el" href="_gene_session_8cs_source.html#l00083">83</a> of file <a class="el" href="_gene_session_8cs_source.html">GeneSession.cs</a>.</p>
-
-</div>
-</div>
-<a id="a3664b4066ba19c467e9d632c15357e0e"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a3664b4066ba19c467e9d632c15357e0e">&sect;&nbsp;</a></span>bestIndividualsRate</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">float Lexmou.MachineLearning.Session.Quadcopter.GeneSession.bestIndividualsRate = 0.1f</td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-<p>Definition at line <a class="el" href="_gene_session_8cs_source.html#l00063">63</a> of file <a class="el" href="_gene_session_8cs_source.html">GeneSession.cs</a>.</p>
-
-</div>
-</div>
-<a id="a374df5edb89e346684c4b38311463d1c"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a374df5edb89e346684c4b38311463d1c">&sect;&nbsp;</a></span>deltaDistribution</h2>
-
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">ContinuousUniform Lexmou.MachineLearning.Session.Quadcopter.GeneSession.deltaDistribution</td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">private</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-<p>Definition at line <a class="el" href="_gene_session_8cs_source.html#l00121">121</a> of file <a class="el" href="_gene_session_8cs_source.html">GeneSession.cs</a>.</p>
-
-</div>
-</div>
-<a id="acb0625bd9ae25c980ec5ab98a571cb1a"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#acb0625bd9ae25c980ec5ab98a571cb1a">&sect;&nbsp;</a></span>distribution</h2>
-
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">ContinuousUniform Lexmou.MachineLearning.Session.Quadcopter.GeneSession.distribution</td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">private</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-<p>Definition at line <a class="el" href="_gene_session_8cs_source.html#l00120">120</a> of file <a class="el" href="_gene_session_8cs_source.html">GeneSession.cs</a>.</p>
-
-</div>
-</div>
-<a id="a52f40ba22962716c50b9dc2f41033a59"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a52f40ba22962716c50b9dc2f41033a59">&sect;&nbsp;</a></span>droneBest</h2>
-
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">GameObject Lexmou.MachineLearning.Session.Quadcopter.GeneSession.droneBest</td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">private</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-<p>Definition at line <a class="el" href="_gene_session_8cs_source.html#l00072">72</a> of file <a class="el" href="_gene_session_8cs_source.html">GeneSession.cs</a>.</p>
-
-</div>
-</div>
-<a id="ae06b63684b11ebb2246aaeb9a03949aa"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ae06b63684b11ebb2246aaeb9a03949aa">&sect;&nbsp;</a></span>dronePopulation</h2>
-
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">GameObject [] Lexmou.MachineLearning.Session.Quadcopter.GeneSession.dronePopulation</td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">private</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-<p>Definition at line <a class="el" href="_gene_session_8cs_source.html#l00070">70</a> of file <a class="el" href="_gene_session_8cs_source.html">GeneSession.cs</a>.</p>
-
-</div>
-</div>
-<a id="ae2784bb5dba3a45063fd7e7edd9cb542"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ae2784bb5dba3a45063fd7e7edd9cb542">&sect;&nbsp;</a></span>emptyRate</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">float Lexmou.MachineLearning.Session.Quadcopter.GeneSession.emptyRate = 0.93f</td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-<p>Definition at line <a class="el" href="_gene_session_8cs_source.html#l00064">64</a> of file <a class="el" href="_gene_session_8cs_source.html">GeneSession.cs</a>.</p>
-
-</div>
-</div>
-<a id="a8164b114671bad01a8a3f071794b5284"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a8164b114671bad01a8a3f071794b5284">&sect;&nbsp;</a></span>externalEvaluations</h2>
-
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">Vector&lt;float&gt; Lexmou.MachineLearning.Session.Quadcopter.GeneSession.externalEvaluations</td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">private</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-<p>Definition at line <a class="el" href="_gene_session_8cs_source.html#l00067">67</a> of file <a class="el" href="_gene_session_8cs_source.html">GeneSession.cs</a>.</p>
+<p>Definition at line <a class="el" href="_gene_session_8cs_source.html#l00055">55</a> of file <a class="el" href="_gene_session_8cs_source.html">GeneSession.cs</a>.</p>
 
 </div>
 </div>
@@ -947,43 +753,35 @@ Private Attributes</h2></td></tr>
 
 </div>
 </div>
-<a id="ad30ec1ffd62957eb5113d4574c2e4e56"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ad30ec1ffd62957eb5113d4574c2e4e56">&sect;&nbsp;</a></span>hudManager</h2>
+<a id="ad3467c91d30e8b5ecf20821090167e6c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ad3467c91d30e8b5ecf20821090167e6c">&sect;&nbsp;</a></span>_seed</h2>
 
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname"><a class="el" href="class_h_u_d_manager.html">HUDManager</a> Lexmou.MachineLearning.Session.Quadcopter.GeneSession.hudManager</td>
+          <td class="memname">int Lexmou.MachineLearning.Session.Quadcopter.GeneSession._seed</td>
         </tr>
       </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="_gene_session_8cs_source.html#l00111">111</a> of file <a class="el" href="_gene_session_8cs_source.html">GeneSession.cs</a>.</p>
+<p>Definition at line <a class="el" href="_gene_session_8cs_source.html#l00057">57</a> of file <a class="el" href="_gene_session_8cs_source.html">GeneSession.cs</a>.</p>
 
 </div>
 </div>
-<a id="abfb0857b8cfb2a246796c4b1a885aaab"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#abfb0857b8cfb2a246796c4b1a885aaab">&sect;&nbsp;</a></span>indexRRArr</h2>
+<a id="a2d128620609dfa001dace3bdd7787220"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a2d128620609dfa001dace3bdd7787220">&sect;&nbsp;</a></span>populationSize</h2>
 
 <div class="memitem">
 <div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">int Lexmou.MachineLearning.Session.Quadcopter.GeneSession.indexRRArr = 0</td>
+          <td class="memname">int Lexmou.MachineLearning.Session.Quadcopter.GeneSession.populationSize</td>
         </tr>
       </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">private</span></span>  </td>
-  </tr>
-</table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="_gene_session_8cs_source.html#l00084">84</a> of file <a class="el" href="_gene_session_8cs_source.html">GeneSession.cs</a>.</p>
+<p>Definition at line <a class="el" href="_gene_session_8cs_source.html#l00059">59</a> of file <a class="el" href="_gene_session_8cs_source.html">GeneSession.cs</a>.</p>
 
 </div>
 </div>
@@ -1008,6 +806,246 @@ Private Attributes</h2></td></tr>
 </div><div class="memdoc">
 
 <p>Definition at line <a class="el" href="_gene_session_8cs_source.html#l00060">60</a> of file <a class="el" href="_gene_session_8cs_source.html">GeneSession.cs</a>.</p>
+
+</div>
+</div>
+<a id="a3ed6c626e3bde8ef1180cc72977e36a8"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a3ed6c626e3bde8ef1180cc72977e36a8">&sect;&nbsp;</a></span>mutationRate</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">float Lexmou.MachineLearning.Session.Quadcopter.GeneSession.mutationRate = 0.1f</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Definition at line <a class="el" href="_gene_session_8cs_source.html#l00061">61</a> of file <a class="el" href="_gene_session_8cs_source.html">GeneSession.cs</a>.</p>
+
+</div>
+</div>
+<a id="aec10dbddfaaec9ca36466c21475ca7eb"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aec10dbddfaaec9ca36466c21475ca7eb">&sect;&nbsp;</a></span>randomIndividualsRate</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">float Lexmou.MachineLearning.Session.Quadcopter.GeneSession.randomIndividualsRate = 0.1f</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Definition at line <a class="el" href="_gene_session_8cs_source.html#l00062">62</a> of file <a class="el" href="_gene_session_8cs_source.html">GeneSession.cs</a>.</p>
+
+</div>
+</div>
+<a id="a3664b4066ba19c467e9d632c15357e0e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a3664b4066ba19c467e9d632c15357e0e">&sect;&nbsp;</a></span>bestIndividualsRate</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">float Lexmou.MachineLearning.Session.Quadcopter.GeneSession.bestIndividualsRate = 0.1f</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Definition at line <a class="el" href="_gene_session_8cs_source.html#l00063">63</a> of file <a class="el" href="_gene_session_8cs_source.html">GeneSession.cs</a>.</p>
+
+</div>
+</div>
+<a id="ae2784bb5dba3a45063fd7e7edd9cb542"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ae2784bb5dba3a45063fd7e7edd9cb542">&sect;&nbsp;</a></span>emptyRate</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">float Lexmou.MachineLearning.Session.Quadcopter.GeneSession.emptyRate = 0.93f</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Definition at line <a class="el" href="_gene_session_8cs_source.html#l00064">64</a> of file <a class="el" href="_gene_session_8cs_source.html">GeneSession.cs</a>.</p>
+
+</div>
+</div>
+<a id="af337eb68e8ac5915c833df840ea2a580"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#af337eb68e8ac5915c833df840ea2a580">&sect;&nbsp;</a></span>spacing</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">float Lexmou.MachineLearning.Session.Quadcopter.GeneSession.spacing = 5.0f</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Definition at line <a class="el" href="_gene_session_8cs_source.html#l00065">65</a> of file <a class="el" href="_gene_session_8cs_source.html">GeneSession.cs</a>.</p>
+
+</div>
+</div>
+<a id="aa24d58efbe50dfb660a38acb80469610"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aa24d58efbe50dfb660a38acb80469610">&sect;&nbsp;</a></span>shapes</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">List&lt;int&gt; Lexmou.MachineLearning.Session.Quadcopter.GeneSession.shapes</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Definition at line <a class="el" href="_gene_session_8cs_source.html#l00066">66</a> of file <a class="el" href="_gene_session_8cs_source.html">GeneSession.cs</a>.</p>
+
+</div>
+</div>
+<a id="a8164b114671bad01a8a3f071794b5284"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a8164b114671bad01a8a3f071794b5284">&sect;&nbsp;</a></span>externalEvaluations</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">Vector&lt;float&gt; Lexmou.MachineLearning.Session.Quadcopter.GeneSession.externalEvaluations</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Definition at line <a class="el" href="_gene_session_8cs_source.html#l00067">67</a> of file <a class="el" href="_gene_session_8cs_source.html">GeneSession.cs</a>.</p>
+
+</div>
+</div>
+<a id="abd81f5e3aef679c9d648e5dc008b466b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#abd81f5e3aef679c9d648e5dc008b466b">&sect;&nbsp;</a></span>tmpVelo</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">Vector&lt;float&gt; Lexmou.MachineLearning.Session.Quadcopter.GeneSession.tmpVelo</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Definition at line <a class="el" href="_gene_session_8cs_source.html#l00068">68</a> of file <a class="el" href="_gene_session_8cs_source.html">GeneSession.cs</a>.</p>
+
+</div>
+</div>
+<a id="ae06b63684b11ebb2246aaeb9a03949aa"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ae06b63684b11ebb2246aaeb9a03949aa">&sect;&nbsp;</a></span>dronePopulation</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">GameObject [] Lexmou.MachineLearning.Session.Quadcopter.GeneSession.dronePopulation</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Definition at line <a class="el" href="_gene_session_8cs_source.html#l00070">70</a> of file <a class="el" href="_gene_session_8cs_source.html">GeneSession.cs</a>.</p>
+
+</div>
+</div>
+<a id="a2d4908efc4d0d6be20252327cc8ff611"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a2d4908efc4d0d6be20252327cc8ff611">&sect;&nbsp;</a></span>mlpPopulation</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="class_lexmou_1_1_machine_learning_1_1_neural_network_1_1_feed_forward_1_1_multi_layer_maths_net.html">MultiLayerMathsNet</a> [] Lexmou.MachineLearning.Session.Quadcopter.GeneSession.mlpPopulation</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Definition at line <a class="el" href="_gene_session_8cs_source.html#l00071">71</a> of file <a class="el" href="_gene_session_8cs_source.html">GeneSession.cs</a>.</p>
+
+</div>
+</div>
+<a id="a52f40ba22962716c50b9dc2f41033a59"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a52f40ba22962716c50b9dc2f41033a59">&sect;&nbsp;</a></span>droneBest</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">GameObject Lexmou.MachineLearning.Session.Quadcopter.GeneSession.droneBest</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Definition at line <a class="el" href="_gene_session_8cs_source.html#l00072">72</a> of file <a class="el" href="_gene_session_8cs_source.html">GeneSession.cs</a>.</p>
+
+</div>
+</div>
+<a id="a25b936828d910fa51faa8dec0834767a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a25b936828d910fa51faa8dec0834767a">&sect;&nbsp;</a></span>nextUpdate</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">float Lexmou.MachineLearning.Session.Quadcopter.GeneSession.nextUpdate</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Definition at line <a class="el" href="_gene_session_8cs_source.html#l00074">74</a> of file <a class="el" href="_gene_session_8cs_source.html">GeneSession.cs</a>.</p>
 
 </div>
 </div>
@@ -1059,6 +1097,134 @@ Private Attributes</h2></td></tr>
 
 </div>
 </div>
+<a id="a1e312a8f9fdf24214ba959dd8c0a64df"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a1e312a8f9fdf24214ba959dd8c0a64df">&sect;&nbsp;</a></span>randomRotation</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool Lexmou.MachineLearning.Session.Quadcopter.GeneSession.randomRotation = false</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Definition at line <a class="el" href="_gene_session_8cs_source.html#l00078">78</a> of file <a class="el" href="_gene_session_8cs_source.html">GeneSession.cs</a>.</p>
+
+</div>
+</div>
+<a id="a4a2e9639ac5e89b94309b42b00086a99"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a4a2e9639ac5e89b94309b42b00086a99">&sect;&nbsp;</a></span>scoreActiveWind</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">float Lexmou.MachineLearning.Session.Quadcopter.GeneSession.scoreActiveWind = 120.0f</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Definition at line <a class="el" href="_gene_session_8cs_source.html#l00079">79</a> of file <a class="el" href="_gene_session_8cs_source.html">GeneSession.cs</a>.</p>
+
+</div>
+</div>
+<a id="ac03e7139ee6dbe0e88f546fcb64e4d1c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ac03e7139ee6dbe0e88f546fcb64e4d1c">&sect;&nbsp;</a></span>_windStrength</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">float Lexmou.MachineLearning.Session.Quadcopter.GeneSession._windStrength = 0.0f</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Definition at line <a class="el" href="_gene_session_8cs_source.html#l00080">80</a> of file <a class="el" href="_gene_session_8cs_source.html">GeneSession.cs</a>.</p>
+
+</div>
+</div>
+<a id="ae1e6bbdbff27743972e49830b9d6f164"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ae1e6bbdbff27743972e49830b9d6f164">&sect;&nbsp;</a></span>scoreActiveRandomRotation</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">float Lexmou.MachineLearning.Session.Quadcopter.GeneSession.scoreActiveRandomRotation = 200.0f</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Definition at line <a class="el" href="_gene_session_8cs_source.html#l00081">81</a> of file <a class="el" href="_gene_session_8cs_source.html">GeneSession.cs</a>.</p>
+
+</div>
+</div>
+<a id="a2510cee3616d053c9fc585c65bbd6344"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a2510cee3616d053c9fc585c65bbd6344">&sect;&nbsp;</a></span>_angleRandomRotation</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">float Lexmou.MachineLearning.Session.Quadcopter.GeneSession._angleRandomRotation = 60.0f</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Definition at line <a class="el" href="_gene_session_8cs_source.html#l00082">82</a> of file <a class="el" href="_gene_session_8cs_source.html">GeneSession.cs</a>.</p>
+
+</div>
+</div>
+<a id="ad4fd0e22f9f533be1d5ecae519389706"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ad4fd0e22f9f533be1d5ecae519389706">&sect;&nbsp;</a></span>angleRandomRotationArr</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">float [] Lexmou.MachineLearning.Session.Quadcopter.GeneSession.angleRandomRotationArr = new float[7] {2, 10, 20, 30, 40, 50, 60}</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Definition at line <a class="el" href="_gene_session_8cs_source.html#l00083">83</a> of file <a class="el" href="_gene_session_8cs_source.html">GeneSession.cs</a>.</p>
+
+</div>
+</div>
+<a id="abfb0857b8cfb2a246796c4b1a885aaab"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#abfb0857b8cfb2a246796c4b1a885aaab">&sect;&nbsp;</a></span>indexRRArr</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">int Lexmou.MachineLearning.Session.Quadcopter.GeneSession.indexRRArr = 0</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Definition at line <a class="el" href="_gene_session_8cs_source.html#l00084">84</a> of file <a class="el" href="_gene_session_8cs_source.html">GeneSession.cs</a>.</p>
+
+</div>
+</div>
 <a id="a416a464c528026e25dd37b5d13a0211c"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a416a464c528026e25dd37b5d13a0211c">&sect;&nbsp;</a></span>medianLimit</h2>
 
@@ -1080,246 +1246,6 @@ Private Attributes</h2></td></tr>
 </div><div class="memdoc">
 
 <p>Definition at line <a class="el" href="_gene_session_8cs_source.html#l00085">85</a> of file <a class="el" href="_gene_session_8cs_source.html">GeneSession.cs</a>.</p>
-
-</div>
-</div>
-<a id="a2d4908efc4d0d6be20252327cc8ff611"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a2d4908efc4d0d6be20252327cc8ff611">&sect;&nbsp;</a></span>mlpPopulation</h2>
-
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname"><a class="el" href="class_lexmou_1_1_machine_learning_1_1_neural_network_1_1_feed_forward_1_1_multi_layer_maths_net.html">MultiLayerMathsNet</a> [] Lexmou.MachineLearning.Session.Quadcopter.GeneSession.mlpPopulation</td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">private</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-<p>Definition at line <a class="el" href="_gene_session_8cs_source.html#l00071">71</a> of file <a class="el" href="_gene_session_8cs_source.html">GeneSession.cs</a>.</p>
-
-</div>
-</div>
-<a id="a3ed6c626e3bde8ef1180cc72977e36a8"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a3ed6c626e3bde8ef1180cc72977e36a8">&sect;&nbsp;</a></span>mutationRate</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">float Lexmou.MachineLearning.Session.Quadcopter.GeneSession.mutationRate = 0.1f</td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-<p>Definition at line <a class="el" href="_gene_session_8cs_source.html#l00061">61</a> of file <a class="el" href="_gene_session_8cs_source.html">GeneSession.cs</a>.</p>
-
-</div>
-</div>
-<a id="a25b936828d910fa51faa8dec0834767a"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a25b936828d910fa51faa8dec0834767a">&sect;&nbsp;</a></span>nextUpdate</h2>
-
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">float Lexmou.MachineLearning.Session.Quadcopter.GeneSession.nextUpdate</td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">private</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-<p>Definition at line <a class="el" href="_gene_session_8cs_source.html#l00074">74</a> of file <a class="el" href="_gene_session_8cs_source.html">GeneSession.cs</a>.</p>
-
-</div>
-</div>
-<a id="a2d128620609dfa001dace3bdd7787220"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a2d128620609dfa001dace3bdd7787220">&sect;&nbsp;</a></span>populationSize</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">int Lexmou.MachineLearning.Session.Quadcopter.GeneSession.populationSize</td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-<p>Definition at line <a class="el" href="_gene_session_8cs_source.html#l00059">59</a> of file <a class="el" href="_gene_session_8cs_source.html">GeneSession.cs</a>.</p>
-
-</div>
-</div>
-<a id="a763d3ce79c285cd732fa7c4ff7adc9be"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a763d3ce79c285cd732fa7c4ff7adc9be">&sect;&nbsp;</a></span>prefabDrone</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">GameObject Lexmou.MachineLearning.Session.Quadcopter.GeneSession.prefabDrone</td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-<p>Definition at line <a class="el" href="_gene_session_8cs_source.html#l00055">55</a> of file <a class="el" href="_gene_session_8cs_source.html">GeneSession.cs</a>.</p>
-
-</div>
-</div>
-<a id="aec10dbddfaaec9ca36466c21475ca7eb"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#aec10dbddfaaec9ca36466c21475ca7eb">&sect;&nbsp;</a></span>randomIndividualsRate</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">float Lexmou.MachineLearning.Session.Quadcopter.GeneSession.randomIndividualsRate = 0.1f</td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-<p>Definition at line <a class="el" href="_gene_session_8cs_source.html#l00062">62</a> of file <a class="el" href="_gene_session_8cs_source.html">GeneSession.cs</a>.</p>
-
-</div>
-</div>
-<a id="a1e312a8f9fdf24214ba959dd8c0a64df"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a1e312a8f9fdf24214ba959dd8c0a64df">&sect;&nbsp;</a></span>randomRotation</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">bool Lexmou.MachineLearning.Session.Quadcopter.GeneSession.randomRotation = false</td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-<p>Definition at line <a class="el" href="_gene_session_8cs_source.html#l00078">78</a> of file <a class="el" href="_gene_session_8cs_source.html">GeneSession.cs</a>.</p>
-
-</div>
-</div>
-<a id="abc747e05c381fec4aaf7824b7cc49a1e"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#abc747e05c381fec4aaf7824b7cc49a1e">&sect;&nbsp;</a></span>rigid</h2>
-
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">Rigidbody Lexmou.MachineLearning.Session.Quadcopter.GeneSession.rigid</td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">private</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-<p>Definition at line <a class="el" href="_gene_session_8cs_source.html#l00049">49</a> of file <a class="el" href="_gene_session_8cs_source.html">GeneSession.cs</a>.</p>
-
-</div>
-</div>
-<a id="a4b87c55f9235de9f1fb90dccb2c0a96f"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a4b87c55f9235de9f1fb90dccb2c0a96f">&sect;&nbsp;</a></span>rndGenerator</h2>
-
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">SystemRandomSource Lexmou.MachineLearning.Session.Quadcopter.GeneSession.rndGenerator</td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">private</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-<p>Definition at line <a class="el" href="_gene_session_8cs_source.html#l00119">119</a> of file <a class="el" href="_gene_session_8cs_source.html">GeneSession.cs</a>.</p>
-
-</div>
-</div>
-<a id="ae1e6bbdbff27743972e49830b9d6f164"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ae1e6bbdbff27743972e49830b9d6f164">&sect;&nbsp;</a></span>scoreActiveRandomRotation</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">float Lexmou.MachineLearning.Session.Quadcopter.GeneSession.scoreActiveRandomRotation = 200.0f</td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-<p>Definition at line <a class="el" href="_gene_session_8cs_source.html#l00081">81</a> of file <a class="el" href="_gene_session_8cs_source.html">GeneSession.cs</a>.</p>
-
-</div>
-</div>
-<a id="a4a2e9639ac5e89b94309b42b00086a99"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a4a2e9639ac5e89b94309b42b00086a99">&sect;&nbsp;</a></span>scoreActiveWind</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">float Lexmou.MachineLearning.Session.Quadcopter.GeneSession.scoreActiveWind = 120.0f</td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-<p>Definition at line <a class="el" href="_gene_session_8cs_source.html#l00079">79</a> of file <a class="el" href="_gene_session_8cs_source.html">GeneSession.cs</a>.</p>
-
-</div>
-</div>
-<a id="aa24d58efbe50dfb660a38acb80469610"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#aa24d58efbe50dfb660a38acb80469610">&sect;&nbsp;</a></span>shapes</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">List&lt;int&gt; Lexmou.MachineLearning.Session.Quadcopter.GeneSession.shapes</td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-<p>Definition at line <a class="el" href="_gene_session_8cs_source.html#l00066">66</a> of file <a class="el" href="_gene_session_8cs_source.html">GeneSession.cs</a>.</p>
-
-</div>
-</div>
-<a id="af337eb68e8ac5915c833df840ea2a580"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#af337eb68e8ac5915c833df840ea2a580">&sect;&nbsp;</a></span>spacing</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">float Lexmou.MachineLearning.Session.Quadcopter.GeneSession.spacing = 5.0f</td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-<p>Definition at line <a class="el" href="_gene_session_8cs_source.html#l00065">65</a> of file <a class="el" href="_gene_session_8cs_source.html">GeneSession.cs</a>.</p>
 
 </div>
 </div>
@@ -1347,6 +1273,142 @@ Private Attributes</h2></td></tr>
 
 </div>
 </div>
+<a id="ad30ec1ffd62957eb5113d4574c2e4e56"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ad30ec1ffd62957eb5113d4574c2e4e56">&sect;&nbsp;</a></span>hudManager</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="class_h_u_d_manager.html">HUDManager</a> Lexmou.MachineLearning.Session.Quadcopter.GeneSession.hudManager</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Definition at line <a class="el" href="_gene_session_8cs_source.html#l00111">111</a> of file <a class="el" href="_gene_session_8cs_source.html">GeneSession.cs</a>.</p>
+
+</div>
+</div>
+<a id="aa7ac35ebe67b93136fdb3c1419b7aaa9"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aa7ac35ebe67b93136fdb3c1419b7aaa9">&sect;&nbsp;</a></span>_intervalSave</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int Lexmou.MachineLearning.Session.Quadcopter.GeneSession._intervalSave</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Definition at line <a class="el" href="_gene_session_8cs_source.html#l00112">112</a> of file <a class="el" href="_gene_session_8cs_source.html">GeneSession.cs</a>.</p>
+
+</div>
+</div>
+<a id="a0cbb77dbdc687b28b39778ecb530ca27"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a0cbb77dbdc687b28b39778ecb530ca27">&sect;&nbsp;</a></span>_loadGeneration</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int Lexmou.MachineLearning.Session.Quadcopter.GeneSession._loadGeneration</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Definition at line <a class="el" href="_gene_session_8cs_source.html#l00114">114</a> of file <a class="el" href="_gene_session_8cs_source.html">GeneSession.cs</a>.</p>
+
+</div>
+</div>
+<a id="a494c61fb3514da960366cf0070a6f388"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a494c61fb3514da960366cf0070a6f388">&sect;&nbsp;</a></span>_timeScale</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">float Lexmou.MachineLearning.Session.Quadcopter.GeneSession._timeScale</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Definition at line <a class="el" href="_gene_session_8cs_source.html#l00117">117</a> of file <a class="el" href="_gene_session_8cs_source.html">GeneSession.cs</a>.</p>
+
+</div>
+</div>
+<a id="a4b87c55f9235de9f1fb90dccb2c0a96f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a4b87c55f9235de9f1fb90dccb2c0a96f">&sect;&nbsp;</a></span>rndGenerator</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">SystemRandomSource Lexmou.MachineLearning.Session.Quadcopter.GeneSession.rndGenerator</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Definition at line <a class="el" href="_gene_session_8cs_source.html#l00119">119</a> of file <a class="el" href="_gene_session_8cs_source.html">GeneSession.cs</a>.</p>
+
+</div>
+</div>
+<a id="acb0625bd9ae25c980ec5ab98a571cb1a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#acb0625bd9ae25c980ec5ab98a571cb1a">&sect;&nbsp;</a></span>distribution</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">ContinuousUniform Lexmou.MachineLearning.Session.Quadcopter.GeneSession.distribution</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Definition at line <a class="el" href="_gene_session_8cs_source.html#l00120">120</a> of file <a class="el" href="_gene_session_8cs_source.html">GeneSession.cs</a>.</p>
+
+</div>
+</div>
+<a id="a374df5edb89e346684c4b38311463d1c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a374df5edb89e346684c4b38311463d1c">&sect;&nbsp;</a></span>deltaDistribution</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">ContinuousUniform Lexmou.MachineLearning.Session.Quadcopter.GeneSession.deltaDistribution</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Definition at line <a class="el" href="_gene_session_8cs_source.html#l00121">121</a> of file <a class="el" href="_gene_session_8cs_source.html">GeneSession.cs</a>.</p>
+
+</div>
+</div>
 <a id="ac967237c1a552bbbd56a5f99da53f1d9"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#ac967237c1a552bbbd56a5f99da53f1d9">&sect;&nbsp;</a></span>tmpBuildCustomWeights</h2>
 
@@ -1371,8 +1433,9 @@ Private Attributes</h2></td></tr>
 
 </div>
 </div>
-<a id="abd81f5e3aef679c9d648e5dc008b466b"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#abd81f5e3aef679c9d648e5dc008b466b">&sect;&nbsp;</a></span>tmpVelo</h2>
+<h2 class="groupheader">Property Documentation</h2>
+<a id="a3e1aa53144296932158278e31bece8e8"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a3e1aa53144296932158278e31bece8e8">&sect;&nbsp;</a></span>task</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -1381,53 +1444,44 @@ Private Attributes</h2></td></tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">Vector&lt;float&gt; Lexmou.MachineLearning.Session.Quadcopter.GeneSession.tmpVelo</td>
+          <td class="memname">string Lexmou.MachineLearning.Session.Quadcopter.GeneSession.task</td>
         </tr>
       </table>
   </td>
   <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+<span class="mlabels"><span class="mlabel">get</span><span class="mlabel">set</span></span>  </td>
   </tr>
 </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="_gene_session_8cs_source.html#l00068">68</a> of file <a class="el" href="_gene_session_8cs_source.html">GeneSession.cs</a>.</p>
+<p>Definition at line <a class="el" href="_gene_session_8cs_source.html#l00053">53</a> of file <a class="el" href="_gene_session_8cs_source.html">GeneSession.cs</a>.</p>
 
 </div>
 </div>
-<a id="a4c7fcc1e6c025b4f7da9e81ae622edd4"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a4c7fcc1e6c025b4f7da9e81ae622edd4">&sect;&nbsp;</a></span>writer</h2>
+<a id="a2ae02298bdb67a4d04d8126b0d7cc72c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a2ae02298bdb67a4d04d8126b0d7cc72c">&sect;&nbsp;</a></span>seed</h2>
 
 <div class="memitem">
 <div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">StreamWriter Lexmou.MachineLearning.Session.Quadcopter.GeneSession.writer</td>
+          <td class="memname">int Lexmou.MachineLearning.Session.Quadcopter.GeneSession.seed</td>
         </tr>
       </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">get</span><span class="mlabel">set</span></span>  </td>
+  </tr>
+</table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="_gene_session_8cs_source.html#l00050">50</a> of file <a class="el" href="_gene_session_8cs_source.html">GeneSession.cs</a>.</p>
+<p>Definition at line <a class="el" href="_gene_session_8cs_source.html#l00058">58</a> of file <a class="el" href="_gene_session_8cs_source.html">GeneSession.cs</a>.</p>
 
 </div>
 </div>
-<a id="a8379035e4591318ea7dc8fe084386720"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a8379035e4591318ea7dc8fe084386720">&sect;&nbsp;</a></span>writerSession</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">StreamWriter Lexmou.MachineLearning.Session.Quadcopter.GeneSession.writerSession</td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-<p>Definition at line <a class="el" href="_gene_session_8cs_source.html#l00051">51</a> of file <a class="el" href="_gene_session_8cs_source.html">GeneSession.cs</a>.</p>
-
-</div>
-</div>
-<h2 class="groupheader">Property Documentation</h2>
 <a id="a1159660a76003f021aebef627aa63151"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a1159660a76003f021aebef627aa63151">&sect;&nbsp;</a></span>AngleRandomRotation</h2>
 
@@ -1449,6 +1503,30 @@ Private Attributes</h2></td></tr>
 </div><div class="memdoc">
 
 <p>Definition at line <a class="el" href="_gene_session_8cs_source.html#l00088">88</a> of file <a class="el" href="_gene_session_8cs_source.html">GeneSession.cs</a>.</p>
+
+</div>
+</div>
+<a id="a0610321f0ac0c25588d56a62aab29355"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a0610321f0ac0c25588d56a62aab29355">&sect;&nbsp;</a></span>WindStrength</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">float Lexmou.MachineLearning.Session.Quadcopter.GeneSession.WindStrength</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">get</span><span class="mlabel">set</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Definition at line <a class="el" href="_gene_session_8cs_source.html#l00098">98</a> of file <a class="el" href="_gene_session_8cs_source.html">GeneSession.cs</a>.</p>
 
 </div>
 </div>
@@ -1500,78 +1578,6 @@ Private Attributes</h2></td></tr>
 
 </div>
 </div>
-<a id="a2ae02298bdb67a4d04d8126b0d7cc72c"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a2ae02298bdb67a4d04d8126b0d7cc72c">&sect;&nbsp;</a></span>seed</h2>
-
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">int Lexmou.MachineLearning.Session.Quadcopter.GeneSession.seed</td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">get</span><span class="mlabel">set</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-<p>Definition at line <a class="el" href="_gene_session_8cs_source.html#l00058">58</a> of file <a class="el" href="_gene_session_8cs_source.html">GeneSession.cs</a>.</p>
-
-</div>
-</div>
-<a id="a3e1aa53144296932158278e31bece8e8"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a3e1aa53144296932158278e31bece8e8">&sect;&nbsp;</a></span>task</h2>
-
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">string Lexmou.MachineLearning.Session.Quadcopter.GeneSession.task</td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">get</span><span class="mlabel">set</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-<p>Definition at line <a class="el" href="_gene_session_8cs_source.html#l00053">53</a> of file <a class="el" href="_gene_session_8cs_source.html">GeneSession.cs</a>.</p>
-
-</div>
-</div>
-<a id="ad68dd326087b3ad47cbfc717227a548d"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ad68dd326087b3ad47cbfc717227a548d">&sect;&nbsp;</a></span>this[string propertyName]</h2>
-
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">object Lexmou.MachineLearning.Session.Quadcopter.GeneSession.this[string propertyName]</td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">get</span><span class="mlabel">set</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-<p>Definition at line <a class="el" href="_gene_session_8cs_source.html#l00128">128</a> of file <a class="el" href="_gene_session_8cs_source.html">GeneSession.cs</a>.</p>
-
-</div>
-</div>
 <a id="a0ac8b6a963009beed22a1ba7c507ae17"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a0ac8b6a963009beed22a1ba7c507ae17">&sect;&nbsp;</a></span>timeScale</h2>
 
@@ -1596,8 +1602,8 @@ Private Attributes</h2></td></tr>
 
 </div>
 </div>
-<a id="a0610321f0ac0c25588d56a62aab29355"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a0610321f0ac0c25588d56a62aab29355">&sect;&nbsp;</a></span>WindStrength</h2>
+<a id="ad68dd326087b3ad47cbfc717227a548d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ad68dd326087b3ad47cbfc717227a548d">&sect;&nbsp;</a></span>this[string propertyName]</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -1606,7 +1612,7 @@ Private Attributes</h2></td></tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">float Lexmou.MachineLearning.Session.Quadcopter.GeneSession.WindStrength</td>
+          <td class="memname">object Lexmou.MachineLearning.Session.Quadcopter.GeneSession.this[string propertyName]</td>
         </tr>
       </table>
   </td>
@@ -1616,7 +1622,7 @@ Private Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="_gene_session_8cs_source.html#l00098">98</a> of file <a class="el" href="_gene_session_8cs_source.html">GeneSession.cs</a>.</p>
+<p>Definition at line <a class="el" href="_gene_session_8cs_source.html#l00128">128</a> of file <a class="el" href="_gene_session_8cs_source.html">GeneSession.cs</a>.</p>
 
 </div>
 </div>

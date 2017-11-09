@@ -22,6 +22,12 @@
 <script type="text/javascript">
   $(document).ready(function() { init_search(); });
 </script>
+<script type="text/x-mathjax-config">
+  MathJax.Hub.Config({
+    extensions: ["tex2jax.js"],
+    jax: ["input/TeX","output/HTML-CSS"],
+});
+</script><script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.2/MathJax.js?config=TeX-MML-AM_CHTML/MathJax.js"></script>
 <link href="doxygen.css" rel="stylesheet" type="text/css" />
 <link href="customdoxygen.css" rel="stylesheet" type="text/css"/>
 <link href="jquery.smartmenus.bootstrap.css" rel="stylesheet" type="text/css"/>
@@ -136,26 +142,6 @@ Private Attributes</h2></td></tr>
 <div class="textblock">
 <p>Definition at line <a class="el" href="_motor_thrust_8cs_source.html#l00004">4</a> of file <a class="el" href="_motor_thrust_8cs_source.html">MotorThrust.cs</a>.</p>
 </div><h2 class="groupheader">Member Function Documentation</h2>
-<a id="ae92c9045207a9ca938d1253d99b7dffe"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ae92c9045207a9ca938d1253d99b7dffe">&sect;&nbsp;</a></span>ApplyTorque()</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">void MotorThrust.ApplyTorque </td>
-          <td>(</td>
-          <td class="paramtype">float&#160;</td>
-          <td class="paramname"><em>percent</em></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-<p>Definition at line <a class="el" href="_motor_thrust_8cs_source.html#l00017">17</a> of file <a class="el" href="_motor_thrust_8cs_source.html">MotorThrust.cs</a>.</p>
-
-</div>
-</div>
 <a id="aa4e4dbfc15ae186f692f618e84b379f7"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#aa4e4dbfc15ae186f692f618e84b379f7">&sect;&nbsp;</a></span>Start()</h2>
 
@@ -183,6 +169,26 @@ Private Attributes</h2></td></tr>
 
 </div>
 </div>
+<a id="ae92c9045207a9ca938d1253d99b7dffe"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ae92c9045207a9ca938d1253d99b7dffe">&sect;&nbsp;</a></span>ApplyTorque()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void MotorThrust.ApplyTorque </td>
+          <td>(</td>
+          <td class="paramtype">float&#160;</td>
+          <td class="paramname"><em>percent</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Definition at line <a class="el" href="_motor_thrust_8cs_source.html#l00017">17</a> of file <a class="el" href="_motor_thrust_8cs_source.html">MotorThrust.cs</a>.</p>
+
+</div>
+</div>
 <h2 class="groupheader">Member Data Documentation</h2>
 <a id="ae554dfd8bab2e7190bcc53321343c48d"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#ae554dfd8bab2e7190bcc53321343c48d">&sect;&nbsp;</a></span>MaxThrust</h2>
@@ -197,6 +203,22 @@ Private Attributes</h2></td></tr>
 </div><div class="memdoc">
 
 <p>Definition at line <a class="el" href="_motor_thrust_8cs_source.html#l00006">6</a> of file <a class="el" href="_motor_thrust_8cs_source.html">MotorThrust.cs</a>.</p>
+
+</div>
+</div>
+<a id="a805d1e84060856f2e4126eacad9c913f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a805d1e84060856f2e4126eacad9c913f">&sect;&nbsp;</a></span>Thrust</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">float MotorThrust.Thrust = 0f</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Definition at line <a class="el" href="_motor_thrust_8cs_source.html#l00007">7</a> of file <a class="el" href="_motor_thrust_8cs_source.html">MotorThrust.cs</a>.</p>
 
 </div>
 </div>
@@ -221,22 +243,6 @@ Private Attributes</h2></td></tr>
 </div><div class="memdoc">
 
 <p>Definition at line <a class="el" href="_motor_thrust_8cs_source.html#l00009">9</a> of file <a class="el" href="_motor_thrust_8cs_source.html">MotorThrust.cs</a>.</p>
-
-</div>
-</div>
-<a id="a805d1e84060856f2e4126eacad9c913f"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a805d1e84060856f2e4126eacad9c913f">&sect;&nbsp;</a></span>Thrust</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">float MotorThrust.Thrust = 0f</td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-<p>Definition at line <a class="el" href="_motor_thrust_8cs_source.html#l00007">7</a> of file <a class="el" href="_motor_thrust_8cs_source.html">MotorThrust.cs</a>.</p>
 
 </div>
 </div>

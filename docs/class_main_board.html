@@ -22,6 +22,12 @@
 <script type="text/javascript">
   $(document).ready(function() { init_search(); });
 </script>
+<script type="text/x-mathjax-config">
+  MathJax.Hub.Config({
+    extensions: ["tex2jax.js"],
+    jax: ["input/TeX","output/HTML-CSS"],
+});
+</script><script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.2/MathJax.js?config=TeX-MML-AM_CHTML/MathJax.js"></script>
 <link href="doxygen.css" rel="stylesheet" type="text/css" />
 <link href="customdoxygen.css" rel="stylesheet" type="text/css"/>
 <link href="jquery.smartmenus.bootstrap.css" rel="stylesheet" type="text/css"/>
@@ -150,46 +156,6 @@ Private Member Functions</h2></td></tr>
 <div class="textblock">
 <p>Definition at line <a class="el" href="_main_board_8cs_source.html#l00011">11</a> of file <a class="el" href="_main_board_8cs_source.html">MainBoard.cs</a>.</p>
 </div><h2 class="groupheader">Member Function Documentation</h2>
-<a id="ae7f552c9b272f179595b0353405d0c96"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ae7f552c9b272f179595b0353405d0c96">&sect;&nbsp;</a></span>SendControlSignal()</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">void MainBoard.SendControlSignal </td>
-          <td>(</td>
-          <td class="paramtype"><a class="el" href="class_drone_1_1_hardware_1_1_control_signal.html">ControlSignal</a>&#160;</td>
-          <td class="paramname"><em>signal</em></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-<p>Definition at line <a class="el" href="_main_board_8cs_source.html#l00052">52</a> of file <a class="el" href="_main_board_8cs_source.html">MainBoard.cs</a>.</p>
-
-</div>
-</div>
-<a id="a18bee0c1a810d1170c818c97310cafee"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a18bee0c1a810d1170c818c97310cafee">&sect;&nbsp;</a></span>SendThrustSignal()</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">void MainBoard.SendThrustSignal </td>
-          <td>(</td>
-          <td class="paramtype"><a class="el" href="class_drone_1_1_hardware_1_1_thrust_signal.html">ThrustSignal</a>&#160;</td>
-          <td class="paramname"><em>signal</em></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-<p>Definition at line <a class="el" href="_main_board_8cs_source.html#l00042">42</a> of file <a class="el" href="_main_board_8cs_source.html">MainBoard.cs</a>.</p>
-
-</div>
-</div>
 <a id="a29809b58d3ce3873303bafdcadf3af3c"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a29809b58d3ce3873303bafdcadf3af3c">&sect;&nbsp;</a></span>Start()</h2>
 
@@ -217,20 +183,60 @@ Private Member Functions</h2></td></tr>
 
 </div>
 </div>
-<h2 class="groupheader">Member Data Documentation</h2>
-<a id="ad942a6b2130147ea7e58d217eb667c5c"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ad942a6b2130147ea7e58d217eb667c5c">&sect;&nbsp;</a></span>_inputMLP</h2>
+<a id="a18bee0c1a810d1170c818c97310cafee"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a18bee0c1a810d1170c818c97310cafee">&sect;&nbsp;</a></span>SendThrustSignal()</h2>
 
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">Vector&lt;float&gt; MainBoard._inputMLP</td>
+          <td class="memname">void MainBoard.SendThrustSignal </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="class_drone_1_1_hardware_1_1_thrust_signal.html">ThrustSignal</a>&#160;</td>
+          <td class="paramname"><em>signal</em></td><td>)</td>
+          <td></td>
         </tr>
       </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="_main_board_8cs_source.html#l00019">19</a> of file <a class="el" href="_main_board_8cs_source.html">MainBoard.cs</a>.</p>
+<p>Definition at line <a class="el" href="_main_board_8cs_source.html#l00042">42</a> of file <a class="el" href="_main_board_8cs_source.html">MainBoard.cs</a>.</p>
+
+</div>
+</div>
+<a id="ae7f552c9b272f179595b0353405d0c96"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ae7f552c9b272f179595b0353405d0c96">&sect;&nbsp;</a></span>SendControlSignal()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void MainBoard.SendControlSignal </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="class_drone_1_1_hardware_1_1_control_signal.html">ControlSignal</a>&#160;</td>
+          <td class="paramname"><em>signal</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Definition at line <a class="el" href="_main_board_8cs_source.html#l00052">52</a> of file <a class="el" href="_main_board_8cs_source.html">MainBoard.cs</a>.</p>
+
+</div>
+</div>
+<h2 class="groupheader">Member Data Documentation</h2>
+<a id="afdb3db62f92d1c82e1cb107c59b2ebe9"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#afdb3db62f92d1c82e1cb107c59b2ebe9">&sect;&nbsp;</a></span>ThrustSignalBus</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">MonoBehaviour [] MainBoard.ThrustSignalBus</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Definition at line <a class="el" href="_main_board_8cs_source.html#l00014">14</a> of file <a class="el" href="_main_board_8cs_source.html">MainBoard.cs</a>.</p>
 
 </div>
 </div>
@@ -247,6 +253,70 @@ Private Member Functions</h2></td></tr>
 </div><div class="memdoc">
 
 <p>Definition at line <a class="el" href="_main_board_8cs_source.html#l00015">15</a> of file <a class="el" href="_main_board_8cs_source.html">MainBoard.cs</a>.</p>
+
+</div>
+</div>
+<a id="a4a2585f1b784a18250211c5061d66470"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a4a2585f1b784a18250211c5061d66470">&sect;&nbsp;</a></span>mlp</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="class_lexmou_1_1_machine_learning_1_1_neural_network_1_1_feed_forward_1_1_multi_layer_maths_net.html">MultiLayerMathsNet</a> MainBoard.mlp</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Definition at line <a class="el" href="_main_board_8cs_source.html#l00016">16</a> of file <a class="el" href="_main_board_8cs_source.html">MainBoard.cs</a>.</p>
+
+</div>
+</div>
+<a id="ade2a0f33535463de0b6dcc839bb40a28"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ade2a0f33535463de0b6dcc839bb40a28">&sect;&nbsp;</a></span>inputSize</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int MainBoard.inputSize</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Definition at line <a class="el" href="_main_board_8cs_source.html#l00017">17</a> of file <a class="el" href="_main_board_8cs_source.html">MainBoard.cs</a>.</p>
+
+</div>
+</div>
+<a id="ad942a6b2130147ea7e58d217eb667c5c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ad942a6b2130147ea7e58d217eb667c5c">&sect;&nbsp;</a></span>_inputMLP</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">Vector&lt;float&gt; MainBoard._inputMLP</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Definition at line <a class="el" href="_main_board_8cs_source.html#l00019">19</a> of file <a class="el" href="_main_board_8cs_source.html">MainBoard.cs</a>.</p>
+
+</div>
+</div>
+<a id="acceef52976913588383d46451fa0a707"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#acceef52976913588383d46451fa0a707">&sect;&nbsp;</a></span>rotate</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">Vector3 MainBoard.rotate</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Definition at line <a class="el" href="_main_board_8cs_source.html#l00029">29</a> of file <a class="el" href="_main_board_8cs_source.html">MainBoard.cs</a>.</p>
 
 </div>
 </div>
@@ -279,70 +349,6 @@ Private Member Functions</h2></td></tr>
 </div><div class="memdoc">
 
 <p>Definition at line <a class="el" href="_main_board_8cs_source.html#l00032">32</a> of file <a class="el" href="_main_board_8cs_source.html">MainBoard.cs</a>.</p>
-
-</div>
-</div>
-<a id="ade2a0f33535463de0b6dcc839bb40a28"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ade2a0f33535463de0b6dcc839bb40a28">&sect;&nbsp;</a></span>inputSize</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">int MainBoard.inputSize</td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-<p>Definition at line <a class="el" href="_main_board_8cs_source.html#l00017">17</a> of file <a class="el" href="_main_board_8cs_source.html">MainBoard.cs</a>.</p>
-
-</div>
-</div>
-<a id="a4a2585f1b784a18250211c5061d66470"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a4a2585f1b784a18250211c5061d66470">&sect;&nbsp;</a></span>mlp</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname"><a class="el" href="class_lexmou_1_1_machine_learning_1_1_neural_network_1_1_feed_forward_1_1_multi_layer_maths_net.html">MultiLayerMathsNet</a> MainBoard.mlp</td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-<p>Definition at line <a class="el" href="_main_board_8cs_source.html#l00016">16</a> of file <a class="el" href="_main_board_8cs_source.html">MainBoard.cs</a>.</p>
-
-</div>
-</div>
-<a id="acceef52976913588383d46451fa0a707"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#acceef52976913588383d46451fa0a707">&sect;&nbsp;</a></span>rotate</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">Vector3 MainBoard.rotate</td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-<p>Definition at line <a class="el" href="_main_board_8cs_source.html#l00029">29</a> of file <a class="el" href="_main_board_8cs_source.html">MainBoard.cs</a>.</p>
-
-</div>
-</div>
-<a id="afdb3db62f92d1c82e1cb107c59b2ebe9"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#afdb3db62f92d1c82e1cb107c59b2ebe9">&sect;&nbsp;</a></span>ThrustSignalBus</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">MonoBehaviour [] MainBoard.ThrustSignalBus</td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-<p>Definition at line <a class="el" href="_main_board_8cs_source.html#l00014">14</a> of file <a class="el" href="_main_board_8cs_source.html">MainBoard.cs</a>.</p>
 
 </div>
 </div>

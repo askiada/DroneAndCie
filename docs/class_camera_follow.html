@@ -22,6 +22,12 @@
 <script type="text/javascript">
   $(document).ready(function() { init_search(); });
 </script>
+<script type="text/x-mathjax-config">
+  MathJax.Hub.Config({
+    extensions: ["tex2jax.js"],
+    jax: ["input/TeX","output/HTML-CSS"],
+});
+</script><script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.2/MathJax.js?config=TeX-MML-AM_CHTML/MathJax.js"></script>
 <link href="doxygen.css" rel="stylesheet" type="text/css" />
 <link href="customdoxygen.css" rel="stylesheet" type="text/css"/>
 <link href="jquery.smartmenus.bootstrap.css" rel="stylesheet" type="text/css"/>
@@ -150,6 +156,77 @@ Private Attributes</h2></td></tr>
 <div class="textblock">
 <p>Definition at line <a class="el" href="_camera_follow_8cs_source.html#l00004">4</a> of file <a class="el" href="_camera_follow_8cs_source.html">CameraFollow.cs</a>.</p>
 </div><h2 class="groupheader">Member Function Documentation</h2>
+<a id="adbbbae516b9d54ffc9afe287dcb72cd5"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#adbbbae516b9d54ffc9afe287dcb72cd5">&sect;&nbsp;</a></span>Start()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void CameraFollow.Start </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Definition at line <a class="el" href="_camera_follow_8cs_source.html#l00015">15</a> of file <a class="el" href="_camera_follow_8cs_source.html">CameraFollow.cs</a>.</p>
+
+</div>
+</div>
+<a id="ab60e11961f5f65972126ad6fd98869ea"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ab60e11961f5f65972126ad6fd98869ea">&sect;&nbsp;</a></span>Det()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">float CameraFollow.Det </td>
+          <td>(</td>
+          <td class="paramtype">float&#160;</td>
+          <td class="paramname"><em>A</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">float&#160;</td>
+          <td class="paramname"><em>B</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">float&#160;</td>
+          <td class="paramname"><em>C</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Definition at line <a class="el" href="_camera_follow_8cs_source.html#l00020">20</a> of file <a class="el" href="_camera_follow_8cs_source.html">CameraFollow.cs</a>.</p>
+
+</div>
+</div>
 <a id="a4c0c84530d8d4ebd3c5c04bc7f8cb668"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a4c0c84530d8d4ebd3c5c04bc7f8cb668">&sect;&nbsp;</a></span>A()</h2>
 
@@ -175,44 +252,6 @@ Private Attributes</h2></td></tr>
 </div><div class="memdoc">
 
 <p>Definition at line <a class="el" href="_camera_follow_8cs_source.html#l00030">30</a> of file <a class="el" href="_camera_follow_8cs_source.html">CameraFollow.cs</a>.</p>
-
-</div>
-</div>
-<a id="aedccc1ef5293c5dd4b7679b8745d2e27"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#aedccc1ef5293c5dd4b7679b8745d2e27">&sect;&nbsp;</a></span>a()</h2>
-
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">float CameraFollow.a </td>
-          <td>(</td>
-          <td class="paramtype">Vector4&#160;</td>
-          <td class="paramname"><em>O1</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">Vector4&#160;</td>
-          <td class="paramname"><em>O2</em>&#160;</td>
-        </tr>
-        <tr>
-          <td></td>
-          <td>)</td>
-          <td></td><td></td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">private</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-<p>Definition at line <a class="el" href="_camera_follow_8cs_source.html#l00046">46</a> of file <a class="el" href="_camera_follow_8cs_source.html">CameraFollow.cs</a>.</p>
 
 </div>
 </div>
@@ -298,6 +337,44 @@ Private Attributes</h2></td></tr>
 
 </div>
 </div>
+<a id="aedccc1ef5293c5dd4b7679b8745d2e27"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aedccc1ef5293c5dd4b7679b8745d2e27">&sect;&nbsp;</a></span>a()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">float CameraFollow.a </td>
+          <td>(</td>
+          <td class="paramtype">Vector4&#160;</td>
+          <td class="paramname"><em>O1</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">Vector4&#160;</td>
+          <td class="paramname"><em>O2</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Definition at line <a class="el" href="_camera_follow_8cs_source.html#l00046">46</a> of file <a class="el" href="_camera_follow_8cs_source.html">CameraFollow.cs</a>.</p>
+
+</div>
+</div>
 <a id="a36ea8315ea326fb1aed3ff06c708fd76"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a36ea8315ea326fb1aed3ff06c708fd76">&sect;&nbsp;</a></span>d()</h2>
 
@@ -333,77 +410,6 @@ Private Attributes</h2></td></tr>
 </div><div class="memdoc">
 
 <p>Definition at line <a class="el" href="_camera_follow_8cs_source.html#l00051">51</a> of file <a class="el" href="_camera_follow_8cs_source.html">CameraFollow.cs</a>.</p>
-
-</div>
-</div>
-<a id="ab60e11961f5f65972126ad6fd98869ea"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ab60e11961f5f65972126ad6fd98869ea">&sect;&nbsp;</a></span>Det()</h2>
-
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">float CameraFollow.Det </td>
-          <td>(</td>
-          <td class="paramtype">float&#160;</td>
-          <td class="paramname"><em>A</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">float&#160;</td>
-          <td class="paramname"><em>B</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">float&#160;</td>
-          <td class="paramname"><em>C</em>&#160;</td>
-        </tr>
-        <tr>
-          <td></td>
-          <td>)</td>
-          <td></td><td></td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">private</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-<p>Definition at line <a class="el" href="_camera_follow_8cs_source.html#l00020">20</a> of file <a class="el" href="_camera_follow_8cs_source.html">CameraFollow.cs</a>.</p>
-
-</div>
-</div>
-<a id="ab8ce2043b1a47917b8b970f5579af9ec"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ab8ce2043b1a47917b8b970f5579af9ec">&sect;&nbsp;</a></span>FixedUpdate()</h2>
-
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">void CameraFollow.FixedUpdate </td>
-          <td>(</td>
-          <td class="paramname"></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">private</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-<p>Definition at line <a class="el" href="_camera_follow_8cs_source.html#l00095">95</a> of file <a class="el" href="_camera_follow_8cs_source.html">CameraFollow.cs</a>.</p>
 
 </div>
 </div>
@@ -463,8 +469,8 @@ Private Attributes</h2></td></tr>
 
 </div>
 </div>
-<a id="adbbbae516b9d54ffc9afe287dcb72cd5"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#adbbbae516b9d54ffc9afe287dcb72cd5">&sect;&nbsp;</a></span>Start()</h2>
+<a id="ab8ce2043b1a47917b8b970f5579af9ec"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ab8ce2043b1a47917b8b970f5579af9ec">&sect;&nbsp;</a></span>FixedUpdate()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -473,7 +479,7 @@ Private Attributes</h2></td></tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">void CameraFollow.Start </td>
+          <td class="memname">void CameraFollow.FixedUpdate </td>
           <td>(</td>
           <td class="paramname"></td><td>)</td>
           <td></td>
@@ -486,40 +492,24 @@ Private Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="_camera_follow_8cs_source.html#l00015">15</a> of file <a class="el" href="_camera_follow_8cs_source.html">CameraFollow.cs</a>.</p>
+<p>Definition at line <a class="el" href="_camera_follow_8cs_source.html#l00095">95</a> of file <a class="el" href="_camera_follow_8cs_source.html">CameraFollow.cs</a>.</p>
 
 </div>
 </div>
 <h2 class="groupheader">Member Data Documentation</h2>
-<a id="a94cb8f84fe6b96324e44d3b7a0be3d91"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a94cb8f84fe6b96324e44d3b7a0be3d91">&sect;&nbsp;</a></span>distance</h2>
+<a id="a0274a2d9747d38da0cb6bf447b6b2df5"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a0274a2d9747d38da0cb6bf447b6b2df5">&sect;&nbsp;</a></span>Target</h2>
 
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">float CameraFollow.distance = 5.0f</td>
+          <td class="memname">Transform CameraFollow.Target</td>
         </tr>
       </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="_camera_follow_8cs_source.html#l00010">10</a> of file <a class="el" href="_camera_follow_8cs_source.html">CameraFollow.cs</a>.</p>
-
-</div>
-</div>
-<a id="a6bdf2afa254e1ee47ffffa5b3956e39a"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a6bdf2afa254e1ee47ffffa5b3956e39a">&sect;&nbsp;</a></span>follow</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">bool CameraFollow.follow = true</td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-<p>Definition at line <a class="el" href="_camera_follow_8cs_source.html#l00011">11</a> of file <a class="el" href="_camera_follow_8cs_source.html">CameraFollow.cs</a>.</p>
+<p>Definition at line <a class="el" href="_camera_follow_8cs_source.html#l00007">7</a> of file <a class="el" href="_camera_follow_8cs_source.html">CameraFollow.cs</a>.</p>
 
 </div>
 </div>
@@ -571,19 +561,35 @@ Private Attributes</h2></td></tr>
 
 </div>
 </div>
-<a id="a0274a2d9747d38da0cb6bf447b6b2df5"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a0274a2d9747d38da0cb6bf447b6b2df5">&sect;&nbsp;</a></span>Target</h2>
+<a id="a94cb8f84fe6b96324e44d3b7a0be3d91"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a94cb8f84fe6b96324e44d3b7a0be3d91">&sect;&nbsp;</a></span>distance</h2>
 
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">Transform CameraFollow.Target</td>
+          <td class="memname">float CameraFollow.distance = 5.0f</td>
         </tr>
       </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="_camera_follow_8cs_source.html#l00007">7</a> of file <a class="el" href="_camera_follow_8cs_source.html">CameraFollow.cs</a>.</p>
+<p>Definition at line <a class="el" href="_camera_follow_8cs_source.html#l00010">10</a> of file <a class="el" href="_camera_follow_8cs_source.html">CameraFollow.cs</a>.</p>
+
+</div>
+</div>
+<a id="a6bdf2afa254e1ee47ffffa5b3956e39a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a6bdf2afa254e1ee47ffffa5b3956e39a">&sect;&nbsp;</a></span>follow</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool CameraFollow.follow = true</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Definition at line <a class="el" href="_camera_follow_8cs_source.html#l00011">11</a> of file <a class="el" href="_camera_follow_8cs_source.html">CameraFollow.cs</a>.</p>
 
 </div>
 </div>

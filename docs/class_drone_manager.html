@@ -22,6 +22,12 @@
 <script type="text/javascript">
   $(document).ready(function() { init_search(); });
 </script>
+<script type="text/x-mathjax-config">
+  MathJax.Hub.Config({
+    extensions: ["tex2jax.js"],
+    jax: ["input/TeX","output/HTML-CSS"],
+});
+</script><script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.2/MathJax.js?config=TeX-MML-AM_CHTML/MathJax.js"></script>
 <link href="doxygen.css" rel="stylesheet" type="text/css" />
 <link href="customdoxygen.css" rel="stylesheet" type="text/css"/>
 <link href="jquery.smartmenus.bootstrap.css" rel="stylesheet" type="text/css"/>
@@ -158,33 +164,6 @@ Private Attributes</h2></td></tr>
 <div class="textblock">
 <p>Definition at line <a class="el" href="_drone_manager_8cs_source.html#l00011">11</a> of file <a class="el" href="_drone_manager_8cs_source.html">DroneManager.cs</a>.</p>
 </div><h2 class="groupheader">Member Function Documentation</h2>
-<a id="ad4549b953cf84114cb04289284fe7ff4"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ad4549b953cf84114cb04289284fe7ff4">&sect;&nbsp;</a></span>Awake()</h2>
-
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">void DroneManager.Awake </td>
-          <td>(</td>
-          <td class="paramname"></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">private</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-<p>Definition at line <a class="el" href="_drone_manager_8cs_source.html#l00079">79</a> of file <a class="el" href="_drone_manager_8cs_source.html">DroneManager.cs</a>.</p>
-
-</div>
-</div>
 <a id="a5f1d1de509bce7215c04b8a296729325"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a5f1d1de509bce7215c04b8a296729325">&sect;&nbsp;</a></span>BuildCustomWeights()</h2>
 
@@ -249,14 +228,14 @@ Private Attributes</h2></td></tr>
 
 </div>
 </div>
-<a id="a90bbfb184aa9f4563d98d5492803c70e"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a90bbfb184aa9f4563d98d5492803c70e">&sect;&nbsp;</a></span>restartPositionRotation()</h2>
+<a id="a78229f47ce11fde7a9698a4280b8426c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a78229f47ce11fde7a9698a4280b8426c">&sect;&nbsp;</a></span>Stabilization()</h2>
 
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">void DroneManager.restartPositionRotation </td>
+          <td class="memname">void DroneManager.Stabilization </td>
           <td>(</td>
           <td class="paramname"></td><td>)</td>
           <td></td>
@@ -264,27 +243,34 @@ Private Attributes</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="_drone_manager_8cs_source.html#l00108">108</a> of file <a class="el" href="_drone_manager_8cs_source.html">DroneManager.cs</a>.</p>
+<p>Definition at line <a class="el" href="_drone_manager_8cs_source.html#l00073">73</a> of file <a class="el" href="_drone_manager_8cs_source.html">DroneManager.cs</a>.</p>
 
 </div>
 </div>
-<a id="a312ce57358885f82902d38d7e564fb97"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a312ce57358885f82902d38d7e564fb97">&sect;&nbsp;</a></span>SetDrag()</h2>
+<a id="ad4549b953cf84114cb04289284fe7ff4"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ad4549b953cf84114cb04289284fe7ff4">&sect;&nbsp;</a></span>Awake()</h2>
 
 <div class="memitem">
 <div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">void DroneManager.SetDrag </td>
+          <td class="memname">void DroneManager.Awake </td>
           <td>(</td>
-          <td class="paramtype">float&#160;</td>
-          <td class="paramname"><em>val</em></td><td>)</td>
+          <td class="paramname"></td><td>)</td>
           <td></td>
         </tr>
       </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="_drone_manager_8cs_source.html#l00091">91</a> of file <a class="el" href="_drone_manager_8cs_source.html">DroneManager.cs</a>.</p>
+<p>Definition at line <a class="el" href="_drone_manager_8cs_source.html#l00079">79</a> of file <a class="el" href="_drone_manager_8cs_source.html">DroneManager.cs</a>.</p>
 
 </div>
 </div>
@@ -308,6 +294,26 @@ Private Attributes</h2></td></tr>
 
 </div>
 </div>
+<a id="a312ce57358885f82902d38d7e564fb97"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a312ce57358885f82902d38d7e564fb97">&sect;&nbsp;</a></span>SetDrag()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void DroneManager.SetDrag </td>
+          <td>(</td>
+          <td class="paramtype">float&#160;</td>
+          <td class="paramname"><em>val</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Definition at line <a class="el" href="_drone_manager_8cs_source.html#l00091">91</a> of file <a class="el" href="_drone_manager_8cs_source.html">DroneManager.cs</a>.</p>
+
+</div>
+</div>
 <a id="a342e893f5a63e8cdc086ceee87a50316"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a342e893f5a63e8cdc086ceee87a50316">&sect;&nbsp;</a></span>setMaxThrust()</h2>
 
@@ -328,14 +334,14 @@ Private Attributes</h2></td></tr>
 
 </div>
 </div>
-<a id="a78229f47ce11fde7a9698a4280b8426c"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a78229f47ce11fde7a9698a4280b8426c">&sect;&nbsp;</a></span>Stabilization()</h2>
+<a id="a90bbfb184aa9f4563d98d5492803c70e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a90bbfb184aa9f4563d98d5492803c70e">&sect;&nbsp;</a></span>restartPositionRotation()</h2>
 
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">void DroneManager.Stabilization </td>
+          <td class="memname">void DroneManager.restartPositionRotation </td>
           <td>(</td>
           <td class="paramname"></td><td>)</td>
           <td></td>
@@ -343,24 +349,56 @@ Private Attributes</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="_drone_manager_8cs_source.html#l00073">73</a> of file <a class="el" href="_drone_manager_8cs_source.html">DroneManager.cs</a>.</p>
+<p>Definition at line <a class="el" href="_drone_manager_8cs_source.html#l00108">108</a> of file <a class="el" href="_drone_manager_8cs_source.html">DroneManager.cs</a>.</p>
 
 </div>
 </div>
 <h2 class="groupheader">Member Data Documentation</h2>
-<a id="a81cc6e62ca884297564079306e2e3862"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a81cc6e62ca884297564079306e2e3862">&sect;&nbsp;</a></span>drone</h2>
+<a id="a3f6bf9cac96071c3fa2a4fc177b7e0f6"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a3f6bf9cac96071c3fa2a4fc177b7e0f6">&sect;&nbsp;</a></span>prefabDrone</h2>
 
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">GameObject DroneManager.drone</td>
+          <td class="memname">GameObject DroneManager.prefabDrone</td>
         </tr>
       </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="_drone_manager_8cs_source.html#l00019">19</a> of file <a class="el" href="_drone_manager_8cs_source.html">DroneManager.cs</a>.</p>
+<p>Definition at line <a class="el" href="_drone_manager_8cs_source.html#l00013">13</a> of file <a class="el" href="_drone_manager_8cs_source.html">DroneManager.cs</a>.</p>
+
+</div>
+</div>
+<a id="aaf139f43dba71c813f7cdab38c64b212"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aaf139f43dba71c813f7cdab38c64b212">&sect;&nbsp;</a></span>stabilizationSeed</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int DroneManager.stabilizationSeed</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Definition at line <a class="el" href="_drone_manager_8cs_source.html#l00015">15</a> of file <a class="el" href="_drone_manager_8cs_source.html">DroneManager.cs</a>.</p>
+
+</div>
+</div>
+<a id="a592488936de9ef69fe2c42a38494c4c5"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a592488936de9ef69fe2c42a38494c4c5">&sect;&nbsp;</a></span>stabilizationGeneration</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int DroneManager.stabilizationGeneration</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Definition at line <a class="el" href="_drone_manager_8cs_source.html#l00016">16</a> of file <a class="el" href="_drone_manager_8cs_source.html">DroneManager.cs</a>.</p>
 
 </div>
 </div>
@@ -388,6 +426,22 @@ Private Attributes</h2></td></tr>
 
 </div>
 </div>
+<a id="a81cc6e62ca884297564079306e2e3862"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a81cc6e62ca884297564079306e2e3862">&sect;&nbsp;</a></span>drone</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">GameObject DroneManager.drone</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Definition at line <a class="el" href="_drone_manager_8cs_source.html#l00019">19</a> of file <a class="el" href="_drone_manager_8cs_source.html">DroneManager.cs</a>.</p>
+
+</div>
+</div>
 <a id="af67e50d7b8be8847737c3e424226af77"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#af67e50d7b8be8847737c3e424226af77">&sect;&nbsp;</a></span>initialY</h2>
 
@@ -401,78 +455,6 @@ Private Attributes</h2></td></tr>
 </div><div class="memdoc">
 
 <p>Definition at line <a class="el" href="_drone_manager_8cs_source.html#l00020">20</a> of file <a class="el" href="_drone_manager_8cs_source.html">DroneManager.cs</a>.</p>
-
-</div>
-</div>
-<a id="a3f6bf9cac96071c3fa2a4fc177b7e0f6"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a3f6bf9cac96071c3fa2a4fc177b7e0f6">&sect;&nbsp;</a></span>prefabDrone</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">GameObject DroneManager.prefabDrone</td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-<p>Definition at line <a class="el" href="_drone_manager_8cs_source.html#l00013">13</a> of file <a class="el" href="_drone_manager_8cs_source.html">DroneManager.cs</a>.</p>
-
-</div>
-</div>
-<a id="a2e5331d70e4b870c782da68c459a6e15"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a2e5331d70e4b870c782da68c459a6e15">&sect;&nbsp;</a></span>shapes</h2>
-
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">List&lt;int&gt; DroneManager.shapes = new List&lt;int&gt;() { 9, 4 }</td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">private</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-<p>Definition at line <a class="el" href="_drone_manager_8cs_source.html#l00022">22</a> of file <a class="el" href="_drone_manager_8cs_source.html">DroneManager.cs</a>.</p>
-
-</div>
-</div>
-<a id="a592488936de9ef69fe2c42a38494c4c5"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a592488936de9ef69fe2c42a38494c4c5">&sect;&nbsp;</a></span>stabilizationGeneration</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">int DroneManager.stabilizationGeneration</td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-<p>Definition at line <a class="el" href="_drone_manager_8cs_source.html#l00016">16</a> of file <a class="el" href="_drone_manager_8cs_source.html">DroneManager.cs</a>.</p>
-
-</div>
-</div>
-<a id="aaf139f43dba71c813f7cdab38c64b212"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#aaf139f43dba71c813f7cdab38c64b212">&sect;&nbsp;</a></span>stabilizationSeed</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">int DroneManager.stabilizationSeed</td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-<p>Definition at line <a class="el" href="_drone_manager_8cs_source.html#l00015">15</a> of file <a class="el" href="_drone_manager_8cs_source.html">DroneManager.cs</a>.</p>
 
 </div>
 </div>
@@ -497,6 +479,30 @@ Private Attributes</h2></td></tr>
 </div><div class="memdoc">
 
 <p>Definition at line <a class="el" href="_drone_manager_8cs_source.html#l00021">21</a> of file <a class="el" href="_drone_manager_8cs_source.html">DroneManager.cs</a>.</p>
+
+</div>
+</div>
+<a id="a2e5331d70e4b870c782da68c459a6e15"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a2e5331d70e4b870c782da68c459a6e15">&sect;&nbsp;</a></span>shapes</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">List&lt;int&gt; DroneManager.shapes = new List&lt;int&gt;() { 9, 4 }</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Definition at line <a class="el" href="_drone_manager_8cs_source.html#l00022">22</a> of file <a class="el" href="_drone_manager_8cs_source.html">DroneManager.cs</a>.</p>
 
 </div>
 </div>

@@ -11,44 +11,109 @@ using Lexmou.Utils;
 
 namespace Lexmou.MachineLearning.Evolutionary
 {
+    /**
+     * \class Genetic
+     * \brief Classic implementation of a genetic algorithm.
+     * \details Class Genetic is an "optimized" unity3D implementation of a standard genetic algorithm. The following picture shows the general principle. for more details, Wikipedia is a good start.
+     *          ![Genetic Algorithm Scheme](./media/genetic/scheme.png)
+     */
 
     public class Genetic
     {
-        private string path;
-        private Matrix<float> population;
+        /**
+         * \brief Seed number to generate a random sequence with a random generator #rndGenerator
+         */ 
         private int seed;
-        public int populationSize;
-        public int individualSize;
-        private float mutationRate;
-        private Vector<float> evaluations;
-        public float sumEvaluations;
+        /**
+         * \brief Relative path to save the results
+         */
+        private string path;
+        /**
+         * \brief Initial value range of the distribution to build the population
+         */
+        private float initialValueWeights;
+        /**
+         * \brief Matrix of the population. Each Column is an individual.
+         */
+        private Matrix<float> population;
+        /**
+         * \brief Random rate. At each generation, add \f$ populationSize \times  randomIndividualsRate\f$ individuals.
+         */
         private float randomIndividualsRate;
+        /**
+         * \brief Best individual rate. At each generation, add \f$ populationSize \times  bestIndividualsRate\f$ times the best individual from the last generation.
+         */
         private float bestIndividualsRate;
+        /**
+         * \brief Mutation rate. Set the probability to randomly change each element of an individual.
+         */
+        private float mutationRate;
+        /**
+         * \brief Empty value rate. The creation of a new individual ensure that \f$ individualSize \times emptyRate\f$ elements are zero.
+         */
+        private float emptyRate;
+
+
+
+        private Vector<float> evaluations;
         private int bestIndividualIndex;
         private Vector<float> bestIndividual;
+
+        private ContinuousUniform distribution;
+        private ContinuousUniform subDistribution;
+        private ContinuousUniform drawDistribution;
+
+        private Vector<float> sliceA;
+        private Vector<float> sliceB;
+        private Matrix<float> tmp;
+        private bool[] distEmpty;
+        private bool save;
+
+
+        /**
+         * \brief Random Generator. Allow the generation of a repeatable random number sequence for each seed value.
+         */
         public SystemRandomSource rndGenerator;
-        float initialValueWeights;
-
-        public Tuple<float, float> meanStd;
-        public float median;
-
-        public float bestScore;
+        /**
+         * \brief Generation counter. Start at 1.
+         */
         public int generation;
-        ContinuousUniform distribution;
-        ContinuousUniform subDistribution;
-        ContinuousUniform drawDistribution;
+        /**
+         * \brief Population size
+         * \details The number of individual by generation is very important for the diversity. There is many ressources online about this.
+         *          This class is not perfect and will only work with a even number. Condition never checked.
+         *  \todo Odd number compatibility (Problem with Selection())          
+         */
+        public int populationSize;
+        /**
+         * \brief Size of each individual
+         */
+        public int individualSize;
+        /**
+         * \brief Best score over the population during the last generation.
+         */
+        public float bestScore;
+        /**
+         * \brief Sum of the individuals scores
+         */
+        public float sumEvaluations;
+        /**
+         * \brief Mean and standard deviation of the score over the population
+         */
+        public Tuple<float, float> meanStd;
+        /**
+         * \brief Median score over the population
+         */
+        public float median;
+        /**
+         * \brief StreamWriter to save and load results
+         */
         public StreamWriter writer;
-        Vector<float> sliceA;
-        Vector<float> sliceB;
-        Matrix<float> tmp;
-        float emptyRate;
-        bool[] distEmpty;
-        bool save;
-         
-        public Matrix<float> GetPopulation()
-        {
-            return population;
-        }
+
+
+        /**
+         * 
+         */
 
         public Genetic(int seed, SystemRandomSource rndGenerator, int populationSize, int individualSize, float initialValueWeights, float mutationRate = 0.1f, float randomIndividualsRate = 0.05f, float bestIndividualsRate = 0.05f, float emptyRate = 0.0f, string path = "",bool save = true)
         {
@@ -78,20 +143,15 @@ namespace Lexmou.MachineLearning.Evolutionary
             for(int i =0; i < populationSize;i++)
             {
                 distEmpty = Combinatorics.GenerateCombination(individualSize, Mathf.RoundToInt(emptyRate * individualSize), rndGenerator);
-                //Debug.Log(dist);
                 for (int j = 0; j < individualSize; j++)
                 {
                     if(distEmpty[j])
                     {
-                        //Debug.Log(dist[j]);
-                        //population[j,i] = (float)subDistribution.Sample();
                         population[j, i] = 0.000f;
                     }
                     
                 }
             }
-
-            //Debug.Log(population.ToString("G40"));
 
             this.evaluations = Vector<float>.Build.Dense(populationSize);
             this.sumEvaluations = 0.0f;
@@ -109,6 +169,34 @@ namespace Lexmou.MachineLearning.Evolutionary
 
 
         }
+
+        public void Evaluation(Vector<float> externalEvaluations, string type)
+        {
+            evaluations = externalEvaluations;
+            sumEvaluations = evaluations.Sum();
+            if (type == "max")
+            {
+                bestIndividualIndex = evaluations.MaximumIndex();
+            }
+            else if (type == "min")
+            {
+                bestIndividualIndex = evaluations.MinimumIndex();
+            }
+            else
+            {
+                throw new System.ArgumentException("Not a good value for type");
+            }
+            bestIndividual = population.Column(bestIndividualIndex);
+            bestScore = evaluations[bestIndividualIndex];
+            meanStd = UVector.BuildMeanStdVariation(evaluations);
+            median = UVector.BuildMedian(evaluations);
+        }
+
+        /**
+         * \brief Fitness proportionate selection of one element
+         * \details If \f$ f_{i} \f$ is the fitness of individual \f$ i \f$ in the population, its probability of being selected is \f$  p_i = \frac{f_i}{\Sigma_{j=1}^{N} f_j} \f$, where \f$ N \f$ is the number of individuals in the population.
+         * \return A \e MathNet.numerics.Vector of the selected individual 
+         */
 
         public Vector<float> SelectionOneElement()
         {
@@ -142,12 +230,10 @@ namespace Lexmou.MachineLearning.Evolutionary
             {
                 tmp.SetColumn(i, Vector<float>.Build.Random(individualSize, distribution));
                 distEmpty = Combinatorics.GenerateCombination(individualSize, Mathf.RoundToInt(emptyRate * individualSize), rndGenerator);
-                //Debug.Log(dist);
                 for (int j = 0; j < individualSize; j++)
                 {
                     if (distEmpty[j])
                     {
-                        //Debug.Log(dist[j]);
                         population[j, i] = 0;
                     }
                 }
@@ -165,6 +251,15 @@ namespace Lexmou.MachineLearning.Evolutionary
             tmp.CopyTo(population);
         }
 
+        /**
+         * \brief Two-point crossover
+         * \details Two-point crossover calls for two points to be selected on the parent organism. Everything between the two points is swapped between the parent organisms, rendering two child organisms
+         *          ![Genetic Algorithm Crossover Two-point](./media/genetic/crossover.png)<!-- .element height="50%" width="50%" -->
+         *  \param[in]  idFirst Index of the first parent
+         *  \param[in]  idSecond Index of the second parent
+         *  \param[in]  sliceIndexA Index of the first swap point
+         *  \param[in]  sliceIndexB Index of the second swap point
+         */
 
         public void CrossoverSliceTwoIndividuals(int idFirst, int idSecond, int sliceIndexA = 0, int sliceIndexB = 0)
         {
@@ -190,6 +285,11 @@ namespace Lexmou.MachineLearning.Evolutionary
             population.SetColumn(idSecond, sliceIndexB, individualSize - sliceIndexB, sliceB);
         }
 
+        /**
+         * \brief Complete population crossover
+         * \details Need an even population size
+         */
+
         public void CrossOver()
         {
             for (int i = 0; i < populationSize - 1; i = i + 2)
@@ -198,82 +298,32 @@ namespace Lexmou.MachineLearning.Evolutionary
             }
         }
 
-        public Vector<float> GetIndividual(int i)
-        {
-            return population.Column(i);
-        }
 
-        public void Evaluation(Vector<float> externalEvaluations, string type)
-        {
-            evaluations = externalEvaluations;
-            sumEvaluations = evaluations.Sum();
-            if (type == "max")
-            {
-                bestIndividualIndex = evaluations.MaximumIndex();
-            }
-            else if (type == "min")
-            {
-                bestIndividualIndex = evaluations.MinimumIndex();
-            }
-            else
-            {
-                throw new System.ArgumentException("Not a good value for type");
-            }
-            bestIndividual = population.Column(bestIndividualIndex);
-            bestScore = evaluations[bestIndividualIndex];
-            meanStd = UVector.BuildMeanStdVariation(evaluations);
-            median = UVector.BuildMedian(evaluations);
-        }
+        /**
+        * \brief Change an element with a probability of #mutationRate
+        * \return A \e float representing the value of this element
+        */
 
-        public Vector<float> GetBestIndividual()
-        {
-            return bestIndividual;
-        }
-
-        public int GetBestIndividualIndex()
-        {
-            return bestIndividualIndex;
-        }
-
-        float MutationOneElement(float value)
+        public float MutationOneElement(float value)
         {
 
             float draw = (float)drawDistribution.Sample();
 
             if (draw <= mutationRate)
             {
-                return (float) distribution.Sample();
+                return (float)distribution.Sample();
             }
             return value;
 
         }
 
+        /**
+        * \brief Apply the mutation process over the population
+        */
+
         public void Mutation()
         {
             population.MapInplace(MutationOneElement);
-        }
-        
-        string GeneratePath()
-        {
-            return this.path + "Seed-"+ this.seed + "/";
-        }
-
-        public void SaveGeneration()
-        {
-                UIO.SaveFloatArray(GeneratePath() + generation, "population.gene", population.ToArray());
-                UIO.SaveFloatArray(GeneratePath() + generation, "best.gene", GetBestIndividual().ToArray());
-        }
-
-        public void LoadGeneration(int generationIndex, float[,] floatArr)
-        {
-            UIO.LoadFloatArray(GeneratePath() + generationIndex , "/population.gene", floatArr);
-            population = Matrix<float>.Build.DenseOfArray(floatArr);
-        }
-
-        public void LoadBest(int generationIndex, float[] floatArr)
-        {
-            UIO.LoadFloatArray(GeneratePath() + generationIndex, "/best.gene", floatArr);
-
         }
 
 
@@ -283,14 +333,14 @@ namespace Lexmou.MachineLearning.Evolutionary
 
             Evaluation(externalEvaluations, "max");
             if (save)
-                UIO.WriteLine(writer, generation +";" +bestScore+";"+meanStd.Item1+";"+meanStd.Item2+";"+median);
+                UIO.WriteLine(writer, generation + ";" + bestScore + ";" + meanStd.Item1 + ";" + meanStd.Item2 + ";" + median);
             if (intervalSave > 0 && generation % intervalSave == 0)
             {
                 Debug.Log("Save in Progress");
                 SaveGeneration();
             }
             generationInfos = generation + "  | Best Score : " + bestScore + "/" + theoricBestScore + " | Index : " + bestIndividualIndex
-                                + "\r\n" + "Score Mean : " + (sumEvaluations/populationSize);
+                                + "\r\n" + "Score Mean : " + (sumEvaluations / populationSize);
             //Debug.Log(UMatrix.Make2DMatrix(bestIndividual, 4, 13).ToString(4,13, "G3"));
             Selection();
             CrossOver();
@@ -300,6 +350,90 @@ namespace Lexmou.MachineLearning.Evolutionary
             return generationInfos;
         }
 
+
+        public Matrix<float> GetPopulation()
+        {
+            return population;
+        }
+
+        /**
+         * \brief Get a specific individual
+         * \param[in] i Index of the individual
+         * \return A \e MathNet.Numerics.Vector representing the individual
+         */
+
+        public Vector<float> GetIndividual(int i)
+        {
+            return population.Column(i);
+        }
+
+        /**
+        * \brief Get the best individual of the last generation
+        * \return A \e MathNet.Numerics.Vector representing the best individual
+        */
+
+        public Vector<float> GetBestIndividual()
+        {
+            return bestIndividual;
+        }
+
+        /**
+        * \brief Get the best individual index of the last generation
+        * \return An \e int representing the index of the best individual
+        */
+
+        public int GetBestIndividualIndex()
+        {
+            return bestIndividualIndex;
+        }
+
+
+
+        /**
+        * \brief Generate the path where to save/load the results
+        * \return \e string Value of the path
+        */
+
+        string GeneratePath()
+        {
+            return this.path + "Seed-" + this.seed + "/";
+        }
+
+        
+
+        /**
+        * \brief Save the generation
+        * \details Save the complete population and the best individual in two files. The path depends on GeneratePath()
+        */
+
+        public void SaveGeneration()
+        {
+                UIO.SaveFloatArray(GeneratePath() + generation, "population.gene", population.ToArray());
+                UIO.SaveFloatArray(GeneratePath() + generation, "best.gene", GetBestIndividual().ToArray());
+        }
+
+        /**
+        * \brief Load the generation
+        * \details load the complete population and the best individual in two files. The path depends on GeneratePath()
+        */
+
+        public void LoadGeneration(int generationIndex, float[,] floatArr)
+        {
+            UIO.LoadFloatArray(GeneratePath() + generationIndex , "/population.gene", floatArr);
+            population = Matrix<float>.Build.DenseOfArray(floatArr);
+        }
+
+        /**
+        * \brief Load the best individual
+        * \details load the complete population and the best individual in two files. The path depends on GeneratePath()
+        */
+
+
+        public void LoadBest(int generationIndex, float[] floatArr)
+        {
+            UIO.LoadFloatArray(GeneratePath() + generationIndex, "/best.gene", floatArr);
+
+        }
         ~Genetic()
         {
             if(save)

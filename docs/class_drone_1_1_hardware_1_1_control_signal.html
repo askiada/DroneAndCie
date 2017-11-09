@@ -22,6 +22,12 @@
 <script type="text/javascript">
   $(document).ready(function() { init_search(); });
 </script>
+<script type="text/x-mathjax-config">
+  MathJax.Hub.Config({
+    extensions: ["tex2jax.js"],
+    jax: ["input/TeX","output/HTML-CSS"],
+});
+</script><script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.2/MathJax.js?config=TeX-MML-AM_CHTML/MathJax.js"></script>
 <link href="doxygen.css" rel="stylesheet" type="text/css" />
 <link href="customdoxygen.css" rel="stylesheet" type="text/css"/>
 <link href="jquery.smartmenus.bootstrap.css" rel="stylesheet" type="text/css"/>
@@ -140,8 +146,8 @@ Properties</h2></td></tr>
 </div>
 </div>
 <h2 class="groupheader">Property Documentation</h2>
-<a id="abc48cc849990469c9780f794a1e32c74"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#abc48cc849990469c9780f794a1e32c74">&sect;&nbsp;</a></span>Aileron</h2>
+<a id="a26aff5ecef7f6c30db9bb1776aa3b606"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a26aff5ecef7f6c30db9bb1776aa3b606">&sect;&nbsp;</a></span>Throttle</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -150,7 +156,7 @@ Properties</h2></td></tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">float Drone.Hardware.ControlSignal.Aileron</td>
+          <td class="memname">float Drone.Hardware.ControlSignal.Throttle</td>
         </tr>
       </table>
   </td>
@@ -160,31 +166,7 @@ Properties</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="_control_signal_8cs_source.html#l00011">11</a> of file <a class="el" href="_control_signal_8cs_source.html">ControlSignal.cs</a>.</p>
-
-</div>
-</div>
-<a id="a889f88961850e183e0e1837a20803417"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a889f88961850e183e0e1837a20803417">&sect;&nbsp;</a></span>Elevator</h2>
-
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">float Drone.Hardware.ControlSignal.Elevator</td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">get</span><span class="mlabel">set</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-<p>Definition at line <a class="el" href="_control_signal_8cs_source.html#l00010">10</a> of file <a class="el" href="_control_signal_8cs_source.html">ControlSignal.cs</a>.</p>
+<p>Definition at line <a class="el" href="_control_signal_8cs_source.html#l00008">8</a> of file <a class="el" href="_control_signal_8cs_source.html">ControlSignal.cs</a>.</p>
 
 </div>
 </div>
@@ -212,8 +194,8 @@ Properties</h2></td></tr>
 
 </div>
 </div>
-<a id="a26aff5ecef7f6c30db9bb1776aa3b606"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a26aff5ecef7f6c30db9bb1776aa3b606">&sect;&nbsp;</a></span>Throttle</h2>
+<a id="a889f88961850e183e0e1837a20803417"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a889f88961850e183e0e1837a20803417">&sect;&nbsp;</a></span>Elevator</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -222,7 +204,7 @@ Properties</h2></td></tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">float Drone.Hardware.ControlSignal.Throttle</td>
+          <td class="memname">float Drone.Hardware.ControlSignal.Elevator</td>
         </tr>
       </table>
   </td>
@@ -232,7 +214,31 @@ Properties</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="_control_signal_8cs_source.html#l00008">8</a> of file <a class="el" href="_control_signal_8cs_source.html">ControlSignal.cs</a>.</p>
+<p>Definition at line <a class="el" href="_control_signal_8cs_source.html#l00010">10</a> of file <a class="el" href="_control_signal_8cs_source.html">ControlSignal.cs</a>.</p>
+
+</div>
+</div>
+<a id="abc48cc849990469c9780f794a1e32c74"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#abc48cc849990469c9780f794a1e32c74">&sect;&nbsp;</a></span>Aileron</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">float Drone.Hardware.ControlSignal.Aileron</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">get</span><span class="mlabel">set</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Definition at line <a class="el" href="_control_signal_8cs_source.html#l00011">11</a> of file <a class="el" href="_control_signal_8cs_source.html">ControlSignal.cs</a>.</p>
 
 </div>
 </div>

@@ -22,6 +22,12 @@
 <script type="text/javascript">
   $(document).ready(function() { init_search(); });
 </script>
+<script type="text/x-mathjax-config">
+  MathJax.Hub.Config({
+    extensions: ["tex2jax.js"],
+    jax: ["input/TeX","output/HTML-CSS"],
+});
+</script><script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.2/MathJax.js?config=TeX-MML-AM_CHTML/MathJax.js"></script>
 <link href="doxygen.css" rel="stylesheet" type="text/css" />
 <link href="customdoxygen.css" rel="stylesheet" type="text/css"/>
 <link href="jquery.smartmenus.bootstrap.css" rel="stylesheet" type="text/css"/>
@@ -262,120 +268,6 @@ Static Private Attributes</h2></td></tr>
 
 </div>
 </div>
-<a id="ac45d15ea33dd8d406cd1bb67fc43bdbc"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ac45d15ea33dd8d406cd1bb67fc43bdbc">&sect;&nbsp;</a></span>Perlin1D()</h2>
-
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">static <a class="el" href="struct_noise_sample.html">NoiseSample</a> Noise.Perlin1D </td>
-          <td>(</td>
-          <td class="paramtype">Vector3&#160;</td>
-          <td class="paramname"><em>point</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">float&#160;</td>
-          <td class="paramname"><em>frequency</em>&#160;</td>
-        </tr>
-        <tr>
-          <td></td>
-          <td>)</td>
-          <td></td><td></td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">static</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-<p>Definition at line <a class="el" href="_noise_8cs_source.html#l00243">243</a> of file <a class="el" href="_noise_8cs_source.html">Noise.cs</a>.</p>
-
-</div>
-</div>
-<a id="afe901026bcfe637f3d4e52d75eae2def"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#afe901026bcfe637f3d4e52d75eae2def">&sect;&nbsp;</a></span>Perlin2D()</h2>
-
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">static <a class="el" href="struct_noise_sample.html">NoiseSample</a> Noise.Perlin2D </td>
-          <td>(</td>
-          <td class="paramtype">Vector3&#160;</td>
-          <td class="paramname"><em>point</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">float&#160;</td>
-          <td class="paramname"><em>frequency</em>&#160;</td>
-        </tr>
-        <tr>
-          <td></td>
-          <td>)</td>
-          <td></td><td></td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">static</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-<p>Definition at line <a class="el" href="_noise_8cs_source.html#l00275">275</a> of file <a class="el" href="_noise_8cs_source.html">Noise.cs</a>.</p>
-
-</div>
-</div>
-<a id="a65e3790828cf28b11d18d2e9b54c7d82"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a65e3790828cf28b11d18d2e9b54c7d82">&sect;&nbsp;</a></span>Perlin3D()</h2>
-
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">static <a class="el" href="struct_noise_sample.html">NoiseSample</a> Noise.Perlin3D </td>
-          <td>(</td>
-          <td class="paramtype">Vector3&#160;</td>
-          <td class="paramname"><em>point</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">float&#160;</td>
-          <td class="paramname"><em>frequency</em>&#160;</td>
-        </tr>
-        <tr>
-          <td></td>
-          <td>)</td>
-          <td></td><td></td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">static</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-<p>Definition at line <a class="el" href="_noise_8cs_source.html#l00325">325</a> of file <a class="el" href="_noise_8cs_source.html">Noise.cs</a>.</p>
-
-</div>
-</div>
 <a id="a458c2f2cfa43fd1ba4364ece467a54dd"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a458c2f2cfa43fd1ba4364ece467a54dd">&sect;&nbsp;</a></span>Smooth()</h2>
 
@@ -429,68 +321,6 @@ Static Private Attributes</h2></td></tr>
 </div><div class="memdoc">
 
 <p>Definition at line <a class="el" href="_noise_8cs_source.html#l00120">120</a> of file <a class="el" href="_noise_8cs_source.html">Noise.cs</a>.</p>
-
-</div>
-</div>
-<a id="ab23128fe6e2542a60132cdb679673f9e"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ab23128fe6e2542a60132cdb679673f9e">&sect;&nbsp;</a></span>Sum()</h2>
-
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">static <a class="el" href="struct_noise_sample.html">NoiseSample</a> Noise.Sum </td>
-          <td>(</td>
-          <td class="paramtype"><a class="el" href="_noise_8cs.html#a01705e14c44328d217f84fbee3251758">NoiseMethod</a>&#160;</td>
-          <td class="paramname"><em>method</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">Vector3&#160;</td>
-          <td class="paramname"><em>point</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">float&#160;</td>
-          <td class="paramname"><em>frequency</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">int&#160;</td>
-          <td class="paramname"><em>octaves</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">float&#160;</td>
-          <td class="paramname"><em>lacunarity</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">float&#160;</td>
-          <td class="paramname"><em>persistence</em>&#160;</td>
-        </tr>
-        <tr>
-          <td></td>
-          <td>)</td>
-          <td></td><td></td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">static</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-<p>Definition at line <a class="el" href="_noise_8cs_source.html#l00402">402</a> of file <a class="el" href="_noise_8cs_source.html">Noise.cs</a>.</p>
 
 </div>
 </div>
@@ -608,9 +438,185 @@ Static Private Attributes</h2></td></tr>
 
 </div>
 </div>
+<a id="ac45d15ea33dd8d406cd1bb67fc43bdbc"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ac45d15ea33dd8d406cd1bb67fc43bdbc">&sect;&nbsp;</a></span>Perlin1D()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">static <a class="el" href="struct_noise_sample.html">NoiseSample</a> Noise.Perlin1D </td>
+          <td>(</td>
+          <td class="paramtype">Vector3&#160;</td>
+          <td class="paramname"><em>point</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">float&#160;</td>
+          <td class="paramname"><em>frequency</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Definition at line <a class="el" href="_noise_8cs_source.html#l00243">243</a> of file <a class="el" href="_noise_8cs_source.html">Noise.cs</a>.</p>
+
+</div>
+</div>
+<a id="afe901026bcfe637f3d4e52d75eae2def"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#afe901026bcfe637f3d4e52d75eae2def">&sect;&nbsp;</a></span>Perlin2D()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">static <a class="el" href="struct_noise_sample.html">NoiseSample</a> Noise.Perlin2D </td>
+          <td>(</td>
+          <td class="paramtype">Vector3&#160;</td>
+          <td class="paramname"><em>point</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">float&#160;</td>
+          <td class="paramname"><em>frequency</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Definition at line <a class="el" href="_noise_8cs_source.html#l00275">275</a> of file <a class="el" href="_noise_8cs_source.html">Noise.cs</a>.</p>
+
+</div>
+</div>
+<a id="a65e3790828cf28b11d18d2e9b54c7d82"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a65e3790828cf28b11d18d2e9b54c7d82">&sect;&nbsp;</a></span>Perlin3D()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">static <a class="el" href="struct_noise_sample.html">NoiseSample</a> Noise.Perlin3D </td>
+          <td>(</td>
+          <td class="paramtype">Vector3&#160;</td>
+          <td class="paramname"><em>point</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">float&#160;</td>
+          <td class="paramname"><em>frequency</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Definition at line <a class="el" href="_noise_8cs_source.html#l00325">325</a> of file <a class="el" href="_noise_8cs_source.html">Noise.cs</a>.</p>
+
+</div>
+</div>
+<a id="ab23128fe6e2542a60132cdb679673f9e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ab23128fe6e2542a60132cdb679673f9e">&sect;&nbsp;</a></span>Sum()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">static <a class="el" href="struct_noise_sample.html">NoiseSample</a> Noise.Sum </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="_noise_8cs.html#a01705e14c44328d217f84fbee3251758">NoiseMethod</a>&#160;</td>
+          <td class="paramname"><em>method</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">Vector3&#160;</td>
+          <td class="paramname"><em>point</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">float&#160;</td>
+          <td class="paramname"><em>frequency</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>octaves</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">float&#160;</td>
+          <td class="paramname"><em>lacunarity</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">float&#160;</td>
+          <td class="paramname"><em>persistence</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Definition at line <a class="el" href="_noise_8cs_source.html#l00402">402</a> of file <a class="el" href="_noise_8cs_source.html">Noise.cs</a>.</p>
+
+</div>
+</div>
 <h2 class="groupheader">Member Data Documentation</h2>
-<a id="a8abef2c4ae392862ac0dae80ac231c98"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a8abef2c4ae392862ac0dae80ac231c98">&sect;&nbsp;</a></span>gradients1D</h2>
+<a id="a3db744ce8f7c982bcd240eaf00eb3d3a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a3db744ce8f7c982bcd240eaf00eb3d3a">&sect;&nbsp;</a></span>valueMethods</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -619,22 +625,22 @@ Static Private Attributes</h2></td></tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">float [] Noise.gradients1D</td>
+          <td class="memname"><a class="el" href="_noise_8cs.html#a01705e14c44328d217f84fbee3251758">NoiseMethod</a> [] Noise.valueMethods</td>
         </tr>
       </table>
   </td>
   <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">static</span><span class="mlabel">private</span></span>  </td>
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
   </tr>
 </table>
 </div><div class="memdoc">
-<b>Initial value:</b><div class="fragment"><div class="line">= {</div><div class="line">        1f, -1f</div><div class="line">    }</div></div><!-- fragment -->
-<p>Definition at line <a class="el" href="_noise_8cs_source.html#l00067">67</a> of file <a class="el" href="_noise_8cs_source.html">Noise.cs</a>.</p>
+<b>Initial value:</b><div class="fragment"><div class="line">= {</div><div class="line">        <a class="code" href="class_noise.html#a2bec1e6ea7fcff134f991c3e18b70354">Value1D</a>,</div><div class="line">        <a class="code" href="class_noise.html#a30368f5ae470e2793b5c1bcd3a13db6a">Value2D</a>,</div><div class="line">        <a class="code" href="class_noise.html#a8309b0511a8c0a1df8f49c7bb13f4e15">Value3D</a></div><div class="line">    }</div></div><!-- fragment -->
+<p>Definition at line <a class="el" href="_noise_8cs_source.html#l00012">12</a> of file <a class="el" href="_noise_8cs_source.html">Noise.cs</a>.</p>
 
 </div>
 </div>
-<a id="a1db1e07d0e23e712d6e9d11a920a69a8"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a1db1e07d0e23e712d6e9d11a920a69a8">&sect;&nbsp;</a></span>gradients2D</h2>
+<a id="a5f9c44c61598ac892a635934e292d20f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a5f9c44c61598ac892a635934e292d20f">&sect;&nbsp;</a></span>perlinMethods</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -643,22 +649,22 @@ Static Private Attributes</h2></td></tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">Vector2 [] Noise.gradients2D</td>
+          <td class="memname"><a class="el" href="_noise_8cs.html#a01705e14c44328d217f84fbee3251758">NoiseMethod</a> [] Noise.perlinMethods</td>
         </tr>
       </table>
   </td>
   <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">static</span><span class="mlabel">private</span></span>  </td>
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
   </tr>
 </table>
 </div><div class="memdoc">
-<b>Initial value:</b><div class="fragment"><div class="line">= {</div><div class="line">        <span class="keyword">new</span> Vector2( 1f, 0f),</div><div class="line">        <span class="keyword">new</span> Vector2(-1f, 0f),</div><div class="line">        <span class="keyword">new</span> Vector2( 0f, 1f),</div><div class="line">        <span class="keyword">new</span> Vector2( 0f,-1f),</div><div class="line">        <span class="keyword">new</span> Vector2( 1f, 1f).normalized,</div><div class="line">        <span class="keyword">new</span> Vector2(-1f, 1f).normalized,</div><div class="line">        <span class="keyword">new</span> Vector2( 1f,-1f).normalized,</div><div class="line">        <span class="keyword">new</span> Vector2(-1f,-1f).normalized</div><div class="line">    }</div></div><!-- fragment -->
-<p>Definition at line <a class="el" href="_noise_8cs_source.html#l00073">73</a> of file <a class="el" href="_noise_8cs_source.html">Noise.cs</a>.</p>
+<b>Initial value:</b><div class="fragment"><div class="line">= {</div><div class="line">        <a class="code" href="class_noise.html#ac45d15ea33dd8d406cd1bb67fc43bdbc">Perlin1D</a>,</div><div class="line">        <a class="code" href="class_noise.html#afe901026bcfe637f3d4e52d75eae2def">Perlin2D</a>,</div><div class="line">        <a class="code" href="class_noise.html#a65e3790828cf28b11d18d2e9b54c7d82">Perlin3D</a></div><div class="line">    }</div></div><!-- fragment -->
+<p>Definition at line <a class="el" href="_noise_8cs_source.html#l00018">18</a> of file <a class="el" href="_noise_8cs_source.html">Noise.cs</a>.</p>
 
 </div>
 </div>
-<a id="a4bfe1a1bc502c4573a3349242f9d64c6"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a4bfe1a1bc502c4573a3349242f9d64c6">&sect;&nbsp;</a></span>gradients3D</h2>
+<a id="a7cff7e7995960866f40a57c83c3e6aff"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a7cff7e7995960866f40a57c83c3e6aff">&sect;&nbsp;</a></span>methods</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -667,89 +673,17 @@ Static Private Attributes</h2></td></tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">Vector3 [] Noise.gradients3D</td>
+          <td class="memname"><a class="el" href="_noise_8cs.html#a01705e14c44328d217f84fbee3251758">NoiseMethod</a> [][] Noise.methods</td>
         </tr>
       </table>
   </td>
   <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">static</span><span class="mlabel">private</span></span>  </td>
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
   </tr>
 </table>
 </div><div class="memdoc">
-<b>Initial value:</b><div class="fragment"><div class="line">= {</div><div class="line">        <span class="keyword">new</span> Vector3( 1f, 1f, 0f),</div><div class="line">        <span class="keyword">new</span> Vector3(-1f, 1f, 0f),</div><div class="line">        <span class="keyword">new</span> Vector3( 1f,-1f, 0f),</div><div class="line">        <span class="keyword">new</span> Vector3(-1f,-1f, 0f),</div><div class="line">        <span class="keyword">new</span> Vector3( 1f, 0f, 1f),</div><div class="line">        <span class="keyword">new</span> Vector3(-1f, 0f, 1f),</div><div class="line">        <span class="keyword">new</span> Vector3( 1f, 0f,-1f),</div><div class="line">        <span class="keyword">new</span> Vector3(-1f, 0f,-1f),</div><div class="line">        <span class="keyword">new</span> Vector3( 0f, 1f, 1f),</div><div class="line">        <span class="keyword">new</span> Vector3( 0f,-1f, 1f),</div><div class="line">        <span class="keyword">new</span> Vector3( 0f, 1f,-1f),</div><div class="line">        <span class="keyword">new</span> Vector3( 0f,-1f,-1f),</div><div class="line">        </div><div class="line">        <span class="keyword">new</span> Vector3( 1f, 1f, 0f),</div><div class="line">        <span class="keyword">new</span> Vector3(-1f, 1f, 0f),</div><div class="line">        <span class="keyword">new</span> Vector3( 0f,-1f, 1f),</div><div class="line">        <span class="keyword">new</span> Vector3( 0f,-1f,-1f)</div><div class="line">    }</div></div><!-- fragment -->
-<p>Definition at line <a class="el" href="_noise_8cs_source.html#l00086">86</a> of file <a class="el" href="_noise_8cs_source.html">Noise.cs</a>.</p>
-
-</div>
-</div>
-<a id="ab259d76c64d24a1e1cff5d5550759424"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ab259d76c64d24a1e1cff5d5550759424">&sect;&nbsp;</a></span>gradientsMask1D</h2>
-
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">const int Noise.gradientsMask1D = 1</td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">private</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-<p>Definition at line <a class="el" href="_noise_8cs_source.html#l00071">71</a> of file <a class="el" href="_noise_8cs_source.html">Noise.cs</a>.</p>
-
-</div>
-</div>
-<a id="a4821f5b4a5d8ee4befaac4c8b32a2597"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a4821f5b4a5d8ee4befaac4c8b32a2597">&sect;&nbsp;</a></span>gradientsMask2D</h2>
-
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">const int Noise.gradientsMask2D = 7</td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">private</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-<p>Definition at line <a class="el" href="_noise_8cs_source.html#l00084">84</a> of file <a class="el" href="_noise_8cs_source.html">Noise.cs</a>.</p>
-
-</div>
-</div>
-<a id="a5ed41cc4431c15c8b83431a87c07521a"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a5ed41cc4431c15c8b83431a87c07521a">&sect;&nbsp;</a></span>gradientsMask3D</h2>
-
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">const int Noise.gradientsMask3D = 15</td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">private</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-<p>Definition at line <a class="el" href="_noise_8cs_source.html#l00106">106</a> of file <a class="el" href="_noise_8cs_source.html">Noise.cs</a>.</p>
+<b>Initial value:</b><div class="fragment"><div class="line">= {</div><div class="line">        <a class="code" href="class_noise.html#a3db744ce8f7c982bcd240eaf00eb3d3a">valueMethods</a>,</div><div class="line">        <a class="code" href="class_noise.html#a5f9c44c61598ac892a635934e292d20f">perlinMethods</a></div><div class="line">    }</div></div><!-- fragment -->
+<p>Definition at line <a class="el" href="_noise_8cs_source.html#l00024">24</a> of file <a class="el" href="_noise_8cs_source.html">Noise.cs</a>.</p>
 
 </div>
 </div>
@@ -801,8 +735,8 @@ Static Private Attributes</h2></td></tr>
 
 </div>
 </div>
-<a id="a7cff7e7995960866f40a57c83c3e6aff"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a7cff7e7995960866f40a57c83c3e6aff">&sect;&nbsp;</a></span>methods</h2>
+<a id="a8abef2c4ae392862ac0dae80ac231c98"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a8abef2c4ae392862ac0dae80ac231c98">&sect;&nbsp;</a></span>gradients1D</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -811,22 +745,22 @@ Static Private Attributes</h2></td></tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname"><a class="el" href="_noise_8cs.html#a01705e14c44328d217f84fbee3251758">NoiseMethod</a> [][] Noise.methods</td>
+          <td class="memname">float [] Noise.gradients1D</td>
         </tr>
       </table>
   </td>
   <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+<span class="mlabels"><span class="mlabel">static</span><span class="mlabel">private</span></span>  </td>
   </tr>
 </table>
 </div><div class="memdoc">
-<b>Initial value:</b><div class="fragment"><div class="line">= {</div><div class="line">        <a class="code" href="class_noise.html#a3db744ce8f7c982bcd240eaf00eb3d3a">valueMethods</a>,</div><div class="line">        <a class="code" href="class_noise.html#a5f9c44c61598ac892a635934e292d20f">perlinMethods</a></div><div class="line">    }</div></div><!-- fragment -->
-<p>Definition at line <a class="el" href="_noise_8cs_source.html#l00024">24</a> of file <a class="el" href="_noise_8cs_source.html">Noise.cs</a>.</p>
+<b>Initial value:</b><div class="fragment"><div class="line">= {</div><div class="line">        1f, -1f</div><div class="line">    }</div></div><!-- fragment -->
+<p>Definition at line <a class="el" href="_noise_8cs_source.html#l00067">67</a> of file <a class="el" href="_noise_8cs_source.html">Noise.cs</a>.</p>
 
 </div>
 </div>
-<a id="a5f9c44c61598ac892a635934e292d20f"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a5f9c44c61598ac892a635934e292d20f">&sect;&nbsp;</a></span>perlinMethods</h2>
+<a id="ab259d76c64d24a1e1cff5d5550759424"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ab259d76c64d24a1e1cff5d5550759424">&sect;&nbsp;</a></span>gradientsMask1D</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -835,17 +769,113 @@ Static Private Attributes</h2></td></tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname"><a class="el" href="_noise_8cs.html#a01705e14c44328d217f84fbee3251758">NoiseMethod</a> [] Noise.perlinMethods</td>
+          <td class="memname">const int Noise.gradientsMask1D = 1</td>
         </tr>
       </table>
   </td>
   <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
   </tr>
 </table>
 </div><div class="memdoc">
-<b>Initial value:</b><div class="fragment"><div class="line">= {</div><div class="line">        <a class="code" href="class_noise.html#ac45d15ea33dd8d406cd1bb67fc43bdbc">Perlin1D</a>,</div><div class="line">        <a class="code" href="class_noise.html#afe901026bcfe637f3d4e52d75eae2def">Perlin2D</a>,</div><div class="line">        <a class="code" href="class_noise.html#a65e3790828cf28b11d18d2e9b54c7d82">Perlin3D</a></div><div class="line">    }</div></div><!-- fragment -->
-<p>Definition at line <a class="el" href="_noise_8cs_source.html#l00018">18</a> of file <a class="el" href="_noise_8cs_source.html">Noise.cs</a>.</p>
+
+<p>Definition at line <a class="el" href="_noise_8cs_source.html#l00071">71</a> of file <a class="el" href="_noise_8cs_source.html">Noise.cs</a>.</p>
+
+</div>
+</div>
+<a id="a1db1e07d0e23e712d6e9d11a920a69a8"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a1db1e07d0e23e712d6e9d11a920a69a8">&sect;&nbsp;</a></span>gradients2D</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">Vector2 [] Noise.gradients2D</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<b>Initial value:</b><div class="fragment"><div class="line">= {</div><div class="line">        <span class="keyword">new</span> Vector2( 1f, 0f),</div><div class="line">        <span class="keyword">new</span> Vector2(-1f, 0f),</div><div class="line">        <span class="keyword">new</span> Vector2( 0f, 1f),</div><div class="line">        <span class="keyword">new</span> Vector2( 0f,-1f),</div><div class="line">        <span class="keyword">new</span> Vector2( 1f, 1f).normalized,</div><div class="line">        <span class="keyword">new</span> Vector2(-1f, 1f).normalized,</div><div class="line">        <span class="keyword">new</span> Vector2( 1f,-1f).normalized,</div><div class="line">        <span class="keyword">new</span> Vector2(-1f,-1f).normalized</div><div class="line">    }</div></div><!-- fragment -->
+<p>Definition at line <a class="el" href="_noise_8cs_source.html#l00073">73</a> of file <a class="el" href="_noise_8cs_source.html">Noise.cs</a>.</p>
+
+</div>
+</div>
+<a id="a4821f5b4a5d8ee4befaac4c8b32a2597"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a4821f5b4a5d8ee4befaac4c8b32a2597">&sect;&nbsp;</a></span>gradientsMask2D</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">const int Noise.gradientsMask2D = 7</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Definition at line <a class="el" href="_noise_8cs_source.html#l00084">84</a> of file <a class="el" href="_noise_8cs_source.html">Noise.cs</a>.</p>
+
+</div>
+</div>
+<a id="a4bfe1a1bc502c4573a3349242f9d64c6"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a4bfe1a1bc502c4573a3349242f9d64c6">&sect;&nbsp;</a></span>gradients3D</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">Vector3 [] Noise.gradients3D</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<b>Initial value:</b><div class="fragment"><div class="line">= {</div><div class="line">        <span class="keyword">new</span> Vector3( 1f, 1f, 0f),</div><div class="line">        <span class="keyword">new</span> Vector3(-1f, 1f, 0f),</div><div class="line">        <span class="keyword">new</span> Vector3( 1f,-1f, 0f),</div><div class="line">        <span class="keyword">new</span> Vector3(-1f,-1f, 0f),</div><div class="line">        <span class="keyword">new</span> Vector3( 1f, 0f, 1f),</div><div class="line">        <span class="keyword">new</span> Vector3(-1f, 0f, 1f),</div><div class="line">        <span class="keyword">new</span> Vector3( 1f, 0f,-1f),</div><div class="line">        <span class="keyword">new</span> Vector3(-1f, 0f,-1f),</div><div class="line">        <span class="keyword">new</span> Vector3( 0f, 1f, 1f),</div><div class="line">        <span class="keyword">new</span> Vector3( 0f,-1f, 1f),</div><div class="line">        <span class="keyword">new</span> Vector3( 0f, 1f,-1f),</div><div class="line">        <span class="keyword">new</span> Vector3( 0f,-1f,-1f),</div><div class="line">        </div><div class="line">        <span class="keyword">new</span> Vector3( 1f, 1f, 0f),</div><div class="line">        <span class="keyword">new</span> Vector3(-1f, 1f, 0f),</div><div class="line">        <span class="keyword">new</span> Vector3( 0f,-1f, 1f),</div><div class="line">        <span class="keyword">new</span> Vector3( 0f,-1f,-1f)</div><div class="line">    }</div></div><!-- fragment -->
+<p>Definition at line <a class="el" href="_noise_8cs_source.html#l00086">86</a> of file <a class="el" href="_noise_8cs_source.html">Noise.cs</a>.</p>
+
+</div>
+</div>
+<a id="a5ed41cc4431c15c8b83431a87c07521a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a5ed41cc4431c15c8b83431a87c07521a">&sect;&nbsp;</a></span>gradientsMask3D</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">const int Noise.gradientsMask3D = 15</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Definition at line <a class="el" href="_noise_8cs_source.html#l00106">106</a> of file <a class="el" href="_noise_8cs_source.html">Noise.cs</a>.</p>
 
 </div>
 </div>
@@ -870,30 +900,6 @@ Static Private Attributes</h2></td></tr>
 </div><div class="memdoc">
 
 <p>Definition at line <a class="el" href="_noise_8cs_source.html#l00124">124</a> of file <a class="el" href="_noise_8cs_source.html">Noise.cs</a>.</p>
-
-</div>
-</div>
-<a id="a3db744ce8f7c982bcd240eaf00eb3d3a"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a3db744ce8f7c982bcd240eaf00eb3d3a">&sect;&nbsp;</a></span>valueMethods</h2>
-
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname"><a class="el" href="_noise_8cs.html#a01705e14c44328d217f84fbee3251758">NoiseMethod</a> [] Noise.valueMethods</td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">static</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-<b>Initial value:</b><div class="fragment"><div class="line">= {</div><div class="line">        <a class="code" href="class_noise.html#a2bec1e6ea7fcff134f991c3e18b70354">Value1D</a>,</div><div class="line">        <a class="code" href="class_noise.html#a30368f5ae470e2793b5c1bcd3a13db6a">Value2D</a>,</div><div class="line">        <a class="code" href="class_noise.html#a8309b0511a8c0a1df8f49c7bb13f4e15">Value3D</a></div><div class="line">    }</div></div><!-- fragment -->
-<p>Definition at line <a class="el" href="_noise_8cs_source.html#l00012">12</a> of file <a class="el" href="_noise_8cs_source.html">Noise.cs</a>.</p>
 
 </div>
 </div>

@@ -22,6 +22,12 @@
 <script type="text/javascript">
   $(document).ready(function() { init_search(); });
 </script>
+<script type="text/x-mathjax-config">
+  MathJax.Hub.Config({
+    extensions: ["tex2jax.js"],
+    jax: ["input/TeX","output/HTML-CSS"],
+});
+</script><script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.2/MathJax.js?config=TeX-MML-AM_CHTML/MathJax.js"></script>
 <link href="doxygen.css" rel="stylesheet" type="text/css" />
 <link href="customdoxygen.css" rel="stylesheet" type="text/css"/>
 <link href="jquery.smartmenus.bootstrap.css" rel="stylesheet" type="text/css"/>
@@ -101,92 +107,126 @@ $(document).ready(function(){initNavTree('class_lexmou_1_1_machine_learning_1_1_
 <div class="title">Lexmou.MachineLearning.Evolutionary.Genetic Class Reference</div>  </div>
 </div><!--header-->
 <div class="contents">
+
+<p>Classic implementation of a genetic algorithm.  
+ <a href="class_lexmou_1_1_machine_learning_1_1_evolutionary_1_1_genetic.html#details">More...</a></p>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
-<tr class="memitem:ae9c9850558a4c28679fdfe901427bd50"><td class="memItemLeft" align="right" valign="top">Matrix&lt; float &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_lexmou_1_1_machine_learning_1_1_evolutionary_1_1_genetic.html#ae9c9850558a4c28679fdfe901427bd50">GetPopulation</a> ()</td></tr>
-<tr class="separator:ae9c9850558a4c28679fdfe901427bd50"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a25f4f7d6ef08c408fdcae62f836d14b3"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_lexmou_1_1_machine_learning_1_1_evolutionary_1_1_genetic.html#a25f4f7d6ef08c408fdcae62f836d14b3">Genetic</a> (int <a class="el" href="class_lexmou_1_1_machine_learning_1_1_evolutionary_1_1_genetic.html#a30ead3397751fb8193bae937adbd95d0">seed</a>, SystemRandomSource <a class="el" href="class_lexmou_1_1_machine_learning_1_1_evolutionary_1_1_genetic.html#a98100f01e5ffc8afe2ac8c1a990cd7e4">rndGenerator</a>, int <a class="el" href="class_lexmou_1_1_machine_learning_1_1_evolutionary_1_1_genetic.html#a7bf13b8789c54b3ca903d3c9a5f9aeed">populationSize</a>, int <a class="el" href="class_lexmou_1_1_machine_learning_1_1_evolutionary_1_1_genetic.html#a1e2ff9a5b339c6e5128c4c8bef9bcf68">individualSize</a>, float <a class="el" href="class_lexmou_1_1_machine_learning_1_1_evolutionary_1_1_genetic.html#a5d927f50c34ea5ba56b122515004afbf">initialValueWeights</a>, float <a class="el" href="class_lexmou_1_1_machine_learning_1_1_evolutionary_1_1_genetic.html#af25ede6f9c6205d13304481b7cb057e8">mutationRate</a>=0.1f, float randomIndividualsRate=0.05f, float bestIndividualsRate=0.05f, float emptyRate=0.0f, string path=&quot;&quot;, bool save=true)</td></tr>
 <tr class="separator:a25f4f7d6ef08c408fdcae62f836d14b3"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac6e0a21ca4f603f86811cee06b107591"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_lexmou_1_1_machine_learning_1_1_evolutionary_1_1_genetic.html#ac6e0a21ca4f603f86811cee06b107591">Evaluation</a> (Vector&lt; float &gt; externalEvaluations, string type)</td></tr>
+<tr class="separator:ac6e0a21ca4f603f86811cee06b107591"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:adb21aee48627d06d546c54288adba0b5"><td class="memItemLeft" align="right" valign="top">Vector&lt; float &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_lexmou_1_1_machine_learning_1_1_evolutionary_1_1_genetic.html#adb21aee48627d06d546c54288adba0b5">SelectionOneElement</a> ()</td></tr>
+<tr class="memdesc:adb21aee48627d06d546c54288adba0b5"><td class="mdescLeft">&#160;</td><td class="mdescRight">Fitness proportionate selection of one element.  <a href="#adb21aee48627d06d546c54288adba0b5">More...</a><br /></td></tr>
 <tr class="separator:adb21aee48627d06d546c54288adba0b5"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a90a173437ebfe074289a464e68d5bcf2"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_lexmou_1_1_machine_learning_1_1_evolutionary_1_1_genetic.html#a90a173437ebfe074289a464e68d5bcf2">Selection</a> ()</td></tr>
 <tr class="separator:a90a173437ebfe074289a464e68d5bcf2"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a460f0c9a538e66bc9b6600cbd61a8806"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_lexmou_1_1_machine_learning_1_1_evolutionary_1_1_genetic.html#a460f0c9a538e66bc9b6600cbd61a8806">CrossoverSliceTwoIndividuals</a> (int idFirst, int idSecond, int sliceIndexA=0, int sliceIndexB=0)</td></tr>
+<tr class="memdesc:a460f0c9a538e66bc9b6600cbd61a8806"><td class="mdescLeft">&#160;</td><td class="mdescRight">Two-point crossover.  <a href="#a460f0c9a538e66bc9b6600cbd61a8806">More...</a><br /></td></tr>
 <tr class="separator:a460f0c9a538e66bc9b6600cbd61a8806"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:af99a221879499f223fad8ae86032b219"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_lexmou_1_1_machine_learning_1_1_evolutionary_1_1_genetic.html#af99a221879499f223fad8ae86032b219">CrossOver</a> ()</td></tr>
+<tr class="memdesc:af99a221879499f223fad8ae86032b219"><td class="mdescLeft">&#160;</td><td class="mdescRight">Complete population crossover.  <a href="#af99a221879499f223fad8ae86032b219">More...</a><br /></td></tr>
 <tr class="separator:af99a221879499f223fad8ae86032b219"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ab97494979da382d4c6ef031106eb01ab"><td class="memItemLeft" align="right" valign="top">Vector&lt; float &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_lexmou_1_1_machine_learning_1_1_evolutionary_1_1_genetic.html#ab97494979da382d4c6ef031106eb01ab">GetIndividual</a> (int i)</td></tr>
-<tr class="separator:ab97494979da382d4c6ef031106eb01ab"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ac6e0a21ca4f603f86811cee06b107591"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_lexmou_1_1_machine_learning_1_1_evolutionary_1_1_genetic.html#ac6e0a21ca4f603f86811cee06b107591">Evaluation</a> (Vector&lt; float &gt; externalEvaluations, string type)</td></tr>
-<tr class="separator:ac6e0a21ca4f603f86811cee06b107591"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:afe9e9ca17e08a09f0dbfc33c3e9cd1ac"><td class="memItemLeft" align="right" valign="top">Vector&lt; float &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_lexmou_1_1_machine_learning_1_1_evolutionary_1_1_genetic.html#afe9e9ca17e08a09f0dbfc33c3e9cd1ac">GetBestIndividual</a> ()</td></tr>
-<tr class="separator:afe9e9ca17e08a09f0dbfc33c3e9cd1ac"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a8ed097db095cff5a0f234c8dcc318ad1"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_lexmou_1_1_machine_learning_1_1_evolutionary_1_1_genetic.html#a8ed097db095cff5a0f234c8dcc318ad1">GetBestIndividualIndex</a> ()</td></tr>
-<tr class="separator:a8ed097db095cff5a0f234c8dcc318ad1"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae4e905dab3fd3e4111189206ffd66a60"><td class="memItemLeft" align="right" valign="top">float&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_lexmou_1_1_machine_learning_1_1_evolutionary_1_1_genetic.html#ae4e905dab3fd3e4111189206ffd66a60">MutationOneElement</a> (float value)</td></tr>
+<tr class="memdesc:ae4e905dab3fd3e4111189206ffd66a60"><td class="mdescLeft">&#160;</td><td class="mdescRight">Change an element with a probability of <a class="el" href="class_lexmou_1_1_machine_learning_1_1_evolutionary_1_1_genetic.html#af25ede6f9c6205d13304481b7cb057e8" title="Mutation rate. Set the probability to randomly change each element of an individual. ">mutationRate</a>.  <a href="#ae4e905dab3fd3e4111189206ffd66a60">More...</a><br /></td></tr>
+<tr class="separator:ae4e905dab3fd3e4111189206ffd66a60"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a62eece17c427447c0e8999c4e3c17ef6"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_lexmou_1_1_machine_learning_1_1_evolutionary_1_1_genetic.html#a62eece17c427447c0e8999c4e3c17ef6">Mutation</a> ()</td></tr>
+<tr class="memdesc:a62eece17c427447c0e8999c4e3c17ef6"><td class="mdescLeft">&#160;</td><td class="mdescRight">Apply the mutation process over the population.  <a href="#a62eece17c427447c0e8999c4e3c17ef6">More...</a><br /></td></tr>
 <tr class="separator:a62eece17c427447c0e8999c4e3c17ef6"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:adbf0639ad9a85b926a2c9da0264cb0d9"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_lexmou_1_1_machine_learning_1_1_evolutionary_1_1_genetic.html#adbf0639ad9a85b926a2c9da0264cb0d9">SaveGeneration</a> ()</td></tr>
-<tr class="separator:adbf0639ad9a85b926a2c9da0264cb0d9"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a8824a4c4262c51c41c00c7d62b149815"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_lexmou_1_1_machine_learning_1_1_evolutionary_1_1_genetic.html#a8824a4c4262c51c41c00c7d62b149815">LoadGeneration</a> (int generationIndex, float[,] floatArr)</td></tr>
-<tr class="separator:a8824a4c4262c51c41c00c7d62b149815"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a862b72d14caa564a0f37f0c469012f88"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_lexmou_1_1_machine_learning_1_1_evolutionary_1_1_genetic.html#a862b72d14caa564a0f37f0c469012f88">LoadBest</a> (int generationIndex, float[] floatArr)</td></tr>
-<tr class="separator:a862b72d14caa564a0f37f0c469012f88"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a9c1119ad5fb3113bbd53a4d59d8e6ce7"><td class="memItemLeft" align="right" valign="top">string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_lexmou_1_1_machine_learning_1_1_evolutionary_1_1_genetic.html#a9c1119ad5fb3113bbd53a4d59d8e6ce7">Run</a> (Vector&lt; float &gt; externalEvaluations, float theoricBestScore, int intervalSave=0)</td></tr>
 <tr class="separator:a9c1119ad5fb3113bbd53a4d59d8e6ce7"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae9c9850558a4c28679fdfe901427bd50"><td class="memItemLeft" align="right" valign="top">Matrix&lt; float &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_lexmou_1_1_machine_learning_1_1_evolutionary_1_1_genetic.html#ae9c9850558a4c28679fdfe901427bd50">GetPopulation</a> ()</td></tr>
+<tr class="separator:ae9c9850558a4c28679fdfe901427bd50"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab97494979da382d4c6ef031106eb01ab"><td class="memItemLeft" align="right" valign="top">Vector&lt; float &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_lexmou_1_1_machine_learning_1_1_evolutionary_1_1_genetic.html#ab97494979da382d4c6ef031106eb01ab">GetIndividual</a> (int i)</td></tr>
+<tr class="memdesc:ab97494979da382d4c6ef031106eb01ab"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get a specific individual.  <a href="#ab97494979da382d4c6ef031106eb01ab">More...</a><br /></td></tr>
+<tr class="separator:ab97494979da382d4c6ef031106eb01ab"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:afe9e9ca17e08a09f0dbfc33c3e9cd1ac"><td class="memItemLeft" align="right" valign="top">Vector&lt; float &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_lexmou_1_1_machine_learning_1_1_evolutionary_1_1_genetic.html#afe9e9ca17e08a09f0dbfc33c3e9cd1ac">GetBestIndividual</a> ()</td></tr>
+<tr class="memdesc:afe9e9ca17e08a09f0dbfc33c3e9cd1ac"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get the best individual of the last generation.  <a href="#afe9e9ca17e08a09f0dbfc33c3e9cd1ac">More...</a><br /></td></tr>
+<tr class="separator:afe9e9ca17e08a09f0dbfc33c3e9cd1ac"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a8ed097db095cff5a0f234c8dcc318ad1"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_lexmou_1_1_machine_learning_1_1_evolutionary_1_1_genetic.html#a8ed097db095cff5a0f234c8dcc318ad1">GetBestIndividualIndex</a> ()</td></tr>
+<tr class="memdesc:a8ed097db095cff5a0f234c8dcc318ad1"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get the best individual index of the last generation.  <a href="#a8ed097db095cff5a0f234c8dcc318ad1">More...</a><br /></td></tr>
+<tr class="separator:a8ed097db095cff5a0f234c8dcc318ad1"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:adbf0639ad9a85b926a2c9da0264cb0d9"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_lexmou_1_1_machine_learning_1_1_evolutionary_1_1_genetic.html#adbf0639ad9a85b926a2c9da0264cb0d9">SaveGeneration</a> ()</td></tr>
+<tr class="memdesc:adbf0639ad9a85b926a2c9da0264cb0d9"><td class="mdescLeft">&#160;</td><td class="mdescRight">Save the generation.  <a href="#adbf0639ad9a85b926a2c9da0264cb0d9">More...</a><br /></td></tr>
+<tr class="separator:adbf0639ad9a85b926a2c9da0264cb0d9"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a8824a4c4262c51c41c00c7d62b149815"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_lexmou_1_1_machine_learning_1_1_evolutionary_1_1_genetic.html#a8824a4c4262c51c41c00c7d62b149815">LoadGeneration</a> (int generationIndex, float[,] floatArr)</td></tr>
+<tr class="memdesc:a8824a4c4262c51c41c00c7d62b149815"><td class="mdescLeft">&#160;</td><td class="mdescRight">Load the generation.  <a href="#a8824a4c4262c51c41c00c7d62b149815">More...</a><br /></td></tr>
+<tr class="separator:a8824a4c4262c51c41c00c7d62b149815"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a862b72d14caa564a0f37f0c469012f88"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_lexmou_1_1_machine_learning_1_1_evolutionary_1_1_genetic.html#a862b72d14caa564a0f37f0c469012f88">LoadBest</a> (int generationIndex, float[] floatArr)</td></tr>
+<tr class="memdesc:a862b72d14caa564a0f37f0c469012f88"><td class="mdescLeft">&#160;</td><td class="mdescRight">Load the best individual.  <a href="#a862b72d14caa564a0f37f0c469012f88">More...</a><br /></td></tr>
+<tr class="separator:a862b72d14caa564a0f37f0c469012f88"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-attribs"></a>
 Public Attributes</h2></td></tr>
+<tr class="memitem:a98100f01e5ffc8afe2ac8c1a990cd7e4"><td class="memItemLeft" align="right" valign="top">SystemRandomSource&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_lexmou_1_1_machine_learning_1_1_evolutionary_1_1_genetic.html#a98100f01e5ffc8afe2ac8c1a990cd7e4">rndGenerator</a></td></tr>
+<tr class="memdesc:a98100f01e5ffc8afe2ac8c1a990cd7e4"><td class="mdescLeft">&#160;</td><td class="mdescRight">Random Generator. Allow the generation of a repeatable random number sequence for each seed value.  <a href="#a98100f01e5ffc8afe2ac8c1a990cd7e4">More...</a><br /></td></tr>
+<tr class="separator:a98100f01e5ffc8afe2ac8c1a990cd7e4"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a2c15e0fafa724ea70de79081364e13a5"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_lexmou_1_1_machine_learning_1_1_evolutionary_1_1_genetic.html#a2c15e0fafa724ea70de79081364e13a5">generation</a></td></tr>
+<tr class="memdesc:a2c15e0fafa724ea70de79081364e13a5"><td class="mdescLeft">&#160;</td><td class="mdescRight">Generation counter. Start at 1.  <a href="#a2c15e0fafa724ea70de79081364e13a5">More...</a><br /></td></tr>
+<tr class="separator:a2c15e0fafa724ea70de79081364e13a5"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a7bf13b8789c54b3ca903d3c9a5f9aeed"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_lexmou_1_1_machine_learning_1_1_evolutionary_1_1_genetic.html#a7bf13b8789c54b3ca903d3c9a5f9aeed">populationSize</a></td></tr>
+<tr class="memdesc:a7bf13b8789c54b3ca903d3c9a5f9aeed"><td class="mdescLeft">&#160;</td><td class="mdescRight">Population size.  <a href="#a7bf13b8789c54b3ca903d3c9a5f9aeed">More...</a><br /></td></tr>
 <tr class="separator:a7bf13b8789c54b3ca903d3c9a5f9aeed"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a1e2ff9a5b339c6e5128c4c8bef9bcf68"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_lexmou_1_1_machine_learning_1_1_evolutionary_1_1_genetic.html#a1e2ff9a5b339c6e5128c4c8bef9bcf68">individualSize</a></td></tr>
+<tr class="memdesc:a1e2ff9a5b339c6e5128c4c8bef9bcf68"><td class="mdescLeft">&#160;</td><td class="mdescRight">Size of each individual.  <a href="#a1e2ff9a5b339c6e5128c4c8bef9bcf68">More...</a><br /></td></tr>
 <tr class="separator:a1e2ff9a5b339c6e5128c4c8bef9bcf68"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a1a1e31120f4c83068d8369e252a9df9c"><td class="memItemLeft" align="right" valign="top">float&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_lexmou_1_1_machine_learning_1_1_evolutionary_1_1_genetic.html#a1a1e31120f4c83068d8369e252a9df9c">bestScore</a></td></tr>
+<tr class="memdesc:a1a1e31120f4c83068d8369e252a9df9c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Best score over the population during the last generation.  <a href="#a1a1e31120f4c83068d8369e252a9df9c">More...</a><br /></td></tr>
+<tr class="separator:a1a1e31120f4c83068d8369e252a9df9c"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a79d17ab780f50b50e4f9aacf46774689"><td class="memItemLeft" align="right" valign="top">float&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_lexmou_1_1_machine_learning_1_1_evolutionary_1_1_genetic.html#a79d17ab780f50b50e4f9aacf46774689">sumEvaluations</a></td></tr>
+<tr class="memdesc:a79d17ab780f50b50e4f9aacf46774689"><td class="mdescLeft">&#160;</td><td class="mdescRight">Sum of the individuals scores.  <a href="#a79d17ab780f50b50e4f9aacf46774689">More...</a><br /></td></tr>
 <tr class="separator:a79d17ab780f50b50e4f9aacf46774689"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a98100f01e5ffc8afe2ac8c1a990cd7e4"><td class="memItemLeft" align="right" valign="top">SystemRandomSource&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_lexmou_1_1_machine_learning_1_1_evolutionary_1_1_genetic.html#a98100f01e5ffc8afe2ac8c1a990cd7e4">rndGenerator</a></td></tr>
-<tr class="separator:a98100f01e5ffc8afe2ac8c1a990cd7e4"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aa2818ad0a5c8ecce7df3cfeee8cd5e94"><td class="memItemLeft" align="right" valign="top">Tuple&lt; float, float &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_lexmou_1_1_machine_learning_1_1_evolutionary_1_1_genetic.html#aa2818ad0a5c8ecce7df3cfeee8cd5e94">meanStd</a></td></tr>
+<tr class="memdesc:aa2818ad0a5c8ecce7df3cfeee8cd5e94"><td class="mdescLeft">&#160;</td><td class="mdescRight">Mean and standard deviation of the score over the population.  <a href="#aa2818ad0a5c8ecce7df3cfeee8cd5e94">More...</a><br /></td></tr>
 <tr class="separator:aa2818ad0a5c8ecce7df3cfeee8cd5e94"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a0abb298f2e968ab01a46788103a2acd5"><td class="memItemLeft" align="right" valign="top">float&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_lexmou_1_1_machine_learning_1_1_evolutionary_1_1_genetic.html#a0abb298f2e968ab01a46788103a2acd5">median</a></td></tr>
+<tr class="memdesc:a0abb298f2e968ab01a46788103a2acd5"><td class="mdescLeft">&#160;</td><td class="mdescRight">Median score over the population.  <a href="#a0abb298f2e968ab01a46788103a2acd5">More...</a><br /></td></tr>
 <tr class="separator:a0abb298f2e968ab01a46788103a2acd5"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a1a1e31120f4c83068d8369e252a9df9c"><td class="memItemLeft" align="right" valign="top">float&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_lexmou_1_1_machine_learning_1_1_evolutionary_1_1_genetic.html#a1a1e31120f4c83068d8369e252a9df9c">bestScore</a></td></tr>
-<tr class="separator:a1a1e31120f4c83068d8369e252a9df9c"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a2c15e0fafa724ea70de79081364e13a5"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_lexmou_1_1_machine_learning_1_1_evolutionary_1_1_genetic.html#a2c15e0fafa724ea70de79081364e13a5">generation</a></td></tr>
-<tr class="separator:a2c15e0fafa724ea70de79081364e13a5"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aaafef3a9b8b41bb4249762bbeb5ebd19"><td class="memItemLeft" align="right" valign="top">StreamWriter&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_lexmou_1_1_machine_learning_1_1_evolutionary_1_1_genetic.html#aaafef3a9b8b41bb4249762bbeb5ebd19">writer</a></td></tr>
+<tr class="memdesc:aaafef3a9b8b41bb4249762bbeb5ebd19"><td class="mdescLeft">&#160;</td><td class="mdescRight">StreamWriter to save and load results.  <a href="#aaafef3a9b8b41bb4249762bbeb5ebd19">More...</a><br /></td></tr>
 <tr class="separator:aaafef3a9b8b41bb4249762bbeb5ebd19"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pri-methods"></a>
 Private Member Functions</h2></td></tr>
-<tr class="memitem:ae4e905dab3fd3e4111189206ffd66a60"><td class="memItemLeft" align="right" valign="top">float&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_lexmou_1_1_machine_learning_1_1_evolutionary_1_1_genetic.html#ae4e905dab3fd3e4111189206ffd66a60">MutationOneElement</a> (float value)</td></tr>
-<tr class="separator:ae4e905dab3fd3e4111189206ffd66a60"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a801ac016fd0c0609071736a91618075d"><td class="memItemLeft" align="right" valign="top">string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_lexmou_1_1_machine_learning_1_1_evolutionary_1_1_genetic.html#a801ac016fd0c0609071736a91618075d">GeneratePath</a> ()</td></tr>
+<tr class="memdesc:a801ac016fd0c0609071736a91618075d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Generate the path where to save/load the results.  <a href="#a801ac016fd0c0609071736a91618075d">More...</a><br /></td></tr>
 <tr class="separator:a801ac016fd0c0609071736a91618075d"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ac1ce58dd3d427c8b35683b409cae2314"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_lexmou_1_1_machine_learning_1_1_evolutionary_1_1_genetic.html#ac1ce58dd3d427c8b35683b409cae2314">~Genetic</a> ()</td></tr>
 <tr class="separator:ac1ce58dd3d427c8b35683b409cae2314"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pri-attribs"></a>
 Private Attributes</h2></td></tr>
-<tr class="memitem:a693df15510c4194b4be5548c56832e72"><td class="memItemLeft" align="right" valign="top">string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_lexmou_1_1_machine_learning_1_1_evolutionary_1_1_genetic.html#a693df15510c4194b4be5548c56832e72">path</a></td></tr>
-<tr class="separator:a693df15510c4194b4be5548c56832e72"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a4b55c2594918dd53c8d4a7f436f19e62"><td class="memItemLeft" align="right" valign="top">Matrix&lt; float &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_lexmou_1_1_machine_learning_1_1_evolutionary_1_1_genetic.html#a4b55c2594918dd53c8d4a7f436f19e62">population</a></td></tr>
-<tr class="separator:a4b55c2594918dd53c8d4a7f436f19e62"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a30ead3397751fb8193bae937adbd95d0"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_lexmou_1_1_machine_learning_1_1_evolutionary_1_1_genetic.html#a30ead3397751fb8193bae937adbd95d0">seed</a></td></tr>
+<tr class="memdesc:a30ead3397751fb8193bae937adbd95d0"><td class="mdescLeft">&#160;</td><td class="mdescRight">Seed number to generate a random sequence with a random generator <a class="el" href="class_lexmou_1_1_machine_learning_1_1_evolutionary_1_1_genetic.html#a98100f01e5ffc8afe2ac8c1a990cd7e4" title="Random Generator. Allow the generation of a repeatable random number sequence for each seed value...">rndGenerator</a>.  <a href="#a30ead3397751fb8193bae937adbd95d0">More...</a><br /></td></tr>
 <tr class="separator:a30ead3397751fb8193bae937adbd95d0"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:af25ede6f9c6205d13304481b7cb057e8"><td class="memItemLeft" align="right" valign="top">float&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_lexmou_1_1_machine_learning_1_1_evolutionary_1_1_genetic.html#af25ede6f9c6205d13304481b7cb057e8">mutationRate</a></td></tr>
-<tr class="separator:af25ede6f9c6205d13304481b7cb057e8"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a76050ed339e1c267bb2dac55bf3ac43c"><td class="memItemLeft" align="right" valign="top">Vector&lt; float &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_lexmou_1_1_machine_learning_1_1_evolutionary_1_1_genetic.html#a76050ed339e1c267bb2dac55bf3ac43c">evaluations</a></td></tr>
-<tr class="separator:a76050ed339e1c267bb2dac55bf3ac43c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a693df15510c4194b4be5548c56832e72"><td class="memItemLeft" align="right" valign="top">string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_lexmou_1_1_machine_learning_1_1_evolutionary_1_1_genetic.html#a693df15510c4194b4be5548c56832e72">path</a></td></tr>
+<tr class="memdesc:a693df15510c4194b4be5548c56832e72"><td class="mdescLeft">&#160;</td><td class="mdescRight">Relative path to save the results.  <a href="#a693df15510c4194b4be5548c56832e72">More...</a><br /></td></tr>
+<tr class="separator:a693df15510c4194b4be5548c56832e72"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a5d927f50c34ea5ba56b122515004afbf"><td class="memItemLeft" align="right" valign="top">float&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_lexmou_1_1_machine_learning_1_1_evolutionary_1_1_genetic.html#a5d927f50c34ea5ba56b122515004afbf">initialValueWeights</a></td></tr>
+<tr class="memdesc:a5d927f50c34ea5ba56b122515004afbf"><td class="mdescLeft">&#160;</td><td class="mdescRight">Initial value range of the distribution to build the population.  <a href="#a5d927f50c34ea5ba56b122515004afbf">More...</a><br /></td></tr>
+<tr class="separator:a5d927f50c34ea5ba56b122515004afbf"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a4b55c2594918dd53c8d4a7f436f19e62"><td class="memItemLeft" align="right" valign="top">Matrix&lt; float &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_lexmou_1_1_machine_learning_1_1_evolutionary_1_1_genetic.html#a4b55c2594918dd53c8d4a7f436f19e62">population</a></td></tr>
+<tr class="memdesc:a4b55c2594918dd53c8d4a7f436f19e62"><td class="mdescLeft">&#160;</td><td class="mdescRight">Matrix of the population. Each Column is an individual.  <a href="#a4b55c2594918dd53c8d4a7f436f19e62">More...</a><br /></td></tr>
+<tr class="separator:a4b55c2594918dd53c8d4a7f436f19e62"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aa1ed1e34781a0472002f12d631b1baab"><td class="memItemLeft" align="right" valign="top">float&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_lexmou_1_1_machine_learning_1_1_evolutionary_1_1_genetic.html#aa1ed1e34781a0472002f12d631b1baab">randomIndividualsRate</a></td></tr>
+<tr class="memdesc:aa1ed1e34781a0472002f12d631b1baab"><td class="mdescLeft">&#160;</td><td class="mdescRight">Random rate. At each generation, add \( populationSize \times randomIndividualsRate\) individuals.  <a href="#aa1ed1e34781a0472002f12d631b1baab">More...</a><br /></td></tr>
 <tr class="separator:aa1ed1e34781a0472002f12d631b1baab"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a6b091734ce66ce9563af9e0e69c0eba8"><td class="memItemLeft" align="right" valign="top">float&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_lexmou_1_1_machine_learning_1_1_evolutionary_1_1_genetic.html#a6b091734ce66ce9563af9e0e69c0eba8">bestIndividualsRate</a></td></tr>
+<tr class="memdesc:a6b091734ce66ce9563af9e0e69c0eba8"><td class="mdescLeft">&#160;</td><td class="mdescRight">Best individual rate. At each generation, add \( populationSize \times bestIndividualsRate\) times the best individual from the last generation.  <a href="#a6b091734ce66ce9563af9e0e69c0eba8">More...</a><br /></td></tr>
 <tr class="separator:a6b091734ce66ce9563af9e0e69c0eba8"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af25ede6f9c6205d13304481b7cb057e8"><td class="memItemLeft" align="right" valign="top">float&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_lexmou_1_1_machine_learning_1_1_evolutionary_1_1_genetic.html#af25ede6f9c6205d13304481b7cb057e8">mutationRate</a></td></tr>
+<tr class="memdesc:af25ede6f9c6205d13304481b7cb057e8"><td class="mdescLeft">&#160;</td><td class="mdescRight">Mutation rate. Set the probability to randomly change each element of an individual.  <a href="#af25ede6f9c6205d13304481b7cb057e8">More...</a><br /></td></tr>
+<tr class="separator:af25ede6f9c6205d13304481b7cb057e8"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a6df0247183c7bb1d91512e0c2282b021"><td class="memItemLeft" align="right" valign="top">float&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_lexmou_1_1_machine_learning_1_1_evolutionary_1_1_genetic.html#a6df0247183c7bb1d91512e0c2282b021">emptyRate</a></td></tr>
+<tr class="memdesc:a6df0247183c7bb1d91512e0c2282b021"><td class="mdescLeft">&#160;</td><td class="mdescRight">Empty value rate. The creation of a new individual ensure that \( individualSize \times emptyRate\) elements are zero.  <a href="#a6df0247183c7bb1d91512e0c2282b021">More...</a><br /></td></tr>
+<tr class="separator:a6df0247183c7bb1d91512e0c2282b021"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a76050ed339e1c267bb2dac55bf3ac43c"><td class="memItemLeft" align="right" valign="top">Vector&lt; float &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_lexmou_1_1_machine_learning_1_1_evolutionary_1_1_genetic.html#a76050ed339e1c267bb2dac55bf3ac43c">evaluations</a></td></tr>
+<tr class="separator:a76050ed339e1c267bb2dac55bf3ac43c"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ab17969721f62f55f89bc771492d5c132"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_lexmou_1_1_machine_learning_1_1_evolutionary_1_1_genetic.html#ab17969721f62f55f89bc771492d5c132">bestIndividualIndex</a></td></tr>
 <tr class="separator:ab17969721f62f55f89bc771492d5c132"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a919685ab1686d2f716cae32f4ac9d68b"><td class="memItemLeft" align="right" valign="top">Vector&lt; float &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_lexmou_1_1_machine_learning_1_1_evolutionary_1_1_genetic.html#a919685ab1686d2f716cae32f4ac9d68b">bestIndividual</a></td></tr>
 <tr class="separator:a919685ab1686d2f716cae32f4ac9d68b"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a5d927f50c34ea5ba56b122515004afbf"><td class="memItemLeft" align="right" valign="top">float&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_lexmou_1_1_machine_learning_1_1_evolutionary_1_1_genetic.html#a5d927f50c34ea5ba56b122515004afbf">initialValueWeights</a></td></tr>
-<tr class="separator:a5d927f50c34ea5ba56b122515004afbf"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ac54761928b2a01018195232c5e5d36bc"><td class="memItemLeft" align="right" valign="top">ContinuousUniform&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_lexmou_1_1_machine_learning_1_1_evolutionary_1_1_genetic.html#ac54761928b2a01018195232c5e5d36bc">distribution</a></td></tr>
 <tr class="separator:ac54761928b2a01018195232c5e5d36bc"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a07b78ccadf553369a3723b27a619fd8a"><td class="memItemLeft" align="right" valign="top">ContinuousUniform&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_lexmou_1_1_machine_learning_1_1_evolutionary_1_1_genetic.html#a07b78ccadf553369a3723b27a619fd8a">subDistribution</a></td></tr>
@@ -199,16 +239,18 @@ Private Attributes</h2></td></tr>
 <tr class="separator:a95a8a48c5d29ea0a1fb67d9862cfb532"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a97b2b32bbddd8a92cdcdf32684e6b98c"><td class="memItemLeft" align="right" valign="top">Matrix&lt; float &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_lexmou_1_1_machine_learning_1_1_evolutionary_1_1_genetic.html#a97b2b32bbddd8a92cdcdf32684e6b98c">tmp</a></td></tr>
 <tr class="separator:a97b2b32bbddd8a92cdcdf32684e6b98c"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a6df0247183c7bb1d91512e0c2282b021"><td class="memItemLeft" align="right" valign="top">float&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_lexmou_1_1_machine_learning_1_1_evolutionary_1_1_genetic.html#a6df0247183c7bb1d91512e0c2282b021">emptyRate</a></td></tr>
-<tr class="separator:a6df0247183c7bb1d91512e0c2282b021"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a09e5b209765638ef008f102ad7caf527"><td class="memItemLeft" align="right" valign="top">bool []&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_lexmou_1_1_machine_learning_1_1_evolutionary_1_1_genetic.html#a09e5b209765638ef008f102ad7caf527">distEmpty</a></td></tr>
 <tr class="separator:a09e5b209765638ef008f102ad7caf527"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a92528c7e4f431ef3d57bb7311be38c25"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_lexmou_1_1_machine_learning_1_1_evolutionary_1_1_genetic.html#a92528c7e4f431ef3d57bb7311be38c25">save</a></td></tr>
 <tr class="separator:a92528c7e4f431ef3d57bb7311be38c25"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
-<div class="textblock">
-<p>Definition at line <a class="el" href="_gene_8cs_source.html#l00015">15</a> of file <a class="el" href="_gene_8cs_source.html">Gene.cs</a>.</p>
+<div class="textblock"><p>Classic implementation of a genetic algorithm. </p>
+<p>Class <a class="el" href="class_lexmou_1_1_machine_learning_1_1_evolutionary_1_1_genetic.html" title="Classic implementation of a genetic algorithm. ">Genetic</a> is an "optimized" unity3D implementation of a standard genetic algorithm. The following picture shows the general principle. for more details, Wikipedia is a good start. </p><div class="image">
+<img src="./media/genetic/scheme.png" alt="Genetic Algorithm Scheme"/>
+</div>
+ 
+<p>Definition at line <a class="el" href="_gene_8cs_source.html#l00021">21</a> of file <a class="el" href="_gene_8cs_source.html">Gene.cs</a>.</p>
 </div><h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
 <a id="a25f4f7d6ef08c408fdcae62f836d14b3"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a25f4f7d6ef08c408fdcae62f836d14b3">&sect;&nbsp;</a></span>Genetic()</h2>
@@ -290,7 +332,7 @@ Private Attributes</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="_gene_8cs_source.html#l00053">53</a> of file <a class="el" href="_gene_8cs_source.html">Gene.cs</a>.</p>
+<p>Definition at line <a class="el" href="_gene_8cs_source.html#l00118">118</a> of file <a class="el" href="_gene_8cs_source.html">Gene.cs</a>.</p>
 
 </div>
 </div>
@@ -317,19 +359,49 @@ Private Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="_gene_8cs_source.html#l00303">303</a> of file <a class="el" href="_gene_8cs_source.html">Gene.cs</a>.</p>
+<p>Definition at line <a class="el" href="_gene_8cs_source.html#l00437">437</a> of file <a class="el" href="_gene_8cs_source.html">Gene.cs</a>.</p>
 
 </div>
 </div>
 <h2 class="groupheader">Member Function Documentation</h2>
-<a id="af99a221879499f223fad8ae86032b219"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#af99a221879499f223fad8ae86032b219">&sect;&nbsp;</a></span>CrossOver()</h2>
+<a id="ac6e0a21ca4f603f86811cee06b107591"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ac6e0a21ca4f603f86811cee06b107591">&sect;&nbsp;</a></span>Evaluation()</h2>
 
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">void Lexmou.MachineLearning.Evolutionary.Genetic.CrossOver </td>
+          <td class="memname">void Lexmou.MachineLearning.Evolutionary.Genetic.Evaluation </td>
+          <td>(</td>
+          <td class="paramtype">Vector&lt; float &gt;&#160;</td>
+          <td class="paramname"><em>externalEvaluations</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">string&#160;</td>
+          <td class="paramname"><em>type</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Definition at line <a class="el" href="_gene_8cs_source.html#l00173">173</a> of file <a class="el" href="_gene_8cs_source.html">Gene.cs</a>.</p>
+
+</div>
+</div>
+<a id="adb21aee48627d06d546c54288adba0b5"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#adb21aee48627d06d546c54288adba0b5">&sect;&nbsp;</a></span>SelectionOneElement()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">Vector&lt;float&gt; Lexmou.MachineLearning.Evolutionary.Genetic.SelectionOneElement </td>
           <td>(</td>
           <td class="paramname"></td><td>)</td>
           <td></td>
@@ -337,7 +409,29 @@ Private Attributes</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="_gene_8cs_source.html#l00193">193</a> of file <a class="el" href="_gene_8cs_source.html">Gene.cs</a>.</p>
+<p>Fitness proportionate selection of one element. </p>
+<p>If \( f_{i} \) is the fitness of individual \( i \) in the population, its probability of being selected is \( p_i = \frac{f_i}{\Sigma_{j=1}^{N} f_j} \), where \( N \) is the number of individuals in the population. </p><dl class="section return"><dt>Returns</dt><dd>A <em>MathNet.numerics.Vector</em> of the selected individual </dd></dl>
+
+<p>Definition at line <a class="el" href="_gene_8cs_source.html#l00201">201</a> of file <a class="el" href="_gene_8cs_source.html">Gene.cs</a>.</p>
+
+</div>
+</div>
+<a id="a90a173437ebfe074289a464e68d5bcf2"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a90a173437ebfe074289a464e68d5bcf2">&sect;&nbsp;</a></span>Selection()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void Lexmou.MachineLearning.Evolutionary.Genetic.Selection </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Definition at line <a class="el" href="_gene_8cs_source.html#l00218">218</a> of file <a class="el" href="_gene_8cs_source.html">Gene.cs</a>.</p>
 
 </div>
 </div>
@@ -379,75 +473,32 @@ Private Attributes</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="_gene_8cs_source.html#l00169">169</a> of file <a class="el" href="_gene_8cs_source.html">Gene.cs</a>.</p>
+<p>Two-point crossover. </p>
+<p>Two-point crossover calls for two points to be selected on the parent organism. Everything between the two points is swapped between the parent organisms, rendering two child organisms </p><div class="image">
+<img src="./media/genetic/crossover.png" alt="Genetic Algorithm Crossover Two-point"/>
+</div>
+ <dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">idFirst</td><td>Index of the first parent </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">idSecond</td><td>Index of the second parent </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">sliceIndexA</td><td>Index of the first swap point </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">sliceIndexB</td><td>Index of the second swap point </td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p>Definition at line <a class="el" href="_gene_8cs_source.html#l00264">264</a> of file <a class="el" href="_gene_8cs_source.html">Gene.cs</a>.</p>
 
 </div>
 </div>
-<a id="ac6e0a21ca4f603f86811cee06b107591"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ac6e0a21ca4f603f86811cee06b107591">&sect;&nbsp;</a></span>Evaluation()</h2>
+<a id="af99a221879499f223fad8ae86032b219"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#af99a221879499f223fad8ae86032b219">&sect;&nbsp;</a></span>CrossOver()</h2>
 
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">void Lexmou.MachineLearning.Evolutionary.Genetic.Evaluation </td>
-          <td>(</td>
-          <td class="paramtype">Vector&lt; float &gt;&#160;</td>
-          <td class="paramname"><em>externalEvaluations</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">string&#160;</td>
-          <td class="paramname"><em>type</em>&#160;</td>
-        </tr>
-        <tr>
-          <td></td>
-          <td>)</td>
-          <td></td><td></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-<p>Definition at line <a class="el" href="_gene_8cs_source.html#l00206">206</a> of file <a class="el" href="_gene_8cs_source.html">Gene.cs</a>.</p>
-
-</div>
-</div>
-<a id="a801ac016fd0c0609071736a91618075d"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a801ac016fd0c0609071736a91618075d">&sect;&nbsp;</a></span>GeneratePath()</h2>
-
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">string Lexmou.MachineLearning.Evolutionary.Genetic.GeneratePath </td>
-          <td>(</td>
-          <td class="paramname"></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">private</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-<p>Definition at line <a class="el" href="_gene_8cs_source.html#l00256">256</a> of file <a class="el" href="_gene_8cs_source.html">Gene.cs</a>.</p>
-
-</div>
-</div>
-<a id="afe9e9ca17e08a09f0dbfc33c3e9cd1ac"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#afe9e9ca17e08a09f0dbfc33c3e9cd1ac">&sect;&nbsp;</a></span>GetBestIndividual()</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">Vector&lt;float&gt; Lexmou.MachineLearning.Evolutionary.Genetic.GetBestIndividual </td>
+          <td class="memname">void Lexmou.MachineLearning.Evolutionary.Genetic.CrossOver </td>
           <td>(</td>
           <td class="paramname"></td><td>)</td>
           <td></td>
@@ -455,125 +506,33 @@ Private Attributes</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="_gene_8cs_source.html#l00228">228</a> of file <a class="el" href="_gene_8cs_source.html">Gene.cs</a>.</p>
+<p>Complete population crossover. </p>
+<p>Need an even population size </p>
+
+<p>Definition at line <a class="el" href="_gene_8cs_source.html#l00293">293</a> of file <a class="el" href="_gene_8cs_source.html">Gene.cs</a>.</p>
 
 </div>
 </div>
-<a id="a8ed097db095cff5a0f234c8dcc318ad1"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a8ed097db095cff5a0f234c8dcc318ad1">&sect;&nbsp;</a></span>GetBestIndividualIndex()</h2>
+<a id="ae4e905dab3fd3e4111189206ffd66a60"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ae4e905dab3fd3e4111189206ffd66a60">&sect;&nbsp;</a></span>MutationOneElement()</h2>
 
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">int Lexmou.MachineLearning.Evolutionary.Genetic.GetBestIndividualIndex </td>
+          <td class="memname">float Lexmou.MachineLearning.Evolutionary.Genetic.MutationOneElement </td>
           <td>(</td>
-          <td class="paramname"></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-<p>Definition at line <a class="el" href="_gene_8cs_source.html#l00233">233</a> of file <a class="el" href="_gene_8cs_source.html">Gene.cs</a>.</p>
-
-</div>
-</div>
-<a id="ab97494979da382d4c6ef031106eb01ab"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ab97494979da382d4c6ef031106eb01ab">&sect;&nbsp;</a></span>GetIndividual()</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">Vector&lt;float&gt; Lexmou.MachineLearning.Evolutionary.Genetic.GetIndividual </td>
-          <td>(</td>
-          <td class="paramtype">int&#160;</td>
-          <td class="paramname"><em>i</em></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-<p>Definition at line <a class="el" href="_gene_8cs_source.html#l00201">201</a> of file <a class="el" href="_gene_8cs_source.html">Gene.cs</a>.</p>
-
-</div>
-</div>
-<a id="ae9c9850558a4c28679fdfe901427bd50"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ae9c9850558a4c28679fdfe901427bd50">&sect;&nbsp;</a></span>GetPopulation()</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">Matrix&lt;float&gt; Lexmou.MachineLearning.Evolutionary.Genetic.GetPopulation </td>
-          <td>(</td>
-          <td class="paramname"></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-<p>Definition at line <a class="el" href="_gene_8cs_source.html#l00048">48</a> of file <a class="el" href="_gene_8cs_source.html">Gene.cs</a>.</p>
-
-</div>
-</div>
-<a id="a862b72d14caa564a0f37f0c469012f88"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a862b72d14caa564a0f37f0c469012f88">&sect;&nbsp;</a></span>LoadBest()</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">void Lexmou.MachineLearning.Evolutionary.Genetic.LoadBest </td>
-          <td>(</td>
-          <td class="paramtype">int&#160;</td>
-          <td class="paramname"><em>generationIndex</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">float []&#160;</td>
-          <td class="paramname"><em>floatArr</em>&#160;</td>
-        </tr>
-        <tr>
-          <td></td>
-          <td>)</td>
-          <td></td><td></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-<p>Definition at line <a class="el" href="_gene_8cs_source.html#l00273">273</a> of file <a class="el" href="_gene_8cs_source.html">Gene.cs</a>.</p>
-
-</div>
-</div>
-<a id="a8824a4c4262c51c41c00c7d62b149815"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a8824a4c4262c51c41c00c7d62b149815">&sect;&nbsp;</a></span>LoadGeneration()</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">void Lexmou.MachineLearning.Evolutionary.Genetic.LoadGeneration </td>
-          <td>(</td>
-          <td class="paramtype">int&#160;</td>
-          <td class="paramname"><em>generationIndex</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
           <td class="paramtype">float&#160;</td>
-          <td class="paramname"><em>floatArr</em>[,]&#160;</td>
-        </tr>
-        <tr>
+          <td class="paramname"><em>value</em></td><td>)</td>
           <td></td>
-          <td>)</td>
-          <td></td><td></td>
         </tr>
       </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="_gene_8cs_source.html#l00267">267</a> of file <a class="el" href="_gene_8cs_source.html">Gene.cs</a>.</p>
+<p>Change an element with a probability of <a class="el" href="class_lexmou_1_1_machine_learning_1_1_evolutionary_1_1_genetic.html#af25ede6f9c6205d13304481b7cb057e8" title="Mutation rate. Set the probability to randomly change each element of an individual. ">mutationRate</a>. </p>
+<dl class="section return"><dt>Returns</dt><dd>A <em>float</em> representing the value of this element </dd></dl>
+
+<p>Definition at line <a class="el" href="_gene_8cs_source.html#l00307">307</a> of file <a class="el" href="_gene_8cs_source.html">Gene.cs</a>.</p>
 
 </div>
 </div>
@@ -592,35 +551,9 @@ Private Attributes</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="_gene_8cs_source.html#l00251">251</a> of file <a class="el" href="_gene_8cs_source.html">Gene.cs</a>.</p>
+<p>Apply the mutation process over the population. </p>
 
-</div>
-</div>
-<a id="ae4e905dab3fd3e4111189206ffd66a60"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ae4e905dab3fd3e4111189206ffd66a60">&sect;&nbsp;</a></span>MutationOneElement()</h2>
-
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">float Lexmou.MachineLearning.Evolutionary.Genetic.MutationOneElement </td>
-          <td>(</td>
-          <td class="paramtype">float&#160;</td>
-          <td class="paramname"><em>value</em></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">private</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-<p>Definition at line <a class="el" href="_gene_8cs_source.html#l00238">238</a> of file <a class="el" href="_gene_8cs_source.html">Gene.cs</a>.</p>
+<p>Definition at line <a class="el" href="_gene_8cs_source.html#l00324">324</a> of file <a class="el" href="_gene_8cs_source.html">Gene.cs</a>.</p>
 
 </div>
 </div>
@@ -656,7 +589,129 @@ Private Attributes</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="_gene_8cs_source.html#l00280">280</a> of file <a class="el" href="_gene_8cs_source.html">Gene.cs</a>.</p>
+<p>Definition at line <a class="el" href="_gene_8cs_source.html#l00330">330</a> of file <a class="el" href="_gene_8cs_source.html">Gene.cs</a>.</p>
+
+</div>
+</div>
+<a id="ae9c9850558a4c28679fdfe901427bd50"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ae9c9850558a4c28679fdfe901427bd50">&sect;&nbsp;</a></span>GetPopulation()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">Matrix&lt;float&gt; Lexmou.MachineLearning.Evolutionary.Genetic.GetPopulation </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Definition at line <a class="el" href="_gene_8cs_source.html#l00354">354</a> of file <a class="el" href="_gene_8cs_source.html">Gene.cs</a>.</p>
+
+</div>
+</div>
+<a id="ab97494979da382d4c6ef031106eb01ab"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ab97494979da382d4c6ef031106eb01ab">&sect;&nbsp;</a></span>GetIndividual()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">Vector&lt;float&gt; Lexmou.MachineLearning.Evolutionary.Genetic.GetIndividual </td>
+          <td>(</td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>i</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Get a specific individual. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">i</td><td>Index of the individual </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>A <em>MathNet.Numerics.Vector</em> representing the individual </dd></dl>
+
+<p>Definition at line <a class="el" href="_gene_8cs_source.html#l00365">365</a> of file <a class="el" href="_gene_8cs_source.html">Gene.cs</a>.</p>
+
+</div>
+</div>
+<a id="afe9e9ca17e08a09f0dbfc33c3e9cd1ac"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#afe9e9ca17e08a09f0dbfc33c3e9cd1ac">&sect;&nbsp;</a></span>GetBestIndividual()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">Vector&lt;float&gt; Lexmou.MachineLearning.Evolutionary.Genetic.GetBestIndividual </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Get the best individual of the last generation. </p>
+<dl class="section return"><dt>Returns</dt><dd>A <em>MathNet.Numerics.Vector</em> representing the best individual </dd></dl>
+
+<p>Definition at line <a class="el" href="_gene_8cs_source.html#l00375">375</a> of file <a class="el" href="_gene_8cs_source.html">Gene.cs</a>.</p>
+
+</div>
+</div>
+<a id="a8ed097db095cff5a0f234c8dcc318ad1"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a8ed097db095cff5a0f234c8dcc318ad1">&sect;&nbsp;</a></span>GetBestIndividualIndex()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int Lexmou.MachineLearning.Evolutionary.Genetic.GetBestIndividualIndex </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Get the best individual index of the last generation. </p>
+<dl class="section return"><dt>Returns</dt><dd>An <em>int</em> representing the index of the best individual </dd></dl>
+
+<p>Definition at line <a class="el" href="_gene_8cs_source.html#l00385">385</a> of file <a class="el" href="_gene_8cs_source.html">Gene.cs</a>.</p>
+
+</div>
+</div>
+<a id="a801ac016fd0c0609071736a91618075d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a801ac016fd0c0609071736a91618075d">&sect;&nbsp;</a></span>GeneratePath()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">string Lexmou.MachineLearning.Evolutionary.Genetic.GeneratePath </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Generate the path where to save/load the results. </p>
+<dl class="section return"><dt>Returns</dt><dd><em>string</em> Value of the path </dd></dl>
+
+<p>Definition at line <a class="el" href="_gene_8cs_source.html#l00397">397</a> of file <a class="el" href="_gene_8cs_source.html">Gene.cs</a>.</p>
 
 </div>
 </div>
@@ -675,51 +730,82 @@ Private Attributes</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="_gene_8cs_source.html#l00261">261</a> of file <a class="el" href="_gene_8cs_source.html">Gene.cs</a>.</p>
+<p>Save the generation. </p>
+<p>Save the complete population and the best individual in two files. The path depends on <a class="el" href="class_lexmou_1_1_machine_learning_1_1_evolutionary_1_1_genetic.html#a801ac016fd0c0609071736a91618075d" title="Generate the path where to save/load the results. ">GeneratePath()</a> </p>
+
+<p>Definition at line <a class="el" href="_gene_8cs_source.html#l00409">409</a> of file <a class="el" href="_gene_8cs_source.html">Gene.cs</a>.</p>
 
 </div>
 </div>
-<a id="a90a173437ebfe074289a464e68d5bcf2"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a90a173437ebfe074289a464e68d5bcf2">&sect;&nbsp;</a></span>Selection()</h2>
+<a id="a8824a4c4262c51c41c00c7d62b149815"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a8824a4c4262c51c41c00c7d62b149815">&sect;&nbsp;</a></span>LoadGeneration()</h2>
 
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">void Lexmou.MachineLearning.Evolutionary.Genetic.Selection </td>
+          <td class="memname">void Lexmou.MachineLearning.Evolutionary.Genetic.LoadGeneration </td>
           <td>(</td>
-          <td class="paramname"></td><td>)</td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>generationIndex</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
           <td></td>
+          <td class="paramtype">float&#160;</td>
+          <td class="paramname"><em>floatArr</em>[,]&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
         </tr>
       </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="_gene_8cs_source.html#l00130">130</a> of file <a class="el" href="_gene_8cs_source.html">Gene.cs</a>.</p>
+<p>Load the generation. </p>
+<p>load the complete population and the best individual in two files. The path depends on <a class="el" href="class_lexmou_1_1_machine_learning_1_1_evolutionary_1_1_genetic.html#a801ac016fd0c0609071736a91618075d" title="Generate the path where to save/load the results. ">GeneratePath()</a> </p>
+
+<p>Definition at line <a class="el" href="_gene_8cs_source.html#l00420">420</a> of file <a class="el" href="_gene_8cs_source.html">Gene.cs</a>.</p>
 
 </div>
 </div>
-<a id="adb21aee48627d06d546c54288adba0b5"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#adb21aee48627d06d546c54288adba0b5">&sect;&nbsp;</a></span>SelectionOneElement()</h2>
+<a id="a862b72d14caa564a0f37f0c469012f88"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a862b72d14caa564a0f37f0c469012f88">&sect;&nbsp;</a></span>LoadBest()</h2>
 
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">Vector&lt;float&gt; Lexmou.MachineLearning.Evolutionary.Genetic.SelectionOneElement </td>
+          <td class="memname">void Lexmou.MachineLearning.Evolutionary.Genetic.LoadBest </td>
           <td>(</td>
-          <td class="paramname"></td><td>)</td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>generationIndex</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
           <td></td>
+          <td class="paramtype">float []&#160;</td>
+          <td class="paramname"><em>floatArr</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
         </tr>
       </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="_gene_8cs_source.html#l00113">113</a> of file <a class="el" href="_gene_8cs_source.html">Gene.cs</a>.</p>
+<p>Load the best individual. </p>
+<p>load the complete population and the best individual in two files. The path depends on <a class="el" href="class_lexmou_1_1_machine_learning_1_1_evolutionary_1_1_genetic.html#a801ac016fd0c0609071736a91618075d" title="Generate the path where to save/load the results. ">GeneratePath()</a> </p>
+
+<p>Definition at line <a class="el" href="_gene_8cs_source.html#l00432">432</a> of file <a class="el" href="_gene_8cs_source.html">Gene.cs</a>.</p>
 
 </div>
 </div>
 <h2 class="groupheader">Member Data Documentation</h2>
-<a id="a919685ab1686d2f716cae32f4ac9d68b"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a919685ab1686d2f716cae32f4ac9d68b">&sect;&nbsp;</a></span>bestIndividual</h2>
+<a id="a30ead3397751fb8193bae937adbd95d0"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a30ead3397751fb8193bae937adbd95d0">&sect;&nbsp;</a></span>seed</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -728,7 +814,7 @@ Private Attributes</h2></td></tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">Vector&lt;float&gt; Lexmou.MachineLearning.Evolutionary.Genetic.bestIndividual</td>
+          <td class="memname">int Lexmou.MachineLearning.Evolutionary.Genetic.seed</td>
         </tr>
       </table>
   </td>
@@ -738,303 +824,9 @@ Private Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="_gene_8cs_source.html#l00028">28</a> of file <a class="el" href="_gene_8cs_source.html">Gene.cs</a>.</p>
-
-</div>
-</div>
-<a id="ab17969721f62f55f89bc771492d5c132"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ab17969721f62f55f89bc771492d5c132">&sect;&nbsp;</a></span>bestIndividualIndex</h2>
-
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">int Lexmou.MachineLearning.Evolutionary.Genetic.bestIndividualIndex</td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">private</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-<p>Definition at line <a class="el" href="_gene_8cs_source.html#l00027">27</a> of file <a class="el" href="_gene_8cs_source.html">Gene.cs</a>.</p>
-
-</div>
-</div>
-<a id="a6b091734ce66ce9563af9e0e69c0eba8"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a6b091734ce66ce9563af9e0e69c0eba8">&sect;&nbsp;</a></span>bestIndividualsRate</h2>
-
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">float Lexmou.MachineLearning.Evolutionary.Genetic.bestIndividualsRate</td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">private</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
+<p>Seed number to generate a random sequence with a random generator <a class="el" href="class_lexmou_1_1_machine_learning_1_1_evolutionary_1_1_genetic.html#a98100f01e5ffc8afe2ac8c1a990cd7e4" title="Random Generator. Allow the generation of a repeatable random number sequence for each seed value...">rndGenerator</a>. </p>
 
 <p>Definition at line <a class="el" href="_gene_8cs_source.html#l00026">26</a> of file <a class="el" href="_gene_8cs_source.html">Gene.cs</a>.</p>
-
-</div>
-</div>
-<a id="a1a1e31120f4c83068d8369e252a9df9c"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a1a1e31120f4c83068d8369e252a9df9c">&sect;&nbsp;</a></span>bestScore</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">float Lexmou.MachineLearning.Evolutionary.Genetic.bestScore</td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-<p>Definition at line <a class="el" href="_gene_8cs_source.html#l00035">35</a> of file <a class="el" href="_gene_8cs_source.html">Gene.cs</a>.</p>
-
-</div>
-</div>
-<a id="a09e5b209765638ef008f102ad7caf527"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a09e5b209765638ef008f102ad7caf527">&sect;&nbsp;</a></span>distEmpty</h2>
-
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">bool [] Lexmou.MachineLearning.Evolutionary.Genetic.distEmpty</td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">private</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-<p>Definition at line <a class="el" href="_gene_8cs_source.html#l00045">45</a> of file <a class="el" href="_gene_8cs_source.html">Gene.cs</a>.</p>
-
-</div>
-</div>
-<a id="ac54761928b2a01018195232c5e5d36bc"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ac54761928b2a01018195232c5e5d36bc">&sect;&nbsp;</a></span>distribution</h2>
-
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">ContinuousUniform Lexmou.MachineLearning.Evolutionary.Genetic.distribution</td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">private</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-<p>Definition at line <a class="el" href="_gene_8cs_source.html#l00037">37</a> of file <a class="el" href="_gene_8cs_source.html">Gene.cs</a>.</p>
-
-</div>
-</div>
-<a id="a8686f1fb9b8b0c8537ad7d89a86fdc3b"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a8686f1fb9b8b0c8537ad7d89a86fdc3b">&sect;&nbsp;</a></span>drawDistribution</h2>
-
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">ContinuousUniform Lexmou.MachineLearning.Evolutionary.Genetic.drawDistribution</td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">private</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-<p>Definition at line <a class="el" href="_gene_8cs_source.html#l00039">39</a> of file <a class="el" href="_gene_8cs_source.html">Gene.cs</a>.</p>
-
-</div>
-</div>
-<a id="a6df0247183c7bb1d91512e0c2282b021"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a6df0247183c7bb1d91512e0c2282b021">&sect;&nbsp;</a></span>emptyRate</h2>
-
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">float Lexmou.MachineLearning.Evolutionary.Genetic.emptyRate</td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">private</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-<p>Definition at line <a class="el" href="_gene_8cs_source.html#l00044">44</a> of file <a class="el" href="_gene_8cs_source.html">Gene.cs</a>.</p>
-
-</div>
-</div>
-<a id="a76050ed339e1c267bb2dac55bf3ac43c"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a76050ed339e1c267bb2dac55bf3ac43c">&sect;&nbsp;</a></span>evaluations</h2>
-
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">Vector&lt;float&gt; Lexmou.MachineLearning.Evolutionary.Genetic.evaluations</td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">private</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-<p>Definition at line <a class="el" href="_gene_8cs_source.html#l00023">23</a> of file <a class="el" href="_gene_8cs_source.html">Gene.cs</a>.</p>
-
-</div>
-</div>
-<a id="a2c15e0fafa724ea70de79081364e13a5"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a2c15e0fafa724ea70de79081364e13a5">&sect;&nbsp;</a></span>generation</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">int Lexmou.MachineLearning.Evolutionary.Genetic.generation</td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-<p>Definition at line <a class="el" href="_gene_8cs_source.html#l00036">36</a> of file <a class="el" href="_gene_8cs_source.html">Gene.cs</a>.</p>
-
-</div>
-</div>
-<a id="a1e2ff9a5b339c6e5128c4c8bef9bcf68"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a1e2ff9a5b339c6e5128c4c8bef9bcf68">&sect;&nbsp;</a></span>individualSize</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">int Lexmou.MachineLearning.Evolutionary.Genetic.individualSize</td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-<p>Definition at line <a class="el" href="_gene_8cs_source.html#l00021">21</a> of file <a class="el" href="_gene_8cs_source.html">Gene.cs</a>.</p>
-
-</div>
-</div>
-<a id="a5d927f50c34ea5ba56b122515004afbf"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a5d927f50c34ea5ba56b122515004afbf">&sect;&nbsp;</a></span>initialValueWeights</h2>
-
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">float Lexmou.MachineLearning.Evolutionary.Genetic.initialValueWeights</td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">private</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-<p>Definition at line <a class="el" href="_gene_8cs_source.html#l00030">30</a> of file <a class="el" href="_gene_8cs_source.html">Gene.cs</a>.</p>
-
-</div>
-</div>
-<a id="aa2818ad0a5c8ecce7df3cfeee8cd5e94"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#aa2818ad0a5c8ecce7df3cfeee8cd5e94">&sect;&nbsp;</a></span>meanStd</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">Tuple&lt;float, float&gt; Lexmou.MachineLearning.Evolutionary.Genetic.meanStd</td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-<p>Definition at line <a class="el" href="_gene_8cs_source.html#l00032">32</a> of file <a class="el" href="_gene_8cs_source.html">Gene.cs</a>.</p>
-
-</div>
-</div>
-<a id="a0abb298f2e968ab01a46788103a2acd5"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a0abb298f2e968ab01a46788103a2acd5">&sect;&nbsp;</a></span>median</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">float Lexmou.MachineLearning.Evolutionary.Genetic.median</td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-<p>Definition at line <a class="el" href="_gene_8cs_source.html#l00033">33</a> of file <a class="el" href="_gene_8cs_source.html">Gene.cs</a>.</p>
-
-</div>
-</div>
-<a id="af25ede6f9c6205d13304481b7cb057e8"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#af25ede6f9c6205d13304481b7cb057e8">&sect;&nbsp;</a></span>mutationRate</h2>
-
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">float Lexmou.MachineLearning.Evolutionary.Genetic.mutationRate</td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">private</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-<p>Definition at line <a class="el" href="_gene_8cs_source.html#l00022">22</a> of file <a class="el" href="_gene_8cs_source.html">Gene.cs</a>.</p>
 
 </div>
 </div>
@@ -1058,7 +850,35 @@ Private Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="_gene_8cs_source.html#l00017">17</a> of file <a class="el" href="_gene_8cs_source.html">Gene.cs</a>.</p>
+<p>Relative path to save the results. </p>
+
+<p>Definition at line <a class="el" href="_gene_8cs_source.html#l00030">30</a> of file <a class="el" href="_gene_8cs_source.html">Gene.cs</a>.</p>
+
+</div>
+</div>
+<a id="a5d927f50c34ea5ba56b122515004afbf"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a5d927f50c34ea5ba56b122515004afbf">&sect;&nbsp;</a></span>initialValueWeights</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">float Lexmou.MachineLearning.Evolutionary.Genetic.initialValueWeights</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Initial value range of the distribution to build the population. </p>
+
+<p>Definition at line <a class="el" href="_gene_8cs_source.html#l00034">34</a> of file <a class="el" href="_gene_8cs_source.html">Gene.cs</a>.</p>
 
 </div>
 </div>
@@ -1082,23 +902,9 @@ Private Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="_gene_8cs_source.html#l00018">18</a> of file <a class="el" href="_gene_8cs_source.html">Gene.cs</a>.</p>
+<p>Matrix of the population. Each Column is an individual. </p>
 
-</div>
-</div>
-<a id="a7bf13b8789c54b3ca903d3c9a5f9aeed"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a7bf13b8789c54b3ca903d3c9a5f9aeed">&sect;&nbsp;</a></span>populationSize</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">int Lexmou.MachineLearning.Evolutionary.Genetic.populationSize</td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-<p>Definition at line <a class="el" href="_gene_8cs_source.html#l00020">20</a> of file <a class="el" href="_gene_8cs_source.html">Gene.cs</a>.</p>
+<p>Definition at line <a class="el" href="_gene_8cs_source.html#l00038">38</a> of file <a class="el" href="_gene_8cs_source.html">Gene.cs</a>.</p>
 
 </div>
 </div>
@@ -1122,28 +928,14 @@ Private Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="_gene_8cs_source.html#l00025">25</a> of file <a class="el" href="_gene_8cs_source.html">Gene.cs</a>.</p>
+<p>Random rate. At each generation, add \( populationSize \times randomIndividualsRate\) individuals. </p>
+
+<p>Definition at line <a class="el" href="_gene_8cs_source.html#l00042">42</a> of file <a class="el" href="_gene_8cs_source.html">Gene.cs</a>.</p>
 
 </div>
 </div>
-<a id="a98100f01e5ffc8afe2ac8c1a990cd7e4"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a98100f01e5ffc8afe2ac8c1a990cd7e4">&sect;&nbsp;</a></span>rndGenerator</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">SystemRandomSource Lexmou.MachineLearning.Evolutionary.Genetic.rndGenerator</td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-<p>Definition at line <a class="el" href="_gene_8cs_source.html#l00029">29</a> of file <a class="el" href="_gene_8cs_source.html">Gene.cs</a>.</p>
-
-</div>
-</div>
-<a id="a92528c7e4f431ef3d57bb7311be38c25"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a92528c7e4f431ef3d57bb7311be38c25">&sect;&nbsp;</a></span>save</h2>
+<a id="a6b091734ce66ce9563af9e0e69c0eba8"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a6b091734ce66ce9563af9e0e69c0eba8">&sect;&nbsp;</a></span>bestIndividualsRate</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -1152,7 +944,7 @@ Private Attributes</h2></td></tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">bool Lexmou.MachineLearning.Evolutionary.Genetic.save</td>
+          <td class="memname">float Lexmou.MachineLearning.Evolutionary.Genetic.bestIndividualsRate</td>
         </tr>
       </table>
   </td>
@@ -1161,13 +953,15 @@ Private Attributes</h2></td></tr>
   </tr>
 </table>
 </div><div class="memdoc">
+
+<p>Best individual rate. At each generation, add \( populationSize \times bestIndividualsRate\) times the best individual from the last generation. </p>
 
 <p>Definition at line <a class="el" href="_gene_8cs_source.html#l00046">46</a> of file <a class="el" href="_gene_8cs_source.html">Gene.cs</a>.</p>
 
 </div>
 </div>
-<a id="a30ead3397751fb8193bae937adbd95d0"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a30ead3397751fb8193bae937adbd95d0">&sect;&nbsp;</a></span>seed</h2>
+<a id="af25ede6f9c6205d13304481b7cb057e8"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#af25ede6f9c6205d13304481b7cb057e8">&sect;&nbsp;</a></span>mutationRate</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -1176,7 +970,7 @@ Private Attributes</h2></td></tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">int Lexmou.MachineLearning.Evolutionary.Genetic.seed</td>
+          <td class="memname">float Lexmou.MachineLearning.Evolutionary.Genetic.mutationRate</td>
         </tr>
       </table>
   </td>
@@ -1186,12 +980,14 @@ Private Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="_gene_8cs_source.html#l00019">19</a> of file <a class="el" href="_gene_8cs_source.html">Gene.cs</a>.</p>
+<p>Mutation rate. Set the probability to randomly change each element of an individual. </p>
+
+<p>Definition at line <a class="el" href="_gene_8cs_source.html#l00050">50</a> of file <a class="el" href="_gene_8cs_source.html">Gene.cs</a>.</p>
 
 </div>
 </div>
-<a id="a8629b08170f8d5166c60834051cef6bf"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a8629b08170f8d5166c60834051cef6bf">&sect;&nbsp;</a></span>sliceA</h2>
+<a id="a6df0247183c7bb1d91512e0c2282b021"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a6df0247183c7bb1d91512e0c2282b021">&sect;&nbsp;</a></span>emptyRate</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -1200,7 +996,7 @@ Private Attributes</h2></td></tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">Vector&lt;float&gt; Lexmou.MachineLearning.Evolutionary.Genetic.sliceA</td>
+          <td class="memname">float Lexmou.MachineLearning.Evolutionary.Genetic.emptyRate</td>
         </tr>
       </table>
   </td>
@@ -1210,12 +1006,14 @@ Private Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="_gene_8cs_source.html#l00041">41</a> of file <a class="el" href="_gene_8cs_source.html">Gene.cs</a>.</p>
+<p>Empty value rate. The creation of a new individual ensure that \( individualSize \times emptyRate\) elements are zero. </p>
+
+<p>Definition at line <a class="el" href="_gene_8cs_source.html#l00054">54</a> of file <a class="el" href="_gene_8cs_source.html">Gene.cs</a>.</p>
 
 </div>
 </div>
-<a id="a95a8a48c5d29ea0a1fb67d9862cfb532"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a95a8a48c5d29ea0a1fb67d9862cfb532">&sect;&nbsp;</a></span>sliceB</h2>
+<a id="a76050ed339e1c267bb2dac55bf3ac43c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a76050ed339e1c267bb2dac55bf3ac43c">&sect;&nbsp;</a></span>evaluations</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -1224,7 +1022,7 @@ Private Attributes</h2></td></tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">Vector&lt;float&gt; Lexmou.MachineLearning.Evolutionary.Genetic.sliceB</td>
+          <td class="memname">Vector&lt;float&gt; Lexmou.MachineLearning.Evolutionary.Genetic.evaluations</td>
         </tr>
       </table>
   </td>
@@ -1234,7 +1032,79 @@ Private Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="_gene_8cs_source.html#l00042">42</a> of file <a class="el" href="_gene_8cs_source.html">Gene.cs</a>.</p>
+<p>Definition at line <a class="el" href="_gene_8cs_source.html#l00058">58</a> of file <a class="el" href="_gene_8cs_source.html">Gene.cs</a>.</p>
+
+</div>
+</div>
+<a id="ab17969721f62f55f89bc771492d5c132"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ab17969721f62f55f89bc771492d5c132">&sect;&nbsp;</a></span>bestIndividualIndex</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">int Lexmou.MachineLearning.Evolutionary.Genetic.bestIndividualIndex</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Definition at line <a class="el" href="_gene_8cs_source.html#l00059">59</a> of file <a class="el" href="_gene_8cs_source.html">Gene.cs</a>.</p>
+
+</div>
+</div>
+<a id="a919685ab1686d2f716cae32f4ac9d68b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a919685ab1686d2f716cae32f4ac9d68b">&sect;&nbsp;</a></span>bestIndividual</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">Vector&lt;float&gt; Lexmou.MachineLearning.Evolutionary.Genetic.bestIndividual</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Definition at line <a class="el" href="_gene_8cs_source.html#l00060">60</a> of file <a class="el" href="_gene_8cs_source.html">Gene.cs</a>.</p>
+
+</div>
+</div>
+<a id="ac54761928b2a01018195232c5e5d36bc"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ac54761928b2a01018195232c5e5d36bc">&sect;&nbsp;</a></span>distribution</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">ContinuousUniform Lexmou.MachineLearning.Evolutionary.Genetic.distribution</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Definition at line <a class="el" href="_gene_8cs_source.html#l00062">62</a> of file <a class="el" href="_gene_8cs_source.html">Gene.cs</a>.</p>
 
 </div>
 </div>
@@ -1258,23 +1128,79 @@ Private Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="_gene_8cs_source.html#l00038">38</a> of file <a class="el" href="_gene_8cs_source.html">Gene.cs</a>.</p>
+<p>Definition at line <a class="el" href="_gene_8cs_source.html#l00063">63</a> of file <a class="el" href="_gene_8cs_source.html">Gene.cs</a>.</p>
 
 </div>
 </div>
-<a id="a79d17ab780f50b50e4f9aacf46774689"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a79d17ab780f50b50e4f9aacf46774689">&sect;&nbsp;</a></span>sumEvaluations</h2>
+<a id="a8686f1fb9b8b0c8537ad7d89a86fdc3b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a8686f1fb9b8b0c8537ad7d89a86fdc3b">&sect;&nbsp;</a></span>drawDistribution</h2>
 
 <div class="memitem">
 <div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">float Lexmou.MachineLearning.Evolutionary.Genetic.sumEvaluations</td>
+          <td class="memname">ContinuousUniform Lexmou.MachineLearning.Evolutionary.Genetic.drawDistribution</td>
         </tr>
       </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="_gene_8cs_source.html#l00024">24</a> of file <a class="el" href="_gene_8cs_source.html">Gene.cs</a>.</p>
+<p>Definition at line <a class="el" href="_gene_8cs_source.html#l00064">64</a> of file <a class="el" href="_gene_8cs_source.html">Gene.cs</a>.</p>
+
+</div>
+</div>
+<a id="a8629b08170f8d5166c60834051cef6bf"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a8629b08170f8d5166c60834051cef6bf">&sect;&nbsp;</a></span>sliceA</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">Vector&lt;float&gt; Lexmou.MachineLearning.Evolutionary.Genetic.sliceA</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Definition at line <a class="el" href="_gene_8cs_source.html#l00066">66</a> of file <a class="el" href="_gene_8cs_source.html">Gene.cs</a>.</p>
+
+</div>
+</div>
+<a id="a95a8a48c5d29ea0a1fb67d9862cfb532"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a95a8a48c5d29ea0a1fb67d9862cfb532">&sect;&nbsp;</a></span>sliceB</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">Vector&lt;float&gt; Lexmou.MachineLearning.Evolutionary.Genetic.sliceB</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Definition at line <a class="el" href="_gene_8cs_source.html#l00067">67</a> of file <a class="el" href="_gene_8cs_source.html">Gene.cs</a>.</p>
 
 </div>
 </div>
@@ -1298,7 +1224,200 @@ Private Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="_gene_8cs_source.html#l00043">43</a> of file <a class="el" href="_gene_8cs_source.html">Gene.cs</a>.</p>
+<p>Definition at line <a class="el" href="_gene_8cs_source.html#l00068">68</a> of file <a class="el" href="_gene_8cs_source.html">Gene.cs</a>.</p>
+
+</div>
+</div>
+<a id="a09e5b209765638ef008f102ad7caf527"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a09e5b209765638ef008f102ad7caf527">&sect;&nbsp;</a></span>distEmpty</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool [] Lexmou.MachineLearning.Evolutionary.Genetic.distEmpty</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Definition at line <a class="el" href="_gene_8cs_source.html#l00069">69</a> of file <a class="el" href="_gene_8cs_source.html">Gene.cs</a>.</p>
+
+</div>
+</div>
+<a id="a92528c7e4f431ef3d57bb7311be38c25"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a92528c7e4f431ef3d57bb7311be38c25">&sect;&nbsp;</a></span>save</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool Lexmou.MachineLearning.Evolutionary.Genetic.save</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Definition at line <a class="el" href="_gene_8cs_source.html#l00070">70</a> of file <a class="el" href="_gene_8cs_source.html">Gene.cs</a>.</p>
+
+</div>
+</div>
+<a id="a98100f01e5ffc8afe2ac8c1a990cd7e4"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a98100f01e5ffc8afe2ac8c1a990cd7e4">&sect;&nbsp;</a></span>rndGenerator</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">SystemRandomSource Lexmou.MachineLearning.Evolutionary.Genetic.rndGenerator</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Random Generator. Allow the generation of a repeatable random number sequence for each seed value. </p>
+
+<p>Definition at line <a class="el" href="_gene_8cs_source.html#l00076">76</a> of file <a class="el" href="_gene_8cs_source.html">Gene.cs</a>.</p>
+
+</div>
+</div>
+<a id="a2c15e0fafa724ea70de79081364e13a5"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a2c15e0fafa724ea70de79081364e13a5">&sect;&nbsp;</a></span>generation</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int Lexmou.MachineLearning.Evolutionary.Genetic.generation</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Generation counter. Start at 1. </p>
+
+<p>Definition at line <a class="el" href="_gene_8cs_source.html#l00080">80</a> of file <a class="el" href="_gene_8cs_source.html">Gene.cs</a>.</p>
+
+</div>
+</div>
+<a id="a7bf13b8789c54b3ca903d3c9a5f9aeed"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a7bf13b8789c54b3ca903d3c9a5f9aeed">&sect;&nbsp;</a></span>populationSize</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int Lexmou.MachineLearning.Evolutionary.Genetic.populationSize</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Population size. </p>
+<p>The number of individual by generation is very important for the diversity. There is many ressources online about this. This class is not perfect and will only work with a even number. Condition never checked. </p><dl class="todo"><dt><b><a class="el" href="todo.html#_todo000001">Todo:</a></b></dt><dd>Odd number compatibility (Problem with <a class="el" href="class_lexmou_1_1_machine_learning_1_1_evolutionary_1_1_genetic.html#a90a173437ebfe074289a464e68d5bcf2">Selection()</a>) </dd></dl>
+
+<p>Definition at line <a class="el" href="_gene_8cs_source.html#l00087">87</a> of file <a class="el" href="_gene_8cs_source.html">Gene.cs</a>.</p>
+
+</div>
+</div>
+<a id="a1e2ff9a5b339c6e5128c4c8bef9bcf68"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a1e2ff9a5b339c6e5128c4c8bef9bcf68">&sect;&nbsp;</a></span>individualSize</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int Lexmou.MachineLearning.Evolutionary.Genetic.individualSize</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Size of each individual. </p>
+
+<p>Definition at line <a class="el" href="_gene_8cs_source.html#l00091">91</a> of file <a class="el" href="_gene_8cs_source.html">Gene.cs</a>.</p>
+
+</div>
+</div>
+<a id="a1a1e31120f4c83068d8369e252a9df9c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a1a1e31120f4c83068d8369e252a9df9c">&sect;&nbsp;</a></span>bestScore</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">float Lexmou.MachineLearning.Evolutionary.Genetic.bestScore</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Best score over the population during the last generation. </p>
+
+<p>Definition at line <a class="el" href="_gene_8cs_source.html#l00095">95</a> of file <a class="el" href="_gene_8cs_source.html">Gene.cs</a>.</p>
+
+</div>
+</div>
+<a id="a79d17ab780f50b50e4f9aacf46774689"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a79d17ab780f50b50e4f9aacf46774689">&sect;&nbsp;</a></span>sumEvaluations</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">float Lexmou.MachineLearning.Evolutionary.Genetic.sumEvaluations</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Sum of the individuals scores. </p>
+
+<p>Definition at line <a class="el" href="_gene_8cs_source.html#l00099">99</a> of file <a class="el" href="_gene_8cs_source.html">Gene.cs</a>.</p>
+
+</div>
+</div>
+<a id="aa2818ad0a5c8ecce7df3cfeee8cd5e94"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aa2818ad0a5c8ecce7df3cfeee8cd5e94">&sect;&nbsp;</a></span>meanStd</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">Tuple&lt;float, float&gt; Lexmou.MachineLearning.Evolutionary.Genetic.meanStd</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Mean and standard deviation of the score over the population. </p>
+
+<p>Definition at line <a class="el" href="_gene_8cs_source.html#l00103">103</a> of file <a class="el" href="_gene_8cs_source.html">Gene.cs</a>.</p>
+
+</div>
+</div>
+<a id="a0abb298f2e968ab01a46788103a2acd5"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a0abb298f2e968ab01a46788103a2acd5">&sect;&nbsp;</a></span>median</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">float Lexmou.MachineLearning.Evolutionary.Genetic.median</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Median score over the population. </p>
+
+<p>Definition at line <a class="el" href="_gene_8cs_source.html#l00107">107</a> of file <a class="el" href="_gene_8cs_source.html">Gene.cs</a>.</p>
 
 </div>
 </div>
@@ -1314,7 +1433,9 @@ Private Attributes</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="_gene_8cs_source.html#l00040">40</a> of file <a class="el" href="_gene_8cs_source.html">Gene.cs</a>.</p>
+<p>StreamWriter to save and load results. </p>
+
+<p>Definition at line <a class="el" href="_gene_8cs_source.html#l00111">111</a> of file <a class="el" href="_gene_8cs_source.html">Gene.cs</a>.</p>
 
 </div>
 </div>

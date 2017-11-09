@@ -22,6 +22,12 @@
 <script type="text/javascript">
   $(document).ready(function() { init_search(); });
 </script>
+<script type="text/x-mathjax-config">
+  MathJax.Hub.Config({
+    extensions: ["tex2jax.js"],
+    jax: ["input/TeX","output/HTML-CSS"],
+});
+</script><script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.2/MathJax.js?config=TeX-MML-AM_CHTML/MathJax.js"></script>
 <link href="doxygen.css" rel="stylesheet" type="text/css" />
 <link href="customdoxygen.css" rel="stylesheet" type="text/css"/>
 <link href="jquery.smartmenus.bootstrap.css" rel="stylesheet" type="text/css"/>
@@ -156,86 +162,6 @@ Public Attributes</h2></td></tr>
 </div>
 </div>
 <h2 class="groupheader">Member Data Documentation</h2>
-<a id="a5fd78152d3c7bf32dd31ca09c62c6122"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a5fd78152d3c7bf32dd31ca09c62c6122">&sect;&nbsp;</a></span>constant</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">bool InputControl.constant = false</td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-<p>Definition at line <a class="el" href="_input_control_8cs_source.html#l00012">12</a> of file <a class="el" href="_input_control_8cs_source.html">InputControl.cs</a>.</p>
-
-</div>
-</div>
-<a id="af7e0da857492e7fc1c09e4c0e125a892"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#af7e0da857492e7fc1c09e4c0e125a892">&sect;&nbsp;</a></span>constantAileron</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">float InputControl.constantAileron = 0.0f</td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-<p>Definition at line <a class="el" href="_input_control_8cs_source.html#l00017">17</a> of file <a class="el" href="_input_control_8cs_source.html">InputControl.cs</a>.</p>
-
-</div>
-</div>
-<a id="a30dac6503e85e652cf362f0f8290b17b"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a30dac6503e85e652cf362f0f8290b17b">&sect;&nbsp;</a></span>constantElevator</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">float InputControl.constantElevator = 0.0f</td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-<p>Definition at line <a class="el" href="_input_control_8cs_source.html#l00016">16</a> of file <a class="el" href="_input_control_8cs_source.html">InputControl.cs</a>.</p>
-
-</div>
-</div>
-<a id="adb884019336585177eca8e1f8bce1097"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#adb884019336585177eca8e1f8bce1097">&sect;&nbsp;</a></span>constantRudder</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">float InputControl.constantRudder = 0.0f</td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-<p>Definition at line <a class="el" href="_input_control_8cs_source.html#l00015">15</a> of file <a class="el" href="_input_control_8cs_source.html">InputControl.cs</a>.</p>
-
-</div>
-</div>
-<a id="a2f3e3a451745147bf5dcdaf84c74bea6"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a2f3e3a451745147bf5dcdaf84c74bea6">&sect;&nbsp;</a></span>constantThrottle</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">float InputControl.constantThrottle = 0.0f</td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-<p>Definition at line <a class="el" href="_input_control_8cs_source.html#l00014">14</a> of file <a class="el" href="_input_control_8cs_source.html">InputControl.cs</a>.</p>
-
-</div>
-</div>
 <a id="a87d6e903e7c260cce3ecca568e18a22b"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a87d6e903e7c260cce3ecca568e18a22b">&sect;&nbsp;</a></span>MainBoard</h2>
 
@@ -268,6 +194,22 @@ Public Attributes</h2></td></tr>
 
 </div>
 </div>
+<a id="a5fd78152d3c7bf32dd31ca09c62c6122"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a5fd78152d3c7bf32dd31ca09c62c6122">&sect;&nbsp;</a></span>constant</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool InputControl.constant = false</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Definition at line <a class="el" href="_input_control_8cs_source.html#l00012">12</a> of file <a class="el" href="_input_control_8cs_source.html">InputControl.cs</a>.</p>
+
+</div>
+</div>
 <a id="ab36a5d49faf62c3f5d46387ee2fdf97f"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#ab36a5d49faf62c3f5d46387ee2fdf97f">&sect;&nbsp;</a></span>stabilization</h2>
 
@@ -281,6 +223,70 @@ Public Attributes</h2></td></tr>
 </div><div class="memdoc">
 
 <p>Definition at line <a class="el" href="_input_control_8cs_source.html#l00013">13</a> of file <a class="el" href="_input_control_8cs_source.html">InputControl.cs</a>.</p>
+
+</div>
+</div>
+<a id="a2f3e3a451745147bf5dcdaf84c74bea6"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a2f3e3a451745147bf5dcdaf84c74bea6">&sect;&nbsp;</a></span>constantThrottle</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">float InputControl.constantThrottle = 0.0f</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Definition at line <a class="el" href="_input_control_8cs_source.html#l00014">14</a> of file <a class="el" href="_input_control_8cs_source.html">InputControl.cs</a>.</p>
+
+</div>
+</div>
+<a id="adb884019336585177eca8e1f8bce1097"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#adb884019336585177eca8e1f8bce1097">&sect;&nbsp;</a></span>constantRudder</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">float InputControl.constantRudder = 0.0f</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Definition at line <a class="el" href="_input_control_8cs_source.html#l00015">15</a> of file <a class="el" href="_input_control_8cs_source.html">InputControl.cs</a>.</p>
+
+</div>
+</div>
+<a id="a30dac6503e85e652cf362f0f8290b17b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a30dac6503e85e652cf362f0f8290b17b">&sect;&nbsp;</a></span>constantElevator</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">float InputControl.constantElevator = 0.0f</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Definition at line <a class="el" href="_input_control_8cs_source.html#l00016">16</a> of file <a class="el" href="_input_control_8cs_source.html">InputControl.cs</a>.</p>
+
+</div>
+</div>
+<a id="af7e0da857492e7fc1c09e4c0e125a892"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#af7e0da857492e7fc1c09e4c0e125a892">&sect;&nbsp;</a></span>constantAileron</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">float InputControl.constantAileron = 0.0f</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Definition at line <a class="el" href="_input_control_8cs_source.html#l00017">17</a> of file <a class="el" href="_input_control_8cs_source.html">InputControl.cs</a>.</p>
 
 </div>
 </div>

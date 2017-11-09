@@ -22,6 +22,12 @@
 <script type="text/javascript">
   $(document).ready(function() { init_search(); });
 </script>
+<script type="text/x-mathjax-config">
+  MathJax.Hub.Config({
+    extensions: ["tex2jax.js"],
+    jax: ["input/TeX","output/HTML-CSS"],
+});
+</script><script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.2/MathJax.js?config=TeX-MML-AM_CHTML/MathJax.js"></script>
 <link href="doxygen.css" rel="stylesheet" type="text/css" />
 <link href="customdoxygen.css" rel="stylesheet" type="text/css"/>
 <link href="jquery.smartmenus.bootstrap.css" rel="stylesheet" type="text/css"/>
@@ -132,33 +138,6 @@ Private Attributes</h2></td></tr>
 <div class="textblock">
 <p>Definition at line <a class="el" href="_surface_creator_inspector_8cs_source.html#l00005">5</a> of file <a class="el" href="_surface_creator_inspector_8cs_source.html">SurfaceCreatorInspector.cs</a>.</p>
 </div><h2 class="groupheader">Member Function Documentation</h2>
-<a id="a0922b72c152b9ce3c4c14a371e31a7c9"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a0922b72c152b9ce3c4c14a371e31a7c9">&sect;&nbsp;</a></span>OnDisable()</h2>
-
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">void SurfaceCreatorInspector.OnDisable </td>
-          <td>(</td>
-          <td class="paramname"></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">private</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-<p>Definition at line <a class="el" href="_surface_creator_inspector_8cs_source.html#l00014">14</a> of file <a class="el" href="_surface_creator_inspector_8cs_source.html">SurfaceCreatorInspector.cs</a>.</p>
-
-</div>
-</div>
 <a id="a5d231f777313c4e81aa2c0ce76472dea"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a5d231f777313c4e81aa2c0ce76472dea">&sect;&nbsp;</a></span>OnEnable()</h2>
 
@@ -186,22 +165,30 @@ Private Attributes</h2></td></tr>
 
 </div>
 </div>
-<a id="af6299c477d61dd91a962dd28133b2234"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#af6299c477d61dd91a962dd28133b2234">&sect;&nbsp;</a></span>OnInspectorGUI()</h2>
+<a id="a0922b72c152b9ce3c4c14a371e31a7c9"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a0922b72c152b9ce3c4c14a371e31a7c9">&sect;&nbsp;</a></span>OnDisable()</h2>
 
 <div class="memitem">
 <div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">override void SurfaceCreatorInspector.OnInspectorGUI </td>
+          <td class="memname">void SurfaceCreatorInspector.OnDisable </td>
           <td>(</td>
           <td class="paramname"></td><td>)</td>
           <td></td>
         </tr>
       </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="_surface_creator_inspector_8cs_source.html#l00024">24</a> of file <a class="el" href="_surface_creator_inspector_8cs_source.html">SurfaceCreatorInspector.cs</a>.</p>
+<p>Definition at line <a class="el" href="_surface_creator_inspector_8cs_source.html#l00014">14</a> of file <a class="el" href="_surface_creator_inspector_8cs_source.html">SurfaceCreatorInspector.cs</a>.</p>
 
 </div>
 </div>
@@ -229,6 +216,25 @@ Private Attributes</h2></td></tr>
 </div><div class="memdoc">
 
 <p>Definition at line <a class="el" href="_surface_creator_inspector_8cs_source.html#l00018">18</a> of file <a class="el" href="_surface_creator_inspector_8cs_source.html">SurfaceCreatorInspector.cs</a>.</p>
+
+</div>
+</div>
+<a id="af6299c477d61dd91a962dd28133b2234"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#af6299c477d61dd91a962dd28133b2234">&sect;&nbsp;</a></span>OnInspectorGUI()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">override void SurfaceCreatorInspector.OnInspectorGUI </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Definition at line <a class="el" href="_surface_creator_inspector_8cs_source.html#l00024">24</a> of file <a class="el" href="_surface_creator_inspector_8cs_source.html">SurfaceCreatorInspector.cs</a>.</p>
 
 </div>
 </div>

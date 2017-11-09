@@ -22,6 +22,12 @@
 <script type="text/javascript">
   $(document).ready(function() { init_search(); });
 </script>
+<script type="text/x-mathjax-config">
+  MathJax.Hub.Config({
+    extensions: ["tex2jax.js"],
+    jax: ["input/TeX","output/HTML-CSS"],
+});
+</script><script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.2/MathJax.js?config=TeX-MML-AM_CHTML/MathJax.js"></script>
 <link href="doxygen.css" rel="stylesheet" type="text/css" />
 <link href="customdoxygen.css" rel="stylesheet" type="text/css"/>
 <link href="jquery.smartmenus.bootstrap.css" rel="stylesheet" type="text/css"/>
@@ -98,17 +104,24 @@ $(document).ready(function(){initNavTree('class_lexmou_1_1_utils_1_1_u_vector.ht
 <div class="title">Lexmou.Utils.UVector Class Reference</div>  </div>
 </div><!--header-->
 <div class="contents">
+
+<p>Util class for MathNet.Numerics.Vector.  
+ <a href="class_lexmou_1_1_utils_1_1_u_vector.html#details">More...</a></p>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-static-methods"></a>
 Static Public Member Functions</h2></td></tr>
 <tr class="memitem:a89095266e96dd0ca25061907fe940d43"><td class="memItemLeft" align="right" valign="top">static Tuple&lt; float, float &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_lexmou_1_1_utils_1_1_u_vector.html#a89095266e96dd0ca25061907fe940d43">BuildMeanStdVariation</a> (Vector&lt; float &gt; V)</td></tr>
+<tr class="memdesc:a89095266e96dd0ca25061907fe940d43"><td class="mdescLeft">&#160;</td><td class="mdescRight">Mean and standard deviation of a Vector.  <a href="#a89095266e96dd0ca25061907fe940d43">More...</a><br /></td></tr>
 <tr class="separator:a89095266e96dd0ca25061907fe940d43"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a394110f8c664d9069dd661993f4a9511"><td class="memItemLeft" align="right" valign="top">static float&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_lexmou_1_1_utils_1_1_u_vector.html#a394110f8c664d9069dd661993f4a9511">BuildMedian</a> (Vector&lt; float &gt; V)</td></tr>
+<tr class="memdesc:a394110f8c664d9069dd661993f4a9511"><td class="mdescLeft">&#160;</td><td class="mdescRight">Median of a Vector.  <a href="#a394110f8c664d9069dd661993f4a9511">More...</a><br /></td></tr>
 <tr class="separator:a394110f8c664d9069dd661993f4a9511"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
-<div class="textblock">
-<p>Definition at line <a class="el" href="_u_vector_8cs_source.html#l00010">10</a> of file <a class="el" href="_u_vector_8cs_source.html">UVector.cs</a>.</p>
+<div class="textblock"><p>Util class for MathNet.Numerics.Vector. </p>
+<p>This <a class="el" href="class_lexmou_1_1_utils_1_1_u_vector.html" title="Util class for MathNet.Numerics.Vector. ">UVector</a> static class provides a set of utility static methods that can be used to perform operations on MathNet.Numerics.Vector </p>
+
+<p>Definition at line <a class="el" href="_u_vector_8cs_source.html#l00016">16</a> of file <a class="el" href="_u_vector_8cs_source.html">UVector.cs</a>.</p>
 </div><h2 class="groupheader">Member Function Documentation</h2>
 <a id="a89095266e96dd0ca25061907fe940d43"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a89095266e96dd0ca25061907fe940d43">&sect;&nbsp;</a></span>BuildMeanStdVariation()</h2>
@@ -134,7 +147,16 @@ Static Public Member Functions</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="_u_vector_8cs_source.html#l00012">12</a> of file <a class="el" href="_u_vector_8cs_source.html">UVector.cs</a>.</p>
+<p>Mean and standard deviation of a Vector. </p>
+<p>Build the mean and the standard deviation of a Vector and convert a <em>MathNet.Numerics.Tuple&lt;double, double&gt;</em> to <em>MathNet.Numerics.Tuple&lt;float, float&gt;</em> </p><dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">V</td><td>Vector used </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>A <em>MathNet.Numerics.Tuple&lt;float, float&gt;</em> where item1 is the mean of V and item2 is the standard deviation </dd></dl>
+
+<p>Definition at line <a class="el" href="_u_vector_8cs_source.html#l00024">24</a> of file <a class="el" href="_u_vector_8cs_source.html">UVector.cs</a>.</p>
 
 </div>
 </div>
@@ -162,7 +184,16 @@ Static Public Member Functions</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="_u_vector_8cs_source.html#l00018">18</a> of file <a class="el" href="_u_vector_8cs_source.html">UVector.cs</a>.</p>
+<p>Median of a Vector. </p>
+<p>Build the median of a Vector </p><dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">V</td><td>Vector used </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>A <em>float</em> which is the median </dd></dl>
+
+<p>Definition at line <a class="el" href="_u_vector_8cs_source.html#l00037">37</a> of file <a class="el" href="_u_vector_8cs_source.html">UVector.cs</a>.</p>
 
 </div>
 </div>

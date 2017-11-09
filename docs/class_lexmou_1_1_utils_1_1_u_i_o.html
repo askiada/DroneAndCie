@@ -22,6 +22,12 @@
 <script type="text/javascript">
   $(document).ready(function() { init_search(); });
 </script>
+<script type="text/x-mathjax-config">
+  MathJax.Hub.Config({
+    extensions: ["tex2jax.js"],
+    jax: ["input/TeX","output/HTML-CSS"],
+});
+</script><script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.2/MathJax.js?config=TeX-MML-AM_CHTML/MathJax.js"></script>
 <link href="doxygen.css" rel="stylesheet" type="text/css" />
 <link href="customdoxygen.css" rel="stylesheet" type="text/css"/>
 <link href="jquery.smartmenus.bootstrap.css" rel="stylesheet" type="text/css"/>
@@ -98,44 +104,60 @@ $(document).ready(function(){initNavTree('class_lexmou_1_1_utils_1_1_u_i_o.html'
 <div class="title">Lexmou.Utils.UIO Class Reference</div>  </div>
 </div><!--header-->
 <div class="contents">
+
+<p>Util class that allow reading and writing to files and data streams.  
+ <a href="class_lexmou_1_1_utils_1_1_u_i_o.html#details">More...</a></p>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-static-methods"></a>
 Static Public Member Functions</h2></td></tr>
 <tr class="memitem:a270b1e0541dc75a335bf09a93ef61540"><td class="memItemLeft" align="right" valign="top">static string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_lexmou_1_1_utils_1_1_u_i_o.html#a270b1e0541dc75a335bf09a93ef61540">GetCommandLineArguments</a> (string name)</td></tr>
+<tr class="memdesc:a270b1e0541dc75a335bf09a93ef61540"><td class="mdescLeft">&#160;</td><td class="mdescRight">Retrieve the command line argument based on the name of the command.  <a href="#a270b1e0541dc75a335bf09a93ef61540">More...</a><br /></td></tr>
 <tr class="separator:a270b1e0541dc75a335bf09a93ef61540"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:af03fb25c5fbf2ed60b2110fc002540ae"><td class="memItemLeft" align="right" valign="top">static void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_lexmou_1_1_utils_1_1_u_i_o.html#af03fb25c5fbf2ed60b2110fc002540ae">CreateDirectory</a> (string path)</td></tr>
+<tr class="memdesc:af03fb25c5fbf2ed60b2110fc002540ae"><td class="mdescLeft">&#160;</td><td class="mdescRight">Create a directory.  <a href="#af03fb25c5fbf2ed60b2110fc002540ae">More...</a><br /></td></tr>
 <tr class="separator:af03fb25c5fbf2ed60b2110fc002540ae"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:af22ac03bdec40c4b6626d90082967d61"><td class="memItemLeft" align="right" valign="top">static byte []&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_lexmou_1_1_utils_1_1_u_i_o.html#af22ac03bdec40c4b6626d90082967d61">ToBytes&lt; T &gt;</a> (this T[,] array)</td></tr>
+<tr class="memdesc:af22ac03bdec40c4b6626d90082967d61"><td class="mdescLeft">&#160;</td><td class="mdescRight">Convert a 2D generic array to a <em>byte</em> array.  <a href="#af22ac03bdec40c4b6626d90082967d61">More...</a><br /></td></tr>
 <tr class="separator:af22ac03bdec40c4b6626d90082967d61"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:af6623c126011952fdbc72bcb83489781"><td class="memItemLeft" align="right" valign="top">static void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_lexmou_1_1_utils_1_1_u_i_o.html#af6623c126011952fdbc72bcb83489781">FromBytes&lt; T &gt;</a> (this T[,] array, byte[] buffer)</td></tr>
+<tr class="memdesc:af6623c126011952fdbc72bcb83489781"><td class="mdescLeft">&#160;</td><td class="mdescRight">Convert a 1D <em>byte</em> array to a 2D generic array.  <a href="#af6623c126011952fdbc72bcb83489781">More...</a><br /></td></tr>
 <tr class="separator:af6623c126011952fdbc72bcb83489781"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aa4756434b9e4d3e834d5c7c75a2097c1"><td class="memItemLeft" align="right" valign="top">static byte []&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_lexmou_1_1_utils_1_1_u_i_o.html#aa4756434b9e4d3e834d5c7c75a2097c1">ToBytes&lt; T &gt;</a> (this T[] array)</td></tr>
+<tr class="memdesc:aa4756434b9e4d3e834d5c7c75a2097c1"><td class="mdescLeft">&#160;</td><td class="mdescRight">Convert a 1D generic array to a <em>byte</em> array.  <a href="#aa4756434b9e4d3e834d5c7c75a2097c1">More...</a><br /></td></tr>
 <tr class="separator:aa4756434b9e4d3e834d5c7c75a2097c1"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:afddaa5b8b4d8e12d82044f2c5482a663"><td class="memItemLeft" align="right" valign="top">static void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_lexmou_1_1_utils_1_1_u_i_o.html#afddaa5b8b4d8e12d82044f2c5482a663">FromBytes&lt; T &gt;</a> (this T[] array, byte[] buffer)</td></tr>
+<tr class="memdesc:afddaa5b8b4d8e12d82044f2c5482a663"><td class="mdescLeft">&#160;</td><td class="mdescRight">Convert a 1D <em>byte</em> array to a 1D generic array.  <a href="#afddaa5b8b4d8e12d82044f2c5482a663">More...</a><br /></td></tr>
 <tr class="separator:afddaa5b8b4d8e12d82044f2c5482a663"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a023ce06a07f60549a6621a79dec8aecf"><td class="memItemLeft" align="right" valign="top">static void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_lexmou_1_1_utils_1_1_u_i_o.html#a023ce06a07f60549a6621a79dec8aecf">SaveFloatArray</a> (string path, string name, float[,] floatArr)</td></tr>
+<tr class="memdesc:a023ce06a07f60549a6621a79dec8aecf"><td class="mdescLeft">&#160;</td><td class="mdescRight">Save a 2D <em>float</em> array in a <em>byte</em> file.  <a href="#a023ce06a07f60549a6621a79dec8aecf">More...</a><br /></td></tr>
 <tr class="separator:a023ce06a07f60549a6621a79dec8aecf"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a0c806337ccd3a59edbc7bae0ce2f92b4"><td class="memItemLeft" align="right" valign="top">static void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_lexmou_1_1_utils_1_1_u_i_o.html#a0c806337ccd3a59edbc7bae0ce2f92b4">LoadFloatArray</a> (string path, string name, float[,] floatArr)</td></tr>
+<tr class="memdesc:a0c806337ccd3a59edbc7bae0ce2f92b4"><td class="mdescLeft">&#160;</td><td class="mdescRight">Load a <em>byte</em> file in a 2D <em>float</em> array.  <a href="#a0c806337ccd3a59edbc7bae0ce2f92b4">More...</a><br /></td></tr>
 <tr class="separator:a0c806337ccd3a59edbc7bae0ce2f92b4"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a3ccc96a48cf20c864e25ae18d1f2f90e"><td class="memItemLeft" align="right" valign="top">static void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_lexmou_1_1_utils_1_1_u_i_o.html#a3ccc96a48cf20c864e25ae18d1f2f90e">SaveFloatArray</a> (string path, string name, float[] floatArr)</td></tr>
+<tr class="memdesc:a3ccc96a48cf20c864e25ae18d1f2f90e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Save a 1D <em>float</em> array in a <em>byte</em> file.  <a href="#a3ccc96a48cf20c864e25ae18d1f2f90e">More...</a><br /></td></tr>
 <tr class="separator:a3ccc96a48cf20c864e25ae18d1f2f90e"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a0027b4b061ab17f098efee17cb1ccbf1"><td class="memItemLeft" align="right" valign="top">static void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_lexmou_1_1_utils_1_1_u_i_o.html#a0027b4b061ab17f098efee17cb1ccbf1">LoadFloatArray</a> (string path, string name, float[] floatArr)</td></tr>
+<tr class="memdesc:a0027b4b061ab17f098efee17cb1ccbf1"><td class="mdescLeft">&#160;</td><td class="mdescRight">Load a <em>byte</em> file in a 1D <em>float</em> array.  <a href="#a0027b4b061ab17f098efee17cb1ccbf1">More...</a><br /></td></tr>
 <tr class="separator:a0027b4b061ab17f098efee17cb1ccbf1"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ac1d112180d9b222c918a1e4f35c770fd"><td class="memItemLeft" align="right" valign="top">static StreamWriter&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_lexmou_1_1_utils_1_1_u_i_o.html#ac1d112180d9b222c918a1e4f35c770fd">CreateStreamWriter</a> (string path, string fileName, bool append)</td></tr>
+<tr class="memdesc:ac1d112180d9b222c918a1e4f35c770fd"><td class="mdescLeft">&#160;</td><td class="mdescRight">Implement a <em>TextWriter</em> for writing characters to a stream.  <a href="#ac1d112180d9b222c918a1e4f35c770fd">More...</a><br /></td></tr>
 <tr class="separator:ac1d112180d9b222c918a1e4f35c770fd"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ac5a549c4e918f9b8dac83379046b999f"><td class="memItemLeft" align="right" valign="top">static void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_lexmou_1_1_utils_1_1_u_i_o.html#ac5a549c4e918f9b8dac83379046b999f">WriteLine</a> (StreamWriter writer, string value)</td></tr>
+<tr class="memdesc:ac5a549c4e918f9b8dac83379046b999f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Write data followed by a line terminator to the stream.  <a href="#ac5a549c4e918f9b8dac83379046b999f">More...</a><br /></td></tr>
 <tr class="separator:ac5a549c4e918f9b8dac83379046b999f"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a1dd77bf9cdd8ab5689823211b6dda2b0"><td class="memItemLeft" align="right" valign="top">static void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_lexmou_1_1_utils_1_1_u_i_o.html#a1dd77bf9cdd8ab5689823211b6dda2b0">CloseStreamWriter</a> (StreamWriter writer)</td></tr>
+<tr class="memdesc:a1dd77bf9cdd8ab5689823211b6dda2b0"><td class="mdescLeft">&#160;</td><td class="mdescRight">Close a <em>StreamWriter</em>.  <a href="#a1dd77bf9cdd8ab5689823211b6dda2b0">More...</a><br /></td></tr>
 <tr class="separator:a1dd77bf9cdd8ab5689823211b6dda2b0"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
-<div class="textblock"><h1>This is a level 1 header</h1>
-<h3>This is level 3 header</h3>
+<div class="textblock"><p>Util class that allow reading and writing to files and data streams. </p>
+<p>This <a class="el" href="class_lexmou_1_1_utils_1_1_u_i_o.html" title="Util class that allow reading and writing to files and data streams. ">UIO</a> static class provides a set of utility static methods that can be used to perform operations on I/O streams </p>
 
 <p>Definition at line <a class="el" href="_u_i_o_8cs_source.html#l00012">12</a> of file <a class="el" href="_u_i_o_8cs_source.html">UIO.cs</a>.</p>
 </div><h2 class="groupheader">Member Function Documentation</h2>
-<a id="a1dd77bf9cdd8ab5689823211b6dda2b0"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a1dd77bf9cdd8ab5689823211b6dda2b0">&sect;&nbsp;</a></span>CloseStreamWriter()</h2>
+<a id="a270b1e0541dc75a335bf09a93ef61540"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a270b1e0541dc75a335bf09a93ef61540">&sect;&nbsp;</a></span>GetCommandLineArguments()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -144,10 +166,10 @@ Static Public Member Functions</h2></td></tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">static void Lexmou.Utils.UIO.CloseStreamWriter </td>
+          <td class="memname">static string Lexmou.Utils.UIO.GetCommandLineArguments </td>
           <td>(</td>
-          <td class="paramtype">StreamWriter&#160;</td>
-          <td class="paramname"><em>writer</em></td><td>)</td>
+          <td class="paramtype">string&#160;</td>
+          <td class="paramname"><em>name</em></td><td>)</td>
           <td></td>
         </tr>
       </table>
@@ -158,7 +180,16 @@ Static Public Member Functions</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="_u_i_o_8cs_source.html#l00131">131</a> of file <a class="el" href="_u_i_o_8cs_source.html">UIO.cs</a>.</p>
+<p>Retrieve the command line argument based on the name of the command. </p>
+<p>Go through the command-line arguments and return the command value </p><dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">name</td><td>Name of the command </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>A <em>string</em> when the command exits and <em>null</em> otherwise </dd></dl>
+
+<p>Definition at line <a class="el" href="_u_i_o_8cs_source.html#l00021">21</a> of file <a class="el" href="_u_i_o_8cs_source.html">UIO.cs</a>.</p>
 
 </div>
 </div>
@@ -186,12 +217,20 @@ Static Public Member Functions</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="_u_i_o_8cs_source.html#l00031">31</a> of file <a class="el" href="_u_i_o_8cs_source.html">UIO.cs</a>.</p>
+<p>Create a directory. </p>
+<p>Determines whether the directory exists before creation </p><dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">path</td><td>Relative Path of the directory </td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p>Definition at line <a class="el" href="_u_i_o_8cs_source.html#l00043">43</a> of file <a class="el" href="_u_i_o_8cs_source.html">UIO.cs</a>.</p>
 
 </div>
 </div>
-<a id="ac1d112180d9b222c918a1e4f35c770fd"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ac1d112180d9b222c918a1e4f35c770fd">&sect;&nbsp;</a></span>CreateStreamWriter()</h2>
+<a id="af22ac03bdec40c4b6626d90082967d61"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#af22ac03bdec40c4b6626d90082967d61">&sect;&nbsp;</a></span>ToBytes< T >() <span class="overload">[1/2]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -200,27 +239,11 @@ Static Public Member Functions</h2></td></tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">static StreamWriter Lexmou.Utils.UIO.CreateStreamWriter </td>
+          <td class="memname">static byte [] Lexmou.Utils.UIO.ToBytes&lt; T &gt; </td>
           <td>(</td>
-          <td class="paramtype">string&#160;</td>
-          <td class="paramname"><em>path</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
+          <td class="paramtype">this T&#160;</td>
+          <td class="paramname"><em>array</em>[,]</td><td>)</td>
           <td></td>
-          <td class="paramtype">string&#160;</td>
-          <td class="paramname"><em>fileName</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">bool&#160;</td>
-          <td class="paramname"><em>append</em>&#160;</td>
-        </tr>
-        <tr>
-          <td></td>
-          <td>)</td>
-          <td></td><td></td>
         </tr>
       </table>
   </td>
@@ -230,7 +253,24 @@ Static Public Member Functions</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="_u_i_o_8cs_source.html#l00118">118</a> of file <a class="el" href="_u_i_o_8cs_source.html">UIO.cs</a>.</p>
+<p>Convert a 2D generic array to a <em>byte</em> array. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">array</td><td>2D generic array to convert </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>A 1D <em>byte</em> array </dd></dl>
+<div class="typeconstraint">
+<dl><dt><b>Type Constraints</b></dt><dd>
+<table border="0" cellspacing="2" cellpadding="0">
+<tr><td valign="top"><em>T</em></td><td>&#160;:</td><td valign="top"><em>struct</em></td><td>&#160;</td></tr>
+</table>
+</dd>
+</dl>
+</div>
+
+<p>Definition at line <a class="el" href="_u_i_o_8cs_source.html#l00066">66</a> of file <a class="el" href="_u_i_o_8cs_source.html">UIO.cs</a>.</p>
 
 </div>
 </div>
@@ -267,6 +307,15 @@ Static Public Member Functions</h2></td></tr>
   </tr>
 </table>
 </div><div class="memdoc">
+
+<p>Convert a 1D <em>byte</em> array to a 2D generic array. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">array</td><td>1D <em>byte</em> to convert </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>A 2D generic array </dd></dl>
 <div class="typeconstraint">
 <dl><dt><b>Type Constraints</b></dt><dd>
 <table border="0" cellspacing="2" cellpadding="0">
@@ -276,7 +325,52 @@ Static Public Member Functions</h2></td></tr>
 </dl>
 </div>
 
-<p>Definition at line <a class="el" href="_u_i_o_8cs_source.html#l00056">56</a> of file <a class="el" href="_u_i_o_8cs_source.html">UIO.cs</a>.</p>
+<p>Definition at line <a class="el" href="_u_i_o_8cs_source.html#l00079">79</a> of file <a class="el" href="_u_i_o_8cs_source.html">UIO.cs</a>.</p>
+
+</div>
+</div>
+<a id="aa4756434b9e4d3e834d5c7c75a2097c1"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aa4756434b9e4d3e834d5c7c75a2097c1">&sect;&nbsp;</a></span>ToBytes< T >() <span class="overload">[2/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">static byte [] Lexmou.Utils.UIO.ToBytes&lt; T &gt; </td>
+          <td>(</td>
+          <td class="paramtype">this T []&#160;</td>
+          <td class="paramname"><em>array</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Convert a 1D generic array to a <em>byte</em> array. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">array</td><td>1D generic array to convert </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>A 1D <em>byte</em> array </dd></dl>
+<div class="typeconstraint">
+<dl><dt><b>Type Constraints</b></dt><dd>
+<table border="0" cellspacing="2" cellpadding="0">
+<tr><td valign="top"><em>T</em></td><td>&#160;:</td><td valign="top"><em>struct</em></td><td>&#160;</td></tr>
+</table>
+</dd>
+</dl>
+</div>
+
+<p>Definition at line <a class="el" href="_u_i_o_8cs_source.html#l00091">91</a> of file <a class="el" href="_u_i_o_8cs_source.html">UIO.cs</a>.</p>
 
 </div>
 </div>
@@ -313,6 +407,15 @@ Static Public Member Functions</h2></td></tr>
   </tr>
 </table>
 </div><div class="memdoc">
+
+<p>Convert a 1D <em>byte</em> array to a 1D generic array. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">array</td><td>1D <em>byte</em> to convert </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>A 1D generic array </dd></dl>
 <div class="typeconstraint">
 <dl><dt><b>Type Constraints</b></dt><dd>
 <table border="0" cellspacing="2" cellpadding="0">
@@ -322,123 +425,7 @@ Static Public Member Functions</h2></td></tr>
 </dl>
 </div>
 
-<p>Definition at line <a class="el" href="_u_i_o_8cs_source.html#l00068">68</a> of file <a class="el" href="_u_i_o_8cs_source.html">UIO.cs</a>.</p>
-
-</div>
-</div>
-<a id="a270b1e0541dc75a335bf09a93ef61540"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a270b1e0541dc75a335bf09a93ef61540">&sect;&nbsp;</a></span>GetCommandLineArguments()</h2>
-
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">static string Lexmou.Utils.UIO.GetCommandLineArguments </td>
-          <td>(</td>
-          <td class="paramtype">string&#160;</td>
-          <td class="paramname"><em>name</em></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">static</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-<p>Definition at line <a class="el" href="_u_i_o_8cs_source.html#l00015">15</a> of file <a class="el" href="_u_i_o_8cs_source.html">UIO.cs</a>.</p>
-
-</div>
-</div>
-<a id="a0c806337ccd3a59edbc7bae0ce2f92b4"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a0c806337ccd3a59edbc7bae0ce2f92b4">&sect;&nbsp;</a></span>LoadFloatArray() <span class="overload">[1/2]</span></h2>
-
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">static void Lexmou.Utils.UIO.LoadFloatArray </td>
-          <td>(</td>
-          <td class="paramtype">string&#160;</td>
-          <td class="paramname"><em>path</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">string&#160;</td>
-          <td class="paramname"><em>name</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">float&#160;</td>
-          <td class="paramname"><em>floatArr</em>[,]&#160;</td>
-        </tr>
-        <tr>
-          <td></td>
-          <td>)</td>
-          <td></td><td></td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">static</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-<p>Definition at line <a class="el" href="_u_i_o_8cs_source.html#l00095">95</a> of file <a class="el" href="_u_i_o_8cs_source.html">UIO.cs</a>.</p>
-
-</div>
-</div>
-<a id="a0027b4b061ab17f098efee17cb1ccbf1"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a0027b4b061ab17f098efee17cb1ccbf1">&sect;&nbsp;</a></span>LoadFloatArray() <span class="overload">[2/2]</span></h2>
-
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">static void Lexmou.Utils.UIO.LoadFloatArray </td>
-          <td>(</td>
-          <td class="paramtype">string&#160;</td>
-          <td class="paramname"><em>path</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">string&#160;</td>
-          <td class="paramname"><em>name</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">float []&#160;</td>
-          <td class="paramname"><em>floatArr</em>&#160;</td>
-        </tr>
-        <tr>
-          <td></td>
-          <td>)</td>
-          <td></td><td></td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">static</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-<p>Definition at line <a class="el" href="_u_i_o_8cs_source.html#l00109">109</a> of file <a class="el" href="_u_i_o_8cs_source.html">UIO.cs</a>.</p>
+<p>Definition at line <a class="el" href="_u_i_o_8cs_source.html#l00103">103</a> of file <a class="el" href="_u_i_o_8cs_source.html">UIO.cs</a>.</p>
 
 </div>
 </div>
@@ -482,7 +469,71 @@ Static Public Member Functions</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="_u_i_o_8cs_source.html#l00088">88</a> of file <a class="el" href="_u_i_o_8cs_source.html">UIO.cs</a>.</p>
+<p>Save a 2D <em>float</em> array in a <em>byte</em> file. </p>
+<p>Use a relative path to save a 2D <em>float</em> array in a <em>byte</em> file. if necessary, create the target directory. </p><dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">path</td><td>Relative path </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">name</td><td>Storage file name </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">floatArr</td><td>2D <em>float</em> array to save </td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p>Definition at line <a class="el" href="_u_i_o_8cs_source.html#l00117">117</a> of file <a class="el" href="_u_i_o_8cs_source.html">UIO.cs</a>.</p>
+
+</div>
+</div>
+<a id="a0c806337ccd3a59edbc7bae0ce2f92b4"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a0c806337ccd3a59edbc7bae0ce2f92b4">&sect;&nbsp;</a></span>LoadFloatArray() <span class="overload">[1/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">static void Lexmou.Utils.UIO.LoadFloatArray </td>
+          <td>(</td>
+          <td class="paramtype">string&#160;</td>
+          <td class="paramname"><em>path</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">string&#160;</td>
+          <td class="paramname"><em>name</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">float&#160;</td>
+          <td class="paramname"><em>floatArr</em>[,]&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Load a <em>byte</em> file in a 2D <em>float</em> array. </p>
+<p>Use a relative path to load a <em>byte</em> file in 2D <em>float</em> array. </p><dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">path</td><td>Relative path </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">name</td><td>Storage file name </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">floatArr</td><td>2D <em>float</em> array where to save data </td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p>Definition at line <a class="el" href="_u_i_o_8cs_source.html#l00132">132</a> of file <a class="el" href="_u_i_o_8cs_source.html">UIO.cs</a>.</p>
 
 </div>
 </div>
@@ -526,12 +577,22 @@ Static Public Member Functions</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="_u_i_o_8cs_source.html#l00102">102</a> of file <a class="el" href="_u_i_o_8cs_source.html">UIO.cs</a>.</p>
+<p>Save a 1D <em>float</em> array in a <em>byte</em> file. </p>
+<p>Use a relative path to save a 1D <em>float</em> array in a <em>byte</em> file. if necessary, create the target directory. </p><dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">path</td><td>Relative path </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">name</td><td>Storage file name </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">floatArr</td><td>1D <em>float</em> array to save </td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p>Definition at line <a class="el" href="_u_i_o_8cs_source.html#l00145">145</a> of file <a class="el" href="_u_i_o_8cs_source.html">UIO.cs</a>.</p>
 
 </div>
 </div>
-<a id="af22ac03bdec40c4b6626d90082967d61"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#af22ac03bdec40c4b6626d90082967d61">&sect;&nbsp;</a></span>ToBytes< T >() <span class="overload">[1/2]</span></h2>
+<a id="a0027b4b061ab17f098efee17cb1ccbf1"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a0027b4b061ab17f098efee17cb1ccbf1">&sect;&nbsp;</a></span>LoadFloatArray() <span class="overload">[2/2]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -540,11 +601,27 @@ Static Public Member Functions</h2></td></tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">static byte [] Lexmou.Utils.UIO.ToBytes&lt; T &gt; </td>
+          <td class="memname">static void Lexmou.Utils.UIO.LoadFloatArray </td>
           <td>(</td>
-          <td class="paramtype">this T&#160;</td>
-          <td class="paramname"><em>array</em>[,]</td><td>)</td>
+          <td class="paramtype">string&#160;</td>
+          <td class="paramname"><em>path</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
           <td></td>
+          <td class="paramtype">string&#160;</td>
+          <td class="paramname"><em>name</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">float []&#160;</td>
+          <td class="paramname"><em>floatArr</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
         </tr>
       </table>
   </td>
@@ -553,21 +630,23 @@ Static Public Member Functions</h2></td></tr>
   </tr>
 </table>
 </div><div class="memdoc">
-<div class="typeconstraint">
-<dl><dt><b>Type Constraints</b></dt><dd>
-<table border="0" cellspacing="2" cellpadding="0">
-<tr><td valign="top"><em>T</em></td><td>&#160;:</td><td valign="top"><em>struct</em></td><td>&#160;</td></tr>
-</table>
-</dd>
+
+<p>Load a <em>byte</em> file in a 1D <em>float</em> array. </p>
+<p>Use a relative path to load a <em>byte</em> file in 1D <em>float</em> array. </p><dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">path</td><td>Relative path </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">name</td><td>Storage file name </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">floatArr</td><td>1D <em>float</em> array where to save data </td></tr>
+  </table>
+  </dd>
 </dl>
-</div>
 
-<p>Definition at line <a class="el" href="_u_i_o_8cs_source.html#l00050">50</a> of file <a class="el" href="_u_i_o_8cs_source.html">UIO.cs</a>.</p>
+<p>Definition at line <a class="el" href="_u_i_o_8cs_source.html#l00160">160</a> of file <a class="el" href="_u_i_o_8cs_source.html">UIO.cs</a>.</p>
 
 </div>
 </div>
-<a id="aa4756434b9e4d3e834d5c7c75a2097c1"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#aa4756434b9e4d3e834d5c7c75a2097c1">&sect;&nbsp;</a></span>ToBytes< T >() <span class="overload">[2/2]</span></h2>
+<a id="ac1d112180d9b222c918a1e4f35c770fd"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ac1d112180d9b222c918a1e4f35c770fd">&sect;&nbsp;</a></span>CreateStreamWriter()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -576,11 +655,27 @@ Static Public Member Functions</h2></td></tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">static byte [] Lexmou.Utils.UIO.ToBytes&lt; T &gt; </td>
+          <td class="memname">static StreamWriter Lexmou.Utils.UIO.CreateStreamWriter </td>
           <td>(</td>
-          <td class="paramtype">this T []&#160;</td>
-          <td class="paramname"><em>array</em></td><td>)</td>
+          <td class="paramtype">string&#160;</td>
+          <td class="paramname"><em>path</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
           <td></td>
+          <td class="paramtype">string&#160;</td>
+          <td class="paramname"><em>fileName</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">bool&#160;</td>
+          <td class="paramname"><em>append</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
         </tr>
       </table>
   </td>
@@ -589,16 +684,19 @@ Static Public Member Functions</h2></td></tr>
   </tr>
 </table>
 </div><div class="memdoc">
-<div class="typeconstraint">
-<dl><dt><b>Type Constraints</b></dt><dd>
-<table border="0" cellspacing="2" cellpadding="0">
-<tr><td valign="top"><em>T</em></td><td>&#160;:</td><td valign="top"><em>struct</em></td><td>&#160;</td></tr>
-</table>
-</dd>
-</dl>
-</div>
 
-<p>Definition at line <a class="el" href="_u_i_o_8cs_source.html#l00062">62</a> of file <a class="el" href="_u_i_o_8cs_source.html">UIO.cs</a>.</p>
+<p>Implement a <em>TextWriter</em> for writing characters to a stream. </p>
+<p>if necessary, create the target directory. Opens a file in write mode. </p><dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">path</td><td>Relative path </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">fileName</td><td>Storage file name </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">append</td><td>When true, the file is not overwritten </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>A <em>StreamWriter</em> linked with the file </dd></dl>
+
+<p>Definition at line <a class="el" href="_u_i_o_8cs_source.html#l00176">176</a> of file <a class="el" href="_u_i_o_8cs_source.html">UIO.cs</a>.</p>
 
 </div>
 </div>
@@ -636,7 +734,52 @@ Static Public Member Functions</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="_u_i_o_8cs_source.html#l00126">126</a> of file <a class="el" href="_u_i_o_8cs_source.html">UIO.cs</a>.</p>
+<p>Write data followed by a line terminator to the stream. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">writer</td><td>The <em>StreamWriter</em> used </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">value</td><td>Line to write </td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p>Definition at line <a class="el" href="_u_i_o_8cs_source.html#l00190">190</a> of file <a class="el" href="_u_i_o_8cs_source.html">UIO.cs</a>.</p>
+
+</div>
+</div>
+<a id="a1dd77bf9cdd8ab5689823211b6dda2b0"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a1dd77bf9cdd8ab5689823211b6dda2b0">&sect;&nbsp;</a></span>CloseStreamWriter()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">static void Lexmou.Utils.UIO.CloseStreamWriter </td>
+          <td>(</td>
+          <td class="paramtype">StreamWriter&#160;</td>
+          <td class="paramname"><em>writer</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Close a <em>StreamWriter</em>. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">writer</td><td>The <em>StreamWriter</em> to close </td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p>Definition at line <a class="el" href="_u_i_o_8cs_source.html#l00200">200</a> of file <a class="el" href="_u_i_o_8cs_source.html">UIO.cs</a>.</p>
 
 </div>
 </div>

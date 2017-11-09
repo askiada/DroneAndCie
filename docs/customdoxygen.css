@@ -110,7 +110,7 @@ font-size: 1.15em !important;
  border: 0px solid #222 !important;
 }
 table{
-    white-space:pre-wrap !important;
+    white-space:nowrap !important;
 }
 
 #titlearea table{
@@ -438,7 +438,7 @@ span.SRScope {
 }
 
 .memItemLeft, .memTemplItemLeft {
-  white-space: normal;
+  white-space: nowrap;
 }
 
 /* enumerations */

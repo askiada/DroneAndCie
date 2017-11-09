@@ -22,6 +22,12 @@
 <script type="text/javascript">
   $(document).ready(function() { init_search(); });
 </script>
+<script type="text/x-mathjax-config">
+  MathJax.Hub.Config({
+    extensions: ["tex2jax.js"],
+    jax: ["input/TeX","output/HTML-CSS"],
+});
+</script><script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.2/MathJax.js?config=TeX-MML-AM_CHTML/MathJax.js"></script>
 <link href="doxygen.css" rel="stylesheet" type="text/css" />
 <link href="customdoxygen.css" rel="stylesheet" type="text/css"/>
 <link href="jquery.smartmenus.bootstrap.css" rel="stylesheet" type="text/css"/>
@@ -132,8 +138,8 @@ Static Private Member Functions</h2></td></tr>
 <div class="textblock">
 <p>Definition at line <a class="el" href="_u_activation_8cs_source.html#l00010">10</a> of file <a class="el" href="_u_activation_8cs_source.html">UActivation.cs</a>.</p>
 </div><h2 class="groupheader">Member Function Documentation</h2>
-<a id="a885ce215c44b59b0bc20554c84f07dd1"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a885ce215c44b59b0bc20554c84f07dd1">&sect;&nbsp;</a></span>DerivativeSigmoid()</h2>
+<a id="a7dd07341fb7ced333d3d1399bd8a8b1f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a7dd07341fb7ced333d3d1399bd8a8b1f">&sect;&nbsp;</a></span>Tanh()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -142,83 +148,11 @@ Static Private Member Functions</h2></td></tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">static float [,] Lexmou.Utils.UActivation.DerivativeSigmoid </td>
+          <td class="memname">static float Lexmou.Utils.UActivation.Tanh </td>
           <td>(</td>
           <td class="paramtype">float&#160;</td>
-          <td class="paramname"><em>values</em>[,]</td><td>)</td>
+          <td class="paramname"><em>value</em></td><td>)</td>
           <td></td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">static</span><span class="mlabel">private</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-<p>Definition at line <a class="el" href="_u_activation_8cs_source.html#l00035">35</a> of file <a class="el" href="_u_activation_8cs_source.html">UActivation.cs</a>.</p>
-
-</div>
-</div>
-<a id="a6a41d96ae348a5849059c6fdc718d4a5"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a6a41d96ae348a5849059c6fdc718d4a5">&sect;&nbsp;</a></span>DerivativeSigmoidExp()</h2>
-
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">static float [,] Lexmou.Utils.UActivation.DerivativeSigmoidExp </td>
-          <td>(</td>
-          <td class="paramtype">float&#160;</td>
-          <td class="paramname"><em>values</em>[,]</td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">static</span><span class="mlabel">private</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-<p>Definition at line <a class="el" href="_u_activation_8cs_source.html#l00071">71</a> of file <a class="el" href="_u_activation_8cs_source.html">UActivation.cs</a>.</p>
-
-</div>
-</div>
-<a id="af049036642b5961e4bab5324e0bb7630"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#af049036642b5961e4bab5324e0bb7630">&sect;&nbsp;</a></span>InternalActivation()</h2>
-
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">static float [,] Lexmou.Utils.UActivation.InternalActivation </td>
-          <td>(</td>
-          <td class="paramtype">float&#160;</td>
-          <td class="paramname"><em>values</em>[,], </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">string&#160;</td>
-          <td class="paramname"><em>name</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">bool&#160;</td>
-          <td class="paramname"><em>reverse</em> = <code>true</code>&#160;</td>
-        </tr>
-        <tr>
-          <td></td>
-          <td>)</td>
-          <td></td><td></td>
         </tr>
       </table>
   </td>
@@ -228,12 +162,12 @@ Static Private Member Functions</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="_u_activation_8cs_source.html#l00121">121</a> of file <a class="el" href="_u_activation_8cs_source.html">UActivation.cs</a>.</p>
+<p>Definition at line <a class="el" href="_u_activation_8cs_source.html#l00016">16</a> of file <a class="el" href="_u_activation_8cs_source.html">UActivation.cs</a>.</p>
 
 </div>
 </div>
-<a id="a0878fdcac6285352a34f41bf0c40e4c4"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a0878fdcac6285352a34f41bf0c40e4c4">&sect;&nbsp;</a></span>InternalDerivativeActivation()</h2>
+<a id="aea6421beec06d1270970d925fd74dc1c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aea6421beec06d1270970d925fd74dc1c">&sect;&nbsp;</a></span>SigExp()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -242,21 +176,11 @@ Static Private Member Functions</h2></td></tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">static float [,] Lexmou.Utils.UActivation.InternalDerivativeActivation </td>
+          <td class="memname">static float Lexmou.Utils.UActivation.SigExp </td>
           <td>(</td>
           <td class="paramtype">float&#160;</td>
-          <td class="paramname"><em>values</em>[,], </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
+          <td class="paramname"><em>value</em></td><td>)</td>
           <td></td>
-          <td class="paramtype">string&#160;</td>
-          <td class="paramname"><em>name</em>&#160;</td>
-        </tr>
-        <tr>
-          <td></td>
-          <td>)</td>
-          <td></td><td></td>
         </tr>
       </table>
   </td>
@@ -266,7 +190,7 @@ Static Private Member Functions</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="_u_activation_8cs_source.html#l00115">115</a> of file <a class="el" href="_u_activation_8cs_source.html">UActivation.cs</a>.</p>
+<p>Definition at line <a class="el" href="_u_activation_8cs_source.html#l00021">21</a> of file <a class="el" href="_u_activation_8cs_source.html">UActivation.cs</a>.</p>
 
 </div>
 </div>
@@ -305,6 +229,176 @@ Static Private Member Functions</h2></td></tr>
 </div><div class="memdoc">
 
 <p>Definition at line <a class="el" href="_u_activation_8cs_source.html#l00028">28</a> of file <a class="el" href="_u_activation_8cs_source.html">UActivation.cs</a>.</p>
+
+</div>
+</div>
+<a id="a885ce215c44b59b0bc20554c84f07dd1"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a885ce215c44b59b0bc20554c84f07dd1">&sect;&nbsp;</a></span>DerivativeSigmoid()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">static float [,] Lexmou.Utils.UActivation.DerivativeSigmoid </td>
+          <td>(</td>
+          <td class="paramtype">float&#160;</td>
+          <td class="paramname"><em>values</em>[,]</td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Definition at line <a class="el" href="_u_activation_8cs_source.html#l00035">35</a> of file <a class="el" href="_u_activation_8cs_source.html">UActivation.cs</a>.</p>
+
+</div>
+</div>
+<a id="a5da34d86fee31232d7c7dea24eeb845f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a5da34d86fee31232d7c7dea24eeb845f">&sect;&nbsp;</a></span>Sigmoid()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">static float [,] Lexmou.Utils.UActivation.Sigmoid </td>
+          <td>(</td>
+          <td class="paramtype">float&#160;</td>
+          <td class="paramname"><em>values</em>[,], </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">bool&#160;</td>
+          <td class="paramname"><em>reverse</em> = <code>true</code>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Definition at line <a class="el" href="_u_activation_8cs_source.html#l00049">49</a> of file <a class="el" href="_u_activation_8cs_source.html">UActivation.cs</a>.</p>
+
+</div>
+</div>
+<a id="a6a41d96ae348a5849059c6fdc718d4a5"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a6a41d96ae348a5849059c6fdc718d4a5">&sect;&nbsp;</a></span>DerivativeSigmoidExp()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">static float [,] Lexmou.Utils.UActivation.DerivativeSigmoidExp </td>
+          <td>(</td>
+          <td class="paramtype">float&#160;</td>
+          <td class="paramname"><em>values</em>[,]</td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Definition at line <a class="el" href="_u_activation_8cs_source.html#l00071">71</a> of file <a class="el" href="_u_activation_8cs_source.html">UActivation.cs</a>.</p>
+
+</div>
+</div>
+<a id="a35870a6eb5b8685535c6d03b320ed204"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a35870a6eb5b8685535c6d03b320ed204">&sect;&nbsp;</a></span>SigmoidExp()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">static float [,] Lexmou.Utils.UActivation.SigmoidExp </td>
+          <td>(</td>
+          <td class="paramtype">float&#160;</td>
+          <td class="paramname"><em>values</em>[,], </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">bool&#160;</td>
+          <td class="paramname"><em>reverse</em> = <code>true</code>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Definition at line <a class="el" href="_u_activation_8cs_source.html#l00083">83</a> of file <a class="el" href="_u_activation_8cs_source.html">UActivation.cs</a>.</p>
+
+</div>
+</div>
+<a id="a24c728648b83b7cc4784b5f08e6e2fe6"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a24c728648b83b7cc4784b5f08e6e2fe6">&sect;&nbsp;</a></span>OutputDerivativeActivation()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">static float [,] Lexmou.Utils.UActivation.OutputDerivativeActivation </td>
+          <td>(</td>
+          <td class="paramtype">float&#160;</td>
+          <td class="paramname"><em>values</em>[,], </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">string&#160;</td>
+          <td class="paramname"><em>name</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Definition at line <a class="el" href="_u_activation_8cs_source.html#l00105">105</a> of file <a class="el" href="_u_activation_8cs_source.html">UActivation.cs</a>.</p>
 
 </div>
 </div>
@@ -352,8 +446,8 @@ Static Private Member Functions</h2></td></tr>
 
 </div>
 </div>
-<a id="a24c728648b83b7cc4784b5f08e6e2fe6"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a24c728648b83b7cc4784b5f08e6e2fe6">&sect;&nbsp;</a></span>OutputDerivativeActivation()</h2>
+<a id="a0878fdcac6285352a34f41bf0c40e4c4"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a0878fdcac6285352a34f41bf0c40e4c4">&sect;&nbsp;</a></span>InternalDerivativeActivation()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -362,7 +456,7 @@ Static Private Member Functions</h2></td></tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">static float [,] Lexmou.Utils.UActivation.OutputDerivativeActivation </td>
+          <td class="memname">static float [,] Lexmou.Utils.UActivation.InternalDerivativeActivation </td>
           <td>(</td>
           <td class="paramtype">float&#160;</td>
           <td class="paramname"><em>values</em>[,], </td>
@@ -386,12 +480,12 @@ Static Private Member Functions</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="_u_activation_8cs_source.html#l00105">105</a> of file <a class="el" href="_u_activation_8cs_source.html">UActivation.cs</a>.</p>
+<p>Definition at line <a class="el" href="_u_activation_8cs_source.html#l00115">115</a> of file <a class="el" href="_u_activation_8cs_source.html">UActivation.cs</a>.</p>
 
 </div>
 </div>
-<a id="aea6421beec06d1270970d925fd74dc1c"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#aea6421beec06d1270970d925fd74dc1c">&sect;&nbsp;</a></span>SigExp()</h2>
+<a id="af049036642b5961e4bab5324e0bb7630"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#af049036642b5961e4bab5324e0bb7630">&sect;&nbsp;</a></span>InternalActivation()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -400,38 +494,16 @@ Static Private Member Functions</h2></td></tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">static float Lexmou.Utils.UActivation.SigExp </td>
-          <td>(</td>
-          <td class="paramtype">float&#160;</td>
-          <td class="paramname"><em>value</em></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">static</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-<p>Definition at line <a class="el" href="_u_activation_8cs_source.html#l00021">21</a> of file <a class="el" href="_u_activation_8cs_source.html">UActivation.cs</a>.</p>
-
-</div>
-</div>
-<a id="a5da34d86fee31232d7c7dea24eeb845f"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a5da34d86fee31232d7c7dea24eeb845f">&sect;&nbsp;</a></span>Sigmoid()</h2>
-
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">static float [,] Lexmou.Utils.UActivation.Sigmoid </td>
+          <td class="memname">static float [,] Lexmou.Utils.UActivation.InternalActivation </td>
           <td>(</td>
           <td class="paramtype">float&#160;</td>
           <td class="paramname"><em>values</em>[,], </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">string&#160;</td>
+          <td class="paramname"><em>name</em>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
@@ -447,78 +519,12 @@ Static Private Member Functions</h2></td></tr>
       </table>
   </td>
   <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">static</span><span class="mlabel">private</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-<p>Definition at line <a class="el" href="_u_activation_8cs_source.html#l00049">49</a> of file <a class="el" href="_u_activation_8cs_source.html">UActivation.cs</a>.</p>
-
-</div>
-</div>
-<a id="a35870a6eb5b8685535c6d03b320ed204"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a35870a6eb5b8685535c6d03b320ed204">&sect;&nbsp;</a></span>SigmoidExp()</h2>
-
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">static float [,] Lexmou.Utils.UActivation.SigmoidExp </td>
-          <td>(</td>
-          <td class="paramtype">float&#160;</td>
-          <td class="paramname"><em>values</em>[,], </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">bool&#160;</td>
-          <td class="paramname"><em>reverse</em> = <code>true</code>&#160;</td>
-        </tr>
-        <tr>
-          <td></td>
-          <td>)</td>
-          <td></td><td></td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">static</span><span class="mlabel">private</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-<p>Definition at line <a class="el" href="_u_activation_8cs_source.html#l00083">83</a> of file <a class="el" href="_u_activation_8cs_source.html">UActivation.cs</a>.</p>
-
-</div>
-</div>
-<a id="a7dd07341fb7ced333d3d1399bd8a8b1f"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a7dd07341fb7ced333d3d1399bd8a8b1f">&sect;&nbsp;</a></span>Tanh()</h2>
-
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">static float Lexmou.Utils.UActivation.Tanh </td>
-          <td>(</td>
-          <td class="paramtype">float&#160;</td>
-          <td class="paramname"><em>value</em></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
 <span class="mlabels"><span class="mlabel">static</span></span>  </td>
   </tr>
 </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="_u_activation_8cs_source.html#l00016">16</a> of file <a class="el" href="_u_activation_8cs_source.html">UActivation.cs</a>.</p>
+<p>Definition at line <a class="el" href="_u_activation_8cs_source.html#l00121">121</a> of file <a class="el" href="_u_activation_8cs_source.html">UActivation.cs</a>.</p>
 
 </div>
 </div>
