@@ -1,0 +1,4 @@
+<map id="MLPTest" name="MLPTest">
+<area shape="rect" id="node2" href="$class_lexmou_1_1_machine_learning_1_1_neural_network_1_1_feed_forward_1_1_multi_layer_maths_net.html" title="{Lexmou.MachineLearning.Neural\lNetwork.FeedForward.MultiLayerMathsNet\n|+ layers\l+ weights\l+ shapes\l+ shapesSize\l&#45; dw\l&#45; save\l&#45; seed\l&#45; batchSize\l&#45; rndGenerator\l&#45; cu\l&#45; initialValueWeights\l|+ MultiLayerMathsNet()\l+ Reset()\l+ PropagateForward()\l+ PropagateForward2()\l&#45; fillWeights()\l}" alt="" coords="5,5,273,303"/>
+<area shape="rect" id="node3" href="$class_multi_layer.html" title="{MultiLayer\n|+ layers\l+ weights\l+ shapesSize\l&#45; dw\l&#45; shapes\l&#45; saveInfos\l&#45; rndGenerator\l|+ MultiLayer()\l+ Reset()\l+ PropagateForward()\l+ Error()\l+ Delta()\l+ Learn()\l&#45; WriteListArray()\l}" alt="" coords="298,27,445,281"/>
+</map>

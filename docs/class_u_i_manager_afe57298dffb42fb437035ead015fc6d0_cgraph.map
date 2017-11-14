@@ -1,0 +1,11 @@
+<map id="UIManager.DroneRestart" name="UIManager.DroneRestart">
+<area shape="rect" id="node2" href="$class_drone_manager.html#a90bbfb184aa9f4563d98d5492803c70e" title="DroneManager.restartPosition\lRotation" alt="" coords="217,129,412,171"/>
+<area shape="rect" id="node3" href="$class_drone_manager.html#a5f2ed8f181764f47597b51ffac1caffc" title="DroneManager.Restart" alt="" coords="460,137,612,163"/>
+<area shape="rect" id="node4" href="$class_lexmou_1_1_machine_learning_1_1_evolutionary_1_1_genetic.html#a862b72d14caa564a0f37f0c469012f88" title="Load the best individual. " alt="" coords="660,5,908,47"/>
+<area shape="rect" id="node6" href="$class_drone_manager.html#a5f1d1de509bce7215c04b8a296729325" title="DroneManager.BuildCustom\lWeights" alt="" coords="692,71,876,112"/>
+<area shape="rect" id="node8" href="$class_drone_manager.html#a92197a9a8343c6214f24de6a8c38e85d" title="DroneManager.SetMass" alt="" coords="703,137,865,163"/>
+<area shape="rect" id="node9" href="$class_drone_manager.html#a312ce57358885f82902d38d7e564fb97" title="DroneManager.SetDrag" alt="" coords="705,187,863,214"/>
+<area shape="rect" id="node10" href="$class_drone_manager.html#a342e893f5a63e8cdc086ceee87a50316" title="DroneManager.setMaxThrust" alt="" coords="689,238,879,265"/>
+<area shape="rect" id="node5" href="$class_lexmou_1_1_utils_1_1_u_i_o.html#a0c806337ccd3a59edbc7bae0ce2f92b4" title="Load a byte file in a 2D float array. " alt="" coords="959,5,1144,47"/>
+<area shape="rect" id="node7" href="$class_lexmou_1_1_utils_1_1_u_matrix.html#a1647f410a576b719af0acce48c0f1c9c" title="Lexmou.Utils.UMatrix.Make2\lDMatrix" alt="" coords="956,71,1147,112"/>
+</map>

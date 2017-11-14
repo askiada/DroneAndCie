@@ -1,31 +1,41 @@
 ﻿using UnityEditor;
 using UnityEngine;
 
-[CustomEditor(typeof(SurfaceCreator))]
-public class SurfaceCreatorInspector : Editor {
+namespace Lexmou.Environment.Floor
+{
+    [CustomEditor(typeof(SurfaceCreator))]
+    public class SurfaceCreatorInspector : Editor
+    {
 
-	private SurfaceCreator creator;
+        private SurfaceCreator creator;
 
-	private void OnEnable () {
-		creator = target as SurfaceCreator;
-		Undo.undoRedoPerformed += RefreshCreator;
-	}
+        private void OnEnable()
+        {
+            creator = target as SurfaceCreator;
+            Undo.undoRedoPerformed += RefreshCreator;
+        }
 
-	private void OnDisable () {
-		Undo.undoRedoPerformed -= RefreshCreator;
-	}
+        private void OnDisable()
+        {
+            Undo.undoRedoPerformed -= RefreshCreator;
+        }
 
-	private void RefreshCreator () {
-		if (Application.isPlaying) {
-			creator.Refresh();
-		}
-	}
+        private void RefreshCreator()
+        {
+            if (Application.isPlaying)
+            {
+                creator.Refresh();
+            }
+        }
 
-	public override void OnInspectorGUI () {
-		EditorGUI.BeginChangeCheck();
-		DrawDefaultInspector();
-		if (EditorGUI.EndChangeCheck()) {
-			RefreshCreator();
-		}
-	}
+        public override void OnInspectorGUI()
+        {
+            EditorGUI.BeginChangeCheck();
+            DrawDefaultInspector();
+            if (EditorGUI.EndChangeCheck())
+            {
+                RefreshCreator();
+            }
+        }
+    }
 }

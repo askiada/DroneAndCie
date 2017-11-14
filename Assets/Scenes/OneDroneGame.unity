@@ -97,6 +97,11 @@ Prefab:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 114000013065238082, guid: 2573ca032085932499baec2d8c3e647a,
+        type: 2}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.size
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 4000012554369602, guid: 2573ca032085932499baec2d8c3e647a, type: 2}
       propertyPath: m_LocalPosition.x
       value: -0.590356
@@ -188,6 +193,26 @@ Prefab:
       propertyPath: m_SizeDelta.x
       value: -770
       objectReference: {fileID: 0}
+    - target: {fileID: 114000013065238082, guid: 2573ca032085932499baec2d8c3e647a,
+        type: 2}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_Mode
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 114000013065238082, guid: 2573ca032085932499baec2d8c3e647a,
+        type: 2}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_CallState
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 114000013065238082, guid: 2573ca032085932499baec2d8c3e647a,
+        type: 2}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 932242495}
+    - target: {fileID: 114000013065238082, guid: 2573ca032085932499baec2d8c3e647a,
+        type: 2}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: TogglePauseMenu
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 2573ca032085932499baec2d8c3e647a, type: 2}
   m_IsPrefabParent: 0
@@ -253,12 +278,28 @@ Prefab:
     - target: {fileID: 114000014040321786, guid: 1ef898e54e6a66346ae52aad7c35a690,
         type: 2}
       propertyPath: stabilizationSeed
-      value: 13
+      value: 42
       objectReference: {fileID: 0}
     - target: {fileID: 114000014040321786, guid: 1ef898e54e6a66346ae52aad7c35a690,
         type: 2}
       propertyPath: stabilizationGeneration
-      value: 1300
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 114000014040321786, guid: 1ef898e54e6a66346ae52aad7c35a690,
+        type: 2}
+      propertyPath: prefabDoor
+      value: 
+      objectReference: {fileID: 1000010558362834, guid: a00f39a4d4abf6d46a6bc58baa1ba819,
+        type: 2}
+    - target: {fileID: 114000014040321786, guid: 1ef898e54e6a66346ae52aad7c35a690,
+        type: 2}
+      propertyPath: moveSeed
+      value: 1256
+      objectReference: {fileID: 0}
+    - target: {fileID: 114000014040321786, guid: 1ef898e54e6a66346ae52aad7c35a690,
+        type: 2}
+      propertyPath: moveGeneration
+      value: 1000
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 1ef898e54e6a66346ae52aad7c35a690, type: 2}
@@ -301,6 +342,11 @@ Prefab:
     - target: {fileID: 4000012723135692, guid: 983d10f61aa02b64ebfab8642257ca68, type: 2}
       propertyPath: m_RootOrder
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 114000013186448114, guid: 983d10f61aa02b64ebfab8642257ca68,
+        type: 2}
+      propertyPath: follow
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 983d10f61aa02b64ebfab8642257ca68, type: 2}

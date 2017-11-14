@@ -1,0 +1,5 @@
+<map id="CameraFollow.d" name="CameraFollow.d">
+<area shape="rect" id="node2" href="$class_camera_follow.html#a31e4196c996f08cbf501b1cf0b322d53" title="CameraFollow.B" alt="" coords="168,5,285,32"/>
+<area shape="rect" id="node3" href="$class_camera_follow.html#a94894b51cf2bf71006499919f1eab54b" title="CameraFollow.I" alt="" coords="333,31,444,57"/>
+<area shape="rect" id="node4" href="$class_camera_follow.html#ab8ce2043b1a47917b8b970f5579af9ec" title="CameraFollow.FixedUpdate" alt="" coords="492,31,673,57"/>
+</map>

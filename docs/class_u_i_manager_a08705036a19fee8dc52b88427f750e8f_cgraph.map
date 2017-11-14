@@ -1,0 +1,4 @@
+<map id="UIManager.DroneDragSliderInputUpdate" name="UIManager.DroneDragSliderInputUpdate">
+<area shape="rect" id="node2" href="$class_u_i_manager.html#a42420b4044cdd1d9cf18eb1725780a79" title="UIManager.UpdateInputField\lValueFromFloat" alt="" coords="236,5,421,47"/>
+<area shape="rect" id="node3" href="$class_drone_manager.html#a312ce57358885f82902d38d7e564fb97" title="DroneManager.SetDrag" alt="" coords="250,71,407,98"/>
+</map>

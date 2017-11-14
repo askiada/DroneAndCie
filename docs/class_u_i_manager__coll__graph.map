@@ -1,0 +1,6 @@
+<map id="UIManager" name="UIManager">
+<area shape="rect" id="node3" href="$class_game_manager.html" title="{GameManager\n||+ StartNewGame()\l+ TogglePauseMenu()\l}" alt="" coords="47,1613,197,1705"/>
+<area shape="rect" id="node4" href="$class_wind_manager.html" title="{WindManager\n||+ SetWind()\l}" alt="" coords="64,761,167,839"/>
+<area shape="rect" id="node5" href="$class_drone_manager.html" title="{DroneManager\n|+ prefabDrone\l+ prefabDoor\l+ stabilizationSeed\l+ stabilizationGeneration\l+ moveSeed\l+ moveGeneration\l+ drone\l+ door\l+ initialY\l&#45; tmpBuildCustomWeights\l&#45; shapes\l&#45; deltaDistribution\l|+ Restart()\l+ Stabilization()\l+ SetNewMovePosition()\l+ Move()\l+ SetMass()\l+ SetDrag()\l+ setMaxThrust()\l+ restartPositionRotation()\l&#45; BuildCustomWeights()\l&#45; Awake()\l}" alt="" coords="243,615,417,985"/>
+<area shape="rect" id="node6" href="$class_lexmou_1_1_machine_learning_1_1_evolutionary_1_1_genetic.html" title="Classic implementation of a genetic algorithm. " alt="" coords="206,5,454,552"/>
+</map>

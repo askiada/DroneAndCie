@@ -1,0 +1,5 @@
+<map id="Lexmou.Manager.WindManager.SetWind" name="Lexmou.Manager.WindManager.SetWind">
+<area shape="rect" id="node2" href="$class_lexmou_1_1_manager_1_1_u_i_manager.html#a16be0c7d1ead12b423bd5f2daa899047" title="Lexmou.Manager.UIManager.\lWindSliderUpdate" alt="" coords="264,5,456,47"/>
+<area shape="rect" id="node3" href="$class_lexmou_1_1_manager_1_1_u_i_manager.html#a30856059d4045472a9eeef56b2e63c69" title="Lexmou.Manager.UIManager.\lWindSliderInputUpdate" alt="" coords="264,71,456,112"/>
+<area shape="rect" id="node4" href="$class_lexmou_1_1_manager_1_1_u_i_manager.html#a1f69d2791a65a13645cf47b8f9d56e13" title="Lexmou.Manager.UIManager.\lWindToggle" alt="" coords="264,136,456,177"/>
+</map>

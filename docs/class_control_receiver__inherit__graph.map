@@ -1,0 +1,4 @@
+<map id="ControlReceiver" name="ControlReceiver">
+<area shape="rect" id="node2" href="$class_drone_1_1_hardware_1_1_component.html" title="{Drone::Hardware::Component\l\&lt; ControlSignal \&gt;\n||+ ProcessSignal()\l}" alt="" coords="18,272,210,364"/>
+<area shape="rect" id="node3" href="$class_drone_1_1_hardware_1_1_component.html" title="{Drone.Hardware.Component\&lt; S \&gt;\n||+ ProcessSignal()\l}" alt="" coords="5,132,223,209"/>
+</map>

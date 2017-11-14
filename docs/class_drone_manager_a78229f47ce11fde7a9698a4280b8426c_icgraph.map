@@ -1,0 +1,4 @@
+<map id="DroneManager.Stabilization" name="DroneManager.Stabilization">
+<area shape="rect" id="node2" href="$class_u_i_manager.html#a6b1dd39c58b2571cda8d6cca374fe87e" title="UIManager.ScanForKeyStabilization" alt="" coords="235,5,465,32"/>
+<area shape="rect" id="node3" href="$class_u_i_manager.html#a6e2db9f2d98e70ccc4864d3af73f1b9e" title="UIManager.Update" alt="" coords="513,5,643,32"/>
+</map>

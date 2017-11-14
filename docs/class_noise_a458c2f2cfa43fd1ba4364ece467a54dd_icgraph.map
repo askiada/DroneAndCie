@@ -1,0 +1,8 @@
+<map id="Noise.Smooth" name="Noise.Smooth">
+<area shape="rect" id="node2" href="$class_noise.html#a2bec1e6ea7fcff134f991c3e18b70354" title="Noise.Value1D" alt="" coords="157,5,265,32"/>
+<area shape="rect" id="node3" href="$class_noise.html#a30368f5ae470e2793b5c1bcd3a13db6a" title="Noise.Value2D" alt="" coords="157,56,265,83"/>
+<area shape="rect" id="node4" href="$class_noise.html#a8309b0511a8c0a1df8f49c7bb13f4e15" title="Noise.Value3D" alt="" coords="157,107,265,133"/>
+<area shape="rect" id="node5" href="$class_noise.html#ac45d15ea33dd8d406cd1bb67fc43bdbc" title="Noise.Perlin1D" alt="" coords="157,157,265,184"/>
+<area shape="rect" id="node6" href="$class_noise.html#afe901026bcfe637f3d4e52d75eae2def" title="Noise.Perlin2D" alt="" coords="157,208,265,235"/>
+<area shape="rect" id="node7" href="$class_noise.html#a65e3790828cf28b11d18d2e9b54c7d82" title="Noise.Perlin3D" alt="" coords="157,259,265,285"/>
+</map>

@@ -1,0 +1,4 @@
+<map id="UIManager.WindSliderUpdate" name="UIManager.WindSliderUpdate">
+<area shape="rect" id="node2" href="$class_u_i_manager.html#ad628ccce73d6fe5d9a2af8a125a9c529" title="UIManager.UpdateSliderValue\lFromFloat" alt="" coords="245,5,440,47"/>
+<area shape="rect" id="node3" href="$class_wind_manager.html#aeca5625a62fa59def776581d01739347" title="WindManager.SetWind" alt="" coords="265,71,421,98"/>
+</map>

@@ -1,0 +1,8 @@
+<map id="DroneManager.BuildCustomWeights" name="DroneManager.BuildCustomWeights">
+<area shape="rect" id="node2" href="$class_drone_manager.html#a5f2ed8f181764f47597b51ffac1caffc" title="DroneManager.Restart" alt="" coords="237,35,389,61"/>
+<area shape="rect" id="node3" href="$class_drone_manager.html#ad4549b953cf84114cb04289284fe7ff4" title="DroneManager.Awake" alt="" coords="460,5,609,32"/>
+<area shape="rect" id="node4" href="$class_drone_manager.html#a90bbfb184aa9f4563d98d5492803c70e" title="DroneManager.restartPosition\lRotation" alt="" coords="437,57,632,98"/>
+<area shape="rect" id="node5" href="$class_u_i_manager.html#a44dccbe538398cca10ab75b7aa0de6df" title="UIManager.ScanForKeyRestart" alt="" coords="680,39,883,65"/>
+<area shape="rect" id="node7" href="$class_u_i_manager.html#afe57298dffb42fb437035ead015fc6d0" title="UIManager.DroneRestart" alt="" coords="699,89,863,116"/>
+<area shape="rect" id="node6" href="$class_u_i_manager.html#a6e2db9f2d98e70ccc4864d3af73f1b9e" title="UIManager.Update" alt="" coords="931,39,1060,65"/>
+</map>

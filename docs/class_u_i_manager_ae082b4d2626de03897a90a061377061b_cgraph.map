@@ -1,0 +1,4 @@
+<map id="UIManager.DroneMassSliderUpdate" name="UIManager.DroneMassSliderUpdate">
+<area shape="rect" id="node2" href="$class_u_i_manager.html#ad628ccce73d6fe5d9a2af8a125a9c529" title="UIManager.UpdateSliderValue\lFromFloat" alt="" coords="240,5,435,47"/>
+<area shape="rect" id="node3" href="$class_drone_manager.html#a92197a9a8343c6214f24de6a8c38e85d" title="DroneManager.SetMass" alt="" coords="256,71,419,98"/>
+</map>

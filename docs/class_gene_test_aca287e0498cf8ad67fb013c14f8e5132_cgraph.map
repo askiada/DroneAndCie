@@ -1,0 +1,12 @@
+<map id="GeneTest.SaveTest" name="GeneTest.SaveTest">
+<area shape="rect" id="node2" href="$class_lexmou_1_1_machine_learning_1_1_evolutionary_1_1_genetic.html#ac6e0a21ca4f603f86811cee06b107591" title="Lexmou.MachineLearning.Evolutionary.\lGenetic.Evaluation" alt="" coords="188,71,436,112"/>
+<area shape="rect" id="node5" href="$class_lexmou_1_1_machine_learning_1_1_evolutionary_1_1_genetic.html#adbf0639ad9a85b926a2c9da0264cb0d9" title="Save the generation. " alt="" coords="188,136,436,177"/>
+<area shape="rect" id="node7" href="$class_lexmou_1_1_machine_learning_1_1_evolutionary_1_1_genetic.html#a8824a4c4262c51c41c00c7d62b149815" title="Load the generation. " alt="" coords="188,201,436,243"/>
+<area shape="rect" id="node9" href="$class_lexmou_1_1_machine_learning_1_1_evolutionary_1_1_genetic.html#a862b72d14caa564a0f37f0c469012f88" title="Load the best individual. " alt="" coords="188,267,436,308"/>
+<area shape="rect" id="node10" href="$class_lexmou_1_1_machine_learning_1_1_evolutionary_1_1_genetic.html#ae9c9850558a4c28679fdfe901427bd50" title="Lexmou.MachineLearning.Evolutionary.\lGenetic.GetPopulation" alt="" coords="188,332,436,373"/>
+<area shape="rect" id="node11" href="$class_lexmou_1_1_machine_learning_1_1_evolutionary_1_1_genetic.html#afe9e9ca17e08a09f0dbfc33c3e9cd1ac" title="Get the best individual of the last generation. " alt="" coords="188,397,436,439"/>
+<area shape="rect" id="node3" href="$class_lexmou_1_1_utils_1_1_u_vector.html#a89095266e96dd0ca25061907fe940d43" title="Mean and standard deviation of a Vector. " alt="" coords="485,5,668,47"/>
+<area shape="rect" id="node4" href="$class_lexmou_1_1_utils_1_1_u_vector.html#a394110f8c664d9069dd661993f4a9511" title="Median of a Vector. " alt="" coords="485,71,668,112"/>
+<area shape="rect" id="node6" href="$class_lexmou_1_1_utils_1_1_u_i_o.html#a023ce06a07f60549a6621a79dec8aecf" title="Save a 2D float array in a byte file. " alt="" coords="484,136,669,177"/>
+<area shape="rect" id="node8" href="$class_lexmou_1_1_utils_1_1_u_i_o.html#a0c806337ccd3a59edbc7bae0ce2f92b4" title="Load a byte file in a 2D float array. " alt="" coords="484,233,669,275"/>
+</map>

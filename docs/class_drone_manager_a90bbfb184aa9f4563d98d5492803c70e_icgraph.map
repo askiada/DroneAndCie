@@ -1,0 +1,5 @@
+<map id="DroneManager.restartPositionRotation" name="DroneManager.restartPositionRotation">
+<area shape="rect" id="node2" href="$class_u_i_manager.html#a44dccbe538398cca10ab75b7aa0de6df" title="UIManager.ScanForKeyRestart" alt="" coords="248,5,451,32"/>
+<area shape="rect" id="node4" href="$class_u_i_manager.html#afe57298dffb42fb437035ead015fc6d0" title="UIManager.DroneRestart" alt="" coords="267,56,431,83"/>
+<area shape="rect" id="node3" href="$class_u_i_manager.html#a6e2db9f2d98e70ccc4864d3af73f1b9e" title="UIManager.Update" alt="" coords="499,5,628,32"/>
+</map>

@@ -1,0 +1,6 @@
+<map id="MultiLayer.PropagateForward" name="MultiLayer.PropagateForward">
+<area shape="rect" id="node2" href="$class_lexmou_1_1_utils_1_1_u_activation.html#af049036642b5961e4bab5324e0bb7630" title="Lexmou.Utils.UActivation.\lInternalActivation" alt="" coords="246,5,417,47"/>
+<area shape="rect" id="node3" href="$class_multiplication.html#a30ac2aa5d89cca24c2fa894d88cb857a" title="Multiplication.FalkScheme" alt="" coords="244,71,419,98"/>
+<area shape="rect" id="node4" href="$class_lexmou_1_1_utils_1_1_u_activation.html#aea1867f28d064ce24e67cee661dcde6b" title="Lexmou.Utils.UActivation.\lOutputActivation" alt="" coords="246,123,417,164"/>
+<area shape="rect" id="node5" href="$class_multi_layer.html#ad062f2b5edf5dd15599d4c689348cb86" title="MultiLayer.WriteListArray" alt="" coords="247,189,416,215"/>
+</map>

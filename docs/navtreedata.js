@@ -31,8 +31,9 @@ var NAVTREE =
 var NAVTREEINDEX =
 [
 "_ball_8cs.html",
-"class_lexmou_1_1_machine_learning_1_1_neural_network_1_1_feed_forward_1_1_multi_layer_maths_net.html#a1287a564bed4fc15c8364aa6cdc05ef3",
-"class_surface_creator_inspector.html#ab61505b52b604d9e0ac06ff487ad0ca9"
+"class_lexmou_1_1_environment_1_1_wind_1_1_wind_area.html#a73901dcb6f4817eb5f02e8a93cd1c7b6",
+"class_lexmou_1_1_manager_1_1_u_i_manager.html#ad44b300d5a44a99dc1b304af177ae82c",
+"functions_vars_d.html"
 ];
 
 var SYNCONMSG = 'click to disable panel synchronisation';

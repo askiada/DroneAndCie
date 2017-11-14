@@ -100,6 +100,7 @@ $(document).ready(function(){initNavTree('class_input_control.html','');});
   <div class="summary">
 <a href="#pub-methods">Public Member Functions</a> &#124;
 <a href="#pub-attribs">Public Attributes</a> &#124;
+<a href="#pri-methods">Private Member Functions</a> &#124;
 <a href="class_input_control-members.html">List of all members</a>  </div>
   <div class="headertitle">
 <div class="title">InputControl Class Reference</div>  </div>
@@ -108,11 +109,17 @@ $(document).ready(function(){initNavTree('class_input_control.html','');});
 <div class="dynheader">
 Inheritance diagram for InputControl:</div>
 <div class="dyncontent">
- <div class="center">
-  <img src="class_input_control.png" usemap="#InputControl_map" alt=""/>
-  <map id="InputControl_map" name="InputControl_map">
+<div class="center"><img src="class_input_control__inherit__graph.png" border="0" usemap="#_input_control_inherit__map" alt="Inheritance graph"/></div>
+</div>
+<div class="dynheader">
+Collaboration diagram for InputControl:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_input_control__coll__graph.png" border="0" usemap="#_input_control_coll__map" alt="Collaboration graph"/></div>
+<map name="_input_control_coll__map" id="_input_control_coll__map">
+<area shape="rect" id="node3" href="class_main_board.html" title="{MainBoard\n|+ ThrustSignalBus\l+ ControlSignalBus\l+ inputSize\l+ _inputMLP\l+ rotate\l+ deltaPosition\l+ initDeltaPosition\l+ inputMLP\l|+ SendThrustSignal()\l+ SendControlSignal()\l&#45; Start()\l}" alt="" coords="98,365,247,575"/>
+<area shape="rect" id="node4" href="class_lexmou_1_1_machine_learning_1_1_neural_network_1_1_feed_forward_1_1_multi_layer_maths_net.html" title="{Lexmou.MachineLearning.Neural\lNetwork.FeedForward.MultiLayerMathsNet\n|+ layers\l+ weights\l+ shapes\l+ shapesSize\l&#45; dw\l&#45; save\l&#45; seed\l&#45; batchSize\l&#45; rndGenerator\l&#45; cu\l&#45; initialValueWeights\l|+ MultiLayerMathsNet()\l+ Reset()\l+ PropagateForward()\l+ PropagateForward2()\l&#45; fillWeights()\l}" alt="" coords="140,5,408,303"/>
 </map>
- </div></div>
+</div>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
@@ -129,6 +136,8 @@ Public Attributes</h2></td></tr>
 <tr class="separator:a5fd78152d3c7bf32dd31ca09c62c6122"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ab36a5d49faf62c3f5d46387ee2fdf97f"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_input_control.html#ab36a5d49faf62c3f5d46387ee2fdf97f">stabilization</a> = false</td></tr>
 <tr class="separator:ab36a5d49faf62c3f5d46387ee2fdf97f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a127ceefafaa2ccb5b35ea83370050796"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_input_control.html#a127ceefafaa2ccb5b35ea83370050796">move</a> = false</td></tr>
+<tr class="separator:a127ceefafaa2ccb5b35ea83370050796"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a2f3e3a451745147bf5dcdaf84c74bea6"><td class="memItemLeft" align="right" valign="top">float&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_input_control.html#a2f3e3a451745147bf5dcdaf84c74bea6">constantThrottle</a> = 0.0f</td></tr>
 <tr class="separator:a2f3e3a451745147bf5dcdaf84c74bea6"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:adb884019336585177eca8e1f8bce1097"><td class="memItemLeft" align="right" valign="top">float&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_input_control.html#adb884019336585177eca8e1f8bce1097">constantRudder</a> = 0.0f</td></tr>
@@ -137,10 +146,15 @@ Public Attributes</h2></td></tr>
 <tr class="separator:a30dac6503e85e652cf362f0f8290b17b"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:af7e0da857492e7fc1c09e4c0e125a892"><td class="memItemLeft" align="right" valign="top">float&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_input_control.html#af7e0da857492e7fc1c09e4c0e125a892">constantAileron</a> = 0.0f</td></tr>
 <tr class="separator:af7e0da857492e7fc1c09e4c0e125a892"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pri-methods"></a>
+Private Member Functions</h2></td></tr>
+<tr class="memitem:a6d811b0f0726d2713042e0187130c55b"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_input_control.html#a6d811b0f0726d2713042e0187130c55b">FixedUpdate</a> ()</td></tr>
+<tr class="separator:a6d811b0f0726d2713042e0187130c55b"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock">
-<p>Definition at line <a class="el" href="_input_control_8cs_source.html#l00005">5</a> of file <a class="el" href="_input_control_8cs_source.html">InputControl.cs</a>.</p>
+<p>Definition at line <a class="el" href="_input_control_8cs_source.html#l00007">7</a> of file <a class="el" href="_input_control_8cs_source.html">InputControl.cs</a>.</p>
 </div><h2 class="groupheader">Member Function Documentation</h2>
 <a id="ad8d0024a0ae68e6199e09f0cac781aaa"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#ad8d0024a0ae68e6199e09f0cac781aaa">&sect;&nbsp;</a></span>SendSignalWithMLP()</h2>
@@ -157,7 +171,51 @@ Public Attributes</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="_input_control_8cs_source.html#l00020">20</a> of file <a class="el" href="_input_control_8cs_source.html">InputControl.cs</a>.</p>
+<p>Definition at line <a class="el" href="_input_control_8cs_source.html#l00023">23</a> of file <a class="el" href="_input_control_8cs_source.html">InputControl.cs</a>.</p>
+<div class="dynheader">
+Here is the call graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_input_control_ad8d0024a0ae68e6199e09f0cac781aaa_cgraph.png" border="0" usemap="#class_input_control_ad8d0024a0ae68e6199e09f0cac781aaa_cgraph" alt=""/></div>
+<map name="class_input_control_ad8d0024a0ae68e6199e09f0cac781aaa_cgraph" id="class_input_control_ad8d0024a0ae68e6199e09f0cac781aaa_cgraph">
+<area shape="rect" id="node2" href="class_main_board.html#ae7f552c9b272f179595b0353405d0c96" title="MainBoard.SendControlSignal" alt="" coords="268,5,463,32"/>
+</map>
+</div>
+
+</div>
+</div>
+<a id="a6d811b0f0726d2713042e0187130c55b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a6d811b0f0726d2713042e0187130c55b">&sect;&nbsp;</a></span>FixedUpdate()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void InputControl.FixedUpdate </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Definition at line <a class="el" href="_input_control_8cs_source.html#l00038">38</a> of file <a class="el" href="_input_control_8cs_source.html">InputControl.cs</a>.</p>
+<div class="dynheader">
+Here is the call graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_input_control_a6d811b0f0726d2713042e0187130c55b_cgraph.png" border="0" usemap="#class_input_control_a6d811b0f0726d2713042e0187130c55b_cgraph" alt=""/></div>
+<map name="class_input_control_a6d811b0f0726d2713042e0187130c55b_cgraph" id="class_input_control_a6d811b0f0726d2713042e0187130c55b_cgraph">
+<area shape="rect" id="node2" href="class_main_board.html#ae7f552c9b272f179595b0353405d0c96" title="MainBoard.SendControlSignal" alt="" coords="221,5,416,32"/>
+<area shape="rect" id="node3" href="class_lexmou_1_1_utils_1_1_u_angle.html#a6e7e088ea5255fb59ba5f72e7c5d8561" title="Lexmou.Utils.UAngle.Steer\lAngle" alt="" coords="229,57,408,98"/>
+</map>
+</div>
 
 </div>
 </div>
@@ -174,7 +232,7 @@ Public Attributes</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="_input_control_8cs_source.html#l00008">8</a> of file <a class="el" href="_input_control_8cs_source.html">InputControl.cs</a>.</p>
+<p>Definition at line <a class="el" href="_input_control_8cs_source.html#l00010">10</a> of file <a class="el" href="_input_control_8cs_source.html">InputControl.cs</a>.</p>
 
 </div>
 </div>
@@ -190,7 +248,7 @@ Public Attributes</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="_input_control_8cs_source.html#l00010">10</a> of file <a class="el" href="_input_control_8cs_source.html">InputControl.cs</a>.</p>
+<p>Definition at line <a class="el" href="_input_control_8cs_source.html#l00012">12</a> of file <a class="el" href="_input_control_8cs_source.html">InputControl.cs</a>.</p>
 
 </div>
 </div>
@@ -206,7 +264,7 @@ Public Attributes</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="_input_control_8cs_source.html#l00012">12</a> of file <a class="el" href="_input_control_8cs_source.html">InputControl.cs</a>.</p>
+<p>Definition at line <a class="el" href="_input_control_8cs_source.html#l00014">14</a> of file <a class="el" href="_input_control_8cs_source.html">InputControl.cs</a>.</p>
 
 </div>
 </div>
@@ -222,7 +280,23 @@ Public Attributes</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="_input_control_8cs_source.html#l00013">13</a> of file <a class="el" href="_input_control_8cs_source.html">InputControl.cs</a>.</p>
+<p>Definition at line <a class="el" href="_input_control_8cs_source.html#l00015">15</a> of file <a class="el" href="_input_control_8cs_source.html">InputControl.cs</a>.</p>
+
+</div>
+</div>
+<a id="a127ceefafaa2ccb5b35ea83370050796"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a127ceefafaa2ccb5b35ea83370050796">&sect;&nbsp;</a></span>move</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool InputControl.move = false</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Definition at line <a class="el" href="_input_control_8cs_source.html#l00016">16</a> of file <a class="el" href="_input_control_8cs_source.html">InputControl.cs</a>.</p>
 
 </div>
 </div>
@@ -238,7 +312,7 @@ Public Attributes</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="_input_control_8cs_source.html#l00014">14</a> of file <a class="el" href="_input_control_8cs_source.html">InputControl.cs</a>.</p>
+<p>Definition at line <a class="el" href="_input_control_8cs_source.html#l00017">17</a> of file <a class="el" href="_input_control_8cs_source.html">InputControl.cs</a>.</p>
 
 </div>
 </div>
@@ -254,7 +328,7 @@ Public Attributes</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="_input_control_8cs_source.html#l00015">15</a> of file <a class="el" href="_input_control_8cs_source.html">InputControl.cs</a>.</p>
+<p>Definition at line <a class="el" href="_input_control_8cs_source.html#l00018">18</a> of file <a class="el" href="_input_control_8cs_source.html">InputControl.cs</a>.</p>
 
 </div>
 </div>
@@ -270,7 +344,7 @@ Public Attributes</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="_input_control_8cs_source.html#l00016">16</a> of file <a class="el" href="_input_control_8cs_source.html">InputControl.cs</a>.</p>
+<p>Definition at line <a class="el" href="_input_control_8cs_source.html#l00019">19</a> of file <a class="el" href="_input_control_8cs_source.html">InputControl.cs</a>.</p>
 
 </div>
 </div>
@@ -286,7 +360,7 @@ Public Attributes</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="_input_control_8cs_source.html#l00017">17</a> of file <a class="el" href="_input_control_8cs_source.html">InputControl.cs</a>.</p>
+<p>Definition at line <a class="el" href="_input_control_8cs_source.html#l00020">20</a> of file <a class="el" href="_input_control_8cs_source.html">InputControl.cs</a>.</p>
 
 </div>
 </div>

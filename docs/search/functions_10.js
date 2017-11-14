@@ -1,8 +1,8 @@
 var searchData=
 [
-  ['update',['Update',['../class_texture_creator.html#a009476d16de013bd2ffbea4bdf53e7d3',1,'TextureCreator.Update()'],['../class_u_i_manager.html#a6e2db9f2d98e70ccc4864d3af73f1b9e',1,'UIManager.Update()'],['../class_ball.html#a416edd5ceab970ca26f787363e7ccb22',1,'Ball.Update()']]],
-  ['updateinputfieldvaluefromfloat',['UpdateInputFieldValueFromFloat',['../class_u_i_manager.html#a42420b4044cdd1d9cf18eb1725780a79',1,'UIManager']]],
-  ['updateslidervaluefromfloat',['UpdateSliderValueFromFloat',['../class_u_i_manager.html#ad628ccce73d6fe5d9a2af8a125a9c529',1,'UIManager']]],
-  ['updatetextlayout',['UpdateTextLayout',['../class_h_u_d_manager.html#a5322e4b531f5e48139e1b55c860fc6c6',1,'HUDManager']]],
-  ['updatevaluefromstring',['UpdateValueFromString',['../class_u_i_manager.html#a80175988a2d2255df5f0d590093b768a',1,'UIManager']]]
+  ['update',['Update',['../class_texture_creator.html#a009476d16de013bd2ffbea4bdf53e7d3',1,'TextureCreator.Update()'],['../class_builder.html#a454a0473f21e6fbf848dc8a5c36c06f4',1,'Builder.Update()'],['../class_lexmou_1_1_manager_1_1_u_i_manager.html#aadf27d2617893246ec7f2aa8ea6d8748',1,'Lexmou.Manager.UIManager.Update()'],['../class_lexmou_1_1_environment_1_1_wind_1_1_ball.html#aaf3ac0b19393ec33181b6fd414d60472',1,'Lexmou.Environment.Wind.Ball.Update()']]],
+  ['updateinputfieldvaluefromfloat',['UpdateInputFieldValueFromFloat',['../class_lexmou_1_1_manager_1_1_u_i_manager.html#a7168bd8c1ee3045d611a1114c19825b9',1,'Lexmou::Manager::UIManager']]],
+  ['updateslidervaluefromfloat',['UpdateSliderValueFromFloat',['../class_lexmou_1_1_manager_1_1_u_i_manager.html#aec8572b5b3e8e790446b0175a3d66ae6',1,'Lexmou::Manager::UIManager']]],
+  ['updatetextlayout',['UpdateTextLayout',['../class_lexmou_1_1_manager_1_1_h_u_d_manager.html#a8030062a236c082ce8d1694fd431d711',1,'Lexmou::Manager::HUDManager']]],
+  ['updatevaluefromstring',['UpdateValueFromString',['../class_lexmou_1_1_manager_1_1_u_i_manager.html#aaffdae314add3b7f316322566555665a',1,'Lexmou::Manager::UIManager']]]
 ];

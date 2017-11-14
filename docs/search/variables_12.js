@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['ui',['UI',['../class_game_manager.html#a3c65ed61c724a920def7b49d442f9258',1,'GameManager']]]
+  ['ui',['UI',['../class_lexmou_1_1_manager_1_1_game_manager.html#a421a7f53f8282b9a615b76edf94248a8',1,'Lexmou::Manager::GameManager']]]
 ];

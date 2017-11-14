@@ -1,0 +1,5 @@
+<map id="WindManager.SetWind" name="WindManager.SetWind">
+<area shape="rect" id="node2" href="$class_u_i_manager.html#a4d91cd26fecb5870ba34fab73d4202cb" title="UIManager.WindSliderUpdate" alt="" coords="209,5,401,32"/>
+<area shape="rect" id="node3" href="$class_u_i_manager.html#a067ce0e6db697da6839bd802729223a0" title="UIManager.WindSliderInput\lUpdate" alt="" coords="216,57,395,98"/>
+<area shape="rect" id="node4" href="$class_u_i_manager.html#af9ed7fa6414b7e0f1d3ee7a8ab399190" title="UIManager.WindToggle" alt="" coords="227,123,383,149"/>
+</map>

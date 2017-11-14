@@ -1,0 +1,4 @@
+<map id="DroneManager.SetNewMovePosition" name="DroneManager.SetNewMovePosition">
+<area shape="rect" id="node2" href="$class_u_i_manager.html#ad0406883e57668c3a3d57905eb1c57b4" title="UIManager.ScanForKeyMove" alt="" coords="285,5,476,32"/>
+<area shape="rect" id="node3" href="$class_u_i_manager.html#a6e2db9f2d98e70ccc4864d3af73f1b9e" title="UIManager.Update" alt="" coords="524,5,653,32"/>
+</map>

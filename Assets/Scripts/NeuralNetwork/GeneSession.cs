@@ -12,6 +12,8 @@ using Lexmou.MachineLearning.NeuralNetwork.FeedForward;
 using System.Linq;
 using System.IO;
 using System.Reflection;
+using Lexmou.Environment.Wind;
+using Lexmou.Manager;
 
 /*! \mainpage Drone et Compagnie
 
@@ -42,8 +44,7 @@ A priori, il faudra mettre en place un serveur sur linux afin de faire tourner l
 */
 
 
-namespace Lexmou.MachineLearning.Session.Quadcopter
-{
+namespace Lexmou.MachineLearning.DroneSession2 { 
     public class GeneSession : MonoBehaviour
     {
         Rigidbody rigid;
@@ -143,25 +144,29 @@ namespace Lexmou.MachineLearning.Session.Quadcopter
 
         }
 
+
         void CheckNullOrReplace(string propertyName)
         {
-            string valueCL = UIO.GetCommandLineArguments("-"+ propertyName);
+            string valueCL = UIO.GetCommandLineArguments("-" + propertyName);
 
             if (valueCL != null)
             {
-                if(this[propertyName] is int)
+                if (this[propertyName] is int)
                 {
                     this[propertyName] = int.Parse(valueCL);
-                }else if(this[propertyName] is float)
+                }
+                else if (this[propertyName] is float)
                 {
-                    this[propertyName] = float.Parse(valueCL); 
-                }else
+                    this[propertyName] = float.Parse(valueCL);
+                }
+                else
                 {
                     this[propertyName] = valueCL;
                 }
-                
+
             }
         }
+
 
         void SetParametersFromCommandLine()
         {
@@ -289,7 +294,7 @@ namespace Lexmou.MachineLearning.Session.Quadcopter
             mlpPopulation = new MultiLayerMathsNet[populationSize];
 
             distribution = new ContinuousUniform(-AngleRandomRotation, AngleRandomRotation, rndGenerator);
-            deltaDistribution = new ContinuousUniform(-4, 4, rndGenerator);
+            deltaDistribution = new ContinuousUniform(-2, 2, rndGenerator);
 
 
             hudManager.AddTextLayout("Infos", "Seed : " + seed + "\r\n" + 

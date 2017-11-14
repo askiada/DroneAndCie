@@ -1,10 +1,11 @@
 var searchData=
 [
-  ['gene',['gene',['../class_lexmou_1_1_machine_learning_1_1_session_1_1_quadcopter_1_1_gene_session.html#ab88f13f69018a04d2703382afa55553e',1,'Lexmou.MachineLearning.Session.Quadcopter.GeneSession.gene()'],['../class_drone_manager.html#a64bdec61a4a619c9d551175a60d083cb',1,'DroneManager.gene()']]],
+  ['gene',['gene',['../class_lexmou_1_1_machine_learning_1_1_drone_session2_1_1_gene_session.html#a23e6f3f981dd76abbe315df13478ed7f',1,'Lexmou.MachineLearning.DroneSession2.GeneSession.gene()'],['../class_lexmou_1_1_machine_learning_1_1_drone_session.html#aba651b0c2588908f87961f41bfe8bbb4',1,'Lexmou.MachineLearning.DroneSession.gene()'],['../class_lexmou_1_1_manager_1_1_drone_manager.html#a5b9ffa25bca4f2069e9b07b2134ed5f9',1,'Lexmou.Manager.DroneManager.gene()']]],
   ['generation',['generation',['../class_lexmou_1_1_machine_learning_1_1_evolutionary_1_1_genetic.html#a2c15e0fafa724ea70de79081364e13a5',1,'Lexmou::MachineLearning::Evolutionary::Genetic']]],
   ['generndgenerator',['geneRndGenerator',['../class_gene_test.html#a68a3b0c6a9ee839a46855418bd31b2b3',1,'GeneTest']]],
   ['geneseed',['geneSeed',['../class_gene_test.html#a607524f34bf520e7e476642a21b6fdde',1,'GeneTest']]],
-  ['gm',['GM',['../class_u_i_manager.html#ad76c4f430538442350984f4e8cc1382a',1,'UIManager']]],
+  ['gm',['GM',['../class_lexmou_1_1_manager_1_1_u_i_manager.html#acdcdfb76c548cedd1d7da247d084e2d9',1,'Lexmou::Manager::UIManager']]],
+  ['gobject',['gObject',['../class_drone_session_test.html#ad847fff69d1908e2e444f178c4149f4e',1,'DroneSessionTest']]],
   ['gradients1d',['gradients1D',['../class_noise.html#a8abef2c4ae392862ac0dae80ac231c98',1,'Noise']]],
   ['gradients2d',['gradients2D',['../class_noise.html#a1db1e07d0e23e712d6e9d11a920a69a8',1,'Noise']]],
   ['gradients3d',['gradients3D',['../class_noise.html#a4bfe1a1bc502c4573a3349242f9d64c6',1,'Noise']]],

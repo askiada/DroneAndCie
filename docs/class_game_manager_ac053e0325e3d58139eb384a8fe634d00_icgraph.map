@@ -1,0 +1,4 @@
+<map id="GameManager.TogglePauseMenu" name="GameManager.TogglePauseMenu">
+<area shape="rect" id="node2" href="$class_u_i_manager.html#a19b765508a71da093cde1a423ad2981d" title="UIManager.ScanForKeyStroke" alt="" coords="272,5,471,32"/>
+<area shape="rect" id="node3" href="$class_u_i_manager.html#a6e2db9f2d98e70ccc4864d3af73f1b9e" title="UIManager.Update" alt="" coords="519,5,648,32"/>
+</map>

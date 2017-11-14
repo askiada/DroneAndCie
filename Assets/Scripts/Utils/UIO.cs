@@ -11,6 +11,29 @@ namespace Lexmou.Utils
      */
     public static class UIO
     {
+
+        public static void CheckBeforeReplaceCommandLineArguments(Lexmou.MachineLearning.Session mb, string propertyName)
+        {
+            string valueCL = UIO.GetCommandLineArguments("-" + propertyName);
+
+            if (valueCL != null)
+            {
+                if (mb[propertyName] is int)
+                {
+                    mb[propertyName] = int.Parse(valueCL);
+                }
+                else if (mb[propertyName] is float)
+                {
+                    mb[propertyName] = float.Parse(valueCL);
+                }
+                else
+                {
+                    mb[propertyName] = valueCL;
+                }
+
+            }
+        }
+
         /**
         * \brief Retrieve the command line argument based on the name of the command
         * \details Go through the command-line arguments and return the command value

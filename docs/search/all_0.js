@@ -1,18 +1,18 @@
 var searchData=
 [
-  ['_5fanglerandomrotation',['_angleRandomRotation',['../class_lexmou_1_1_machine_learning_1_1_session_1_1_quadcopter_1_1_gene_session.html#a2510cee3616d053c9fc585c65bbd6344',1,'Lexmou::MachineLearning::Session::Quadcopter::GeneSession']]],
-  ['_5fdronedragslider',['_droneDragSlider',['../class_u_i_manager.html#a83e00d3a3125a7ba8d85e692f6b67489',1,'UIManager']]],
-  ['_5fdronedragsliderinput',['_droneDragSliderInput',['../class_u_i_manager.html#a13e6ac64eaa171979b4669bd996a83b0',1,'UIManager']]],
-  ['_5fdronemassslider',['_droneMassSlider',['../class_u_i_manager.html#a0ce4dcaae7274d21b6b2120ef56e9916',1,'UIManager']]],
-  ['_5fdronemasssliderinput',['_droneMassSliderInput',['../class_u_i_manager.html#a284b63f132d549a168d671dce532597a',1,'UIManager']]],
-  ['_5fdronemotorsmaxthrust',['_droneMotorsMaxThrust',['../class_u_i_manager.html#a655ca739b001bb6af2a925348bc8c0f8',1,'UIManager']]],
+  ['_5fanglerandomrotation',['_angleRandomRotation',['../class_lexmou_1_1_machine_learning_1_1_drone_session2_1_1_gene_session.html#a10211efefe5a737b0ec10c657210a928',1,'Lexmou::MachineLearning::DroneSession2::GeneSession']]],
+  ['_5fdronedragslider',['_droneDragSlider',['../class_lexmou_1_1_manager_1_1_u_i_manager.html#afc421da62fea7da0ef17723f4f90dac5',1,'Lexmou::Manager::UIManager']]],
+  ['_5fdronedragsliderinput',['_droneDragSliderInput',['../class_lexmou_1_1_manager_1_1_u_i_manager.html#a0fb9c2c6a580990209831b67b6eaef03',1,'Lexmou::Manager::UIManager']]],
+  ['_5fdronemassslider',['_droneMassSlider',['../class_lexmou_1_1_manager_1_1_u_i_manager.html#af051cb33eb95ff7cc6dca8099f4e2315',1,'Lexmou::Manager::UIManager']]],
+  ['_5fdronemasssliderinput',['_droneMassSliderInput',['../class_lexmou_1_1_manager_1_1_u_i_manager.html#ac5d6d0e9e521adf091a81d4ee3b83448',1,'Lexmou::Manager::UIManager']]],
+  ['_5fdronemotorsmaxthrust',['_droneMotorsMaxThrust',['../class_lexmou_1_1_manager_1_1_u_i_manager.html#af2606df11a09ae30cd331fcee8c17fbf',1,'Lexmou::Manager::UIManager']]],
   ['_5finputmlp',['_inputMLP',['../class_main_board.html#ad942a6b2130147ea7e58d217eb667c5c',1,'MainBoard']]],
-  ['_5fintervalsave',['_intervalSave',['../class_lexmou_1_1_machine_learning_1_1_session_1_1_quadcopter_1_1_gene_session.html#aa7ac35ebe67b93136fdb3c1419b7aaa9',1,'Lexmou::MachineLearning::Session::Quadcopter::GeneSession']]],
-  ['_5floadgeneration',['_loadGeneration',['../class_lexmou_1_1_machine_learning_1_1_session_1_1_quadcopter_1_1_gene_session.html#a0cbb77dbdc687b28b39778ecb530ca27',1,'Lexmou::MachineLearning::Session::Quadcopter::GeneSession']]],
-  ['_5fseed',['_seed',['../class_lexmou_1_1_machine_learning_1_1_session_1_1_quadcopter_1_1_gene_session.html#ad3467c91d30e8b5ecf20821090167e6c',1,'Lexmou::MachineLearning::Session::Quadcopter::GeneSession']]],
-  ['_5ftask',['_task',['../class_lexmou_1_1_machine_learning_1_1_session_1_1_quadcopter_1_1_gene_session.html#a21604db18380a94c9be6321008a341b0',1,'Lexmou::MachineLearning::Session::Quadcopter::GeneSession']]],
-  ['_5ftimescale',['_timeScale',['../class_lexmou_1_1_machine_learning_1_1_session_1_1_quadcopter_1_1_gene_session.html#a494c61fb3514da960366cf0070a6f388',1,'Lexmou::MachineLearning::Session::Quadcopter::GeneSession']]],
-  ['_5fwindslider',['_windSlider',['../class_u_i_manager.html#a135d0901e3d5e44cdbdd1e80e680a341',1,'UIManager']]],
-  ['_5fwindsliderinput',['_windSliderInput',['../class_u_i_manager.html#a20b036aead20030d9fa3ed2db8c63c7b',1,'UIManager']]],
-  ['_5fwindstrength',['_windStrength',['../class_lexmou_1_1_machine_learning_1_1_session_1_1_quadcopter_1_1_gene_session.html#ac03e7139ee6dbe0e88f546fcb64e4d1c',1,'Lexmou::MachineLearning::Session::Quadcopter::GeneSession']]]
+  ['_5fintervalsave',['_intervalSave',['../class_lexmou_1_1_machine_learning_1_1_drone_session2_1_1_gene_session.html#a5b447c17bbd3034ef4b22ee50c52caa2',1,'Lexmou::MachineLearning::DroneSession2::GeneSession']]],
+  ['_5floadgeneration',['_loadGeneration',['../class_lexmou_1_1_machine_learning_1_1_drone_session2_1_1_gene_session.html#aa4a25db2bee94f793db381a74a53d404',1,'Lexmou::MachineLearning::DroneSession2::GeneSession']]],
+  ['_5fseed',['_seed',['../class_lexmou_1_1_machine_learning_1_1_drone_session2_1_1_gene_session.html#a48e909cb725fcad4e7dc51b6ec9d15c8',1,'Lexmou.MachineLearning.DroneSession2.GeneSession._seed()'],['../class_lexmou_1_1_machine_learning_1_1_session.html#a6e898ee1072c8d9e5c405310a9be02d2',1,'Lexmou.MachineLearning.Session._seed()']]],
+  ['_5ftask',['_task',['../class_lexmou_1_1_machine_learning_1_1_drone_session2_1_1_gene_session.html#a67ac601705eab58fe5ccc12334b09fab',1,'Lexmou::MachineLearning::DroneSession2::GeneSession']]],
+  ['_5ftimescale',['_timeScale',['../class_lexmou_1_1_machine_learning_1_1_drone_session2_1_1_gene_session.html#a57ce0c54ef885ab610e608a8857741c4',1,'Lexmou::MachineLearning::DroneSession2::GeneSession']]],
+  ['_5fwindslider',['_windSlider',['../class_lexmou_1_1_manager_1_1_u_i_manager.html#ae25c13f69e7fa63735a8a56507a75933',1,'Lexmou::Manager::UIManager']]],
+  ['_5fwindsliderinput',['_windSliderInput',['../class_lexmou_1_1_manager_1_1_u_i_manager.html#a2962f29ca8f611d224daa2a52d6f86bd',1,'Lexmou::Manager::UIManager']]],
+  ['_5fwindstrength',['_windStrength',['../class_lexmou_1_1_machine_learning_1_1_drone_session2_1_1_gene_session.html#a37b45ea2a3ef0b7e4a8e1d5eff174afc',1,'Lexmou::MachineLearning::DroneSession2::GeneSession']]]
 ];

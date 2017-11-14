@@ -1,5 +1,8 @@
 var dir_4ac128074754ce1b8751cccfe3cac9fe =
 [
+    [ "DroneSessionTest.cs", "_drone_session_test_8cs.html", [
+      [ "DroneSessionTest", "class_drone_session_test.html", "class_drone_session_test" ]
+    ] ],
     [ "GeneTest.cs", "_gene_test_8cs.html", [
       [ "GeneTest", "class_gene_test.html", "class_gene_test" ]
     ] ],

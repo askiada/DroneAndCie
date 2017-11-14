@@ -3,6 +3,7 @@ var class_u_i_manager =
     [ "Start", "class_u_i_manager.html#a2bd6b48b13b9e14e6292e4b713f59584", null ],
     [ "Update", "class_u_i_manager.html#a6e2db9f2d98e70ccc4864d3af73f1b9e", null ],
     [ "ScanForKeyStroke", "class_u_i_manager.html#a19b765508a71da093cde1a423ad2981d", null ],
+    [ "ScanForKeyMove", "class_u_i_manager.html#ad0406883e57668c3a3d57905eb1c57b4", null ],
     [ "ScanForKeyStabilization", "class_u_i_manager.html#a6b1dd39c58b2571cda8d6cca374fe87e", null ],
     [ "ScanForKeyRestart", "class_u_i_manager.html#a44dccbe538398cca10ab75b7aa0de6df", null ],
     [ "OptionSliderUpdate", "class_u_i_manager.html#adae69e34d0b5155f9404a2840cd332c3", null ],

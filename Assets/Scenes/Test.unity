@@ -324,7 +324,7 @@ MonoBehaviour:
   _task: move
   prefabDrone: {fileID: 1000012061608460, guid: 0f06f3e9f7c8ae642a88d305314c667a,
     type: 2}
-  _seed: 0
+  _seed: 42
   populationSize: 100
   mutationRate: 0.01
   randomIndividualsRate: 0.02
@@ -629,7 +629,7 @@ RectTransform:
   m_RootOrder: 0
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: -280, y: 0}
+  m_AnchoredPosition: {x: -200, y: 0}
   m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &2016442386

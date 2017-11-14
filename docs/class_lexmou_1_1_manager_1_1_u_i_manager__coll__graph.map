@@ -1,0 +1,6 @@
+<map id="Lexmou.Manager.UIManager" name="Lexmou.Manager.UIManager">
+<area shape="rect" id="node6" href="$class_lexmou_1_1_manager_1_1_game_manager.html" title="{Lexmou.Manager.GameManager\n||+ StartNewGame()\l+ TogglePauseMenu()\l}" alt="" coords="347,1613,557,1705"/>
+<area shape="rect" id="node3" href="$class_lexmou_1_1_manager_1_1_drone_manager.html" title="{Lexmou.Manager.DroneManager\n|+ prefabDrone\l+ prefabDoor\l+ stabilizationSeed\l+ stabilizationGeneration\l+ moveSeed\l+ moveGeneration\l+ drone\l+ door\l+ initialY\l&#45; tmpBuildCustomWeights\l&#45; shapes\l&#45; deltaDistribution\l|+ Restart()\l+ Stabilization()\l+ SetNewMovePosition()\l+ Move()\l+ SetMass()\l+ SetDrag()\l+ setMaxThrust()\l+ restartPositionRotation()\l&#45; BuildCustomWeights()\l&#45; Awake()\l}" alt="" coords="24,615,235,985"/>
+<area shape="rect" id="node5" href="$class_lexmou_1_1_manager_1_1_wind_manager.html" title="{Lexmou.Manager.WindManager\n||+ SetWind()\l}" alt="" coords="259,761,466,839"/>
+<area shape="rect" id="node4" href="$class_lexmou_1_1_machine_learning_1_1_evolutionary_1_1_genetic.html" title="Classic implementation of a genetic algorithm. " alt="" coords="5,5,253,552"/>
+</map>

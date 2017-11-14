@@ -1,0 +1,7 @@
+<map id="MultiLayer.Delta" name="MultiLayer.Delta">
+<area shape="rect" id="node2" href="$class_multiplication.html#ac78223b6b29863b1e04b48ca6f536e26" title="Multiplication.ElementWise" alt="" coords="169,5,349,32"/>
+<area shape="rect" id="node3" href="$class_lexmou_1_1_utils_1_1_u_activation.html#a24c728648b83b7cc4784b5f08e6e2fe6" title="Lexmou.Utils.UActivation.\lOutputDerivativeActivation" alt="" coords="174,57,345,98"/>
+<area shape="rect" id="node4" href="$class_multiplication.html#a30ac2aa5d89cca24c2fa894d88cb857a" title="Multiplication.FalkScheme" alt="" coords="172,123,347,149"/>
+<area shape="rect" id="node5" href="$class_lexmou_1_1_utils_1_1_u_activation.html#a0878fdcac6285352a34f41bf0c40e4c4" title="Lexmou.Utils.UActivation.\lInternalDerivativeActivation" alt="" coords="172,174,347,215"/>
+<area shape="rect" id="node6" href="$class_multi_layer.html#ad062f2b5edf5dd15599d4c689348cb86" title="MultiLayer.WriteListArray" alt="" coords="175,240,344,267"/>
+</map>

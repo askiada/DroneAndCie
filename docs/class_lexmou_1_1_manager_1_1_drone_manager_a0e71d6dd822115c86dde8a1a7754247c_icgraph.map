@@ -1,0 +1,5 @@
+<map id="Lexmou.Manager.DroneManager.SetMass" name="Lexmou.Manager.DroneManager.SetMass">
+<area shape="rect" id="node2" href="$class_lexmou_1_1_manager_1_1_u_i_manager.html#ad03ea14259c478c7c47ee97f072cd62b" title="Lexmou.Manager.UIManager.\lDroneMassSliderUpdate" alt="" coords="268,5,460,47"/>
+<area shape="rect" id="node3" href="$class_lexmou_1_1_manager_1_1_u_i_manager.html#a4464701f868555dcf1950bd60d2065b2" title="Lexmou.Manager.UIManager.\lDroneMassSliderInputUpdate" alt="" coords="268,71,460,112"/>
+<area shape="rect" id="node4" href="$class_lexmou_1_1_manager_1_1_u_i_manager.html#a0377b9d67f2fb06a6b627c4f9f340cf1" title="Lexmou.Manager.UIManager.\lDroneMassToggle" alt="" coords="268,136,460,177"/>
+</map>

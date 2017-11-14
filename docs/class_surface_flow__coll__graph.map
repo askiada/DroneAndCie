@@ -1,0 +1,3 @@
+<map id="SurfaceFlow" name="SurfaceFlow">
+<area shape="rect" id="node3" href="$class_surface_creator.html" title="{SurfaceCreator\n|+ resolution\l+ offset\l+ rotation\l+ strength\l+ damping\l+ frequency\l+ octaves\l+ lacunarity\l+ persistence\l+ dimensions\l+ type\l+ coloring\l+ coloringForStrength\l+ analyticalDerivatives\l+ showNormals\l&#45; mesh\l&#45; vertices\l&#45; normals\l&#45; colors\l&#45; currentResolution\l|+ Refresh()\l&#45; OnEnable()\l&#45; CreateGrid()\l&#45; GetXDerivative()\l&#45; GetZDerivative()\l&#45; CalculateNormals()\l&#45; OnDrawGizmosSelected()\l}" alt="" coords="90,132,270,576"/>
+</map>

@@ -1,0 +1,5 @@
+<map id="UIManager.UpdateSliderValueFromFloat" name="UIManager.UpdateSliderValueFromFloat">
+<area shape="rect" id="node2" href="$class_u_i_manager.html#a4d91cd26fecb5870ba34fab73d4202cb" title="UIManager.WindSliderUpdate" alt="" coords="248,5,440,32"/>
+<area shape="rect" id="node3" href="$class_u_i_manager.html#ae082b4d2626de03897a90a061377061b" title="UIManager.DroneMassSlider\lUpdate" alt="" coords="251,57,437,98"/>
+<area shape="rect" id="node4" href="$class_u_i_manager.html#abe5e1e5abdbf686de522b2535f557591" title="UIManager.DroneDragSlider\lUpdate" alt="" coords="253,122,435,163"/>
+</map>

@@ -1,0 +1,4 @@
+<map id="UIManager.WindSliderInputUpdate" name="UIManager.WindSliderInputUpdate">
+<area shape="rect" id="node2" href="$class_u_i_manager.html#a42420b4044cdd1d9cf18eb1725780a79" title="UIManager.UpdateInputField\lValueFromFloat" alt="" coords="232,5,417,47"/>
+<area shape="rect" id="node3" href="$class_wind_manager.html#aeca5625a62fa59def776581d01739347" title="WindManager.SetWind" alt="" coords="247,71,403,98"/>
+</map>

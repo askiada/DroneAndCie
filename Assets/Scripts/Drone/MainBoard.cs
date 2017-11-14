@@ -6,7 +6,7 @@ using MathNet.Numerics.LinearAlgebra;
 using MathNet.Numerics.LinearAlgebra.Double;
 using Lexmou.Utils;
 using Lexmou.MachineLearning.NeuralNetwork.FeedForward;
-using Lexmou.MachineLearning.Session.Quadcopter;
+using Lexmou.MachineLearning.DroneSession2;
 
 public class MainBoard : MonoBehaviour
 {

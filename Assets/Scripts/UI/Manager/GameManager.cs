@@ -1,32 +1,35 @@
 ﻿using UnityEngine;
 using System.Collections;
 
-public class GameManager : MonoBehaviour
+namespace Lexmou.Manager
 {
-
-    public UIManager UI;
-
-    /*void Start()
+    public class GameManager : MonoBehaviour
     {
 
-    }*/
-    //void GenerateMap(GameSettings settings) {  }
-    public void StartNewGame() {  }
+        public UIManager UI;
 
-    public void TogglePauseMenu()
-    {
-        if (UI.GetComponentInChildren<Canvas>().enabled)
+        /*void Start()
         {
-            UI.GetComponentInChildren<Canvas>().enabled = false;
-            Time.timeScale = 1.0f;
-        }
-        else
+
+        }*/
+        //void GenerateMap(GameSettings settings) {  }
+        public void StartNewGame() { }
+
+        public void TogglePauseMenu()
         {
-            UI.GetComponentInChildren<Canvas>().enabled = true;
-            Time.timeScale = 0f;
+            if (UI.GetComponentInChildren<Canvas>().enabled)
+            {
+                UI.GetComponentInChildren<Canvas>().enabled = false;
+                Time.timeScale = 1.0f;
+            }
+            else
+            {
+                UI.GetComponentInChildren<Canvas>().enabled = true;
+                Time.timeScale = 0f;
+            }
+
+            //Debug.Log("GAMEMANAGER:: TimeScale: " + Time.timeScale);
         }
 
-        //Debug.Log("GAMEMANAGER:: TimeScale: " + Time.timeScale);
     }
-
 }

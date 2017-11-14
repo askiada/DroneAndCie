@@ -1,0 +1,5 @@
+<map id="Lexmou.Manager.DroneManager.SetDrag" name="Lexmou.Manager.DroneManager.SetDrag">
+<area shape="rect" id="node2" href="$class_lexmou_1_1_manager_1_1_u_i_manager.html#a23c0bb1797da1fed8d6264d71f4b6475" title="Lexmou.Manager.UIManager.\lDroneDragSliderUpdate" alt="" coords="268,5,460,47"/>
+<area shape="rect" id="node3" href="$class_lexmou_1_1_manager_1_1_u_i_manager.html#a9d43cfd9a8dc880490d87e09c899d084" title="Lexmou.Manager.UIManager.\lDroneDragSliderInputUpdate" alt="" coords="268,71,460,112"/>
+<area shape="rect" id="node4" href="$class_lexmou_1_1_manager_1_1_u_i_manager.html#aa3cd92d325eaa9a5ce71d72313528626" title="Lexmou.Manager.UIManager.\lDroneDragToggle" alt="" coords="268,136,460,177"/>
+</map>
