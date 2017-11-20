@@ -20,8 +20,9 @@ public class InputControl : MonoBehaviour
     public float constantAileron = 0.0f;
 
 
-    public void SendSignalWithMLP()
+    public void SendSignalWithMLP(Vector<float> input)
     {
+        MainBoard.inputMLP = input;
         ControlSignal signal = new ControlSignal();
         signal.Throttle = MainBoard.mlp.layers[MainBoard.mlp.shapesSize - 1]
         [3, 0];

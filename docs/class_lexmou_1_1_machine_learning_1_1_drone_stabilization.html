@@ -109,8 +109,8 @@ Inheritance diagram for Lexmou.MachineLearning.DroneStabilization:</div>
 <div class="dyncontent">
 <div class="center"><img src="class_lexmou_1_1_machine_learning_1_1_drone_stabilization__inherit__graph.png" border="0" usemap="#_lexmou_8_machine_learning_8_drone_stabilization_inherit__map" alt="Inheritance graph"/></div>
 <map name="_lexmou_8_machine_learning_8_drone_stabilization_inherit__map" id="_lexmou_8_machine_learning_8_drone_stabilization_inherit__map">
-<area shape="rect" id="node2" href="class_lexmou_1_1_machine_learning_1_1_drone_task.html" title="{DroneTask\n|+ spacing\l+ initialY\l+ individualSize\l+ shapes\l|}" alt="" coords="53,131,165,252"/>
-<area shape="rect" id="node3" href="class_lexmou_1_1_machine_learning_1_1_task.html" title="{Task\n||+ Build()\l}" alt="" coords="74,5,145,83"/>
+<area shape="rect" id="node2" href="class_lexmou_1_1_machine_learning_1_1_drone_task.html" title="{DroneTask\n|+ spacing\l+ initialY\l+ individualSize\l+ shapes\l+ signal\l|+ GetInitialposition()\l+ EvaluateIndividual()\l}" alt="" coords="38,131,181,281"/>
+<area shape="rect" id="node3" href="class_lexmou_1_1_machine_learning_1_1_task.html" title="{Task\n||+ UCSignal()\l}" alt="" coords="61,5,157,83"/>
 </map>
 </div>
 <div class="dynheader">
@@ -118,8 +118,9 @@ Collaboration diagram for Lexmou.MachineLearning.DroneStabilization:</div>
 <div class="dyncontent">
 <div class="center"><img src="class_lexmou_1_1_machine_learning_1_1_drone_stabilization__coll__graph.png" border="0" usemap="#_lexmou_8_machine_learning_8_drone_stabilization_coll__map" alt="Collaboration graph"/></div>
 <map name="_lexmou_8_machine_learning_8_drone_stabilization_coll__map" id="_lexmou_8_machine_learning_8_drone_stabilization_coll__map">
-<area shape="rect" id="node2" href="class_lexmou_1_1_machine_learning_1_1_drone_task.html" title="{DroneTask\n|+ spacing\l+ initialY\l+ individualSize\l+ shapes\l|}" alt="" coords="53,131,165,252"/>
-<area shape="rect" id="node3" href="class_lexmou_1_1_machine_learning_1_1_task.html" title="{Task\n||+ Build()\l}" alt="" coords="74,5,145,83"/>
+<area shape="rect" id="node2" href="class_lexmou_1_1_machine_learning_1_1_drone_task.html" title="{DroneTask\n|+ spacing\l+ initialY\l+ individualSize\l+ shapes\l|+ GetInitialposition()\l+ EvaluateIndividual()\l}" alt="" coords="42,145,185,281"/>
+<area shape="rect" id="node3" href="class_lexmou_1_1_machine_learning_1_1_task.html" title="{Task\n||+ UCSignal()\l}" alt="" coords="5,5,101,83"/>
+<area shape="rect" id="node4" href="class_u_c_signal.html" title="{UCSignal\n|+ input\l|+ UCSignal()\l}" alt="" coords="125,5,221,83"/>
 </map>
 </div>
 <table class="memberdecls">
@@ -127,8 +128,12 @@ Collaboration diagram for Lexmou.MachineLearning.DroneStabilization:</div>
 Public Member Functions</h2></td></tr>
 <tr class="memitem:a0a707fa14c2153fc54305e5e3c41c0b0"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_lexmou_1_1_machine_learning_1_1_drone_stabilization.html#a0a707fa14c2153fc54305e5e3c41c0b0">DroneStabilization</a> ()</td></tr>
 <tr class="separator:a0a707fa14c2153fc54305e5e3c41c0b0"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a459b353bdf443107450cda2c203febd1"><td class="memItemLeft" align="right" valign="top">override void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_lexmou_1_1_machine_learning_1_1_drone_stabilization.html#a459b353bdf443107450cda2c203febd1">Build</a> (params object[] args)</td></tr>
-<tr class="separator:a459b353bdf443107450cda2c203febd1"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a9605bda09047e4f7c6d6ff3ae081bcfa"><td class="memItemLeft" align="right" valign="top">override Vector3&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_lexmou_1_1_machine_learning_1_1_drone_stabilization.html#a9605bda09047e4f7c6d6ff3ae081bcfa">GetInitialposition</a> (int i)</td></tr>
+<tr class="separator:a9605bda09047e4f7c6d6ff3ae081bcfa"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae994502c337a70cb72ef7270d0dbd9fd"><td class="memItemLeft" align="right" valign="top">override float&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_lexmou_1_1_machine_learning_1_1_drone_stabilization.html#ae994502c337a70cb72ef7270d0dbd9fd">EvaluateIndividual</a> (int i, Rigidbody rigid)</td></tr>
+<tr class="separator:ae994502c337a70cb72ef7270d0dbd9fd"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a3da37134f1cacd93ef5e7d6d5467b564"><td class="memItemLeft" align="right" valign="top">override <a class="el" href="class_u_c_signal.html">UCSignal</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_lexmou_1_1_machine_learning_1_1_drone_stabilization.html#a3da37134f1cacd93ef5e7d6d5467b564">UCSignal</a> (Rigidbody rigid)</td></tr>
+<tr class="separator:a3da37134f1cacd93ef5e7d6d5467b564"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="inherited"></a>
 Additional Inherited Members</h2></td></tr>
@@ -141,10 +146,12 @@ Additional Inherited Members</h2></td></tr>
 <tr class="separator:a46c12dc9e85f568190ff1b8af7774c54 inherit pub_attribs_class_lexmou_1_1_machine_learning_1_1_drone_task"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a4601024a74ade72c89fb463fb07eb2c2 inherit pub_attribs_class_lexmou_1_1_machine_learning_1_1_drone_task"><td class="memItemLeft" align="right" valign="top">List&lt; int &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_lexmou_1_1_machine_learning_1_1_drone_task.html#a4601024a74ade72c89fb463fb07eb2c2">shapes</a></td></tr>
 <tr class="separator:a4601024a74ade72c89fb463fb07eb2c2 inherit pub_attribs_class_lexmou_1_1_machine_learning_1_1_drone_task"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a71b1300fcca5420fe727e598b837eab1 inherit pub_attribs_class_lexmou_1_1_machine_learning_1_1_drone_task"><td class="memItemLeft" align="right" valign="top"><a class="el" href="class_u_c_signal.html">UCSignal</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_lexmou_1_1_machine_learning_1_1_drone_task.html#a71b1300fcca5420fe727e598b837eab1">signal</a></td></tr>
+<tr class="separator:a71b1300fcca5420fe727e598b837eab1 inherit pub_attribs_class_lexmou_1_1_machine_learning_1_1_drone_task"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock">
-<p>Definition at line <a class="el" href="_drone_stabilization_8cs_source.html#l00012">12</a> of file <a class="el" href="_drone_stabilization_8cs_source.html">DroneStabilization.cs</a>.</p>
+<p>Definition at line <a class="el" href="_drone_stabilization_8cs_source.html#l00014">14</a> of file <a class="el" href="_drone_stabilization_8cs_source.html">DroneStabilization.cs</a>.</p>
 </div><h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
 <a id="a0a707fa14c2153fc54305e5e3c41c0b0"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a0a707fa14c2153fc54305e5e3c41c0b0">&sect;&nbsp;</a></span>DroneStabilization()</h2>
@@ -161,13 +168,13 @@ Additional Inherited Members</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="_drone_stabilization_8cs_source.html#l00015">15</a> of file <a class="el" href="_drone_stabilization_8cs_source.html">DroneStabilization.cs</a>.</p>
+<p>Definition at line <a class="el" href="_drone_stabilization_8cs_source.html#l00016">16</a> of file <a class="el" href="_drone_stabilization_8cs_source.html">DroneStabilization.cs</a>.</p>
 
 </div>
 </div>
 <h2 class="groupheader">Member Function Documentation</h2>
-<a id="a459b353bdf443107450cda2c203febd1"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a459b353bdf443107450cda2c203febd1">&sect;&nbsp;</a></span>Build()</h2>
+<a id="a9605bda09047e4f7c6d6ff3ae081bcfa"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a9605bda09047e4f7c6d6ff3ae081bcfa">&sect;&nbsp;</a></span>GetInitialposition()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -176,10 +183,10 @@ Additional Inherited Members</h2></td></tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">override void Lexmou.MachineLearning.DroneStabilization.Build </td>
+          <td class="memname">override Vector3 Lexmou.MachineLearning.DroneStabilization.GetInitialposition </td>
           <td>(</td>
-          <td class="paramtype">params object []&#160;</td>
-          <td class="paramname"><em>args</em></td><td>)</td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>i</em></td><td>)</td>
           <td></td>
         </tr>
       </table>
@@ -190,9 +197,95 @@ Additional Inherited Members</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p>Implements <a class="el" href="class_lexmou_1_1_machine_learning_1_1_task.html#a0e5bc9981fb452ce799c5ebd4cb85438">Lexmou.MachineLearning.Task</a>.</p>
+<p>Implements <a class="el" href="class_lexmou_1_1_machine_learning_1_1_drone_task.html#a9474f67cd61740665d99265428541df8">Lexmou.MachineLearning.DroneTask</a>.</p>
 
-<p>Definition at line <a class="el" href="_drone_stabilization_8cs_source.html#l00025">25</a> of file <a class="el" href="_drone_stabilization_8cs_source.html">DroneStabilization.cs</a>.</p>
+<p>Definition at line <a class="el" href="_drone_stabilization_8cs_source.html#l00027">27</a> of file <a class="el" href="_drone_stabilization_8cs_source.html">DroneStabilization.cs</a>.</p>
+
+</div>
+</div>
+<a id="ae994502c337a70cb72ef7270d0dbd9fd"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ae994502c337a70cb72ef7270d0dbd9fd">&sect;&nbsp;</a></span>EvaluateIndividual()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">override float Lexmou.MachineLearning.DroneStabilization.EvaluateIndividual </td>
+          <td>(</td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>i</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">Rigidbody&#160;</td>
+          <td class="paramname"><em>rigid</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Implements <a class="el" href="class_lexmou_1_1_machine_learning_1_1_drone_task.html#acce47671b67d67e97157d374d27b86ee">Lexmou.MachineLearning.DroneTask</a>.</p>
+
+<p>Definition at line <a class="el" href="_drone_stabilization_8cs_source.html#l00032">32</a> of file <a class="el" href="_drone_stabilization_8cs_source.html">DroneStabilization.cs</a>.</p>
+<div class="dynheader">
+Here is the call graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_lexmou_1_1_machine_learning_1_1_drone_stabilization_ae994502c337a70cb72ef7270d0dbd9fd_cgraph.png" border="0" usemap="#class_lexmou_1_1_machine_learning_1_1_drone_stabilization_ae994502c337a70cb72ef7270d0dbd9fd_cgraph" alt=""/></div>
+<map name="class_lexmou_1_1_machine_learning_1_1_drone_stabilization_ae994502c337a70cb72ef7270d0dbd9fd_cgraph" id="class_lexmou_1_1_machine_learning_1_1_drone_stabilization_ae994502c337a70cb72ef7270d0dbd9fd_cgraph">
+<area shape="rect" id="node2" href="class_lexmou_1_1_utils_1_1_u_angle.html#a6e7e088ea5255fb59ba5f72e7c5d8561" title="Lexmou.Utils.UAngle.Steer\lAngle" alt="" coords="261,5,440,47"/>
+</map>
+</div>
+
+</div>
+</div>
+<a id="a3da37134f1cacd93ef5e7d6d5467b564"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a3da37134f1cacd93ef5e7d6d5467b564">&sect;&nbsp;</a></span>UCSignal()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">override <a class="el" href="class_u_c_signal.html">UCSignal</a> Lexmou.MachineLearning.DroneStabilization.UCSignal </td>
+          <td>(</td>
+          <td class="paramtype">Rigidbody&#160;</td>
+          <td class="paramname"><em>rigid</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Implements <a class="el" href="class_lexmou_1_1_machine_learning_1_1_task.html#a5d3767708c03a5a8a8132e9352ef0592">Lexmou.MachineLearning.Task</a>.</p>
+
+<p>Definition at line <a class="el" href="_drone_stabilization_8cs_source.html#l00037">37</a> of file <a class="el" href="_drone_stabilization_8cs_source.html">DroneStabilization.cs</a>.</p>
+<div class="dynheader">
+Here is the call graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_lexmou_1_1_machine_learning_1_1_drone_stabilization_a3da37134f1cacd93ef5e7d6d5467b564_cgraph.png" border="0" usemap="#class_lexmou_1_1_machine_learning_1_1_drone_stabilization_a3da37134f1cacd93ef5e7d6d5467b564_cgraph" alt=""/></div>
+<map name="class_lexmou_1_1_machine_learning_1_1_drone_stabilization_a3da37134f1cacd93ef5e7d6d5467b564_cgraph" id="class_lexmou_1_1_machine_learning_1_1_drone_stabilization_a3da37134f1cacd93ef5e7d6d5467b564_cgraph">
+<area shape="rect" id="node2" href="class_lexmou_1_1_utils_1_1_u_angle.html#a6e7e088ea5255fb59ba5f72e7c5d8561" title="Lexmou.Utils.UAngle.Steer\lAngle" alt="" coords="261,5,440,47"/>
+</map>
+</div>
 
 </div>
 </div>

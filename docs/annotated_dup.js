@@ -2,7 +2,9 @@ var annotated_dup =
 [
     [ "Drone", "namespace_drone.html", "namespace_drone" ],
     [ "Lexmou", "namespace_lexmou.html", "namespace_lexmou" ],
+    [ "AIInputControl", "class_a_i_input_control.html", "class_a_i_input_control" ],
     [ "Builder", "class_builder.html", "class_builder" ],
+    [ "CompassReceiver", "class_compass_receiver.html", "class_compass_receiver" ],
     [ "ControlReceiver", "class_control_receiver.html", "class_control_receiver" ],
     [ "DroneSessionTest", "class_drone_session_test.html", "class_drone_session_test" ],
     [ "Extensions", "class_extensions.html", "class_extensions" ],
@@ -10,7 +12,9 @@ var annotated_dup =
     [ "GPUInstancingTest", "class_g_p_u_instancing_test.html", "class_g_p_u_instancing_test" ],
     [ "Gyro", "class_gyro.html", "class_gyro" ],
     [ "InputControl", "class_input_control.html", "class_input_control" ],
+    [ "InputControl2", "class_input_control2.html", "class_input_control2" ],
     [ "MainBoard", "class_main_board.html", "class_main_board" ],
+    [ "ManualInputControl", "class_manual_input_control.html", "class_manual_input_control" ],
     [ "MLPTest", "class_m_l_p_test.html", "class_m_l_p_test" ],
     [ "MotorsController", "class_motors_controller.html", "class_motors_controller" ],
     [ "MotorThrust", "class_motor_thrust.html", "class_motor_thrust" ],
@@ -19,8 +23,10 @@ var annotated_dup =
     [ "Noise", "class_noise.html", "class_noise" ],
     [ "NoiseSample", "struct_noise_sample.html", "struct_noise_sample" ],
     [ "Perlin", "class_perlin.html", "class_perlin" ],
+    [ "SensorSignal", "class_sensor_signal.html", "class_sensor_signal" ],
     [ "SliderMoveHandler", "class_slider_move_handler.html", "class_slider_move_handler" ],
     [ "TextureCreator", "class_texture_creator.html", "class_texture_creator" ],
     [ "TextureCreatorInspector", "class_texture_creator_inspector.html", "class_texture_creator_inspector" ],
+    [ "UCSignal", "class_u_c_signal.html", "class_u_c_signal" ],
     [ "UMatrixTest", "class_u_matrix_test.html", "class_u_matrix_test" ]
 ];

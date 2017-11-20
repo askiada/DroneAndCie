@@ -1,10 +1,12 @@
 var searchData=
 [
-  ['mainboard',['MainBoard',['../class_main_board.html',1,'MainBoard'],['../class_control_receiver.html#aad6351ab1f6b5bfb6b224db34e19475b',1,'ControlReceiver.MainBoard()'],['../class_input_control.html#a87d6e903e7c260cce3ecca568e18a22b',1,'InputControl.MainBoard()']]],
+  ['mainboard',['MainBoard',['../class_main_board.html',1,'MainBoard'],['../class_control_receiver.html#aad6351ab1f6b5bfb6b224db34e19475b',1,'ControlReceiver.MainBoard()'],['../class_input_control.html#a87d6e903e7c260cce3ecca568e18a22b',1,'InputControl.MainBoard()'],['../class_input_control2.html#ae87604e2aa92bf99b6b981cd4b19e871',1,'InputControl2.MainBoard()']]],
   ['mainboard_2ecs',['MainBoard.cs',['../_main_board_8cs.html',1,'']]],
   ['make2dmatrix',['Make2DMatrix',['../class_lexmou_1_1_utils_1_1_u_matrix.html#a1647f410a576b719af0acce48c0f1c9c',1,'Lexmou::Utils::UMatrix']]],
   ['make2dmatrixtest',['Make2DMatrixTest',['../class_u_matrix_test.html#ad3f3f24e191a398384e71956bbbd7fa6',1,'UMatrixTest']]],
   ['manual',['manual',['../class_input_control.html#a551ee5b9b84af1697e1efc9dd2db2469',1,'InputControl']]],
+  ['manualinputcontrol',['ManualInputControl',['../class_manual_input_control.html',1,'']]],
+  ['manualinputcontrol_2ecs',['ManualInputControl.cs',['../_manual_input_control_8cs.html',1,'']]],
   ['maxthrust',['MaxThrust',['../class_motor_thrust.html#ae554dfd8bab2e7190bcc53321343c48d',1,'MotorThrust']]],
   ['meanstd',['meanStd',['../class_lexmou_1_1_machine_learning_1_1_evolutionary_1_1_genetic.html#aa2818ad0a5c8ecce7df3cfeee8cd5e94',1,'Lexmou::MachineLearning::Evolutionary::Genetic']]],
   ['median',['median',['../class_lexmou_1_1_machine_learning_1_1_evolutionary_1_1_genetic.html#a0abb298f2e968ab01a46788103a2acd5',1,'Lexmou::MachineLearning::Evolutionary::Genetic']]],

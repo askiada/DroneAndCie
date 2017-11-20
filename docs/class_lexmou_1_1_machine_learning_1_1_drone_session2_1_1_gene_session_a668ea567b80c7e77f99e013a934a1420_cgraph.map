@@ -1,4 +1,5 @@
 <map id="Lexmou.MachineLearning.DroneSession2.GeneSession.ResetAll" name="Lexmou.MachineLearning.DroneSession2.GeneSession.ResetAll">
 <area shape="rect" id="node2" href="$class_lexmou_1_1_utils_1_1_u_angle.html#abe32a64a966bfab546ebc875d6277446" title="Lexmou.Utils.UAngle.Reverse\lSteerAngle" alt="" coords="291,5,485,47"/>
-<area shape="rect" id="node3" href="$class_lexmou_1_1_machine_learning_1_1_evolutionary_1_1_genetic.html#ab97494979da382d4c6ef031106eb01ab" title="Get a specific individual. " alt="" coords="264,71,512,112"/>
+<area shape="rect" id="node3" href="$class_lexmou_1_1_machine_learning_1_1_neural_network_1_1_feed_forward_1_1_multi_layer_maths_net.html#a1f5aaaab655216f49d5ef1c57a561bf3" title="Lexmou.MachineLearning.Neural\lNetwork.FeedForward.MultiLayerMaths\lNet.Reset" alt="" coords="264,71,512,127"/>
+<area shape="rect" id="node4" href="$class_lexmou_1_1_machine_learning_1_1_evolutionary_1_1_genetic.html#ab97494979da382d4c6ef031106eb01ab" title="Get a specific individual. " alt="" coords="264,152,512,193"/>
 </map>

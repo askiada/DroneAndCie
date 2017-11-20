@@ -1,3 +1,4 @@
 <map id="Lexmou.MachineLearning.NeuralNetwork.FeedForward.MultiLayerMathsNet.PropagateForward" name="Lexmou.MachineLearning.NeuralNetwork.FeedForward.MultiLayerMathsNet.PropagateForward">
-<area shape="rect" id="node2" href="$class_m_l_p_test.html#a17195550a8fd7c85887d51406faa13a0" title="MLPTest.PropagateForwardTest" alt="" coords="301,20,509,47"/>
+<area shape="rect" id="node2" href="$class_m_l_p_test.html#a17195550a8fd7c85887d51406faa13a0" title="MLPTest.PropagateForwardTest" alt="" coords="301,5,509,32"/>
+<area shape="rect" id="node3" href="$class_lexmou_1_1_machine_learning_1_1_drone_session.html#a7035b9f59ebcf492479c0118c91b0fd4" title="Lexmou.MachineLearning.Drone\lSession.RunEachFixedUpdate" alt="" coords="301,57,509,98"/>
 </map>

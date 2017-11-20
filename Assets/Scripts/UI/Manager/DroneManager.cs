@@ -61,7 +61,7 @@ namespace Lexmou.Manager
             if (stabilizationGeneration != 0)
             {
                 shapes = new List<int>() { 9, 4 };
-                drone.GetComponent<MainBoard>().inputSize = 9;
+                //drone.GetComponent<MainBoard>().inputSize = 9;
                 float[] floatArr = new float[40];
                 gene.LoadBest(stabilizationGeneration, floatArr);
                 gene.generation = stabilizationGeneration;
@@ -74,7 +74,7 @@ namespace Lexmou.Manager
             {
 
                 shapes = new List<int>() { 12, 4 };
-                drone.GetComponent<MainBoard>().inputSize = 12;
+                //drone.GetComponent<MainBoard>().inputSize = 12;
                 float[] floatArr = new float[52];
                 gene.LoadBest(moveGeneration, floatArr);
                 gene.generation = moveGeneration;

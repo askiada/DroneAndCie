@@ -1,4 +1,5 @@
 <map id="MainBoard.SendControlSignal" name="MainBoard.SendControlSignal">
-<area shape="rect" id="node2" href="$class_input_control.html#ad8d0024a0ae68e6199e09f0cac781aaa" title="InputControl.SendSignalWithMLP" alt="" coords="248,5,463,32"/>
+<area shape="rect" id="node2" href="$class_input_control.html#a73c5bedcec6bc944173cbf98ba0b9d88" title="InputControl.SendSignalWithMLP" alt="" coords="248,5,463,32"/>
 <area shape="rect" id="node3" href="$class_input_control.html#a6d811b0f0726d2713042e0187130c55b" title="InputControl.FixedUpdate" alt="" coords="271,56,439,83"/>
+<area shape="rect" id="node4" href="$class_manual_input_control.html#a89f7e784ff732cd227b38a9c0b7ce7f1" title="ManualInputControl.SendSignal" alt="" coords="254,107,457,133"/>
 </map>

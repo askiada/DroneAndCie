@@ -1,0 +1,4 @@
+<map id="InputControl2" name="InputControl2">
+<area shape="rect" id="node3" href="$class_a_i_input_control.html" title="{AIInputControl\n||+ SendSignal()\l}" alt="" coords="5,256,113,333"/>
+<area shape="rect" id="node4" href="$class_manual_input_control.html" title="{ManualInputControl\n||+ SendSignal()\l}" alt="" coords="138,256,271,333"/>
+</map>

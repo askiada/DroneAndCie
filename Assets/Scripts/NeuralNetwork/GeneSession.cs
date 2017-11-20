@@ -347,7 +347,7 @@ namespace Lexmou.MachineLearning.DroneSession2 {
                 }
                 dronePopulation[i].name = "Drone " + i;
 
-                dronePopulation[i].GetComponent<MainBoard>().inputSize = shapes[0];
+                //dronePopulation[i].GetComponent<MainBoard>().inputSize = shapes[0];
                 mlpPopulation[i] = new MultiLayerMathsNet(seed, rndGenerator, shapes, 1, initialValueWeights);
                 dronePopulation[i].GetComponent<MainBoard>().mlp = mlpPopulation[i];
 
@@ -385,8 +385,7 @@ namespace Lexmou.MachineLearning.DroneSession2 {
 
         void ConfigureDrone(GameObject drone, Vector<float> input)
         {
-            drone.GetComponent<MainBoard>().inputMLP = input;
-            drone.GetComponent<InputControl>().SendSignalWithMLP();
+            drone.GetComponent<InputControl>().SendSignalWithMLP(input);
         }
 
 
@@ -482,7 +481,7 @@ namespace Lexmou.MachineLearning.DroneSession2 {
 
                 droneBest.GetComponent<MainBoard>().mlp = new MultiLayerMathsNet(seed, rndGenerator, shapes, 1, initialValueWeights);
 
-                droneBest.GetComponent<MainBoard>().inputSize = shapes[0];
+                //droneBest.GetComponent<MainBoard>().inputSize = shapes[0];
                 BuildCustomWeights(gene.GetBestIndividual());
                 droneBest.GetComponent<MainBoard>().mlp.Reset(false, tmpBuildCustomWeights);
 

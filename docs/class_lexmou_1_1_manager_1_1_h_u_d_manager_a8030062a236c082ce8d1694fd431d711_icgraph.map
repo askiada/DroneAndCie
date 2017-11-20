@@ -1,3 +1,4 @@
 <map id="Lexmou.Manager.HUDManager.UpdateTextLayout" name="Lexmou.Manager.HUDManager.UpdateTextLayout">
 <area shape="rect" id="node2" href="$class_lexmou_1_1_machine_learning_1_1_drone_session2_1_1_gene_session.html#ade1e8083fdb85b185f9a4732037ec5a1" title="Lexmou.MachineLearning.Drone\lSession2.GeneSession.FixedUpdate" alt="" coords="260,5,495,47"/>
+<area shape="rect" id="node3" href="$class_lexmou_1_1_machine_learning_1_1_drone_session.html#ab3786903593ae864d9679bbfda8d8845" title="Lexmou.MachineLearning.Drone\lSession.RunEachIntervalUpdate" alt="" coords="273,71,481,112"/>
 </map>

@@ -12,11 +12,14 @@ namespace Lexmou.MachineLearning
     {
 
         private float nextUpdate;
-        private float intervalUpdate;
+        public float intervalUpdate = 5.0f;
 
         public SystemRandomSource rndGenerator;
         public int _seed;
         public int seed { get { return _seed; } set { _seed = value; } }
+
+        public float _timeScale;
+        public float timeScale { get { return _timeScale; } set { _timeScale = value; } }
 
         public abstract void Build();
         public abstract void BuildHUD();
@@ -53,12 +56,15 @@ namespace Lexmou.MachineLearning
         {
             Debug.Log("Constructor Session");
             SetParametersFromCommandLine();
-            Build();
+            //Debug.Log(seed);
+
         }
 
         void Awake()
         {
             Debug.Log("Awake Session");
+            Build();
+            Time.timeScale = timeScale;
             BuildHUD();
             BuildSessionWriter();
             nextUpdate = intervalUpdate;

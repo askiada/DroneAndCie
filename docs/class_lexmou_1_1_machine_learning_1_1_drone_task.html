@@ -98,10 +98,11 @@ $(document).ready(function(){initNavTree('class_lexmou_1_1_machine_learning_1_1_
 
 <div class="header">
   <div class="summary">
+<a href="#pub-methods">Public Member Functions</a> &#124;
 <a href="#pub-attribs">Public Attributes</a> &#124;
 <a href="class_lexmou_1_1_machine_learning_1_1_drone_task-members.html">List of all members</a>  </div>
   <div class="headertitle">
-<div class="title">Lexmou.MachineLearning.DroneTask Class Reference</div>  </div>
+<div class="title">Lexmou.MachineLearning.DroneTask Class Reference<span class="mlabels"><span class="mlabel">abstract</span></span></div>  </div>
 </div><!--header-->
 <div class="contents">
 <div class="dynheader">
@@ -109,8 +110,8 @@ Inheritance diagram for Lexmou.MachineLearning.DroneTask:</div>
 <div class="dyncontent">
 <div class="center"><img src="class_lexmou_1_1_machine_learning_1_1_drone_task__inherit__graph.png" border="0" usemap="#_lexmou_8_machine_learning_8_drone_task_inherit__map" alt="Inheritance graph"/></div>
 <map name="_lexmou_8_machine_learning_8_drone_task_inherit__map" id="_lexmou_8_machine_learning_8_drone_task_inherit__map">
-<area shape="rect" id="node3" href="class_lexmou_1_1_machine_learning_1_1_drone_stabilization.html" title="{Lexmou.MachineLearning.Drone\lStabilization\n||+ DroneStabilization()\l+ Build()\l}" alt="" coords="19,300,227,407"/>
-<area shape="rect" id="node2" href="class_lexmou_1_1_machine_learning_1_1_task.html" title="{Task\n||+ Build()\l}" alt="" coords="88,5,159,83"/>
+<area shape="rect" id="node3" href="class_lexmou_1_1_machine_learning_1_1_drone_stabilization.html" title="{Lexmou.MachineLearning.Drone\lStabilization\n||+ DroneStabilization()\l+ GetInitialposition()\l+ EvaluateIndividual()\l+ UCSignal()\l}" alt="" coords="19,329,227,465"/>
+<area shape="rect" id="node2" href="class_lexmou_1_1_machine_learning_1_1_task.html" title="{Task\n||+ UCSignal()\l}" alt="" coords="75,5,171,83"/>
 </map>
 </div>
 <div class="dynheader">
@@ -118,10 +119,21 @@ Collaboration diagram for Lexmou.MachineLearning.DroneTask:</div>
 <div class="dyncontent">
 <div class="center"><img src="class_lexmou_1_1_machine_learning_1_1_drone_task__coll__graph.png" border="0" usemap="#_lexmou_8_machine_learning_8_drone_task_coll__map" alt="Collaboration graph"/></div>
 <map name="_lexmou_8_machine_learning_8_drone_task_coll__map" id="_lexmou_8_machine_learning_8_drone_task_coll__map">
-<area shape="rect" id="node2" href="class_lexmou_1_1_machine_learning_1_1_task.html" title="{Task\n||+ Build()\l}" alt="" coords="88,5,159,83"/>
+<area shape="rect" id="node2" href="class_lexmou_1_1_machine_learning_1_1_task.html" title="{Task\n||+ UCSignal()\l}" alt="" coords="15,5,111,83"/>
+<area shape="rect" id="node3" href="class_u_c_signal.html" title="{UCSignal\n|+ input\l|+ UCSignal()\l}" alt="" coords="135,5,231,83"/>
 </map>
 </div>
 <table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
+Public Member Functions</h2></td></tr>
+<tr class="memitem:a9474f67cd61740665d99265428541df8"><td class="memItemLeft" align="right" valign="top">abstract Vector3&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_lexmou_1_1_machine_learning_1_1_drone_task.html#a9474f67cd61740665d99265428541df8">GetInitialposition</a> (int i)</td></tr>
+<tr class="separator:a9474f67cd61740665d99265428541df8"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:acce47671b67d67e97157d374d27b86ee"><td class="memItemLeft" align="right" valign="top">abstract float&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_lexmou_1_1_machine_learning_1_1_drone_task.html#acce47671b67d67e97157d374d27b86ee">EvaluateIndividual</a> (int i, Rigidbody rigid)</td></tr>
+<tr class="separator:acce47671b67d67e97157d374d27b86ee"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="inherit_header pub_methods_class_lexmou_1_1_machine_learning_1_1_task"><td colspan="2" onclick="javascript:toggleInherit('pub_methods_class_lexmou_1_1_machine_learning_1_1_task')"><img src="closed.png" alt="-"/>&#160;Public Member Functions inherited from <a class="el" href="class_lexmou_1_1_machine_learning_1_1_task.html">Lexmou.MachineLearning.Task</a></td></tr>
+<tr class="memitem:a5d3767708c03a5a8a8132e9352ef0592 inherit pub_methods_class_lexmou_1_1_machine_learning_1_1_task"><td class="memItemLeft" align="right" valign="top">abstract <a class="el" href="class_u_c_signal.html">UCSignal</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_lexmou_1_1_machine_learning_1_1_task.html#a5d3767708c03a5a8a8132e9352ef0592">UCSignal</a> (Rigidbody rigid)</td></tr>
+<tr class="separator:a5d3767708c03a5a8a8132e9352ef0592 inherit pub_methods_class_lexmou_1_1_machine_learning_1_1_task"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-attribs"></a>
 Public Attributes</h2></td></tr>
 <tr class="memitem:aa5a6aeb19de7cb41175bf93e44ff5419"><td class="memItemLeft" align="right" valign="top">float&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_lexmou_1_1_machine_learning_1_1_drone_task.html#aa5a6aeb19de7cb41175bf93e44ff5419">spacing</a> = 5.0f</td></tr>
@@ -132,17 +144,96 @@ Public Attributes</h2></td></tr>
 <tr class="separator:a46c12dc9e85f568190ff1b8af7774c54"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a4601024a74ade72c89fb463fb07eb2c2"><td class="memItemLeft" align="right" valign="top">List&lt; int &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_lexmou_1_1_machine_learning_1_1_drone_task.html#a4601024a74ade72c89fb463fb07eb2c2">shapes</a></td></tr>
 <tr class="separator:a4601024a74ade72c89fb463fb07eb2c2"><td class="memSeparator" colspan="2">&#160;</td></tr>
-</table><table class="memberdecls">
-<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="inherited"></a>
-Additional Inherited Members</h2></td></tr>
-<tr class="inherit_header pub_methods_class_lexmou_1_1_machine_learning_1_1_task"><td colspan="2" onclick="javascript:toggleInherit('pub_methods_class_lexmou_1_1_machine_learning_1_1_task')"><img src="closed.png" alt="-"/>&#160;Public Member Functions inherited from <a class="el" href="class_lexmou_1_1_machine_learning_1_1_task.html">Lexmou.MachineLearning.Task</a></td></tr>
-<tr class="memitem:a0e5bc9981fb452ce799c5ebd4cb85438 inherit pub_methods_class_lexmou_1_1_machine_learning_1_1_task"><td class="memItemLeft" align="right" valign="top">abstract void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_lexmou_1_1_machine_learning_1_1_task.html#a0e5bc9981fb452ce799c5ebd4cb85438">Build</a> (params object[] args)</td></tr>
-<tr class="separator:a0e5bc9981fb452ce799c5ebd4cb85438 inherit pub_methods_class_lexmou_1_1_machine_learning_1_1_task"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a71b1300fcca5420fe727e598b837eab1"><td class="memItemLeft" align="right" valign="top"><a class="el" href="class_u_c_signal.html">UCSignal</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_lexmou_1_1_machine_learning_1_1_drone_task.html#a71b1300fcca5420fe727e598b837eab1">signal</a></td></tr>
+<tr class="separator:a71b1300fcca5420fe727e598b837eab1"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock">
 <p>Definition at line <a class="el" href="_drone_task_8cs_source.html#l00007">7</a> of file <a class="el" href="_drone_task_8cs_source.html">DroneTask.cs</a>.</p>
-</div><h2 class="groupheader">Member Data Documentation</h2>
+</div><h2 class="groupheader">Member Function Documentation</h2>
+<a id="a9474f67cd61740665d99265428541df8"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a9474f67cd61740665d99265428541df8">&sect;&nbsp;</a></span>GetInitialposition()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">abstract Vector3 Lexmou.MachineLearning.DroneTask.GetInitialposition </td>
+          <td>(</td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>i</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">pure virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Implemented in <a class="el" href="class_lexmou_1_1_machine_learning_1_1_drone_stabilization.html#a9605bda09047e4f7c6d6ff3ae081bcfa">Lexmou.MachineLearning.DroneStabilization</a>.</p>
+<div class="dynheader">
+Here is the caller graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_lexmou_1_1_machine_learning_1_1_drone_task_a9474f67cd61740665d99265428541df8_icgraph.png" border="0" usemap="#class_lexmou_1_1_machine_learning_1_1_drone_task_a9474f67cd61740665d99265428541df8_icgraph" alt=""/></div>
+<map name="class_lexmou_1_1_machine_learning_1_1_drone_task_a9474f67cd61740665d99265428541df8_icgraph" id="class_lexmou_1_1_machine_learning_1_1_drone_task_a9474f67cd61740665d99265428541df8_icgraph">
+<area shape="rect" id="node2" href="class_lexmou_1_1_machine_learning_1_1_drone_session.html#ac3230ac2e3c24aa8a8ffeab2b27dcb17" title="Lexmou.MachineLearning.Drone\lSession.Reset" alt="" coords="261,5,469,47"/>
+</map>
+</div>
+
+</div>
+</div>
+<a id="acce47671b67d67e97157d374d27b86ee"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#acce47671b67d67e97157d374d27b86ee">&sect;&nbsp;</a></span>EvaluateIndividual()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">abstract float Lexmou.MachineLearning.DroneTask.EvaluateIndividual </td>
+          <td>(</td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>i</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">Rigidbody&#160;</td>
+          <td class="paramname"><em>rigid</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">pure virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Implemented in <a class="el" href="class_lexmou_1_1_machine_learning_1_1_drone_stabilization.html#ae994502c337a70cb72ef7270d0dbd9fd">Lexmou.MachineLearning.DroneStabilization</a>.</p>
+<div class="dynheader">
+Here is the caller graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_lexmou_1_1_machine_learning_1_1_drone_task_acce47671b67d67e97157d374d27b86ee_icgraph.png" border="0" usemap="#class_lexmou_1_1_machine_learning_1_1_drone_task_acce47671b67d67e97157d374d27b86ee_icgraph" alt=""/></div>
+<map name="class_lexmou_1_1_machine_learning_1_1_drone_task_acce47671b67d67e97157d374d27b86ee_icgraph" id="class_lexmou_1_1_machine_learning_1_1_drone_task_acce47671b67d67e97157d374d27b86ee_icgraph">
+<area shape="rect" id="node2" href="class_lexmou_1_1_machine_learning_1_1_drone_session.html#a7035b9f59ebcf492479c0118c91b0fd4" title="Lexmou.MachineLearning.Drone\lSession.RunEachFixedUpdate" alt="" coords="261,5,469,47"/>
+</map>
+</div>
+
+</div>
+</div>
+<h2 class="groupheader">Member Data Documentation</h2>
 <a id="aa5a6aeb19de7cb41175bf93e44ff5419"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#aa5a6aeb19de7cb41175bf93e44ff5419">&sect;&nbsp;</a></span>spacing</h2>
 
@@ -204,6 +295,22 @@ Additional Inherited Members</h2></td></tr>
 </div><div class="memdoc">
 
 <p>Definition at line <a class="el" href="_drone_task_8cs_source.html#l00012">12</a> of file <a class="el" href="_drone_task_8cs_source.html">DroneTask.cs</a>.</p>
+
+</div>
+</div>
+<a id="a71b1300fcca5420fe727e598b837eab1"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a71b1300fcca5420fe727e598b837eab1">&sect;&nbsp;</a></span>signal</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="class_u_c_signal.html">UCSignal</a> Lexmou.MachineLearning.DroneTask.signal</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Definition at line <a class="el" href="_drone_task_8cs_source.html#l00013">13</a> of file <a class="el" href="_drone_task_8cs_source.html">DroneTask.cs</a>.</p>
 
 </div>
 </div>

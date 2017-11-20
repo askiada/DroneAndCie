@@ -5,7 +5,7 @@ var searchData=
   ['task',['task',['../class_lexmou_1_1_machine_learning_1_1_drone_session.html#ac2e3515f31baff271fd4874ea1ae3ff7',1,'Lexmou::MachineLearning::DroneSession']]],
   ['taskobject',['taskObject',['../class_lexmou_1_1_machine_learning_1_1_drone_session.html#a66ab589d2dc5144f3db7a1c997078f8c',1,'Lexmou::MachineLearning::DroneSession']]],
   ['texture',['texture',['../class_texture_creator.html#a4adcc205d0c4b0520ac025586ed7e737',1,'TextureCreator']]],
-  ['theoricbestscore',['theoricBestScore',['../class_lexmou_1_1_machine_learning_1_1_drone_session2_1_1_gene_session.html#a57d2edb301f8b3f4fdcf258d04d8b3ea',1,'Lexmou::MachineLearning::DroneSession2::GeneSession']]],
+  ['theoricbestscore',['theoricBestScore',['../class_lexmou_1_1_machine_learning_1_1_drone_session2_1_1_gene_session.html#a57d2edb301f8b3f4fdcf258d04d8b3ea',1,'Lexmou.MachineLearning.DroneSession2.GeneSession.theoricBestScore()'],['../class_lexmou_1_1_machine_learning_1_1_drone_session.html#abdab2a37806e653ae283ddeb95b245be',1,'Lexmou.MachineLearning.DroneSession.theoricBestScore()']]],
   ['throttlesensitivity',['ThrottleSensitivity',['../class_control_receiver.html#a4835e69e8ee5174d31e744e042d9bd61',1,'ControlReceiver']]],
   ['thrust',['Thrust',['../class_motor_thrust.html#a805d1e84060856f2e4126eacad9c913f',1,'MotorThrust']]],
   ['thrustsignalbus',['ThrustSignalBus',['../class_main_board.html#afdb3db62f92d1c82e1cb107c59b2ebe9',1,'MainBoard']]],

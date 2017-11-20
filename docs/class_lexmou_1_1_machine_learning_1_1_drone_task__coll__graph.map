@@ -1,3 +1,4 @@
 <map id="Lexmou.MachineLearning.DroneTask" name="Lexmou.MachineLearning.DroneTask">
-<area shape="rect" id="node2" href="$class_lexmou_1_1_machine_learning_1_1_task.html" title="{Task\n||+ Build()\l}" alt="" coords="88,5,159,83"/>
+<area shape="rect" id="node2" href="$class_lexmou_1_1_machine_learning_1_1_task.html" title="{Task\n||+ UCSignal()\l}" alt="" coords="15,5,111,83"/>
+<area shape="rect" id="node3" href="$class_u_c_signal.html" title="{UCSignal\n|+ input\l|+ UCSignal()\l}" alt="" coords="135,5,231,83"/>
 </map>

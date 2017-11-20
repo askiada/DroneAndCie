@@ -19,6 +19,7 @@ var searchData=
   ['getbestindividualindex',['GetBestIndividualIndex',['../class_lexmou_1_1_machine_learning_1_1_evolutionary_1_1_genetic.html#a8ed097db095cff5a0f234c8dcc318ad1',1,'Lexmou::MachineLearning::Evolutionary::Genetic']]],
   ['getcommandlinearguments',['GetCommandLineArguments',['../class_lexmou_1_1_utils_1_1_u_i_o.html#a270b1e0541dc75a335bf09a93ef61540',1,'Lexmou::Utils::UIO']]],
   ['getindividual',['GetIndividual',['../class_lexmou_1_1_machine_learning_1_1_evolutionary_1_1_genetic.html#ab97494979da382d4c6ef031106eb01ab',1,'Lexmou::MachineLearning::Evolutionary::Genetic']]],
+  ['getinitialposition',['GetInitialposition',['../class_lexmou_1_1_machine_learning_1_1_drone_stabilization.html#a9605bda09047e4f7c6d6ff3ae081bcfa',1,'Lexmou.MachineLearning.DroneStabilization.GetInitialposition()'],['../class_lexmou_1_1_machine_learning_1_1_drone_task.html#a9474f67cd61740665d99265428541df8',1,'Lexmou.MachineLearning.DroneTask.GetInitialposition()']]],
   ['getpopulation',['GetPopulation',['../class_lexmou_1_1_machine_learning_1_1_evolutionary_1_1_genetic.html#ae9c9850558a4c28679fdfe901427bd50',1,'Lexmou::MachineLearning::Evolutionary::Genetic']]],
   ['getxderivative',['GetXDerivative',['../class_lexmou_1_1_environment_1_1_floor_1_1_surface_creator.html#a3f544812f839b4f574b73503b987e30c',1,'Lexmou::Environment::Floor::SurfaceCreator']]],
   ['getzderivative',['GetZDerivative',['../class_lexmou_1_1_environment_1_1_floor_1_1_surface_creator.html#a10b3166296dd8f72db16fcbe65515bbf',1,'Lexmou::Environment::Floor::SurfaceCreator']]],

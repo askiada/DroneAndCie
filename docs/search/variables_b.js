@@ -1,6 +1,6 @@
 var searchData=
 [
-  ['mainboard',['MainBoard',['../class_control_receiver.html#aad6351ab1f6b5bfb6b224db34e19475b',1,'ControlReceiver.MainBoard()'],['../class_input_control.html#a87d6e903e7c260cce3ecca568e18a22b',1,'InputControl.MainBoard()']]],
+  ['mainboard',['MainBoard',['../class_control_receiver.html#aad6351ab1f6b5bfb6b224db34e19475b',1,'ControlReceiver.MainBoard()'],['../class_input_control.html#a87d6e903e7c260cce3ecca568e18a22b',1,'InputControl.MainBoard()'],['../class_input_control2.html#ae87604e2aa92bf99b6b981cd4b19e871',1,'InputControl2.MainBoard()']]],
   ['manual',['manual',['../class_input_control.html#a551ee5b9b84af1697e1efc9dd2db2469',1,'InputControl']]],
   ['maxthrust',['MaxThrust',['../class_motor_thrust.html#ae554dfd8bab2e7190bcc53321343c48d',1,'MotorThrust']]],
   ['meanstd',['meanStd',['../class_lexmou_1_1_machine_learning_1_1_evolutionary_1_1_genetic.html#aa2818ad0a5c8ecce7df3cfeee8cd5e94',1,'Lexmou::MachineLearning::Evolutionary::Genetic']]],

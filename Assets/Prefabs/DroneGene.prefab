@@ -761,9 +761,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   ThrottleSensitivity: 1
-  ElevatorSensitivity: 0.04
-  AileronSensitivity: 0.04
-  RudderSensitivity: 0.04
+  ElevatorSensitivity: 0.5
+  AileronSensitivity: 0.5
+  RudderSensitivity: 0.5
   MainBoard: {fileID: 114000010766843022}
 --- !u!114 &114000010766843022
 MonoBehaviour:

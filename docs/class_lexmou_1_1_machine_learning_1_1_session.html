@@ -113,7 +113,7 @@ Inheritance diagram for Lexmou.MachineLearning.Session:</div>
 <div class="dyncontent">
 <div class="center"><img src="class_lexmou_1_1_machine_learning_1_1_session__inherit__graph.png" border="0" usemap="#_lexmou_8_machine_learning_8_session_inherit__map" alt="Inheritance graph"/></div>
 <map name="_lexmou_8_machine_learning_8_session_inherit__map" id="_lexmou_8_machine_learning_8_session_inherit__map">
-<area shape="rect" id="node3" href="class_lexmou_1_1_machine_learning_1_1_drone_session.html" title="{Lexmou.MachineLearning.Drone\lSession\n|+ tmpBuildCustomWeights\l+ initialValueWeights\l+ populationSize\l+ mutationRate\l+ randomIndividualsRate\l+ bestIndividualsRate\l+ emptyRate\l+ task\l+ taskObject\l+ dronePopulation\l+ mlpPopulation\l&#45; individualSize\l&#45; gene\l|+ GeneratePath()\l+ SetParametersFromCommandLine()\l+ Build()\l+ RunEachIntervalUpdate()\l+ RunEachFixedUpdate()\l+ Reset()\l+ OnDestroy()\l+ Destroy()\l+ CloseSessionWriter()\l+ BuildSessionWriter()\l+ BuildHUD()\l}" alt="" coords="5,535,248,949"/>
+<area shape="rect" id="node3" href="class_lexmou_1_1_machine_learning_1_1_drone_session.html" title="{Lexmou.MachineLearning.Drone\lSession\n|+ hudManager\l+ writerSession\l+ tmpBuildCustomWeights\l+ initialValueWeights\l+ populationSize\l+ mutationRate\l+ randomIndividualsRate\l+ bestIndividualsRate\l+ emptyRate\l+ task\land 6 more...\l+ intervalSave\l+ loadGeneration\l&#45; theoricBestScore\l&#45; externalEvaluations\l&#45; gene\l&#45; signal\l|+ GeneratePath()\l+ SetParametersFromCommandLine()\l+ Build()\l+ RunEachIntervalUpdate()\l+ RunEachFixedUpdate()\l+ Reset()\l+ OnDestroy()\l+ Destroy()\l+ CloseSessionWriter()\l+ BuildSessionWriter()\l+ BuildHUD()\l&#45; BuildCustomWeights()\l}" alt="" coords="5,564,248,1052"/>
 </map>
 </div>
 <div class="dynheader">
@@ -153,15 +153,21 @@ Public Member Functions</h2></td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-attribs"></a>
 Public Attributes</h2></td></tr>
+<tr class="memitem:adcae3db405c75fb2cc15a49fc524539c"><td class="memItemLeft" align="right" valign="top">float&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_lexmou_1_1_machine_learning_1_1_session.html#adcae3db405c75fb2cc15a49fc524539c">intervalUpdate</a> = 5.0f</td></tr>
+<tr class="separator:adcae3db405c75fb2cc15a49fc524539c"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aeffa79a44d49f9f290e804b43f894c26"><td class="memItemLeft" align="right" valign="top">SystemRandomSource&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_lexmou_1_1_machine_learning_1_1_session.html#aeffa79a44d49f9f290e804b43f894c26">rndGenerator</a></td></tr>
 <tr class="separator:aeffa79a44d49f9f290e804b43f894c26"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a6e898ee1072c8d9e5c405310a9be02d2"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_lexmou_1_1_machine_learning_1_1_session.html#a6e898ee1072c8d9e5c405310a9be02d2">_seed</a></td></tr>
 <tr class="separator:a6e898ee1072c8d9e5c405310a9be02d2"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a5a97321a5f2dee0d75bf9f8c655af4ce"><td class="memItemLeft" align="right" valign="top">float&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_lexmou_1_1_machine_learning_1_1_session.html#a5a97321a5f2dee0d75bf9f8c655af4ce">_timeScale</a></td></tr>
+<tr class="separator:a5a97321a5f2dee0d75bf9f8c655af4ce"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="properties"></a>
 Properties</h2></td></tr>
 <tr class="memitem:ad23614e06e3dc42310c5a3de0c609272"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_lexmou_1_1_machine_learning_1_1_session.html#ad23614e06e3dc42310c5a3de0c609272">seed</a><code> [get, set]</code></td></tr>
 <tr class="separator:ad23614e06e3dc42310c5a3de0c609272"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a168180c902eb66b8659115c90916e64e"><td class="memItemLeft" align="right" valign="top">float&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_lexmou_1_1_machine_learning_1_1_session.html#a168180c902eb66b8659115c90916e64e">timeScale</a><code> [get, set]</code></td></tr>
+<tr class="separator:a168180c902eb66b8659115c90916e64e"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aee113a60fb6a5479a92d77f6ce90a3e8"><td class="memItemLeft" align="right" valign="top">object&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_lexmou_1_1_machine_learning_1_1_session.html#aee113a60fb6a5479a92d77f6ce90a3e8">this[string propertyName]</a><code> [get, set]</code></td></tr>
 <tr class="separator:aee113a60fb6a5479a92d77f6ce90a3e8"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
@@ -178,8 +184,6 @@ Private Member Functions</h2></td></tr>
 Private Attributes</h2></td></tr>
 <tr class="memitem:ad8904f6533d59bbeeea7369f62dc4e1e"><td class="memItemLeft" align="right" valign="top">float&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_lexmou_1_1_machine_learning_1_1_session.html#ad8904f6533d59bbeeea7369f62dc4e1e">nextUpdate</a></td></tr>
 <tr class="separator:ad8904f6533d59bbeeea7369f62dc4e1e"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:adcae3db405c75fb2cc15a49fc524539c"><td class="memItemLeft" align="right" valign="top">float&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_lexmou_1_1_machine_learning_1_1_session.html#adcae3db405c75fb2cc15a49fc524539c">intervalUpdate</a></td></tr>
-<tr class="separator:adcae3db405c75fb2cc15a49fc524539c"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock">
@@ -200,7 +204,7 @@ Private Attributes</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="_session_8cs_source.html#l00052">52</a> of file <a class="el" href="_session_8cs_source.html">Session.cs</a>.</p>
+<p>Definition at line <a class="el" href="_session_8cs_source.html#l00055">55</a> of file <a class="el" href="_session_8cs_source.html">Session.cs</a>.</p>
 
 </div>
 </div>
@@ -526,7 +530,7 @@ Private Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="_session_8cs_source.html#l00059">59</a> of file <a class="el" href="_session_8cs_source.html">Session.cs</a>.</p>
+<p>Definition at line <a class="el" href="_session_8cs_source.html#l00063">63</a> of file <a class="el" href="_session_8cs_source.html">Session.cs</a>.</p>
 
 </div>
 </div>
@@ -553,7 +557,7 @@ Private Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="_session_8cs_source.html#l00070">70</a> of file <a class="el" href="_session_8cs_source.html">Session.cs</a>.</p>
+<p>Definition at line <a class="el" href="_session_8cs_source.html#l00076">76</a> of file <a class="el" href="_session_8cs_source.html">Session.cs</a>.</p>
 
 </div>
 </div>
@@ -580,7 +584,7 @@ Private Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="_session_8cs_source.html#l00080">80</a> of file <a class="el" href="_session_8cs_source.html">Session.cs</a>.</p>
+<p>Definition at line <a class="el" href="_session_8cs_source.html#l00086">86</a> of file <a class="el" href="_session_8cs_source.html">Session.cs</a>.</p>
 
 </div>
 </div>
@@ -614,19 +618,11 @@ Private Attributes</h2></td></tr>
 
 <div class="memitem">
 <div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">float Lexmou.MachineLearning.Session.intervalUpdate</td>
+          <td class="memname">float Lexmou.MachineLearning.Session.intervalUpdate = 5.0f</td>
         </tr>
       </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">private</span></span>  </td>
-  </tr>
-</table>
 </div><div class="memdoc">
 
 <p>Definition at line <a class="el" href="_session_8cs_source.html#l00015">15</a> of file <a class="el" href="_session_8cs_source.html">Session.cs</a>.</p>
@@ -665,6 +661,22 @@ Private Attributes</h2></td></tr>
 
 </div>
 </div>
+<a id="a5a97321a5f2dee0d75bf9f8c655af4ce"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a5a97321a5f2dee0d75bf9f8c655af4ce">&sect;&nbsp;</a></span>_timeScale</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">float Lexmou.MachineLearning.Session._timeScale</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Definition at line <a class="el" href="_session_8cs_source.html#l00021">21</a> of file <a class="el" href="_session_8cs_source.html">Session.cs</a>.</p>
+
+</div>
+</div>
 <h2 class="groupheader">Property Documentation</h2>
 <a id="ad23614e06e3dc42310c5a3de0c609272"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#ad23614e06e3dc42310c5a3de0c609272">&sect;&nbsp;</a></span>seed</h2>
@@ -690,6 +702,30 @@ Private Attributes</h2></td></tr>
 
 </div>
 </div>
+<a id="a168180c902eb66b8659115c90916e64e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a168180c902eb66b8659115c90916e64e">&sect;&nbsp;</a></span>timeScale</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">float Lexmou.MachineLearning.Session.timeScale</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">get</span><span class="mlabel">set</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Definition at line <a class="el" href="_session_8cs_source.html#l00022">22</a> of file <a class="el" href="_session_8cs_source.html">Session.cs</a>.</p>
+
+</div>
+</div>
 <a id="aee113a60fb6a5479a92d77f6ce90a3e8"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#aee113a60fb6a5479a92d77f6ce90a3e8">&sect;&nbsp;</a></span>this[string propertyName]</h2>
 
@@ -710,7 +746,7 @@ Private Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="_session_8cs_source.html#l00034">34</a> of file <a class="el" href="_session_8cs_source.html">Session.cs</a>.</p>
+<p>Definition at line <a class="el" href="_session_8cs_source.html#l00037">37</a> of file <a class="el" href="_session_8cs_source.html">Session.cs</a>.</p>
 
 </div>
 </div>

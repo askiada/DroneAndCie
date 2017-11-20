@@ -101,7 +101,6 @@ $(document).ready(function(){initNavTree('class_main_board.html','');});
 <a href="#pub-methods">Public Member Functions</a> &#124;
 <a href="#pub-attribs">Public Attributes</a> &#124;
 <a href="#properties">Properties</a> &#124;
-<a href="#pri-methods">Private Member Functions</a> &#124;
 <a href="class_main_board-members.html">List of all members</a>  </div>
   <div class="headertitle">
 <div class="title">MainBoard Class Reference</div>  </div>
@@ -111,6 +110,8 @@ $(document).ready(function(){initNavTree('class_main_board.html','');});
 Inheritance diagram for MainBoard:</div>
 <div class="dyncontent">
 <div class="center"><img src="class_main_board__inherit__graph.png" border="0" usemap="#_main_board_inherit__map" alt="Inheritance graph"/></div>
+<map name="_main_board_inherit__map" id="_main_board_inherit__map">
+</map>
 </div>
 <div class="dynheader">
 Collaboration diagram for MainBoard:</div>
@@ -127,6 +128,10 @@ Public Member Functions</h2></td></tr>
 <tr class="separator:a18bee0c1a810d1170c818c97310cafee"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ae7f552c9b272f179595b0353405d0c96"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_main_board.html#ae7f552c9b272f179595b0353405d0c96">SendControlSignal</a> (<a class="el" href="class_drone_1_1_hardware_1_1_control_signal.html">ControlSignal</a> signal)</td></tr>
 <tr class="separator:ae7f552c9b272f179595b0353405d0c96"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af7b7bff9a8e5bec6d059a6c3d7752af2"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_main_board.html#af7b7bff9a8e5bec6d059a6c3d7752af2">SendSensorSignal</a> ()</td></tr>
+<tr class="separator:af7b7bff9a8e5bec6d059a6c3d7752af2"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a69924dd5cc2eed8fd014a4bb0d3ee518"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_main_board.html#a69924dd5cc2eed8fd014a4bb0d3ee518">SendUCSignal</a> (<a class="el" href="class_u_c_signal.html">UCSignal</a> signal)</td></tr>
+<tr class="separator:a69924dd5cc2eed8fd014a4bb0d3ee518"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-attribs"></a>
 Public Attributes</h2></td></tr>
@@ -134,10 +139,12 @@ Public Attributes</h2></td></tr>
 <tr class="separator:afdb3db62f92d1c82e1cb107c59b2ebe9"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a9b80660226bf0ddc174a9186e3aa50e9"><td class="memItemLeft" align="right" valign="top">MonoBehaviour []&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_main_board.html#a9b80660226bf0ddc174a9186e3aa50e9">ControlSignalBus</a></td></tr>
 <tr class="separator:a9b80660226bf0ddc174a9186e3aa50e9"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aebb2740fb6e133f01e992eab458c2d96"><td class="memItemLeft" align="right" valign="top">MonoBehaviour []&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_main_board.html#aebb2740fb6e133f01e992eab458c2d96">SensorSignalBus</a></td></tr>
+<tr class="separator:aebb2740fb6e133f01e992eab458c2d96"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a19a3dd7f06b72b69391a58068a50d573"><td class="memItemLeft" align="right" valign="top">MonoBehaviour []&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_main_board.html#a19a3dd7f06b72b69391a58068a50d573">UCSignalBus</a></td></tr>
+<tr class="separator:a19a3dd7f06b72b69391a58068a50d573"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a4a2585f1b784a18250211c5061d66470"><td class="memItemLeft" align="right" valign="top"><a class="el" href="class_lexmou_1_1_machine_learning_1_1_neural_network_1_1_feed_forward_1_1_multi_layer_maths_net.html">MultiLayerMathsNet</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_main_board.html#a4a2585f1b784a18250211c5061d66470">mlp</a></td></tr>
 <tr class="separator:a4a2585f1b784a18250211c5061d66470"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ade2a0f33535463de0b6dcc839bb40a28"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_main_board.html#ade2a0f33535463de0b6dcc839bb40a28">inputSize</a></td></tr>
-<tr class="separator:ade2a0f33535463de0b6dcc839bb40a28"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ad942a6b2130147ea7e58d217eb667c5c"><td class="memItemLeft" align="right" valign="top">Vector&lt; float &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_main_board.html#ad942a6b2130147ea7e58d217eb667c5c">_inputMLP</a></td></tr>
 <tr class="separator:ad942a6b2130147ea7e58d217eb667c5c"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:acceef52976913588383d46451fa0a707"><td class="memItemLeft" align="right" valign="top">Vector3&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_main_board.html#acceef52976913588383d46451fa0a707">rotate</a></td></tr>
@@ -151,43 +158,11 @@ Public Attributes</h2></td></tr>
 Properties</h2></td></tr>
 <tr class="memitem:ae0562f955a1b3eb0a7fb42f388ec4f8f"><td class="memItemLeft" align="right" valign="top">Vector&lt; float &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_main_board.html#ae0562f955a1b3eb0a7fb42f388ec4f8f">inputMLP</a><code> [get, set]</code></td></tr>
 <tr class="separator:ae0562f955a1b3eb0a7fb42f388ec4f8f"><td class="memSeparator" colspan="2">&#160;</td></tr>
-</table><table class="memberdecls">
-<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pri-methods"></a>
-Private Member Functions</h2></td></tr>
-<tr class="memitem:a29809b58d3ce3873303bafdcadf3af3c"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_main_board.html#a29809b58d3ce3873303bafdcadf3af3c">Start</a> ()</td></tr>
-<tr class="separator:a29809b58d3ce3873303bafdcadf3af3c"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock">
 <p>Definition at line <a class="el" href="_main_board_8cs_source.html#l00011">11</a> of file <a class="el" href="_main_board_8cs_source.html">MainBoard.cs</a>.</p>
 </div><h2 class="groupheader">Member Function Documentation</h2>
-<a id="a29809b58d3ce3873303bafdcadf3af3c"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a29809b58d3ce3873303bafdcadf3af3c">&sect;&nbsp;</a></span>Start()</h2>
-
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">void MainBoard.Start </td>
-          <td>(</td>
-          <td class="paramname"></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">private</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-<p>Definition at line <a class="el" href="_main_board_8cs_source.html#l00036">36</a> of file <a class="el" href="_main_board_8cs_source.html">MainBoard.cs</a>.</p>
-
-</div>
-</div>
 <a id="a18bee0c1a810d1170c818c97310cafee"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a18bee0c1a810d1170c818c97310cafee">&sect;&nbsp;</a></span>SendThrustSignal()</h2>
 
@@ -204,7 +179,7 @@ Private Member Functions</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="_main_board_8cs_source.html#l00042">42</a> of file <a class="el" href="_main_board_8cs_source.html">MainBoard.cs</a>.</p>
+<p>Definition at line <a class="el" href="_main_board_8cs_source.html#l00044">44</a> of file <a class="el" href="_main_board_8cs_source.html">MainBoard.cs</a>.</p>
 <div class="dynheader">
 Here is the caller graph for this function:</div>
 <div class="dyncontent">
@@ -232,16 +207,64 @@ Here is the caller graph for this function:</div>
       </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="_main_board_8cs_source.html#l00052">52</a> of file <a class="el" href="_main_board_8cs_source.html">MainBoard.cs</a>.</p>
+<p>Definition at line <a class="el" href="_main_board_8cs_source.html#l00054">54</a> of file <a class="el" href="_main_board_8cs_source.html">MainBoard.cs</a>.</p>
 <div class="dynheader">
 Here is the caller graph for this function:</div>
 <div class="dyncontent">
 <div class="center"><img src="class_main_board_ae7f552c9b272f179595b0353405d0c96_icgraph.png" border="0" usemap="#class_main_board_ae7f552c9b272f179595b0353405d0c96_icgraph" alt=""/></div>
 <map name="class_main_board_ae7f552c9b272f179595b0353405d0c96_icgraph" id="class_main_board_ae7f552c9b272f179595b0353405d0c96_icgraph">
-<area shape="rect" id="node2" href="class_input_control.html#ad8d0024a0ae68e6199e09f0cac781aaa" title="InputControl.SendSignalWithMLP" alt="" coords="248,5,463,32"/>
+<area shape="rect" id="node2" href="class_input_control.html#a73c5bedcec6bc944173cbf98ba0b9d88" title="InputControl.SendSignalWithMLP" alt="" coords="248,5,463,32"/>
 <area shape="rect" id="node3" href="class_input_control.html#a6d811b0f0726d2713042e0187130c55b" title="InputControl.FixedUpdate" alt="" coords="271,56,439,83"/>
+<area shape="rect" id="node4" href="class_manual_input_control.html#a89f7e784ff732cd227b38a9c0b7ce7f1" title="ManualInputControl.SendSignal" alt="" coords="254,107,457,133"/>
 </map>
 </div>
+
+</div>
+</div>
+<a id="af7b7bff9a8e5bec6d059a6c3d7752af2"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#af7b7bff9a8e5bec6d059a6c3d7752af2">&sect;&nbsp;</a></span>SendSensorSignal()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void MainBoard.SendSensorSignal </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Definition at line <a class="el" href="_main_board_8cs_source.html#l00064">64</a> of file <a class="el" href="_main_board_8cs_source.html">MainBoard.cs</a>.</p>
+<div class="dynheader">
+Here is the caller graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_main_board_af7b7bff9a8e5bec6d059a6c3d7752af2_icgraph.png" border="0" usemap="#class_main_board_af7b7bff9a8e5bec6d059a6c3d7752af2_icgraph" alt=""/></div>
+<map name="class_main_board_af7b7bff9a8e5bec6d059a6c3d7752af2_icgraph" id="class_main_board_af7b7bff9a8e5bec6d059a6c3d7752af2_icgraph">
+<area shape="rect" id="node2" href="class_a_i_input_control.html#ab555f7868498eaa9e8b2fcf813bb02b9" title="AIInputControl.SendSignal" alt="" coords="248,5,421,32"/>
+</map>
+</div>
+
+</div>
+</div>
+<a id="a69924dd5cc2eed8fd014a4bb0d3ee518"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a69924dd5cc2eed8fd014a4bb0d3ee518">&sect;&nbsp;</a></span>SendUCSignal()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void MainBoard.SendUCSignal </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="class_u_c_signal.html">UCSignal</a>&#160;</td>
+          <td class="paramname"><em>signal</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Definition at line <a class="el" href="_main_board_8cs_source.html#l00078">78</a> of file <a class="el" href="_main_board_8cs_source.html">MainBoard.cs</a>.</p>
 
 </div>
 </div>
@@ -258,7 +281,7 @@ Here is the caller graph for this function:</div>
       </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="_main_board_8cs_source.html#l00014">14</a> of file <a class="el" href="_main_board_8cs_source.html">MainBoard.cs</a>.</p>
+<p>Definition at line <a class="el" href="_main_board_8cs_source.html#l00013">13</a> of file <a class="el" href="_main_board_8cs_source.html">MainBoard.cs</a>.</p>
 
 </div>
 </div>
@@ -274,7 +297,39 @@ Here is the caller graph for this function:</div>
       </table>
 </div><div class="memdoc">
 
+<p>Definition at line <a class="el" href="_main_board_8cs_source.html#l00014">14</a> of file <a class="el" href="_main_board_8cs_source.html">MainBoard.cs</a>.</p>
+
+</div>
+</div>
+<a id="aebb2740fb6e133f01e992eab458c2d96"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aebb2740fb6e133f01e992eab458c2d96">&sect;&nbsp;</a></span>SensorSignalBus</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">MonoBehaviour [] MainBoard.SensorSignalBus</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
 <p>Definition at line <a class="el" href="_main_board_8cs_source.html#l00015">15</a> of file <a class="el" href="_main_board_8cs_source.html">MainBoard.cs</a>.</p>
+
+</div>
+</div>
+<a id="a19a3dd7f06b72b69391a58068a50d573"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a19a3dd7f06b72b69391a58068a50d573">&sect;&nbsp;</a></span>UCSignalBus</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">MonoBehaviour [] MainBoard.UCSignalBus</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Definition at line <a class="el" href="_main_board_8cs_source.html#l00016">16</a> of file <a class="el" href="_main_board_8cs_source.html">MainBoard.cs</a>.</p>
 
 </div>
 </div>
@@ -286,22 +341,6 @@ Here is the caller graph for this function:</div>
       <table class="memname">
         <tr>
           <td class="memname"><a class="el" href="class_lexmou_1_1_machine_learning_1_1_neural_network_1_1_feed_forward_1_1_multi_layer_maths_net.html">MultiLayerMathsNet</a> MainBoard.mlp</td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-<p>Definition at line <a class="el" href="_main_board_8cs_source.html#l00016">16</a> of file <a class="el" href="_main_board_8cs_source.html">MainBoard.cs</a>.</p>
-
-</div>
-</div>
-<a id="ade2a0f33535463de0b6dcc839bb40a28"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ade2a0f33535463de0b6dcc839bb40a28">&sect;&nbsp;</a></span>inputSize</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">int MainBoard.inputSize</td>
         </tr>
       </table>
 </div><div class="memdoc">
@@ -322,7 +361,7 @@ Here is the caller graph for this function:</div>
       </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="_main_board_8cs_source.html#l00019">19</a> of file <a class="el" href="_main_board_8cs_source.html">MainBoard.cs</a>.</p>
+<p>Definition at line <a class="el" href="_main_board_8cs_source.html#l00020">20</a> of file <a class="el" href="_main_board_8cs_source.html">MainBoard.cs</a>.</p>
 
 </div>
 </div>
@@ -338,7 +377,7 @@ Here is the caller graph for this function:</div>
       </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="_main_board_8cs_source.html#l00029">29</a> of file <a class="el" href="_main_board_8cs_source.html">MainBoard.cs</a>.</p>
+<p>Definition at line <a class="el" href="_main_board_8cs_source.html#l00030">30</a> of file <a class="el" href="_main_board_8cs_source.html">MainBoard.cs</a>.</p>
 
 </div>
 </div>
@@ -354,7 +393,7 @@ Here is the caller graph for this function:</div>
       </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="_main_board_8cs_source.html#l00031">31</a> of file <a class="el" href="_main_board_8cs_source.html">MainBoard.cs</a>.</p>
+<p>Definition at line <a class="el" href="_main_board_8cs_source.html#l00032">32</a> of file <a class="el" href="_main_board_8cs_source.html">MainBoard.cs</a>.</p>
 
 </div>
 </div>
@@ -370,7 +409,7 @@ Here is the caller graph for this function:</div>
       </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="_main_board_8cs_source.html#l00032">32</a> of file <a class="el" href="_main_board_8cs_source.html">MainBoard.cs</a>.</p>
+<p>Definition at line <a class="el" href="_main_board_8cs_source.html#l00033">33</a> of file <a class="el" href="_main_board_8cs_source.html">MainBoard.cs</a>.</p>
 
 </div>
 </div>
@@ -395,7 +434,7 @@ Here is the caller graph for this function:</div>
 </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="_main_board_8cs_source.html#l00020">20</a> of file <a class="el" href="_main_board_8cs_source.html">MainBoard.cs</a>.</p>
+<p>Definition at line <a class="el" href="_main_board_8cs_source.html#l00021">21</a> of file <a class="el" href="_main_board_8cs_source.html">MainBoard.cs</a>.</p>
 
 </div>
 </div>

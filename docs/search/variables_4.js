@@ -14,6 +14,7 @@ var searchData=
   ['drone',['drone',['../class_lexmou_1_1_manager_1_1_drone_manager.html#a92187604d00a2cfba31a4e5cc3fc9581',1,'Lexmou::Manager::DroneManager']]],
   ['dronebest',['droneBest',['../class_lexmou_1_1_machine_learning_1_1_drone_session2_1_1_gene_session.html#acf19349d7314c2b6baaea50c1c7cee72',1,'Lexmou::MachineLearning::DroneSession2::GeneSession']]],
   ['dronepopulation',['dronePopulation',['../class_lexmou_1_1_machine_learning_1_1_drone_session2_1_1_gene_session.html#a671af28898c4daeaac670a328c6b2524',1,'Lexmou.MachineLearning.DroneSession2.GeneSession.dronePopulation()'],['../class_lexmou_1_1_machine_learning_1_1_drone_session.html#a7a06b8a06ca99cde9359b9effbf92a93',1,'Lexmou.MachineLearning.DroneSession.dronePopulation()']]],
+  ['dronerigid',['droneRigid',['../class_lexmou_1_1_machine_learning_1_1_drone_session.html#af20e77fb7f2f24444ec394353d1b258d',1,'Lexmou::MachineLearning::DroneSession']]],
   ['dronesession',['droneSession',['../class_drone_session_test.html#a66577af7c760c5aa7ac414daeeac84e0',1,'DroneSessionTest']]],
   ['dw',['dw',['../class_multi_layer.html#acf14ca01fc3aa491cfc24a5ebe94f198',1,'MultiLayer.dw()'],['../class_lexmou_1_1_machine_learning_1_1_neural_network_1_1_feed_forward_1_1_multi_layer_maths_net.html#ae235de8db2bf3fbf098bf73effa2c0f1',1,'Lexmou.MachineLearning.NeuralNetwork.FeedForward.MultiLayerMathsNet.dw()']]]
 ];

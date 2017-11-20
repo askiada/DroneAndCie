@@ -19,6 +19,8 @@ var class_lexmou_1_1_machine_learning_1_1_session =
     [ "intervalUpdate", "class_lexmou_1_1_machine_learning_1_1_session.html#adcae3db405c75fb2cc15a49fc524539c", null ],
     [ "rndGenerator", "class_lexmou_1_1_machine_learning_1_1_session.html#aeffa79a44d49f9f290e804b43f894c26", null ],
     [ "_seed", "class_lexmou_1_1_machine_learning_1_1_session.html#a6e898ee1072c8d9e5c405310a9be02d2", null ],
+    [ "_timeScale", "class_lexmou_1_1_machine_learning_1_1_session.html#a5a97321a5f2dee0d75bf9f8c655af4ce", null ],
     [ "seed", "class_lexmou_1_1_machine_learning_1_1_session.html#ad23614e06e3dc42310c5a3de0c609272", null ],
+    [ "timeScale", "class_lexmou_1_1_machine_learning_1_1_session.html#a168180c902eb66b8659115c90916e64e", null ],
     [ "this[string propertyName]", "class_lexmou_1_1_machine_learning_1_1_session.html#aee113a60fb6a5479a92d77f6ce90a3e8", null ]
 ];

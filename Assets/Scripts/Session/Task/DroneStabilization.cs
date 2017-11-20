@@ -6,15 +6,17 @@ using Lexmou.MachineLearning.NeuralNetwork.FeedForward;
 using MathNet.Numerics.Random;
 using MathNet.Numerics.LinearAlgebra;
 using MathNet.Numerics.LinearAlgebra.Double;
+using System;
+using Lexmou.Utils;
 
 namespace Lexmou.MachineLearning
 {
     public class DroneStabilization : DroneTask
     {
-
         public DroneStabilization()
         {
             shapes = new List<int>() { 9, 4 };
+            signal = new UCSignal(shapes[0]);
             individualSize = 0;
             for (int i = 0; i < shapes.Count - 1; i++)
             {
@@ -22,20 +24,30 @@ namespace Lexmou.MachineLearning
             }
         }
 
-        public override void Build(params object[] args)
+        public override Vector3 GetInitialposition(int i)
         {
-            /*GameObject[] dronePopulation = (GameObject[]) args[0];
-            MultiLayerMathsNet[] mlpPopulation = (MultiLayerMathsNet[])args[1];*/
-            //Debug.Log(dronePopulation.Length);
-            for (int i = 0; i < ((GameObject[])args[0]).Length; i++)
-            {
-                ((GameObject[]) args[0])[i] = MonoBehaviour.Instantiate((GameObject)Resources.Load("DroneGene"), new Vector3(i * spacing, initialY, 0.0f), Quaternion.identity) as GameObject;
-                ((GameObject[])args[0])[i].GetComponent<MainBoard>().inputSize = shapes[0];
-                ((MultiLayerMathsNet[])args[1])[i] = new MultiLayerMathsNet(-1, (SystemRandomSource) args[2], shapes, 1, (float) args[3]);
-                ((GameObject[])args[0])[i].GetComponent<MainBoard>().mlp = ((MultiLayerMathsNet[])args[1])[i];
-                //Problème ici, je reconstruis pas tmpBuildCustomWeigths
-                ((MultiLayerMathsNet[])args[1])[i].Reset(false, (List<Matrix<float>>) args[4]);
-            }
+            return new Vector3(i * spacing, initialY, 0.0f);
+        }
+
+        public override float EvaluateIndividual(int i, Rigidbody rigid)
+        {
+            return 1 / (1 + Mathf.Abs(rigid.velocity.y) + Mathf.Abs(UAngle.SteerAngle(rigid.transform.eulerAngles.x)) + Mathf.Abs(UAngle.SteerAngle(rigid.transform.eulerAngles.y)) + Mathf.Abs(UAngle.SteerAngle(rigid.transform.eulerAngles.z)) + Mathf.Abs(rigid.angularVelocity.x) + Mathf.Abs(rigid.angularVelocity.z) + Mathf.Abs(rigid.angularVelocity.y));
+        }
+
+        public override UCSignal UCSignal(Rigidbody rigid)
+        {
+
+            signal.input[0] = UAngle.SteerAngle(rigid.transform.eulerAngles.x);
+            signal.input[1] = UAngle.SteerAngle(rigid.transform.eulerAngles.y);
+            signal.input[2] = UAngle.SteerAngle(rigid.transform.eulerAngles.z);
+            signal.input[3] = rigid.angularVelocity.x;
+            signal.input[4] = rigid.angularVelocity.y;
+            signal.input[5] = rigid.angularVelocity.z;
+            signal.input[6] = rigid.velocity.x;
+            signal.input[7] = rigid.velocity.y;
+            signal.input[8] = rigid.velocity.z;
+            //signal.input = Vector<float>.Build.DenseOfArray(new float[] { UAngle.SteerAngle(rigid.transform.eulerAngles.x), UAngle.SteerAngle(rigid.transform.eulerAngles.y), UAngle.SteerAngle(rigid.transform.eulerAngles.z), rigid.angularVelocity.x, rigid.angularVelocity.y, rigid.angularVelocity.z, rigid.velocity.x, rigid.velocity.y, rigid.velocity.z });
+            return signal;
         }
     }
 }

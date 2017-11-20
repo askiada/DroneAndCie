@@ -10,11 +10,12 @@ using Lexmou.MachineLearning.DroneSession2;
 
 public class MainBoard : MonoBehaviour
 {
-
     public MonoBehaviour[] ThrustSignalBus;
     public MonoBehaviour[] ControlSignalBus;
+    public MonoBehaviour[] SensorSignalBus;
+    public MonoBehaviour[] UCSignalBus;
     public MultiLayerMathsNet mlp;
-    public int inputSize;
+    //public int inputSize;
     //public Gyro gyro;
     public Vector<float> _inputMLP;
     public Vector<float>  inputMLP {
@@ -33,10 +34,11 @@ public class MainBoard : MonoBehaviour
 
 
 
-    void Start()
+    /*void Start()
     {
+        Debug.Log(inputSize);
         inputMLP = Vector<float>.Build.Dense(inputSize);
-    }
+    }*/
 
 
     public void SendThrustSignal(ThrustSignal signal)
@@ -54,6 +56,29 @@ public class MainBoard : MonoBehaviour
         //Debug.Log("SendControlSignal");
         ControlSignal result = signal;
         foreach (Drone.Hardware.Component<ControlSignal> component in ControlSignalBus)
+        {
+            result = component.ProcessSignal(result);
+        }
+    }
+
+    public void SendSensorSignal()
+    {
+        /*foreach (Drone.Hardware.Component<SensorSignal> component in SensorSignalBus)
+        {
+           
+            SensorSignal result = component.ProcessSignal(GetComponent<Rigidbody>());
+            foreach (Drone.Hardware.Component<UCSignal> ucComponent in UCSignalBus)
+            {
+                ControlSignal controlSignal = ucComponent.ProcessSignal(result);
+                SendControlSignal(controlSignal);
+            }
+        }*/
+    }
+
+    public void SendUCSignal(UCSignal signal)
+    {
+        UCSignal result = signal;
+        foreach (Drone.Hardware.Component<UCSignal> component in UCSignalBus)
         {
             result = component.ProcessSignal(result);
         }

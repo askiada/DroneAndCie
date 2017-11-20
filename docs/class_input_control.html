@@ -116,15 +116,15 @@ Collaboration diagram for InputControl:</div>
 <div class="dyncontent">
 <div class="center"><img src="class_input_control__coll__graph.png" border="0" usemap="#_input_control_coll__map" alt="Collaboration graph"/></div>
 <map name="_input_control_coll__map" id="_input_control_coll__map">
-<area shape="rect" id="node3" href="class_main_board.html" title="{MainBoard\n|+ ThrustSignalBus\l+ ControlSignalBus\l+ inputSize\l+ _inputMLP\l+ rotate\l+ deltaPosition\l+ initDeltaPosition\l+ inputMLP\l|+ SendThrustSignal()\l+ SendControlSignal()\l&#45; Start()\l}" alt="" coords="98,365,247,575"/>
+<area shape="rect" id="node3" href="class_main_board.html" title="{MainBoard\n|+ ThrustSignalBus\l+ ControlSignalBus\l+ SensorSignalBus\l+ UCSignalBus\l+ _inputMLP\l+ rotate\l+ deltaPosition\l+ initDeltaPosition\l+ inputMLP\l|+ SendThrustSignal()\l+ SendControlSignal()\l+ SendSensorSignal()\l+ SendUCSignal()\l}" alt="" coords="98,365,247,604"/>
 <area shape="rect" id="node4" href="class_lexmou_1_1_machine_learning_1_1_neural_network_1_1_feed_forward_1_1_multi_layer_maths_net.html" title="{Lexmou.MachineLearning.Neural\lNetwork.FeedForward.MultiLayerMathsNet\n|+ layers\l+ weights\l+ shapes\l+ shapesSize\l&#45; dw\l&#45; save\l&#45; seed\l&#45; batchSize\l&#45; rndGenerator\l&#45; cu\l&#45; initialValueWeights\l|+ MultiLayerMathsNet()\l+ Reset()\l+ PropagateForward()\l+ PropagateForward2()\l&#45; fillWeights()\l}" alt="" coords="140,5,408,303"/>
 </map>
 </div>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
-<tr class="memitem:ad8d0024a0ae68e6199e09f0cac781aaa"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_input_control.html#ad8d0024a0ae68e6199e09f0cac781aaa">SendSignalWithMLP</a> ()</td></tr>
-<tr class="separator:ad8d0024a0ae68e6199e09f0cac781aaa"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a73c5bedcec6bc944173cbf98ba0b9d88"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_input_control.html#a73c5bedcec6bc944173cbf98ba0b9d88">SendSignalWithMLP</a> (Vector&lt; float &gt; input)</td></tr>
+<tr class="separator:a73c5bedcec6bc944173cbf98ba0b9d88"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-attribs"></a>
 Public Attributes</h2></td></tr>
@@ -156,8 +156,8 @@ Private Member Functions</h2></td></tr>
 <div class="textblock">
 <p>Definition at line <a class="el" href="_input_control_8cs_source.html#l00007">7</a> of file <a class="el" href="_input_control_8cs_source.html">InputControl.cs</a>.</p>
 </div><h2 class="groupheader">Member Function Documentation</h2>
-<a id="ad8d0024a0ae68e6199e09f0cac781aaa"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ad8d0024a0ae68e6199e09f0cac781aaa">&sect;&nbsp;</a></span>SendSignalWithMLP()</h2>
+<a id="a73c5bedcec6bc944173cbf98ba0b9d88"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a73c5bedcec6bc944173cbf98ba0b9d88">&sect;&nbsp;</a></span>SendSignalWithMLP()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -165,7 +165,8 @@ Private Member Functions</h2></td></tr>
         <tr>
           <td class="memname">void InputControl.SendSignalWithMLP </td>
           <td>(</td>
-          <td class="paramname"></td><td>)</td>
+          <td class="paramtype">Vector&lt; float &gt;&#160;</td>
+          <td class="paramname"><em>input</em></td><td>)</td>
           <td></td>
         </tr>
       </table>
@@ -175,8 +176,8 @@ Private Member Functions</h2></td></tr>
 <div class="dynheader">
 Here is the call graph for this function:</div>
 <div class="dyncontent">
-<div class="center"><img src="class_input_control_ad8d0024a0ae68e6199e09f0cac781aaa_cgraph.png" border="0" usemap="#class_input_control_ad8d0024a0ae68e6199e09f0cac781aaa_cgraph" alt=""/></div>
-<map name="class_input_control_ad8d0024a0ae68e6199e09f0cac781aaa_cgraph" id="class_input_control_ad8d0024a0ae68e6199e09f0cac781aaa_cgraph">
+<div class="center"><img src="class_input_control_a73c5bedcec6bc944173cbf98ba0b9d88_cgraph.png" border="0" usemap="#class_input_control_a73c5bedcec6bc944173cbf98ba0b9d88_cgraph" alt=""/></div>
+<map name="class_input_control_a73c5bedcec6bc944173cbf98ba0b9d88_cgraph" id="class_input_control_a73c5bedcec6bc944173cbf98ba0b9d88_cgraph">
 <area shape="rect" id="node2" href="class_main_board.html#ae7f552c9b272f179595b0353405d0c96" title="MainBoard.SendControlSignal" alt="" coords="268,5,463,32"/>
 </map>
 </div>
@@ -206,7 +207,7 @@ Here is the call graph for this function:</div>
 </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="_input_control_8cs_source.html#l00038">38</a> of file <a class="el" href="_input_control_8cs_source.html">InputControl.cs</a>.</p>
+<p>Definition at line <a class="el" href="_input_control_8cs_source.html#l00039">39</a> of file <a class="el" href="_input_control_8cs_source.html">InputControl.cs</a>.</p>
 <div class="dynheader">
 Here is the call graph for this function:</div>
 <div class="dyncontent">

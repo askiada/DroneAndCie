@@ -1,3 +1,5 @@
 <map id="Graphical Class Hierarchy" name="Graphical Class Hierarchy">
-<area shape="rect" id="node1" href="$class_lexmou_1_1_utils_1_1_u_activation.html" title="Lexmou.Utils.UActivation" alt="" coords="5,5,172,32"/>
+<area shape="rect" id="node1" href="$class_lexmou_1_1_machine_learning_1_1_task.html" title="Lexmou.MachineLearning.Task" alt="" coords="5,13,208,39"/>
+<area shape="rect" id="node2" href="$class_lexmou_1_1_machine_learning_1_1_drone_task.html" title="Lexmou.MachineLearning.DroneTask" alt="" coords="256,13,492,39"/>
+<area shape="rect" id="node3" href="$class_lexmou_1_1_machine_learning_1_1_drone_stabilization.html" title="Lexmou.MachineLearning.Drone\lStabilization" alt="" coords="540,5,748,47"/>
 </map>
