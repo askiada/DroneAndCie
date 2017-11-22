@@ -1,4 +1,5 @@
 ﻿using UnityEngine;
+using System;
 using System.Collections;
 using Lexmou.MachineLearning.NeuralNetwork.FeedForward;
 using Lexmou.MachineLearning.Evolutionary;
@@ -8,22 +9,24 @@ using MathNet.Numerics.LinearAlgebra;
 using MathNet.Numerics.LinearAlgebra.Double;
 using MathNet.Numerics.Random;
 using MathNet.Numerics.Distributions;
+using Lexmou.MachineLearning;
+using Drone.Hardware;
 
 namespace Lexmou.Manager
 {
 
     public class DroneManager : MonoBehaviour
     {
-
+        public SystemRandomSource rndGenerator;
+        public string task = "Stabilization";
+        DroneTask taskObject;
         public GameObject prefabDrone;
         public GameObject prefabDoor;
-        public int stabilizationSeed;
-        public int stabilizationGeneration;
+        public int fromSeed;
+        public int fromGeneration;
 
-        public int moveSeed;
-        public int moveGeneration;
-
-        Genetic gene;
+        MultiLayerMathsNet mlp;
+        //Genetic gene;
 
         public GameObject drone;
         public GameObject door;
@@ -31,6 +34,10 @@ namespace Lexmou.Manager
         List<Matrix<float>> tmpBuildCustomWeights;
         List<int> shapes = new List<int>() { 9, 4 };
         ContinuousUniform deltaDistribution;
+
+        string path;
+        Vector3 targetPosition;
+        private ControlSignal signalControl;
 
         void BuildCustomWeights(Vector<float> individual)
         {
@@ -58,7 +65,9 @@ namespace Lexmou.Manager
             drone.GetComponent<InputControl>().manual = true;
 
 
-            if (stabilizationGeneration != 0)
+
+
+            /*if (stabilizationGeneration != 0)
             {
                 shapes = new List<int>() { 9, 4 };
                 //drone.GetComponent<MainBoard>().inputSize = 9;
@@ -81,7 +90,7 @@ namespace Lexmou.Manager
                 drone.GetComponent<MainBoard>().mlp = new MultiLayerMathsNet(moveSeed, null, shapes, 1, 0);
                 BuildCustomWeights(Vector<float>.Build.DenseOfArray(floatArr));
                 drone.GetComponent<MainBoard>().mlp.Reset(false, tmpBuildCustomWeights);
-            }
+            }*/
 
 
             drone.name = "Drone";
@@ -100,32 +109,84 @@ namespace Lexmou.Manager
 
         public void Stabilization()
         {
+            Rigidbody rigid = drone.GetComponent<MainBoard>().GetComponentInChildren<Rigidbody>();
             //Debug.Log(drone.GetComponent<MainBoard>().inputMLP);
-            drone.GetComponent<MainBoard>().mlp.PropagateForward(drone.GetComponent<MainBoard>().inputMLP);
+            /*drone.GetComponent<MainBoard>().deltaPosition = new Vector3(rigid.transform.localPosition.x - drone.GetComponent<MainBoard>().initDeltaPosition.x, rigid.transform.localPosition.y - drone.GetComponent<MainBoard>().initDeltaPosition.y, rigid.transform.localPosition.z - drone.GetComponent<MainBoard>().initDeltaPosition.z);
+            drone.GetComponent<MainBoard>().mlp.PropagateForward(drone.GetComponent<MainBoard>().inputMLP);*/
+            taskObject.UCSignal(rigid, targetPosition);
+            Debug.Log(taskObject.signal.input);
+            mlp.PropagateForward(taskObject.signal.input, true);
+            Debug.Log(mlp.layers[taskObject.shapes.Count - 1]);
+            signalControl.Throttle = mlp.layers[taskObject.shapes.Count - 1][3, 0];
+            signalControl.Rudder = mlp.layers[taskObject.shapes.Count - 1][0, 0];
+            signalControl.Elevator = mlp.layers[taskObject.shapes.Count - 1][1, 0];
+            signalControl.Aileron = mlp.layers[taskObject.shapes.Count - 1][2, 0];
+
+            drone.GetComponent<MainBoard>().SendControlSignal(signalControl);
         }
 
         public void SetNewMovePosition()
         {
-            drone.GetComponent<MainBoard>().initDeltaPosition = new Vector3((float)deltaDistribution.Sample(), (float)deltaDistribution.Sample(), (float)deltaDistribution.Sample());
-            door.transform.position = new Vector3(door.transform.position.x + drone.GetComponent<MainBoard>().initDeltaPosition.x, door.transform.position.y + drone.GetComponent<MainBoard>().initDeltaPosition.y, door.transform.position.z + drone.GetComponent<MainBoard>().initDeltaPosition.z);
+            targetPosition = taskObject.GetTargetPosition();
+            //drone.GetComponent<MainBoard>().initDeltaPosition = new Vector3((float)deltaDistribution.Sample(), (float)deltaDistribution.Sample(), (float)deltaDistribution.Sample());
+            door.transform.position = new Vector3(drone.transform.position.x + targetPosition.x, drone.transform.position.y + targetPosition.y, drone.transform.position.z + targetPosition.z);
         }
 
         public void Move()
         {
             Rigidbody rigid = drone.GetComponent<MainBoard>().GetComponentInChildren<Rigidbody>();
             //Debug.Log(drone.GetComponent<MainBoard>().inputMLP);
-            drone.GetComponent<MainBoard>().deltaPosition = new Vector3(rigid.transform.localPosition.x - drone.GetComponent<MainBoard>().initDeltaPosition.x, rigid.transform.localPosition.y - drone.GetComponent<MainBoard>().initDeltaPosition.y, rigid.transform.localPosition.z - drone.GetComponent<MainBoard>().initDeltaPosition.z);
-            drone.GetComponent<MainBoard>().mlp.PropagateForward(drone.GetComponent<MainBoard>().inputMLP);
+            /*drone.GetComponent<MainBoard>().deltaPosition = new Vector3(rigid.transform.localPosition.x - drone.GetComponent<MainBoard>().initDeltaPosition.x, rigid.transform.localPosition.y - drone.GetComponent<MainBoard>().initDeltaPosition.y, rigid.transform.localPosition.z - drone.GetComponent<MainBoard>().initDeltaPosition.z);
+            drone.GetComponent<MainBoard>().mlp.PropagateForward(drone.GetComponent<MainBoard>().inputMLP);*/
+            taskObject.UCSignal(rigid, targetPosition);
+            mlp.PropagateForward(taskObject.signal.input, true);
+            signalControl.Throttle = mlp.layers[taskObject.shapes.Count - 1][3, 0];
+            signalControl.Rudder = mlp.layers[taskObject.shapes.Count - 1][0, 0];
+            signalControl.Elevator = mlp.layers[taskObject.shapes.Count - 1][1, 0];
+            signalControl.Aileron = mlp.layers[taskObject.shapes.Count - 1][2, 0];
+
+            drone.GetComponent<MainBoard>().SendControlSignal(signalControl);
+        }
+
+        void BuildCustomWeights(List<Matrix<float>> newWeights, List<int> shapes, Vector<float> individual)
+        {
+            for (int i = 0; i < shapes.Count - 1; i++)
+            {
+                if (i == 0)
+                {
+                    UMatrix.Make2DMatrix(newWeights[i], individual.SubVector(0, (shapes[i] + 1) * shapes[i + 1]), shapes[i + 1], shapes[i] + 1);
+                }
+                else
+                {
+                    UMatrix.Make2DMatrix(newWeights[i], individual.SubVector((shapes[i - 1] + 1) * shapes[i], (shapes[i] + 1) * shapes[i + 1]), shapes[i + 1], shapes[i] + 1);
+                }
+            }
         }
 
         void Awake()
         {
-            if (stabilizationGeneration != 0)
-                gene = new Genetic(stabilizationSeed, null, 100, 40, 1.0f, 0.1f, 0.1f, 0.1f, 0.1f, "Save/GeneSession/Task-stabilization/", false);
+            signalControl = new ControlSignal();
+            path = "Save/DroneSession/" + "Task-" + task + "/Seed-" + fromSeed + "/";
+            rndGenerator = new SystemRandomSource(fromSeed);
+            taskObject = (DroneTask)Activator.CreateInstance(Type.GetType("Lexmou.MachineLearning.Drone" + task), rndGenerator);
+
+            mlp = new MultiLayerMathsNet(fromSeed, null, taskObject.shapes, 1, 0);
+            float[] floatArr = new float[taskObject.individualSize];
+            Genetic.LoadBest(path, fromGeneration, floatArr);
+            BuildCustomWeights(mlp.weights, taskObject.shapes, Vector<float>.Build.DenseOfArray(floatArr));
+            
+            /*if (stabilizationGeneration != 0)
+            {
+                Debug.Log("Gene Move");
+                gene = new Genetic(stabilizationSeed, null, 100, 40, 1.0f, 0.1f, 0.1f, 0.1f, 0.1f, "Save/DroneSession/Task-stabilization/", false);
+            }
             if (moveGeneration != 0)
-                gene = new Genetic(stabilizationSeed, null, 100, 40, 1.0f, 0.1f, 0.1f, 0.1f, 0.1f, "Save/GeneSession/Task-move/", false);
+            {
+                Debug.Log("Gene Move");
+                gene = new Genetic(moveSeed, null, 100, 52, 1.0f, 0.1f, 0.1f, 0.1f, 0.1f, "Save/DroneSession/Task-move/", false);
+            }
             deltaDistribution = new ContinuousUniform(-2, 2);
-            tmpBuildCustomWeights = new List<Matrix<float>>();
+            tmpBuildCustomWeights = new List<Matrix<float>>();*/
 
             Restart();
         }

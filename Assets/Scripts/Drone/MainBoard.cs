@@ -32,8 +32,8 @@ public class MainBoard : MonoBehaviour
     public Vector3 deltaPosition;
     public Vector3 initDeltaPosition;
 
-
-
+    ControlSignal resultControl;
+    ThrustSignal resultThrust;
     /*void Start()
     {
         Debug.Log(inputSize);
@@ -44,20 +44,19 @@ public class MainBoard : MonoBehaviour
     public void SendThrustSignal(ThrustSignal signal)
     {
         //Debug.Log("SendThrustSignal");
-        ThrustSignal result = signal;
+        resultThrust = signal;
         foreach (Drone.Hardware.Component<ThrustSignal> component in ThrustSignalBus)
         {
-            result = component.ProcessSignal(result);
+            resultThrust = component.ProcessSignal(resultThrust);
         }
     }
 
     public void SendControlSignal(ControlSignal signal)
     {
-        //Debug.Log("SendControlSignal");
-        ControlSignal result = signal;
+        resultControl = signal;
         foreach (Drone.Hardware.Component<ControlSignal> component in ControlSignalBus)
         {
-            result = component.ProcessSignal(result);
+            resultControl = component.ProcessSignal(resultControl);
         }
     }
 

@@ -12,13 +12,17 @@ using MathNet.Numerics.LinearAlgebra.Double;
 using Drone.Hardware;
 using System.Linq;
 
-
+using System.Reflection;
 namespace Lexmou.MachineLearning
 {
-    public class DroneSession : Lexmou.MachineLearning.Session {
+    public class DroneSession : Lexmou.MachineLearning.Session
+    {
 
+        public bool _save = false;
+        public bool save { get { return _save; } set { _save = value; } }
         public HUDManager hudManager;
         public StreamWriter writerSession;
+        public StreamWriter writerEnv;
         public List<Matrix<float>> tmpBuildCustomWeights;
         float theoricBestScore;
         public float initialValueWeights = 1.0f;
@@ -27,11 +31,13 @@ namespace Lexmou.MachineLearning
         public float randomIndividualsRate = 0.1f;
         public float bestIndividualsRate = 0.1f;
         public float emptyRate = 0.93f;
-        public string task = "Stabilization";
+        public string _task = "Stabilization";
+        public string task { get { return _task; } set { _task = value; } }
         public DroneTask taskObject;
         Vector<float> externalEvaluations;
         //private int individualSize;
         private Genetic gene;
+        string generationInfos;
         public int _intervalSave;
         public int intervalSave { get { return _intervalSave; } set { _intervalSave = value; } }
         public int _loadGeneration;
@@ -40,10 +46,13 @@ namespace Lexmou.MachineLearning
         public Rigidbody[] droneRigid;
         public GameObject[] dronePopulation;
         public MultiLayerMathsNet[] mlpPopulation;
+        public Vector3[] targetPosition;
 
         private ControlSignal signal;
 
-        public override string GeneratePath(bool withSeed = false)
+
+
+        public override string GeneratePath(string task, bool withSeed = false)
         {
             if (withSeed)
             {
@@ -51,12 +60,13 @@ namespace Lexmou.MachineLearning
             }
             else
             {
-                return "Save/DroneSession/" + "Task-" + task + "/";       
+                return "Save/DroneSession/" + "Task-" + task + "/";
             }
         }
 
         public override void SetParametersFromCommandLine()
         {
+            UIO.CheckBeforeReplaceCommandLineArguments(this, "save");
             UIO.CheckBeforeReplaceCommandLineArguments(this, "task");
             UIO.CheckBeforeReplaceCommandLineArguments(this, "seed");
             UIO.CheckBeforeReplaceCommandLineArguments(this, "intervalSave");
@@ -66,30 +76,43 @@ namespace Lexmou.MachineLearning
 
         public override void Build()
         {
+            if (save)
+            {
+                writerEnv = UIO.CreateStreamWriter(GeneratePath(task, true), "GeneSessionResults.csv", false);
+                UIO.WriteLine(writerEnv, "Generation;Angle Random Rotation;Wind");
+            }
             Debug.Log("Build DroneSession");
             signal = new ControlSignal();
             tmpBuildCustomWeights = new List<Matrix<float>>();
             externalEvaluations = Vector<float>.Build.Dense(populationSize);
-            taskObject = (DroneTask)Activator.CreateInstance(Type.GetType("Lexmou.MachineLearning.Drone" + task));
+            taskObject = (DroneTask)Activator.CreateInstance(Type.GetType("Lexmou.MachineLearning.Drone" + task), rndGenerator);
             dronePopulation = new GameObject[populationSize];
             droneRigid = new Rigidbody[populationSize];
+            targetPosition = new Vector3[populationSize];
             mlpPopulation = new MultiLayerMathsNet[populationSize];
-            
-            gene = new Genetic(seed, rndGenerator, populationSize, taskObject.individualSize, initialValueWeights, mutationRate, randomIndividualsRate, bestIndividualsRate, emptyRate, GeneratePath(false));
+
+            gene = new Genetic(seed, rndGenerator, populationSize, taskObject.individualSize, initialValueWeights, mutationRate, randomIndividualsRate, bestIndividualsRate, emptyRate, GeneratePath(task, false), save);
             if (loadGeneration != 0)
             {
-                float[,] floatArr = new float[taskObject.individualSize, populationSize];
-                gene.LoadGeneration(loadGeneration, floatArr);
+                float[,] floatArr = new float[taskObject.individualSize - taskObject.rowIndex, populationSize];
+                gene.LoadGeneration(GeneratePath(taskObject.fromTask, true), loadGeneration, floatArr, taskObject.rowIndex);
                 gene.generation = loadGeneration;
             }
 
         }
         public override void RunEachIntervalUpdate()
         {
-            string generationInfos;
             generationInfos = gene.Run(externalEvaluations, theoricBestScore, intervalSave);
             hudManager.UpdateTextLayout("Generation", generationInfos);
             theoricBestScore = 0;
+            if (save)
+                UIO.WriteLine(writerEnv, gene.generation + ";" + taskObject.AngleRandomRotation + ";" + taskObject.WindStrength);
+        }
+
+
+        private float MapEvaluate(int index, float value)
+        {
+            return value + taskObject.EvaluateIndividual(index, droneRigid[index], targetPosition[index]);
         }
 
         public override void RunEachFixedUpdate()
@@ -97,55 +120,67 @@ namespace Lexmou.MachineLearning
             theoricBestScore += 1;
             for (int i = 0; i < populationSize; i++)
             {
-                mlpPopulation[i].PropagateForward(taskObject.UCSignal(droneRigid[i]).input);
-                
+                taskObject.UCSignal(droneRigid[i], targetPosition[i]);
+                //Ici se trouve la plus grosse allocation à chaque frame !!! Si falk est vrai un poil plus lent mais moins de garbage (13.5kB contre 55kB)
+                mlpPopulation[i].PropagateForward(taskObject.signal.input, true);
+
                 signal.Throttle = mlpPopulation[i].layers[taskObject.shapes.Count - 1][3, 0];
                 signal.Rudder = mlpPopulation[i].layers[taskObject.shapes.Count - 1][0, 0];
                 signal.Elevator = mlpPopulation[i].layers[taskObject.shapes.Count - 1][1, 0];
                 signal.Aileron = mlpPopulation[i].layers[taskObject.shapes.Count - 1][2, 0];
 
                 dronePopulation[i].GetComponent<MainBoard>().SendControlSignal(signal);
-                externalEvaluations[i] += taskObject.EvaluateIndividual(i, droneRigid[i]);
+
             }
+            externalEvaluations.MapIndexedInplace(MapEvaluate);
         }
 
-        void BuildCustomWeights(List<int> shapes, Vector<float> individual)
+        void BuildCustomWeights(List<Matrix<float>> newWeights, List<int> shapes, Vector<float> individual)
         {
-            tmpBuildCustomWeights.Clear();
             for (int i = 0; i < shapes.Count - 1; i++)
             {
                 if (i == 0)
                 {
-                    tmpBuildCustomWeights.Add(UMatrix.Make2DMatrix(individual.SubVector(0, (shapes[i] + 1) * shapes[i + 1]), shapes[i + 1], shapes[i] + 1));
+                    UMatrix.Make2DMatrix(newWeights[i], individual.SubVector(0, (shapes[i] + 1) * shapes[i + 1]), shapes[i + 1], shapes[i] + 1);
                 }
                 else
                 {
-                    tmpBuildCustomWeights.Add(UMatrix.Make2DMatrix(individual.SubVector((shapes[i - 1] + 1) * shapes[i], (shapes[i] + 1) * shapes[i + 1]), shapes[i + 1], shapes[i] + 1));
+                    UMatrix.Make2DMatrix(newWeights[i], individual.SubVector((shapes[i - 1] + 1) * shapes[i], (shapes[i] + 1) * shapes[i + 1]), shapes[i + 1], shapes[i] + 1);
                 }
             }
         }
 
         public override void Reset()
         {
-            //Debug.Log("Reset");
             for (int i = 0; i < populationSize; i++)
             {
+
                 dronePopulation[i] = MonoBehaviour.Instantiate((GameObject)Resources.Load("DroneGene"), taskObject.GetInitialposition(i), Quaternion.identity) as GameObject;
                 droneRigid[i] = dronePopulation[i].GetComponentInChildren<Rigidbody>();
-                mlpPopulation[i] = new MultiLayerMathsNet(-1, rndGenerator, taskObject.shapes, 1, initialValueWeights);
-                //if(gene.generation == 1)
-                //Suspect, il doit y avoir une fuite mémoire ici je pense
-                BuildCustomWeights(taskObject.shapes, gene.GetIndividual(i));
-                mlpPopulation[i].Reset(false, tmpBuildCustomWeights);
+                taskObject.GetTargetPosition(i, targetPosition);
+                //Debug.Log(targetPosition[i].ToString());
+                //targetPosition[i] = 
+                if (!taskObject.ResetOrientation(droneRigid[i], gene.bestScore, gene.median, i, populationSize))
+                {
+                    OnDestroy();
+                    Application.Quit();
+                    Time.timeScale = 0f;
+                }
+                if ((gene.generation == 1) || (gene.generation == loadGeneration))
+                    mlpPopulation[i] = new MultiLayerMathsNet(-1, rndGenerator, taskObject.shapes, 1, initialValueWeights);
+                BuildCustomWeights(mlpPopulation[i].weights, taskObject.shapes, gene.GetIndividual(i));
             }
-            externalEvaluations = Vector<float>.Build.Dense(populationSize);
+            externalEvaluations.Clear();
         }
 
         public override void OnDestroy()
         {
-            Debug.Log("Destroy Genetic Writer");
-            UIO.CloseStreamWriter(gene.writer);
-            //UIO.CloseStreamWriter(writer);
+            if (save)
+            {
+                Debug.Log("Destroy Genetic Writer");
+                UIO.CloseStreamWriter(gene.writer);
+                UIO.CloseStreamWriter(writerEnv);
+            }
         }
 
         public override void Destroy()
@@ -153,37 +188,39 @@ namespace Lexmou.MachineLearning
             for (int i = 0; i < populationSize; i++)
             {
                 Destroy(dronePopulation[i]);
-                mlpPopulation[i] = null;
+                //mlpPopulation[i] = null;
                 droneRigid[i] = null;
+                targetPosition[i] = Vector3.zero;
             }
         }
 
         public override void CloseSessionWriter()
         {
-            UIO.CloseStreamWriter(writerSession);
+            if (save)
+                UIO.CloseStreamWriter(writerSession);
         }
 
         public override void BuildSessionWriter()
         {
-            writerSession = UIO.CreateStreamWriter(GeneratePath(true), "DroneSessionParams.csv", false);
-            UIO.WriteLine(writerSession, "Task : " + task + ";" +
-                                     "Seed : " + seed + ";" +
-                                     "Population Size : " + populationSize + ";" +
-                                     "Individual Size : " + taskObject.individualSize + ";" +
-                                     "Mutation Rate : " + mutationRate + ";" +
-                                     "Random Rate : " + randomIndividualsRate + ";" +
-                                     "Best Individual Rate : " + bestIndividualsRate + ";" +
-                                     "Empty Coeff Individual Rate : " + emptyRate + " (" + Mathf.RoundToInt(emptyRate * taskObject.individualSize) + ");" +
-                                     "MLP layers : [" + string.Join("-", taskObject.shapes.Select(x => x.ToString()).ToArray()) + "] ; Intitial Value Weights :  [" + -initialValueWeights + "," + initialValueWeights + "]");
+            if (save)
+            {
+                writerSession = UIO.CreateStreamWriter(GeneratePath(task, true), "DroneSessionParams.csv", false);
+                UIO.WriteLine(writerSession, "Task : " + task + ";" +
+                                         "Seed : " + seed + ";" +
+                                         "Population Size : " + populationSize + ";" +
+                                         "Individual Size : " + taskObject.individualSize + ";" +
+                                         "Mutation Rate : " + mutationRate + ";" +
+                                         "Random Rate : " + randomIndividualsRate + ";" +
+                                         "Best Individual Rate : " + bestIndividualsRate + ";" +
+                                         "Empty Coeff Individual Rate : " + emptyRate + " (" + Mathf.RoundToInt(emptyRate * taskObject.individualSize) + ");" +
+                                         "MLP layers : [" + string.Join("-", taskObject.shapes.Select(x => x.ToString()).ToArray()) + "] ; Intitial Value Weights :  [" + -initialValueWeights + "," + initialValueWeights + "]");
+            }
         }
 
         public override void BuildHUD()
         {
             hudManager = this.gameObject.AddComponent<HUDManager>() as HUDManager;
             hudManager.AddTextLayout("Task", task);
-            hudManager.AddTextLayout("Best Drone Info", "");
-            hudManager.AddTextLayout("Position", "--------");
-            hudManager.AddTextLayout("Commands", "--------");
             hudManager.AddTextLayout("Time Scale", Time.timeScale.ToString() + "x");
             hudManager.AddTextLayout("Generation", "--------");
             hudManager.AddTextLayout("Infos", "Seed : " + seed + "\r\n" +

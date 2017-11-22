@@ -177,7 +177,7 @@ public class MLPTest
         ContinuousUniform cu = new ContinuousUniform(-initialValueWeights, initialValueWeights, rndGenerator);
         */
         Vector<float> data = Vector<float>.Build.DenseOfArray(new float[] { 1,2,3,4,5,6,7,8,9}); ;
-        int iter = 10000;
+        int iter = 50000;
 
 
         var watch = System.Diagnostics.Stopwatch.StartNew();
@@ -189,7 +189,7 @@ public class MLPTest
         watch.Stop();
         var elapsedMs = watch.ElapsedMilliseconds;
 
-        Debug.Log("PropagateForward Array Time MathNet: " + elapsedMs);
+        Debug.Log("MathNet Falk Array : " + elapsedMs);
 
 
 
@@ -201,8 +201,22 @@ public class MLPTest
         watch.Stop();
         elapsedMs = watch.ElapsedMilliseconds;
 
-        Debug.Log("PropagateForward2 Multiply Time MathNet: " + elapsedMs);
+        Debug.Log("MathNet Multiply: " + elapsedMs);
 
+        watch = System.Diagnostics.Stopwatch.StartNew();
+        for (int i = 0; i < iter; i++)
+        {
+            mlpMN.PropagateForward(data, true);
+        }
+        watch.Stop();
+        elapsedMs = watch.ElapsedMilliseconds;
+
+        Debug.Log("MathNet Falk Matrix: " + elapsedMs);
+
+
+
+
+        
         float[,] dataArr  = new float[,] { { 1,2,3,4,5,6,7,8,9 } };
         watch = System.Diagnostics.Stopwatch.StartNew();
         for (int i = 0; i < iter; i++)
@@ -212,7 +226,7 @@ public class MLPTest
         watch.Stop();
         elapsedMs = watch.ElapsedMilliseconds;
 
-        Debug.Log("PropagateForward Time Array: " + elapsedMs);
+        Debug.Log("Array Falk Array: " + elapsedMs);
         //mlpMN.PropagateForward2(data);
     }
 

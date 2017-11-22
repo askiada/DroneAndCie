@@ -34,5 +34,30 @@ namespace Lexmou.Utils
             
             return tmp;
         }
+
+        public static void Make2DMatrix(Matrix<float> M, Vector<float> V, int height, int width, bool colMode = true)
+        {
+            if (height * width < V.Count)
+            {
+                Debug.Log((height * width));
+                Debug.Log(V.Count);
+                throw new System.ArgumentOutOfRangeException("The size of V is not compatible with the shape of the matrix !");
+            }
+            //Matrix<float> tmp = Matrix<float>.Build.Dense(height, width);
+            if (colMode)
+            {
+                for (int i = 0; i < width; i++)
+                {
+                    M.SetColumn(i, V.SubVector(height * i, height));
+                }
+            }
+            else
+            {
+                for (int i = 0; i < height; i++)
+                {
+                    M.SetRow(i, V.SubVector(width * i, width));
+                }
+            }
+        }
     }
 }

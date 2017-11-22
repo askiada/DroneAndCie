@@ -31,13 +31,13 @@ public class GeneTest
     public void SetUp()
     {
         seed = 65;
-        geneSeed = new Genetic(seed, null, 2, 10, 1.0f);
+        geneSeed = new Genetic(seed, null, 2, 10, initialValueWeights, 0.1f,0.05f,0.05f,0,"",false);
         initialValueWeights = 1.0f;
         //Debug.Log(geneSeed.ToString());
         //System.Threading.Thread.Sleep(10000);
         SystemRandomSource rndGenerator = new SystemRandomSource(seed);
 
-        geneRndGenerator = new Genetic(seed, rndGenerator, 2, 10, initialValueWeights);
+        geneRndGenerator = new Genetic(seed, rndGenerator, 2, 10, initialValueWeights, 0.1f, 0.05f, 0.05f, 0, "", false);
     }
 
     [TearDown]
@@ -163,7 +163,8 @@ public class GeneTest
         gene.Evaluation(externalEvaluations, "max");
         Debug.Log(gene.GetPopulation());
         gene.Selection();
-        
+        Debug.Log(gene.GetPopulation());
+
     }
 
     [Test]

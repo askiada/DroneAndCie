@@ -15,7 +15,7 @@ namespace Lexmou.Utils
         public static void CheckBeforeReplaceCommandLineArguments(Lexmou.MachineLearning.Session mb, string propertyName)
         {
             string valueCL = UIO.GetCommandLineArguments("-" + propertyName);
-
+            //Debug.Log(mb[propertyName]);
             if (valueCL != null)
             {
                 if (mb[propertyName] is int)
@@ -25,6 +25,11 @@ namespace Lexmou.Utils
                 else if (mb[propertyName] is float)
                 {
                     mb[propertyName] = float.Parse(valueCL);
+                }
+                else if (mb[propertyName] is bool)
+                {
+                    Debug.Log("Bite");
+                    mb[propertyName] = bool.Parse(valueCL);
                 }
                 else
                 {

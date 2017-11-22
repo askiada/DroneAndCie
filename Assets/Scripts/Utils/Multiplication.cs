@@ -1,4 +1,5 @@
 ﻿using UnityEngine;
+using System;
 using System.Collections;
 using MathNet.Numerics.LinearAlgebra;
 using MathNet.Numerics.LinearAlgebra.Double;
@@ -63,8 +64,11 @@ public static class Multiplication  {
 
         return result;
     }
-
-    public static Matrix<float> FalkSchemeM(Matrix<float> Matrix1, Matrix<float> Matrix2)
+    /*int r1;
+    int c1;
+    int r2;
+    int c2;*/
+    public static void FalkSchemeM(Matrix<float> Matrix1, Matrix<float> Matrix2, Matrix<float> result, Func<float, float> f)
     {
         if (UnityEngine.Object.ReferenceEquals(null, Matrix1))
             throw new System.ArgumentNullException("Matrix1");
@@ -76,14 +80,11 @@ public static class Multiplication  {
 
         int r2 = Matrix2.RowCount;
         int c2 = Matrix2.ColumnCount;
-
+        //float s = 0;
         if (c1 != r2)
             throw new System.ArgumentOutOfRangeException("Matrix2", "Matrixes dimensions don't fit.");
 
-        Matrix<float> result = Matrix<float>.Build.Dense(r1, c2);
-
         // Naive matrix multiplication: O(n**3) 
-        // Use Strassen algorithm O(n**2.81) in case of big matrices
         for (int r = 0; r < r1; ++r)
             for (int c = 0; c < c2; ++c)
             {
@@ -93,10 +94,8 @@ public static class Multiplication  {
                 {                  
                         s += Matrix1[r, z] * Matrix2[z, c];
                 }
-                result[r, c] = s;
+                result[r, c] = f(s);
             }
-
-        return result;
     }
 
 

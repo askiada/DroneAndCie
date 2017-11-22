@@ -2,7 +2,7 @@ using UnityEngine;
 using System.Collections;
 using Drone.Hardware;
 
-public class ControlReceiver : Drone.Hardware.Component <ControlSignal>
+public class ControlReceiver : Component<ControlSignal>
 {
     public float ThrottleSensitivity = 1.0f;
 	public float ElevatorSensitivity = .5f;

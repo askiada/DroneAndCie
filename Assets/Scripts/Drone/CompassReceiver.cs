@@ -2,8 +2,9 @@
 using System.Collections;
 using MathNet.Numerics.LinearAlgebra;
 using MathNet.Numerics.LinearAlgebra.Double;
+using Drone.Hardware;
 
-public class CompassReceiver : Drone.Hardware.Component<SensorSignal>
+public class CompassReceiver : Component<SensorSignal>
 {
 
     public override SensorSignal ProcessSignal(SensorSignal signal)

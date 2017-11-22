@@ -294,12 +294,27 @@ Prefab:
     - target: {fileID: 114000014040321786, guid: 1ef898e54e6a66346ae52aad7c35a690,
         type: 2}
       propertyPath: moveSeed
-      value: 1256
+      value: 13
       objectReference: {fileID: 0}
     - target: {fileID: 114000014040321786, guid: 1ef898e54e6a66346ae52aad7c35a690,
         type: 2}
       propertyPath: moveGeneration
-      value: 1000
+      value: 1360
+      objectReference: {fileID: 0}
+    - target: {fileID: 114000014040321786, guid: 1ef898e54e6a66346ae52aad7c35a690,
+        type: 2}
+      propertyPath: task
+      value: move
+      objectReference: {fileID: 0}
+    - target: {fileID: 114000014040321786, guid: 1ef898e54e6a66346ae52aad7c35a690,
+        type: 2}
+      propertyPath: fromSeed
+      value: 13
+      objectReference: {fileID: 0}
+    - target: {fileID: 114000014040321786, guid: 1ef898e54e6a66346ae52aad7c35a690,
+        type: 2}
+      propertyPath: fromGeneration
+      value: 1300
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 1ef898e54e6a66346ae52aad7c35a690, type: 2}
@@ -415,6 +430,10 @@ Prefab:
         type: 2}
       propertyPath: windStrength
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1000011555306642, guid: 047c37bb4dc2c974c9a57d65335e4bc4, type: 2}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 047c37bb4dc2c974c9a57d65335e4bc4, type: 2}

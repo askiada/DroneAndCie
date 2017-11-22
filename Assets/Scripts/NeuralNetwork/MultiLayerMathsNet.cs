@@ -110,23 +110,30 @@ namespace Lexmou.MachineLearning.NeuralNetwork.FeedForward
 
 
 
-        public void PropagateForward(Vector<float> data)
+        public void PropagateForward(Vector<float> data, bool falk = false)
         {
             //Debug.Log(data);
             for (int i = 0; i < layers[0].ColumnCount; i++)
             {
                 layers[0].SetColumn(i, 0, shapes[0], data);
             }
-
+            //Danger c'est pas worth niveau Garbage Collection si shapes est grand
             for (int i = 1; i < shapesSize - 1; i++)
             {
                 layers[i].SetSubMatrix(0, 0, weights[i - 1].Multiply(layers[i - 1]));
 
                 layers[i].MapInplace(UActivation.Tanh);
             }
-            weights[shapesSize - 2].Multiply(layers[shapesSize - 2], layers[shapesSize - 1]);
 
-            layers[shapesSize - 1].MapInplace(UActivation.Tanh);
+            if (falk)
+            {
+                Multiplication.FalkSchemeM(weights[shapesSize - 2], layers[shapesSize - 2], layers[shapesSize - 1], UActivation.Tanh);
+            }
+            else
+            {
+                weights[shapesSize - 2].Multiply(layers[shapesSize - 2], layers[shapesSize - 1]);
+                layers[shapesSize - 1].MapInplace(UActivation.Tanh);
+            }           
         }
 
         public void PropagateForward2(Vector<float> data)

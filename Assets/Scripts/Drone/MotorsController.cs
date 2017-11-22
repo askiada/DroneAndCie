@@ -3,7 +3,7 @@ using System.Collections;
 //using System.Collections.Generic;
 using Drone.Hardware;
 
-public class MotorsController : Drone.Hardware.Component <ThrustSignal>
+public class MotorsController : Component<ThrustSignal>
 {
 	
 	public MotorThrust MotorFR;

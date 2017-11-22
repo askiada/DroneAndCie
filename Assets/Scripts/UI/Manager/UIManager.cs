@@ -52,10 +52,20 @@ namespace Lexmou.Manager
         }
 
         // Update is called once per frame
+
         void Update()
         {
             ScanForKeyStroke();
             ScanForKeyRestart();
+            if (Input.GetKeyDown("joystick 1 button 0"))
+            {
+                Debug.Log("New move !");
+                DM.SetNewMovePosition();
+            }
+        }
+
+        void FixedUpdate()
+        {
             ScanForKeyStabilization();
             ScanForKeyMove();
         }
@@ -79,6 +89,10 @@ namespace Lexmou.Manager
         {
             if (Input.GetKey("joystick 1 button 4"))
             {
+                DM.Move();
+            }
+            /*if (Input.GetKey("joystick 1 button 4"))
+            {
                 DM.drone.GetComponent<InputControl>().move = true;
                 if (Input.GetKeyDown("joystick 1 button 0"))
                 {
@@ -91,13 +105,19 @@ namespace Lexmou.Manager
             {
                 if (DM.drone.GetComponent<InputControl>().move)
                     DM.drone.GetComponent<InputControl>().move = false;
-            }
+            }*/
         }
 
 
         void ScanForKeyStabilization()
         {
+            //DM.Stabilization();
             if (Input.GetKey("joystick 1 button 5"))
+            {
+                DM.Stabilization();
+            }
+
+            /*if (Input.GetKey("joystick 1 button 5"))
             {
                 DM.drone.GetComponent<InputControl>().stabilization = true;
                 DM.Stabilization();
@@ -106,7 +126,7 @@ namespace Lexmou.Manager
             {
                 if (DM.drone.GetComponent<InputControl>().stabilization)
                     DM.drone.GetComponent<InputControl>().stabilization = false;
-            }
+            }*/
         }
 
 

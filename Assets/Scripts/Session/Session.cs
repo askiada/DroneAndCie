@@ -1,9 +1,10 @@
 ﻿using UnityEngine;
 using System;
-using System.Reflection;
+
 using System.Collections;
 using System.IO;
 using MathNet.Numerics.Random;
+using System.Reflection;
 
 namespace Lexmou.MachineLearning
 {
@@ -25,7 +26,7 @@ namespace Lexmou.MachineLearning
         public abstract void BuildHUD();
         public abstract void BuildSessionWriter();
         public abstract void CloseSessionWriter();
-        public abstract string GeneratePath(bool withSeed = false);
+        public abstract string GeneratePath(string task, bool withSeed = false);
         public abstract void SetParametersFromCommandLine();
         public abstract void OnDestroy();
         public abstract void Reset();
@@ -37,31 +38,25 @@ namespace Lexmou.MachineLearning
         {
             get
             {
-                Type myType = typeof(Session);
+                Type myType = this.GetType();
                 PropertyInfo myPropInfo = myType.GetProperty(propertyName);
+                //Debug.Log("PropInfo : " + myPropInfo.ToString());
                 return myPropInfo.GetValue(this, null);
             }
             set
             {
-                Type myType = typeof(Session);
+                Type myType = this.GetType();
                 PropertyInfo myPropInfo = myType.GetProperty(propertyName);
-                Debug.Log(value);
+                //Debug.Log(value);
                 myPropInfo.SetValue(this, value, null);
 
             }
 
         }
 
-        public Session()
-        {
-            Debug.Log("Constructor Session");
-            SetParametersFromCommandLine();
-            //Debug.Log(seed);
-
-        }
-
         void Awake()
         {
+            SetParametersFromCommandLine();
             Debug.Log("Awake Session");
             Build();
             Time.timeScale = timeScale;
