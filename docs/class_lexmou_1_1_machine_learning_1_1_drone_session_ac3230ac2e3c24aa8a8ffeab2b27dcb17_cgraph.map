@@ -1,4 +1,6 @@
 <map id="Lexmou.MachineLearning.DroneSession.Reset" name="Lexmou.MachineLearning.DroneSession.Reset">
-<area shape="rect" id="node2" href="$class_lexmou_1_1_machine_learning_1_1_drone_task.html#a9474f67cd61740665d99265428541df8" title="Lexmou.MachineLearning.Drone\lTask.GetInitialposition" alt="" coords="281,5,489,47"/>
-<area shape="rect" id="node3" href="$class_lexmou_1_1_machine_learning_1_1_evolutionary_1_1_genetic.html#ab97494979da382d4c6ef031106eb01ab" title="Get a specific individual. " alt="" coords="261,71,509,112"/>
+<area shape="rect" id="node2" href="$class_lexmou_1_1_machine_learning_1_1_drone_task.html#a9474f67cd61740665d99265428541df8" title="Define a initial position for the drone i. " alt="" coords="281,5,489,47"/>
+<area shape="rect" id="node3" href="$class_lexmou_1_1_machine_learning_1_1_drone_task.html#ace79f0060a6521abc4d6ce2e880c84a7" title="Define a target position from another position. " alt="" coords="281,71,489,112"/>
+<area shape="rect" id="node4" href="$class_lexmou_1_1_machine_learning_1_1_drone_task.html#ac12ea410036adb103f64833e55c55a16" title="Reset the orientation of the drone define by an index. Take care of the maximum euler angle subtask..." alt="" coords="281,136,489,177"/>
+<area shape="rect" id="node5" href="$class_lexmou_1_1_machine_learning_1_1_evolutionary_1_1_genetic.html#ab97494979da382d4c6ef031106eb01ab" title="Get a specific individual. " alt="" coords="261,201,509,243"/>
 </map>

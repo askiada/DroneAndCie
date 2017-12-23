@@ -16,6 +16,8 @@ var searchData=
   ['dronemasssliderupdate',['DroneMassSliderUpdate',['../class_lexmou_1_1_manager_1_1_u_i_manager.html#ad03ea14259c478c7c47ee97f072cd62b',1,'Lexmou::Manager::UIManager']]],
   ['dronemasstoggle',['DroneMassToggle',['../class_lexmou_1_1_manager_1_1_u_i_manager.html#a0377b9d67f2fb06a6b627c4f9f340cf1',1,'Lexmou::Manager::UIManager']]],
   ['dronemotorsmaxthrust',['DroneMotorsMaxThrust',['../class_lexmou_1_1_manager_1_1_u_i_manager.html#aeb00ac46104f10f5679d7ad9b9ddb191',1,'Lexmou::Manager::UIManager']]],
+  ['dronemove',['DroneMove',['../class_lexmou_1_1_machine_learning_1_1_drone_move.html#a2ee66d6028752a685684943817c22e4d',1,'Lexmou::MachineLearning::DroneMove']]],
   ['dronerestart',['DroneRestart',['../class_lexmou_1_1_manager_1_1_u_i_manager.html#a7719d5244b98130437a5cebf9e5ffe3d',1,'Lexmou::Manager::UIManager']]],
-  ['dronestabilization',['DroneStabilization',['../class_lexmou_1_1_machine_learning_1_1_drone_stabilization.html#a0a707fa14c2153fc54305e5e3c41c0b0',1,'Lexmou::MachineLearning::DroneStabilization']]]
+  ['dronestabilization',['DroneStabilization',['../class_lexmou_1_1_machine_learning_1_1_drone_stabilization.html#a639f7c37d9d936a0d3e73385296102c6',1,'Lexmou::MachineLearning::DroneStabilization']]],
+  ['dronetask',['DroneTask',['../class_lexmou_1_1_machine_learning_1_1_drone_task.html#afd15c7c3834f2fd7efb631f880c1f1dc',1,'Lexmou::MachineLearning::DroneTask']]]
 ];

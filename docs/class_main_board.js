@@ -13,5 +13,7 @@ var class_main_board =
     [ "rotate", "class_main_board.html#acceef52976913588383d46451fa0a707", null ],
     [ "deltaPosition", "class_main_board.html#a8f7c997933f601e8630c8da4f48797da", null ],
     [ "initDeltaPosition", "class_main_board.html#a2f060d3b6350474a72f4ea2e8e815d05", null ],
+    [ "resultControl", "class_main_board.html#ae5a08fc699aeb99984a531464834ebd8", null ],
+    [ "resultThrust", "class_main_board.html#ae6815145756f5931b17cc98ca7b43501", null ],
     [ "inputMLP", "class_main_board.html#ae0562f955a1b3eb0a7fb42f388ec4f8f", null ]
 ];

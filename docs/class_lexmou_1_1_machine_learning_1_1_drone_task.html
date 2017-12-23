@@ -5,7 +5,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=9"/>
 <meta name="generator" content="Doxygen 1.8.12"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>Drone &amp; Cie: Lexmou.MachineLearning.DroneTask Class Reference</title>
+<title>Drone &amp; Cie: Lexmou.MachineLearning.DroneTask Interface Reference</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -100,18 +100,24 @@ $(document).ready(function(){initNavTree('class_lexmou_1_1_machine_learning_1_1_
   <div class="summary">
 <a href="#pub-methods">Public Member Functions</a> &#124;
 <a href="#pub-attribs">Public Attributes</a> &#124;
+<a href="#properties">Properties</a> &#124;
+<a href="#pri-attribs">Private Attributes</a> &#124;
 <a href="class_lexmou_1_1_machine_learning_1_1_drone_task-members.html">List of all members</a>  </div>
   <div class="headertitle">
-<div class="title">Lexmou.MachineLearning.DroneTask Class Reference<span class="mlabels"><span class="mlabel">abstract</span></span></div>  </div>
+<div class="title">Lexmou.MachineLearning.DroneTask Interface Reference<span class="mlabels"><span class="mlabel">abstract</span></span></div>  </div>
 </div><!--header-->
 <div class="contents">
+
+<p><a class="el" href="class_lexmou_1_1_machine_learning_1_1_drone_task.html" title="DroneTask interface used during a DroneSession. ">DroneTask</a> interface used during a <a class="el" href="class_lexmou_1_1_machine_learning_1_1_drone_session.html">DroneSession</a>.  
+ <a href="class_lexmou_1_1_machine_learning_1_1_drone_task.html#details">More...</a></p>
 <div class="dynheader">
 Inheritance diagram for Lexmou.MachineLearning.DroneTask:</div>
 <div class="dyncontent">
 <div class="center"><img src="class_lexmou_1_1_machine_learning_1_1_drone_task__inherit__graph.png" border="0" usemap="#_lexmou_8_machine_learning_8_drone_task_inherit__map" alt="Inheritance graph"/></div>
 <map name="_lexmou_8_machine_learning_8_drone_task_inherit__map" id="_lexmou_8_machine_learning_8_drone_task_inherit__map">
-<area shape="rect" id="node3" href="class_lexmou_1_1_machine_learning_1_1_drone_stabilization.html" title="{Lexmou.MachineLearning.Drone\lStabilization\n||+ DroneStabilization()\l+ GetInitialposition()\l+ EvaluateIndividual()\l+ UCSignal()\l}" alt="" coords="19,329,227,465"/>
-<area shape="rect" id="node2" href="class_lexmou_1_1_machine_learning_1_1_task.html" title="{Task\n||+ UCSignal()\l}" alt="" coords="75,5,171,83"/>
+<area shape="rect" id="node3" href="class_lexmou_1_1_machine_learning_1_1_drone_move.html" title="{Lexmou.MachineLearning.DroneMove\n|&#45; deltaDistribution\l|+ DroneMove()\l+ GetTargetPosition()\l+ GetTargetPosition()\l+ GetInitialposition()\l+ EvaluateIndividual()\l+ UCSignal()\l}" alt="" coords="5,586,244,737"/>
+<area shape="rect" id="node4" href="class_lexmou_1_1_machine_learning_1_1_drone_stabilization.html" title="Implementation of the stabilization task for a drone using a genetic algorithm and a MLP..." alt="" coords="269,579,477,744"/>
+<area shape="rect" id="node2" href="class_lexmou_1_1_machine_learning_1_1_task.html" title="Task interface used during a Session. " alt="" coords="194,5,303,97"/>
 </map>
 </div>
 <div class="dynheader">
@@ -119,38 +125,128 @@ Collaboration diagram for Lexmou.MachineLearning.DroneTask:</div>
 <div class="dyncontent">
 <div class="center"><img src="class_lexmou_1_1_machine_learning_1_1_drone_task__coll__graph.png" border="0" usemap="#_lexmou_8_machine_learning_8_drone_task_coll__map" alt="Collaboration graph"/></div>
 <map name="_lexmou_8_machine_learning_8_drone_task_coll__map" id="_lexmou_8_machine_learning_8_drone_task_coll__map">
-<area shape="rect" id="node2" href="class_lexmou_1_1_machine_learning_1_1_task.html" title="{Task\n||+ UCSignal()\l}" alt="" coords="15,5,111,83"/>
-<area shape="rect" id="node3" href="class_u_c_signal.html" title="{UCSignal\n|+ input\l|+ UCSignal()\l}" alt="" coords="135,5,231,83"/>
+<area shape="rect" id="node2" href="class_lexmou_1_1_machine_learning_1_1_task.html" title="Task interface used during a Session. " alt="" coords="6,5,115,97"/>
+<area shape="rect" id="node3" href="class_u_c_signal.html" title="{UCSignal\n|+ input\l|+ UCSignal()\l}" alt="" coords="139,13,235,90"/>
 </map>
 </div>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
 <tr class="memitem:a9474f67cd61740665d99265428541df8"><td class="memItemLeft" align="right" valign="top">abstract Vector3&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_lexmou_1_1_machine_learning_1_1_drone_task.html#a9474f67cd61740665d99265428541df8">GetInitialposition</a> (int i)</td></tr>
+<tr class="memdesc:a9474f67cd61740665d99265428541df8"><td class="mdescLeft">&#160;</td><td class="mdescRight">Define a initial position for the drone i.  <a href="#a9474f67cd61740665d99265428541df8">More...</a><br /></td></tr>
 <tr class="separator:a9474f67cd61740665d99265428541df8"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:acce47671b67d67e97157d374d27b86ee"><td class="memItemLeft" align="right" valign="top">abstract float&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_lexmou_1_1_machine_learning_1_1_drone_task.html#acce47671b67d67e97157d374d27b86ee">EvaluateIndividual</a> (int i, Rigidbody rigid)</td></tr>
-<tr class="separator:acce47671b67d67e97157d374d27b86ee"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ace79f0060a6521abc4d6ce2e880c84a7"><td class="memItemLeft" align="right" valign="top">abstract Vector3&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_lexmou_1_1_machine_learning_1_1_drone_task.html#ace79f0060a6521abc4d6ce2e880c84a7">GetTargetPosition</a> (Vector3 fromPosition)</td></tr>
+<tr class="memdesc:ace79f0060a6521abc4d6ce2e880c84a7"><td class="mdescLeft">&#160;</td><td class="mdescRight">Define a target position from another position.  <a href="#ace79f0060a6521abc4d6ce2e880c84a7">More...</a><br /></td></tr>
+<tr class="separator:ace79f0060a6521abc4d6ce2e880c84a7"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:adbf4ef098c6062b9cfedfd8603ed4f70"><td class="memItemLeft" align="right" valign="top">abstract void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_lexmou_1_1_machine_learning_1_1_drone_task.html#adbf4ef098c6062b9cfedfd8603ed4f70">GetTargetPosition</a> (int index, Vector3[] targetPosition)</td></tr>
+<tr class="memdesc:adbf4ef098c6062b9cfedfd8603ed4f70"><td class="mdescLeft">&#160;</td><td class="mdescRight">Define a target position for the drone num index.  <a href="#adbf4ef098c6062b9cfedfd8603ed4f70">More...</a><br /></td></tr>
+<tr class="separator:adbf4ef098c6062b9cfedfd8603ed4f70"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a7ed1c02aeb2f181168a0b04d0e7e6a35"><td class="memItemLeft" align="right" valign="top">abstract float&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_lexmou_1_1_machine_learning_1_1_drone_task.html#a7ed1c02aeb2f181168a0b04d0e7e6a35">EvaluateIndividual</a> (int i, Rigidbody rigid, Vector3 targetPosition)</td></tr>
+<tr class="memdesc:a7ed1c02aeb2f181168a0b04d0e7e6a35"><td class="mdescLeft">&#160;</td><td class="mdescRight">Define an objective function. Ideally this function is concave.  <a href="#a7ed1c02aeb2f181168a0b04d0e7e6a35">More...</a><br /></td></tr>
+<tr class="separator:a7ed1c02aeb2f181168a0b04d0e7e6a35"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:afd15c7c3834f2fd7efb631f880c1f1dc"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_lexmou_1_1_machine_learning_1_1_drone_task.html#afd15c7c3834f2fd7efb631f880c1f1dc">DroneTask</a> (SystemRandomSource <a class="el" href="class_lexmou_1_1_machine_learning_1_1_task.html#a622f68ae31f5bdf94123dc56863c770a">rndGenerator</a>)</td></tr>
+<tr class="separator:afd15c7c3834f2fd7efb631f880c1f1dc"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac12ea410036adb103f64833e55c55a16"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_lexmou_1_1_machine_learning_1_1_drone_task.html#ac12ea410036adb103f64833e55c55a16">ResetOrientation</a> (Rigidbody rigid, float best, float median, int index, int populationSize)</td></tr>
+<tr class="memdesc:ac12ea410036adb103f64833e55c55a16"><td class="mdescLeft">&#160;</td><td class="mdescRight">Reset the orientation of the drone define by an index. Take care of the maximum euler angle subtask.  <a href="#ac12ea410036adb103f64833e55c55a16">More...</a><br /></td></tr>
+<tr class="separator:ac12ea410036adb103f64833e55c55a16"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a91be01b613b0313dcb852d42b6418227"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_lexmou_1_1_machine_learning_1_1_drone_task.html#a91be01b613b0313dcb852d42b6418227">ResetOrientation</a> (bool condition, Rigidbody rigid)</td></tr>
+<tr class="memdesc:a91be01b613b0313dcb852d42b6418227"><td class="mdescLeft">&#160;</td><td class="mdescRight">Reset the orientation of the drone define by an index. Take care of a specific condition to define a specific orientation.  <a href="#a91be01b613b0313dcb852d42b6418227">More...</a><br /></td></tr>
+<tr class="separator:a91be01b613b0313dcb852d42b6418227"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="inherit_header pub_methods_class_lexmou_1_1_machine_learning_1_1_task"><td colspan="2" onclick="javascript:toggleInherit('pub_methods_class_lexmou_1_1_machine_learning_1_1_task')"><img src="closed.png" alt="-"/>&#160;Public Member Functions inherited from <a class="el" href="class_lexmou_1_1_machine_learning_1_1_task.html">Lexmou.MachineLearning.Task</a></td></tr>
-<tr class="memitem:a5d3767708c03a5a8a8132e9352ef0592 inherit pub_methods_class_lexmou_1_1_machine_learning_1_1_task"><td class="memItemLeft" align="right" valign="top">abstract <a class="el" href="class_u_c_signal.html">UCSignal</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_lexmou_1_1_machine_learning_1_1_task.html#a5d3767708c03a5a8a8132e9352ef0592">UCSignal</a> (Rigidbody rigid)</td></tr>
-<tr class="separator:a5d3767708c03a5a8a8132e9352ef0592 inherit pub_methods_class_lexmou_1_1_machine_learning_1_1_task"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab8710594a29025ec29802ad4d62632a6 inherit pub_methods_class_lexmou_1_1_machine_learning_1_1_task"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_lexmou_1_1_machine_learning_1_1_task.html#ab8710594a29025ec29802ad4d62632a6">Task</a> (SystemRandomSource <a class="el" href="class_lexmou_1_1_machine_learning_1_1_task.html#a622f68ae31f5bdf94123dc56863c770a">rndGenerator</a>)</td></tr>
+<tr class="separator:ab8710594a29025ec29802ad4d62632a6 inherit pub_methods_class_lexmou_1_1_machine_learning_1_1_task"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a95d18a52f08ee63e35a02410f41a3281 inherit pub_methods_class_lexmou_1_1_machine_learning_1_1_task"><td class="memItemLeft" align="right" valign="top">abstract void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_lexmou_1_1_machine_learning_1_1_task.html#a95d18a52f08ee63e35a02410f41a3281">UCSignal</a> (Rigidbody rigid, Vector3 targetPosition)</td></tr>
+<tr class="memdesc:a95d18a52f08ee63e35a02410f41a3281 inherit pub_methods_class_lexmou_1_1_machine_learning_1_1_task"><td class="mdescLeft">&#160;</td><td class="mdescRight">Define the <a class="el" href="class_u_c_signal.html">UCSignal</a> of the task. This <a class="el" href="class_u_c_signal.html">UCSignal</a> is a vector containing specific task info. Most of the time, it requires a Rigidbody.  <a href="class_lexmou_1_1_machine_learning_1_1_task.html#a95d18a52f08ee63e35a02410f41a3281">More...</a><br /></td></tr>
+<tr class="separator:a95d18a52f08ee63e35a02410f41a3281 inherit pub_methods_class_lexmou_1_1_machine_learning_1_1_task"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-attribs"></a>
 Public Attributes</h2></td></tr>
 <tr class="memitem:aa5a6aeb19de7cb41175bf93e44ff5419"><td class="memItemLeft" align="right" valign="top">float&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_lexmou_1_1_machine_learning_1_1_drone_task.html#aa5a6aeb19de7cb41175bf93e44ff5419">spacing</a> = 5.0f</td></tr>
+<tr class="memdesc:aa5a6aeb19de7cb41175bf93e44ff5419"><td class="mdescLeft">&#160;</td><td class="mdescRight">Space along a direction between two instances of a drone.  <a href="#aa5a6aeb19de7cb41175bf93e44ff5419">More...</a><br /></td></tr>
 <tr class="separator:aa5a6aeb19de7cb41175bf93e44ff5419"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aaf92bec0d06f019daa486ea3572fcaba"><td class="memItemLeft" align="right" valign="top">float&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_lexmou_1_1_machine_learning_1_1_drone_task.html#aaf92bec0d06f019daa486ea3572fcaba">initialY</a> = 5.0f</td></tr>
+<tr class="memdesc:aaf92bec0d06f019daa486ea3572fcaba"><td class="mdescLeft">&#160;</td><td class="mdescRight">Initial height of each drone along Y axis.  <a href="#aaf92bec0d06f019daa486ea3572fcaba">More...</a><br /></td></tr>
 <tr class="separator:aaf92bec0d06f019daa486ea3572fcaba"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a46c12dc9e85f568190ff1b8af7774c54"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_lexmou_1_1_machine_learning_1_1_drone_task.html#a46c12dc9e85f568190ff1b8af7774c54">individualSize</a></td></tr>
+<tr class="memdesc:a46c12dc9e85f568190ff1b8af7774c54"><td class="mdescLeft">&#160;</td><td class="mdescRight">Number of parameters to evaluate for each drone (number of neurons, number of alleles ...)  <a href="#a46c12dc9e85f568190ff1b8af7774c54">More...</a><br /></td></tr>
 <tr class="separator:a46c12dc9e85f568190ff1b8af7774c54"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a8d614c0ed02c4d2fe08e649f7f3347f6"><td class="memItemLeft" align="right" valign="top">string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_lexmou_1_1_machine_learning_1_1_drone_task.html#a8d614c0ed02c4d2fe08e649f7f3347f6">fromTask</a></td></tr>
+<tr class="memdesc:a8d614c0ed02c4d2fe08e649f7f3347f6"><td class="mdescLeft">&#160;</td><td class="mdescRight">Build the pramaters of a task from another one.  <a href="#a8d614c0ed02c4d2fe08e649f7f3347f6">More...</a><br /></td></tr>
+<tr class="separator:a8d614c0ed02c4d2fe08e649f7f3347f6"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a7a1823b61eec0a9956f9fc9ca3a5a988"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_lexmou_1_1_machine_learning_1_1_drone_task.html#a7a1823b61eec0a9956f9fc9ca3a5a988">rowIndex</a></td></tr>
+<tr class="memdesc:a7a1823b61eec0a9956f9fc9ca3a5a988"><td class="mdescLeft">&#160;</td><td class="mdescRight">Build the matrix of paramaters with an offset (index of the row)  <a href="#a7a1823b61eec0a9956f9fc9ca3a5a988">More...</a><br /></td></tr>
+<tr class="separator:a7a1823b61eec0a9956f9fc9ca3a5a988"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a4601024a74ade72c89fb463fb07eb2c2"><td class="memItemLeft" align="right" valign="top">List&lt; int &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_lexmou_1_1_machine_learning_1_1_drone_task.html#a4601024a74ade72c89fb463fb07eb2c2">shapes</a></td></tr>
+<tr class="memdesc:a4601024a74ade72c89fb463fb07eb2c2"><td class="mdescLeft">&#160;</td><td class="mdescRight">Shape of the MLP for each drone.  <a href="#a4601024a74ade72c89fb463fb07eb2c2">More...</a><br /></td></tr>
 <tr class="separator:a4601024a74ade72c89fb463fb07eb2c2"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a71b1300fcca5420fe727e598b837eab1"><td class="memItemLeft" align="right" valign="top"><a class="el" href="class_u_c_signal.html">UCSignal</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_lexmou_1_1_machine_learning_1_1_drone_task.html#a71b1300fcca5420fe727e598b837eab1">signal</a></td></tr>
+<tr class="memdesc:a71b1300fcca5420fe727e598b837eab1"><td class="mdescLeft">&#160;</td><td class="mdescRight"><a class="el" href="class_lexmou_1_1_machine_learning_1_1_task.html" title="Task interface used during a Session. ">Task</a> specific signal containing a vector of the inputs.  <a href="#a71b1300fcca5420fe727e598b837eab1">More...</a><br /></td></tr>
 <tr class="separator:a71b1300fcca5420fe727e598b837eab1"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae76357689b20aab406e8c0a209054caf"><td class="memItemLeft" align="right" valign="top">float []&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_lexmou_1_1_machine_learning_1_1_drone_task.html#ae76357689b20aab406e8c0a209054caf">angleRandomRotation</a> = new float[7] { 2, 10, 20, 30, 40, 50, 60 }</td></tr>
+<tr class="memdesc:ae76357689b20aab406e8c0a209054caf"><td class="mdescLeft">&#160;</td><td class="mdescRight">Define the maximum of each euler angle during the progress of the subtask.  <a href="#ae76357689b20aab406e8c0a209054caf">More...</a><br /></td></tr>
+<tr class="separator:ae76357689b20aab406e8c0a209054caf"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a59a3a4a33f3653e283ff63c163f396a1"><td class="memItemLeft" align="right" valign="top">float []&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_lexmou_1_1_machine_learning_1_1_drone_task.html#a59a3a4a33f3653e283ff63c163f396a1">medianThreshold</a> = new float[7] {200, 180, 170, 170, 165, 165, 165}</td></tr>
+<tr class="memdesc:a59a3a4a33f3653e283ff63c163f396a1"><td class="mdescLeft">&#160;</td><td class="mdescRight">Define the median threshold (of the objective function) before changing the maximum angle.  <a href="#a59a3a4a33f3653e283ff63c163f396a1">More...</a><br /></td></tr>
+<tr class="separator:a59a3a4a33f3653e283ff63c163f396a1"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a3613096705ae7f594c95619416f3823c"><td class="memItemLeft" align="right" valign="top">float []&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_lexmou_1_1_machine_learning_1_1_drone_task.html#a3613096705ae7f594c95619416f3823c">bestThreshold</a> = new float[7] { 240, 220, 220, 220, 220, 220, 220 }</td></tr>
+<tr class="memdesc:a3613096705ae7f594c95619416f3823c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Define the best score threshold (of the objective function) before changing the maximum angle.  <a href="#a3613096705ae7f594c95619416f3823c">More...</a><br /></td></tr>
+<tr class="separator:a3613096705ae7f594c95619416f3823c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aec60c913d5e3e4ad8b66506c55e54f69"><td class="memItemLeft" align="right" valign="top">float&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_lexmou_1_1_machine_learning_1_1_drone_task.html#aec60c913d5e3e4ad8b66506c55e54f69">_angleRandomRotation</a> = 0f</td></tr>
+<tr class="memdesc:aec60c913d5e3e4ad8b66506c55e54f69"><td class="mdescLeft">&#160;</td><td class="mdescRight">Define the actual maximum angle.  <a href="#aec60c913d5e3e4ad8b66506c55e54f69">More...</a><br /></td></tr>
+<tr class="separator:aec60c913d5e3e4ad8b66506c55e54f69"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a61848493a37449602524feb91a93e78e"><td class="memItemLeft" align="right" valign="top">float&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_lexmou_1_1_machine_learning_1_1_drone_task.html#a61848493a37449602524feb91a93e78e">_windStrength</a> = 0.0f</td></tr>
+<tr class="memdesc:a61848493a37449602524feb91a93e78e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Define the actual wind value.  <a href="#a61848493a37449602524feb91a93e78e">More...</a><br /></td></tr>
+<tr class="separator:a61848493a37449602524feb91a93e78e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="inherit_header pub_attribs_class_lexmou_1_1_machine_learning_1_1_task"><td colspan="2" onclick="javascript:toggleInherit('pub_attribs_class_lexmou_1_1_machine_learning_1_1_task')"><img src="closed.png" alt="-"/>&#160;Public Attributes inherited from <a class="el" href="class_lexmou_1_1_machine_learning_1_1_task.html">Lexmou.MachineLearning.Task</a></td></tr>
+<tr class="memitem:a622f68ae31f5bdf94123dc56863c770a inherit pub_attribs_class_lexmou_1_1_machine_learning_1_1_task"><td class="memItemLeft" align="right" valign="top">SystemRandomSource&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_lexmou_1_1_machine_learning_1_1_task.html#a622f68ae31f5bdf94123dc56863c770a">rndGenerator</a></td></tr>
+<tr class="memdesc:a622f68ae31f5bdf94123dc56863c770a inherit pub_attribs_class_lexmou_1_1_machine_learning_1_1_task"><td class="mdescLeft">&#160;</td><td class="mdescRight">Random Generator. Allow the generation of a repeatable random number sequence for each seed value.  <a href="class_lexmou_1_1_machine_learning_1_1_task.html#a622f68ae31f5bdf94123dc56863c770a">More...</a><br /></td></tr>
+<tr class="separator:a622f68ae31f5bdf94123dc56863c770a inherit pub_attribs_class_lexmou_1_1_machine_learning_1_1_task"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="properties"></a>
+Properties</h2></td></tr>
+<tr class="memitem:a02fdf3ee901ecae71b1a60cb8942bbfd"><td class="memItemLeft" align="right" valign="top">float&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_lexmou_1_1_machine_learning_1_1_drone_task.html#a02fdf3ee901ecae71b1a60cb8942bbfd">AngleRandomRotation</a><code> [get, set]</code></td></tr>
+<tr class="memdesc:a02fdf3ee901ecae71b1a60cb8942bbfd"><td class="mdescLeft">&#160;</td><td class="mdescRight">Define the property of the maximum angle. Set this angle change the boundaries of the random distibution used.  <a href="#a02fdf3ee901ecae71b1a60cb8942bbfd">More...</a><br /></td></tr>
+<tr class="separator:a02fdf3ee901ecae71b1a60cb8942bbfd"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa079ad5307fdd3f4caa0b9bc0ef905b8"><td class="memItemLeft" align="right" valign="top">float&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_lexmou_1_1_machine_learning_1_1_drone_task.html#aa079ad5307fdd3f4caa0b9bc0ef905b8">WindStrength</a><code> [get, set]</code></td></tr>
+<tr class="memdesc:aa079ad5307fdd3f4caa0b9bc0ef905b8"><td class="mdescLeft">&#160;</td><td class="mdescRight">Define the property of the maximum wind value.  <a href="#aa079ad5307fdd3f4caa0b9bc0ef905b8">More...</a><br /></td></tr>
+<tr class="separator:aa079ad5307fdd3f4caa0b9bc0ef905b8"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pri-attribs"></a>
+Private Attributes</h2></td></tr>
+<tr class="memitem:afd44c51a2e7824e53001283ed41c315c"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_lexmou_1_1_machine_learning_1_1_drone_task.html#afd44c51a2e7824e53001283ed41c315c">indexRRArr</a> = 0</td></tr>
+<tr class="memdesc:afd44c51a2e7824e53001283ed41c315c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Bad implementation of random orientation subtask. This index define the progress with this subtask.  <a href="#afd44c51a2e7824e53001283ed41c315c">More...</a><br /></td></tr>
+<tr class="separator:afd44c51a2e7824e53001283ed41c315c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a5b104e051d20ffd8f8414e8dbd998430"><td class="memItemLeft" align="right" valign="top">ContinuousUniform&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_lexmou_1_1_machine_learning_1_1_drone_task.html#a5b104e051d20ffd8f8414e8dbd998430">distribution</a></td></tr>
+<tr class="memdesc:a5b104e051d20ffd8f8414e8dbd998430"><td class="mdescLeft">&#160;</td><td class="mdescRight">Continue uniform distribution for the maximum euler angle subtask.  <a href="#a5b104e051d20ffd8f8414e8dbd998430">More...</a><br /></td></tr>
+<tr class="separator:a5b104e051d20ffd8f8414e8dbd998430"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
-<div class="textblock">
-<p>Definition at line <a class="el" href="_drone_task_8cs_source.html#l00007">7</a> of file <a class="el" href="_drone_task_8cs_source.html">DroneTask.cs</a>.</p>
-</div><h2 class="groupheader">Member Function Documentation</h2>
+<div class="textblock"><p><a class="el" href="class_lexmou_1_1_machine_learning_1_1_drone_task.html" title="DroneTask interface used during a DroneSession. ">DroneTask</a> interface used during a <a class="el" href="class_lexmou_1_1_machine_learning_1_1_drone_session.html">DroneSession</a>. </p>
+<p>This interface define the global structure of a drone task </p>
+
+<p>Definition at line <a class="el" href="_drone_task_8cs_source.html#l00017">17</a> of file <a class="el" href="_drone_task_8cs_source.html">DroneTask.cs</a>.</p>
+</div><h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
+<a id="afd15c7c3834f2fd7efb631f880c1f1dc"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#afd15c7c3834f2fd7efb631f880c1f1dc">&sect;&nbsp;</a></span>DroneTask()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">Lexmou.MachineLearning.DroneTask.DroneTask </td>
+          <td>(</td>
+          <td class="paramtype">SystemRandomSource&#160;</td>
+          <td class="paramname"><em>rndGenerator</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Definition at line <a class="el" href="_drone_task_8cs_source.html#l00124">124</a> of file <a class="el" href="_drone_task_8cs_source.html">DroneTask.cs</a>.</p>
+
+</div>
+</div>
+<h2 class="groupheader">Member Function Documentation</h2>
 <a id="a9474f67cd61740665d99265428541df8"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a9474f67cd61740665d99265428541df8">&sect;&nbsp;</a></span>GetInitialposition()</h2>
 
@@ -175,7 +271,9 @@ Public Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p>Implemented in <a class="el" href="class_lexmou_1_1_machine_learning_1_1_drone_stabilization.html#a9605bda09047e4f7c6d6ff3ae081bcfa">Lexmou.MachineLearning.DroneStabilization</a>.</p>
+<p>Define a initial position for the drone i. </p>
+
+<p>Implemented in <a class="el" href="class_lexmou_1_1_machine_learning_1_1_drone_move.html#a817edb26e9a37fc43e3c4d78a6d3de97">Lexmou.MachineLearning.DroneMove</a>, and <a class="el" href="class_lexmou_1_1_machine_learning_1_1_drone_stabilization.html#a9605bda09047e4f7c6d6ff3ae081bcfa">Lexmou.MachineLearning.DroneStabilization</a>.</p>
 <div class="dynheader">
 Here is the caller graph for this function:</div>
 <div class="dyncontent">
@@ -187,8 +285,88 @@ Here is the caller graph for this function:</div>
 
 </div>
 </div>
-<a id="acce47671b67d67e97157d374d27b86ee"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#acce47671b67d67e97157d374d27b86ee">&sect;&nbsp;</a></span>EvaluateIndividual()</h2>
+<a id="ace79f0060a6521abc4d6ce2e880c84a7"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ace79f0060a6521abc4d6ce2e880c84a7">&sect;&nbsp;</a></span>GetTargetPosition() <span class="overload">[1/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">abstract Vector3 Lexmou.MachineLearning.DroneTask.GetTargetPosition </td>
+          <td>(</td>
+          <td class="paramtype">Vector3&#160;</td>
+          <td class="paramname"><em>fromPosition</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">pure virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Define a target position from another position. </p>
+
+<p>Implemented in <a class="el" href="class_lexmou_1_1_machine_learning_1_1_drone_stabilization.html#aa70a5145b4ca32d7293411bb566168ca">Lexmou.MachineLearning.DroneStabilization</a>, and <a class="el" href="class_lexmou_1_1_machine_learning_1_1_drone_move.html#ae2ef1d892b5ce7db0a64351bb722cd79">Lexmou.MachineLearning.DroneMove</a>.</p>
+<div class="dynheader">
+Here is the caller graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_lexmou_1_1_machine_learning_1_1_drone_task_ace79f0060a6521abc4d6ce2e880c84a7_icgraph.png" border="0" usemap="#class_lexmou_1_1_machine_learning_1_1_drone_task_ace79f0060a6521abc4d6ce2e880c84a7_icgraph" alt=""/></div>
+<map name="class_lexmou_1_1_machine_learning_1_1_drone_task_ace79f0060a6521abc4d6ce2e880c84a7_icgraph" id="class_lexmou_1_1_machine_learning_1_1_drone_task_ace79f0060a6521abc4d6ce2e880c84a7_icgraph">
+<area shape="rect" id="node2" href="class_lexmou_1_1_machine_learning_1_1_drone_session.html#ac3230ac2e3c24aa8a8ffeab2b27dcb17" title="Lexmou.MachineLearning.Drone\lSession.Reset" alt="" coords="265,5,473,47"/>
+<area shape="rect" id="node3" href="class_lexmou_1_1_manager_1_1_drone_manager.html#a7ebc6fb1d5636374095e2a19a734f9f3" title="Lexmou.Manager.DroneManager.\lSetNewMovePosition" alt="" coords="261,71,476,112"/>
+<area shape="rect" id="node4" href="class_lexmou_1_1_manager_1_1_u_i_manager.html#aadf27d2617893246ec7f2aa8ea6d8748" title="Lexmou.Manager.UIManager.\lUpdate" alt="" coords="524,71,716,112"/>
+</map>
+</div>
+
+</div>
+</div>
+<a id="adbf4ef098c6062b9cfedfd8603ed4f70"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#adbf4ef098c6062b9cfedfd8603ed4f70">&sect;&nbsp;</a></span>GetTargetPosition() <span class="overload">[2/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">abstract void Lexmou.MachineLearning.DroneTask.GetTargetPosition </td>
+          <td>(</td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>index</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">Vector3 []&#160;</td>
+          <td class="paramname"><em>targetPosition</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">pure virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Define a target position for the drone num index. </p>
+
+<p>Implemented in <a class="el" href="class_lexmou_1_1_machine_learning_1_1_drone_stabilization.html#af6f9605751a571f79f48540defda6986">Lexmou.MachineLearning.DroneStabilization</a>, and <a class="el" href="class_lexmou_1_1_machine_learning_1_1_drone_move.html#a3aaad6820a224f090b858b680ae7a518">Lexmou.MachineLearning.DroneMove</a>.</p>
+
+</div>
+</div>
+<a id="a7ed1c02aeb2f181168a0b04d0e7e6a35"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a7ed1c02aeb2f181168a0b04d0e7e6a35">&sect;&nbsp;</a></span>EvaluateIndividual()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -206,7 +384,13 @@ Here is the caller graph for this function:</div>
           <td class="paramkey"></td>
           <td></td>
           <td class="paramtype">Rigidbody&#160;</td>
-          <td class="paramname"><em>rigid</em>&#160;</td>
+          <td class="paramname"><em>rigid</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">Vector3&#160;</td>
+          <td class="paramname"><em>targetPosition</em>&#160;</td>
         </tr>
         <tr>
           <td></td>
@@ -221,13 +405,113 @@ Here is the caller graph for this function:</div>
 </table>
 </div><div class="memdoc">
 
-<p>Implemented in <a class="el" href="class_lexmou_1_1_machine_learning_1_1_drone_stabilization.html#ae994502c337a70cb72ef7270d0dbd9fd">Lexmou.MachineLearning.DroneStabilization</a>.</p>
+<p>Define an objective function. Ideally this function is concave. </p>
+
+<p>Implemented in <a class="el" href="class_lexmou_1_1_machine_learning_1_1_drone_stabilization.html#a05bde727ad3464cf02c5d129bcb2dcd7">Lexmou.MachineLearning.DroneStabilization</a>, and <a class="el" href="class_lexmou_1_1_machine_learning_1_1_drone_move.html#a40037c871aa5c9f99927482d056a6df0">Lexmou.MachineLearning.DroneMove</a>.</p>
 <div class="dynheader">
 Here is the caller graph for this function:</div>
 <div class="dyncontent">
-<div class="center"><img src="class_lexmou_1_1_machine_learning_1_1_drone_task_acce47671b67d67e97157d374d27b86ee_icgraph.png" border="0" usemap="#class_lexmou_1_1_machine_learning_1_1_drone_task_acce47671b67d67e97157d374d27b86ee_icgraph" alt=""/></div>
-<map name="class_lexmou_1_1_machine_learning_1_1_drone_task_acce47671b67d67e97157d374d27b86ee_icgraph" id="class_lexmou_1_1_machine_learning_1_1_drone_task_acce47671b67d67e97157d374d27b86ee_icgraph">
-<area shape="rect" id="node2" href="class_lexmou_1_1_machine_learning_1_1_drone_session.html#a7035b9f59ebcf492479c0118c91b0fd4" title="Lexmou.MachineLearning.Drone\lSession.RunEachFixedUpdate" alt="" coords="261,5,469,47"/>
+<div class="center"><img src="class_lexmou_1_1_machine_learning_1_1_drone_task_a7ed1c02aeb2f181168a0b04d0e7e6a35_icgraph.png" border="0" usemap="#class_lexmou_1_1_machine_learning_1_1_drone_task_a7ed1c02aeb2f181168a0b04d0e7e6a35_icgraph" alt=""/></div>
+<map name="class_lexmou_1_1_machine_learning_1_1_drone_task_a7ed1c02aeb2f181168a0b04d0e7e6a35_icgraph" id="class_lexmou_1_1_machine_learning_1_1_drone_task_a7ed1c02aeb2f181168a0b04d0e7e6a35_icgraph">
+<area shape="rect" id="node2" href="class_lexmou_1_1_machine_learning_1_1_drone_session.html#a41b24c50d8dfd8e74990bc462e70a03a" title="Lexmou.MachineLearning.Drone\lSession.MapEvaluate" alt="" coords="261,5,469,47"/>
+</map>
+</div>
+
+</div>
+</div>
+<a id="ac12ea410036adb103f64833e55c55a16"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ac12ea410036adb103f64833e55c55a16">&sect;&nbsp;</a></span>ResetOrientation() <span class="overload">[1/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool Lexmou.MachineLearning.DroneTask.ResetOrientation </td>
+          <td>(</td>
+          <td class="paramtype">Rigidbody&#160;</td>
+          <td class="paramname"><em>rigid</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">float&#160;</td>
+          <td class="paramname"><em>best</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">float&#160;</td>
+          <td class="paramname"><em>median</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>index</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>populationSize</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Reset the orientation of the drone define by an index. Take care of the maximum euler angle subtask. </p>
+
+<p>Definition at line <a class="el" href="_drone_task_8cs_source.html#l00133">133</a> of file <a class="el" href="_drone_task_8cs_source.html">DroneTask.cs</a>.</p>
+<div class="dynheader">
+Here is the caller graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_lexmou_1_1_machine_learning_1_1_drone_task_ac12ea410036adb103f64833e55c55a16_icgraph.png" border="0" usemap="#class_lexmou_1_1_machine_learning_1_1_drone_task_ac12ea410036adb103f64833e55c55a16_icgraph" alt=""/></div>
+<map name="class_lexmou_1_1_machine_learning_1_1_drone_task_ac12ea410036adb103f64833e55c55a16_icgraph" id="class_lexmou_1_1_machine_learning_1_1_drone_task_ac12ea410036adb103f64833e55c55a16_icgraph">
+<area shape="rect" id="node2" href="class_lexmou_1_1_machine_learning_1_1_drone_session.html#ac3230ac2e3c24aa8a8ffeab2b27dcb17" title="Lexmou.MachineLearning.Drone\lSession.Reset" alt="" coords="261,5,469,47"/>
+</map>
+</div>
+
+</div>
+</div>
+<a id="a91be01b613b0313dcb852d42b6418227"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a91be01b613b0313dcb852d42b6418227">&sect;&nbsp;</a></span>ResetOrientation() <span class="overload">[2/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool Lexmou.MachineLearning.DroneTask.ResetOrientation </td>
+          <td>(</td>
+          <td class="paramtype">bool&#160;</td>
+          <td class="paramname"><em>condition</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">Rigidbody&#160;</td>
+          <td class="paramname"><em>rigid</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Reset the orientation of the drone define by an index. Take care of a specific condition to define a specific orientation. </p>
+
+<p>Definition at line <a class="el" href="_drone_task_8cs_source.html#l00143">143</a> of file <a class="el" href="_drone_task_8cs_source.html">DroneTask.cs</a>.</p>
+<div class="dynheader">
+Here is the call graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_lexmou_1_1_machine_learning_1_1_drone_task_a91be01b613b0313dcb852d42b6418227_cgraph.png" border="0" usemap="#class_lexmou_1_1_machine_learning_1_1_drone_task_a91be01b613b0313dcb852d42b6418227_cgraph" alt=""/></div>
+<map name="class_lexmou_1_1_machine_learning_1_1_drone_task_a91be01b613b0313dcb852d42b6418227_cgraph" id="class_lexmou_1_1_machine_learning_1_1_drone_task_a91be01b613b0313dcb852d42b6418227_cgraph">
+<area shape="rect" id="node2" href="class_lexmou_1_1_utils_1_1_u_angle.html#abe32a64a966bfab546ebc875d6277446" title="Lexmou.Utils.UAngle.Reverse\lSteerAngle" alt="" coords="261,5,456,47"/>
 </map>
 </div>
 
@@ -246,7 +530,9 @@ Here is the caller graph for this function:</div>
       </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="_drone_task_8cs_source.html#l00009">9</a> of file <a class="el" href="_drone_task_8cs_source.html">DroneTask.cs</a>.</p>
+<p>Space along a direction between two instances of a drone. </p>
+
+<p>Definition at line <a class="el" href="_drone_task_8cs_source.html#l00022">22</a> of file <a class="el" href="_drone_task_8cs_source.html">DroneTask.cs</a>.</p>
 
 </div>
 </div>
@@ -262,7 +548,9 @@ Here is the caller graph for this function:</div>
       </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="_drone_task_8cs_source.html#l00010">10</a> of file <a class="el" href="_drone_task_8cs_source.html">DroneTask.cs</a>.</p>
+<p>Initial height of each drone along Y axis. </p>
+
+<p>Definition at line <a class="el" href="_drone_task_8cs_source.html#l00026">26</a> of file <a class="el" href="_drone_task_8cs_source.html">DroneTask.cs</a>.</p>
 
 </div>
 </div>
@@ -278,7 +566,45 @@ Here is the caller graph for this function:</div>
       </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="_drone_task_8cs_source.html#l00011">11</a> of file <a class="el" href="_drone_task_8cs_source.html">DroneTask.cs</a>.</p>
+<p>Number of parameters to evaluate for each drone (number of neurons, number of alleles ...) </p>
+
+<p>Definition at line <a class="el" href="_drone_task_8cs_source.html#l00030">30</a> of file <a class="el" href="_drone_task_8cs_source.html">DroneTask.cs</a>.</p>
+
+</div>
+</div>
+<a id="a8d614c0ed02c4d2fe08e649f7f3347f6"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a8d614c0ed02c4d2fe08e649f7f3347f6">&sect;&nbsp;</a></span>fromTask</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">string Lexmou.MachineLearning.DroneTask.fromTask</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Build the pramaters of a task from another one. </p>
+
+<p>Definition at line <a class="el" href="_drone_task_8cs_source.html#l00034">34</a> of file <a class="el" href="_drone_task_8cs_source.html">DroneTask.cs</a>.</p>
+
+</div>
+</div>
+<a id="a7a1823b61eec0a9956f9fc9ca3a5a988"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a7a1823b61eec0a9956f9fc9ca3a5a988">&sect;&nbsp;</a></span>rowIndex</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int Lexmou.MachineLearning.DroneTask.rowIndex</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Build the matrix of paramaters with an offset (index of the row) </p>
+
+<p>Definition at line <a class="el" href="_drone_task_8cs_source.html#l00038">38</a> of file <a class="el" href="_drone_task_8cs_source.html">DroneTask.cs</a>.</p>
 
 </div>
 </div>
@@ -294,7 +620,9 @@ Here is the caller graph for this function:</div>
       </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="_drone_task_8cs_source.html#l00012">12</a> of file <a class="el" href="_drone_task_8cs_source.html">DroneTask.cs</a>.</p>
+<p>Shape of the MLP for each drone. </p>
+
+<p>Definition at line <a class="el" href="_drone_task_8cs_source.html#l00042">42</a> of file <a class="el" href="_drone_task_8cs_source.html">DroneTask.cs</a>.</p>
 
 </div>
 </div>
@@ -310,11 +638,208 @@ Here is the caller graph for this function:</div>
       </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="_drone_task_8cs_source.html#l00013">13</a> of file <a class="el" href="_drone_task_8cs_source.html">DroneTask.cs</a>.</p>
+<p><a class="el" href="class_lexmou_1_1_machine_learning_1_1_task.html" title="Task interface used during a Session. ">Task</a> specific signal containing a vector of the inputs. </p>
+
+<p>Definition at line <a class="el" href="_drone_task_8cs_source.html#l00047">47</a> of file <a class="el" href="_drone_task_8cs_source.html">DroneTask.cs</a>.</p>
 
 </div>
 </div>
-<hr/>The documentation for this class was generated from the following file:<ul>
+<a id="afd44c51a2e7824e53001283ed41c315c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#afd44c51a2e7824e53001283ed41c315c">&sect;&nbsp;</a></span>indexRRArr</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">int Lexmou.MachineLearning.DroneTask.indexRRArr = 0</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Bad implementation of random orientation subtask. This index define the progress with this subtask. </p>
+
+<p>Definition at line <a class="el" href="_drone_task_8cs_source.html#l00069">69</a> of file <a class="el" href="_drone_task_8cs_source.html">DroneTask.cs</a>.</p>
+
+</div>
+</div>
+<a id="ae76357689b20aab406e8c0a209054caf"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ae76357689b20aab406e8c0a209054caf">&sect;&nbsp;</a></span>angleRandomRotation</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">float [] Lexmou.MachineLearning.DroneTask.angleRandomRotation = new float[7] { 2, 10, 20, 30, 40, 50, 60 }</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Define the maximum of each euler angle during the progress of the subtask. </p>
+
+<p>Definition at line <a class="el" href="_drone_task_8cs_source.html#l00074">74</a> of file <a class="el" href="_drone_task_8cs_source.html">DroneTask.cs</a>.</p>
+
+</div>
+</div>
+<a id="a59a3a4a33f3653e283ff63c163f396a1"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a59a3a4a33f3653e283ff63c163f396a1">&sect;&nbsp;</a></span>medianThreshold</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">float [] Lexmou.MachineLearning.DroneTask.medianThreshold = new float[7] {200, 180, 170, 170, 165, 165, 165}</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Define the median threshold (of the objective function) before changing the maximum angle. </p>
+
+<p>Definition at line <a class="el" href="_drone_task_8cs_source.html#l00078">78</a> of file <a class="el" href="_drone_task_8cs_source.html">DroneTask.cs</a>.</p>
+
+</div>
+</div>
+<a id="a3613096705ae7f594c95619416f3823c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a3613096705ae7f594c95619416f3823c">&sect;&nbsp;</a></span>bestThreshold</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">float [] Lexmou.MachineLearning.DroneTask.bestThreshold = new float[7] { 240, 220, 220, 220, 220, 220, 220 }</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Define the best score threshold (of the objective function) before changing the maximum angle. </p>
+
+<p>Definition at line <a class="el" href="_drone_task_8cs_source.html#l00082">82</a> of file <a class="el" href="_drone_task_8cs_source.html">DroneTask.cs</a>.</p>
+
+</div>
+</div>
+<a id="aec60c913d5e3e4ad8b66506c55e54f69"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aec60c913d5e3e4ad8b66506c55e54f69">&sect;&nbsp;</a></span>_angleRandomRotation</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">float Lexmou.MachineLearning.DroneTask._angleRandomRotation = 0f</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Define the actual maximum angle. </p>
+
+<p>Definition at line <a class="el" href="_drone_task_8cs_source.html#l00086">86</a> of file <a class="el" href="_drone_task_8cs_source.html">DroneTask.cs</a>.</p>
+
+</div>
+</div>
+<a id="a61848493a37449602524feb91a93e78e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a61848493a37449602524feb91a93e78e">&sect;&nbsp;</a></span>_windStrength</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">float Lexmou.MachineLearning.DroneTask._windStrength = 0.0f</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Define the actual wind value. </p>
+
+<p>Definition at line <a class="el" href="_drone_task_8cs_source.html#l00105">105</a> of file <a class="el" href="_drone_task_8cs_source.html">DroneTask.cs</a>.</p>
+
+</div>
+</div>
+<a id="a5b104e051d20ffd8f8414e8dbd998430"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a5b104e051d20ffd8f8414e8dbd998430">&sect;&nbsp;</a></span>distribution</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">ContinuousUniform Lexmou.MachineLearning.DroneTask.distribution</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Continue uniform distribution for the maximum euler angle subtask. </p>
+
+<p>Definition at line <a class="el" href="_drone_task_8cs_source.html#l00122">122</a> of file <a class="el" href="_drone_task_8cs_source.html">DroneTask.cs</a>.</p>
+
+</div>
+</div>
+<h2 class="groupheader">Property Documentation</h2>
+<a id="a02fdf3ee901ecae71b1a60cb8942bbfd"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a02fdf3ee901ecae71b1a60cb8942bbfd">&sect;&nbsp;</a></span>AngleRandomRotation</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">float Lexmou.MachineLearning.DroneTask.AngleRandomRotation</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">get</span><span class="mlabel">set</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Define the property of the maximum angle. Set this angle change the boundaries of the random distibution used. </p>
+
+<p>Definition at line <a class="el" href="_drone_task_8cs_source.html#l00091">91</a> of file <a class="el" href="_drone_task_8cs_source.html">DroneTask.cs</a>.</p>
+
+</div>
+</div>
+<a id="aa079ad5307fdd3f4caa0b9bc0ef905b8"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aa079ad5307fdd3f4caa0b9bc0ef905b8">&sect;&nbsp;</a></span>WindStrength</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">float Lexmou.MachineLearning.DroneTask.WindStrength</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">get</span><span class="mlabel">set</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Define the property of the maximum wind value. </p>
+
+<p>Definition at line <a class="el" href="_drone_task_8cs_source.html#l00110">110</a> of file <a class="el" href="_drone_task_8cs_source.html">DroneTask.cs</a>.</p>
+
+</div>
+</div>
+<hr/>The documentation for this interface was generated from the following file:<ul>
 <li>D:/Projets/Unity/OriginalDrone/Assets/Scripts/Session/Task/<a class="el" href="_drone_task_8cs_source.html">DroneTask.cs</a></li>
 </ul>
 </div><!-- contents -->

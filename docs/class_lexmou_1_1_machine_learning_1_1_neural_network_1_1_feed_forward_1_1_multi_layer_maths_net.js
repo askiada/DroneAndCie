@@ -3,7 +3,7 @@ var class_lexmou_1_1_machine_learning_1_1_neural_network_1_1_feed_forward_1_1_mu
     [ "MultiLayerMathsNet", "class_lexmou_1_1_machine_learning_1_1_neural_network_1_1_feed_forward_1_1_multi_layer_maths_net.html#ab62da059ed45d9bb03d5779ed8cd8285", null ],
     [ "fillWeights", "class_lexmou_1_1_machine_learning_1_1_neural_network_1_1_feed_forward_1_1_multi_layer_maths_net.html#ad30e833c510825f29def1492bcd332dc", null ],
     [ "Reset", "class_lexmou_1_1_machine_learning_1_1_neural_network_1_1_feed_forward_1_1_multi_layer_maths_net.html#a1f5aaaab655216f49d5ef1c57a561bf3", null ],
-    [ "PropagateForward", "class_lexmou_1_1_machine_learning_1_1_neural_network_1_1_feed_forward_1_1_multi_layer_maths_net.html#a8513e88540a0c59a6e8113ada1e661d0", null ],
+    [ "PropagateForward", "class_lexmou_1_1_machine_learning_1_1_neural_network_1_1_feed_forward_1_1_multi_layer_maths_net.html#add40b66a3a3ebc09dd62957ff38c0c3c", null ],
     [ "PropagateForward2", "class_lexmou_1_1_machine_learning_1_1_neural_network_1_1_feed_forward_1_1_multi_layer_maths_net.html#a7b243c655f074f1368769f5d68c6ac15", null ],
     [ "layers", "class_lexmou_1_1_machine_learning_1_1_neural_network_1_1_feed_forward_1_1_multi_layer_maths_net.html#a1287a564bed4fc15c8364aa6cdc05ef3", null ],
     [ "weights", "class_lexmou_1_1_machine_learning_1_1_neural_network_1_1_feed_forward_1_1_multi_layer_maths_net.html#ac8ad1c51684d345766b34185c92add86", null ],

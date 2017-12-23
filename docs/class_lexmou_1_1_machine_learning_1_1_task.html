@@ -5,7 +5,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=9"/>
 <meta name="generator" content="Doxygen 1.8.12"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>Drone &amp; Cie: Lexmou.MachineLearning.Task Class Reference</title>
+<title>Drone &amp; Cie: Lexmou.MachineLearning.Task Interface Reference</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -99,39 +99,75 @@ $(document).ready(function(){initNavTree('class_lexmou_1_1_machine_learning_1_1_
 <div class="header">
   <div class="summary">
 <a href="#pub-methods">Public Member Functions</a> &#124;
+<a href="#pub-attribs">Public Attributes</a> &#124;
 <a href="class_lexmou_1_1_machine_learning_1_1_task-members.html">List of all members</a>  </div>
   <div class="headertitle">
-<div class="title">Lexmou.MachineLearning.Task Class Reference<span class="mlabels"><span class="mlabel">abstract</span></span></div>  </div>
+<div class="title">Lexmou.MachineLearning.Task Interface Reference<span class="mlabels"><span class="mlabel">abstract</span></span></div>  </div>
 </div><!--header-->
 <div class="contents">
+
+<p><a class="el" href="class_lexmou_1_1_machine_learning_1_1_task.html" title="Task interface used during a Session. ">Task</a> interface used during a <a class="el" href="class_lexmou_1_1_machine_learning_1_1_session.html">Session</a>.  
+ <a href="class_lexmou_1_1_machine_learning_1_1_task.html#details">More...</a></p>
 <div class="dynheader">
 Inheritance diagram for Lexmou.MachineLearning.Task:</div>
 <div class="dyncontent">
 <div class="center"><img src="class_lexmou_1_1_machine_learning_1_1_task__inherit__graph.png" border="0" usemap="#_lexmou_8_machine_learning_8_task_inherit__map" alt="Inheritance graph"/></div>
 <map name="_lexmou_8_machine_learning_8_task_inherit__map" id="_lexmou_8_machine_learning_8_task_inherit__map">
-<area shape="rect" id="node2" href="class_lexmou_1_1_machine_learning_1_1_drone_task.html" title="{Lexmou.MachineLearning.DroneTask\n|+ spacing\l+ initialY\l+ individualSize\l+ shapes\l+ signal\l|+ GetInitialposition()\l+ EvaluateIndividual()\l}" alt="" coords="5,131,241,281"/>
-<area shape="rect" id="node3" href="class_lexmou_1_1_machine_learning_1_1_drone_stabilization.html" title="{Lexmou.MachineLearning.Drone\lStabilization\n||+ DroneStabilization()\l+ GetInitialposition()\l+ EvaluateIndividual()\l+ UCSignal()\l}" alt="" coords="19,329,227,465"/>
+<area shape="rect" id="node2" href="class_lexmou_1_1_machine_learning_1_1_drone_task.html" title="DroneTask interface used during a DroneSession. " alt="" coords="131,145,367,531"/>
+<area shape="rect" id="node3" href="class_lexmou_1_1_machine_learning_1_1_drone_move.html" title="{Lexmou.MachineLearning.DroneMove\n|&#45; deltaDistribution\l|+ DroneMove()\l+ GetTargetPosition()\l+ GetTargetPosition()\l+ GetInitialposition()\l+ EvaluateIndividual()\l+ UCSignal()\l}" alt="" coords="5,586,244,737"/>
+<area shape="rect" id="node4" href="class_lexmou_1_1_machine_learning_1_1_drone_stabilization.html" title="Implementation of the stabilization task for a drone using a genetic algorithm and a MLP..." alt="" coords="269,579,477,744"/>
 </map>
 </div>
 <div class="dynheader">
 Collaboration diagram for Lexmou.MachineLearning.Task:</div>
 <div class="dyncontent">
 <div class="center"><img src="class_lexmou_1_1_machine_learning_1_1_task__coll__graph.png" border="0" usemap="#_lexmou_8_machine_learning_8_task_coll__map" alt="Collaboration graph"/></div>
-<map name="_lexmou_8_machine_learning_8_task_coll__map" id="_lexmou_8_machine_learning_8_task_coll__map">
-</map>
 </div>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
-<tr class="memitem:a5d3767708c03a5a8a8132e9352ef0592"><td class="memItemLeft" align="right" valign="top">abstract <a class="el" href="class_u_c_signal.html">UCSignal</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_lexmou_1_1_machine_learning_1_1_task.html#a5d3767708c03a5a8a8132e9352ef0592">UCSignal</a> (Rigidbody rigid)</td></tr>
-<tr class="separator:a5d3767708c03a5a8a8132e9352ef0592"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab8710594a29025ec29802ad4d62632a6"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_lexmou_1_1_machine_learning_1_1_task.html#ab8710594a29025ec29802ad4d62632a6">Task</a> (SystemRandomSource <a class="el" href="class_lexmou_1_1_machine_learning_1_1_task.html#a622f68ae31f5bdf94123dc56863c770a">rndGenerator</a>)</td></tr>
+<tr class="separator:ab8710594a29025ec29802ad4d62632a6"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a95d18a52f08ee63e35a02410f41a3281"><td class="memItemLeft" align="right" valign="top">abstract void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_lexmou_1_1_machine_learning_1_1_task.html#a95d18a52f08ee63e35a02410f41a3281">UCSignal</a> (Rigidbody rigid, Vector3 targetPosition)</td></tr>
+<tr class="memdesc:a95d18a52f08ee63e35a02410f41a3281"><td class="mdescLeft">&#160;</td><td class="mdescRight">Define the <a class="el" href="class_u_c_signal.html">UCSignal</a> of the task. This <a class="el" href="class_u_c_signal.html">UCSignal</a> is a vector containing specific task info. Most of the time, it requires a Rigidbody.  <a href="#a95d18a52f08ee63e35a02410f41a3281">More...</a><br /></td></tr>
+<tr class="separator:a95d18a52f08ee63e35a02410f41a3281"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-attribs"></a>
+Public Attributes</h2></td></tr>
+<tr class="memitem:a622f68ae31f5bdf94123dc56863c770a"><td class="memItemLeft" align="right" valign="top">SystemRandomSource&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_lexmou_1_1_machine_learning_1_1_task.html#a622f68ae31f5bdf94123dc56863c770a">rndGenerator</a></td></tr>
+<tr class="memdesc:a622f68ae31f5bdf94123dc56863c770a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Random Generator. Allow the generation of a repeatable random number sequence for each seed value.  <a href="#a622f68ae31f5bdf94123dc56863c770a">More...</a><br /></td></tr>
+<tr class="separator:a622f68ae31f5bdf94123dc56863c770a"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
-<div class="textblock">
-<p>Definition at line <a class="el" href="_task_8cs_source.html#l00006">6</a> of file <a class="el" href="_task_8cs_source.html">Task.cs</a>.</p>
-</div><h2 class="groupheader">Member Function Documentation</h2>
-<a id="a5d3767708c03a5a8a8132e9352ef0592"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a5d3767708c03a5a8a8132e9352ef0592">&sect;&nbsp;</a></span>UCSignal()</h2>
+<div class="textblock"><p><a class="el" href="class_lexmou_1_1_machine_learning_1_1_task.html" title="Task interface used during a Session. ">Task</a> interface used during a <a class="el" href="class_lexmou_1_1_machine_learning_1_1_session.html">Session</a>. </p>
+<p>This interface define a Random Generator and the global structure of a task </p>
+
+<p>Definition at line <a class="el" href="_task_8cs_source.html#l00012">12</a> of file <a class="el" href="_task_8cs_source.html">Task.cs</a>.</p>
+</div><h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
+<a id="ab8710594a29025ec29802ad4d62632a6"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ab8710594a29025ec29802ad4d62632a6">&sect;&nbsp;</a></span>Task()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">Lexmou.MachineLearning.Task.Task </td>
+          <td>(</td>
+          <td class="paramtype">SystemRandomSource&#160;</td>
+          <td class="paramname"><em>rndGenerator</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Constructor which use an existing Random Generator </p>
+
+<p>Definition at line <a class="el" href="_task_8cs_source.html#l00021">21</a> of file <a class="el" href="_task_8cs_source.html">Task.cs</a>.</p>
+
+</div>
+</div>
+<h2 class="groupheader">Member Function Documentation</h2>
+<a id="a95d18a52f08ee63e35a02410f41a3281"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a95d18a52f08ee63e35a02410f41a3281">&sect;&nbsp;</a></span>UCSignal()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -140,11 +176,21 @@ Public Member Functions</h2></td></tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">abstract <a class="el" href="class_u_c_signal.html">UCSignal</a> Lexmou.MachineLearning.Task.UCSignal </td>
+          <td class="memname">abstract void Lexmou.MachineLearning.Task.UCSignal </td>
           <td>(</td>
           <td class="paramtype">Rigidbody&#160;</td>
-          <td class="paramname"><em>rigid</em></td><td>)</td>
+          <td class="paramname"><em>rigid</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
           <td></td>
+          <td class="paramtype">Vector3&#160;</td>
+          <td class="paramname"><em>targetPosition</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
         </tr>
       </table>
   </td>
@@ -154,19 +200,44 @@ Public Member Functions</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p>Implemented in <a class="el" href="class_lexmou_1_1_machine_learning_1_1_drone_stabilization.html#a3da37134f1cacd93ef5e7d6d5467b564">Lexmou.MachineLearning.DroneStabilization</a>.</p>
+<p>Define the <a class="el" href="class_u_c_signal.html">UCSignal</a> of the task. This <a class="el" href="class_u_c_signal.html">UCSignal</a> is a vector containing specific task info. Most of the time, it requires a Rigidbody. </p>
+
+<p>Implemented in <a class="el" href="class_lexmou_1_1_machine_learning_1_1_drone_stabilization.html#aeab2c47efb795adfe1a44cfedb16c38e">Lexmou.MachineLearning.DroneStabilization</a>, and <a class="el" href="class_lexmou_1_1_machine_learning_1_1_drone_move.html#a6d705fa8756ad7606d1a2bf226f40b66">Lexmou.MachineLearning.DroneMove</a>.</p>
 <div class="dynheader">
 Here is the caller graph for this function:</div>
 <div class="dyncontent">
-<div class="center"><img src="class_lexmou_1_1_machine_learning_1_1_task_a5d3767708c03a5a8a8132e9352ef0592_icgraph.png" border="0" usemap="#class_lexmou_1_1_machine_learning_1_1_task_a5d3767708c03a5a8a8132e9352ef0592_icgraph" alt=""/></div>
-<map name="class_lexmou_1_1_machine_learning_1_1_task_a5d3767708c03a5a8a8132e9352ef0592_icgraph" id="class_lexmou_1_1_machine_learning_1_1_task_a5d3767708c03a5a8a8132e9352ef0592_icgraph">
-<area shape="rect" id="node2" href="class_lexmou_1_1_machine_learning_1_1_drone_session.html#a7035b9f59ebcf492479c0118c91b0fd4" title="Lexmou.MachineLearning.Drone\lSession.RunEachFixedUpdate" alt="" coords="260,5,468,47"/>
+<div class="center"><img src="class_lexmou_1_1_machine_learning_1_1_task_a95d18a52f08ee63e35a02410f41a3281_icgraph.png" border="0" usemap="#class_lexmou_1_1_machine_learning_1_1_task_a95d18a52f08ee63e35a02410f41a3281_icgraph" alt=""/></div>
+<map name="class_lexmou_1_1_machine_learning_1_1_task_a95d18a52f08ee63e35a02410f41a3281_icgraph" id="class_lexmou_1_1_machine_learning_1_1_task_a95d18a52f08ee63e35a02410f41a3281_icgraph">
+<area shape="rect" id="node2" href="class_lexmou_1_1_machine_learning_1_1_drone_session.html#a7035b9f59ebcf492479c0118c91b0fd4" title="Lexmou.MachineLearning.Drone\lSession.RunEachFixedUpdate" alt="" coords="278,5,486,47"/>
+<area shape="rect" id="node3" href="class_lexmou_1_1_manager_1_1_drone_manager.html#a3589f57b83a6f9295c444aa8715da961" title="Lexmou.Manager.DroneManager.\lStabilization" alt="" coords="275,71,489,112"/>
+<area shape="rect" id="node5" href="class_lexmou_1_1_manager_1_1_drone_manager.html#a8d59143772978fb00b0a3705615bd3f8" title="Lexmou.Manager.DroneManager.Move" alt="" coords="260,138,504,165"/>
+<area shape="rect" id="node4" href="class_lexmou_1_1_manager_1_1_u_i_manager.html#ad44b300d5a44a99dc1b304af177ae82c" title="Lexmou.Manager.UIManager.\lScanForKeyStabilization" alt="" coords="552,68,744,109"/>
+<area shape="rect" id="node6" href="class_lexmou_1_1_manager_1_1_u_i_manager.html#a07adc25bc84df74cfbdb8f3e6e74f38a" title="Lexmou.Manager.UIManager.\lScanForKeyMove" alt="" coords="552,133,744,175"/>
 </map>
 </div>
 
 </div>
 </div>
-<hr/>The documentation for this class was generated from the following file:<ul>
+<h2 class="groupheader">Member Data Documentation</h2>
+<a id="a622f68ae31f5bdf94123dc56863c770a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a622f68ae31f5bdf94123dc56863c770a">&sect;&nbsp;</a></span>rndGenerator</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">SystemRandomSource Lexmou.MachineLearning.Task.rndGenerator</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Random Generator. Allow the generation of a repeatable random number sequence for each seed value. </p>
+
+<p>Definition at line <a class="el" href="_task_8cs_source.html#l00017">17</a> of file <a class="el" href="_task_8cs_source.html">Task.cs</a>.</p>
+
+</div>
+</div>
+<hr/>The documentation for this interface was generated from the following file:<ul>
 <li>D:/Projets/Unity/OriginalDrone/Assets/Scripts/Session/Task/<a class="el" href="_task_8cs_source.html">Task.cs</a></li>
 </ul>
 </div><!-- contents -->

@@ -64,6 +64,7 @@ var hierarchy =
     [ "SensorSignal", "class_sensor_signal.html", null ],
     [ "Lexmou.MachineLearning.Task", "class_lexmou_1_1_machine_learning_1_1_task.html", [
       [ "Lexmou.MachineLearning.DroneTask", "class_lexmou_1_1_machine_learning_1_1_drone_task.html", [
+        [ "Lexmou.MachineLearning.DroneMove", "class_lexmou_1_1_machine_learning_1_1_drone_move.html", null ],
         [ "Lexmou.MachineLearning.DroneStabilization", "class_lexmou_1_1_machine_learning_1_1_drone_stabilization.html", null ]
       ] ]
     ] ],

@@ -101,6 +101,7 @@ $(document).ready(function(){initNavTree('class_main_board.html','');});
 <a href="#pub-methods">Public Member Functions</a> &#124;
 <a href="#pub-attribs">Public Attributes</a> &#124;
 <a href="#properties">Properties</a> &#124;
+<a href="#pri-attribs">Private Attributes</a> &#124;
 <a href="class_main_board-members.html">List of all members</a>  </div>
   <div class="headertitle">
 <div class="title">MainBoard Class Reference</div>  </div>
@@ -110,8 +111,6 @@ $(document).ready(function(){initNavTree('class_main_board.html','');});
 Inheritance diagram for MainBoard:</div>
 <div class="dyncontent">
 <div class="center"><img src="class_main_board__inherit__graph.png" border="0" usemap="#_main_board_inherit__map" alt="Inheritance graph"/></div>
-<map name="_main_board_inherit__map" id="_main_board_inherit__map">
-</map>
 </div>
 <div class="dynheader">
 Collaboration diagram for MainBoard:</div>
@@ -119,6 +118,8 @@ Collaboration diagram for MainBoard:</div>
 <div class="center"><img src="class_main_board__coll__graph.png" border="0" usemap="#_main_board_coll__map" alt="Collaboration graph"/></div>
 <map name="_main_board_coll__map" id="_main_board_coll__map">
 <area shape="rect" id="node3" href="class_lexmou_1_1_machine_learning_1_1_neural_network_1_1_feed_forward_1_1_multi_layer_maths_net.html" title="{Lexmou.MachineLearning.Neural\lNetwork.FeedForward.MultiLayerMathsNet\n|+ layers\l+ weights\l+ shapes\l+ shapesSize\l&#45; dw\l&#45; save\l&#45; seed\l&#45; batchSize\l&#45; rndGenerator\l&#45; cu\l&#45; initialValueWeights\l|+ MultiLayerMathsNet()\l+ Reset()\l+ PropagateForward()\l+ PropagateForward2()\l&#45; fillWeights()\l}" alt="" coords="140,5,408,303"/>
+<area shape="rect" id="node4" href="class_drone_1_1_hardware_1_1_thrust_signal.html" title="{Drone.Hardware.ThrustSignal\n|+ FRThrust\l+ FLThrust\l+ RRThrust\l+ RLThrust\l|+ ThrustSignal()\l}" alt="" coords="432,93,623,215"/>
+<area shape="rect" id="node5" href="class_drone_1_1_hardware_1_1_control_signal.html" title="{Drone.Hardware.ControlSignal\n|+ Throttle\l+ Rudder\l+ Elevator\l+ Aileron\l|+ ControlSignal()\l}" alt="" coords="647,93,842,215"/>
 </map>
 </div>
 <table class="memberdecls">
@@ -158,6 +159,13 @@ Public Attributes</h2></td></tr>
 Properties</h2></td></tr>
 <tr class="memitem:ae0562f955a1b3eb0a7fb42f388ec4f8f"><td class="memItemLeft" align="right" valign="top">Vector&lt; float &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_main_board.html#ae0562f955a1b3eb0a7fb42f388ec4f8f">inputMLP</a><code> [get, set]</code></td></tr>
 <tr class="separator:ae0562f955a1b3eb0a7fb42f388ec4f8f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pri-attribs"></a>
+Private Attributes</h2></td></tr>
+<tr class="memitem:ae5a08fc699aeb99984a531464834ebd8"><td class="memItemLeft" align="right" valign="top"><a class="el" href="class_drone_1_1_hardware_1_1_control_signal.html">ControlSignal</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_main_board.html#ae5a08fc699aeb99984a531464834ebd8">resultControl</a></td></tr>
+<tr class="separator:ae5a08fc699aeb99984a531464834ebd8"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae6815145756f5931b17cc98ca7b43501"><td class="memItemLeft" align="right" valign="top"><a class="el" href="class_drone_1_1_hardware_1_1_thrust_signal.html">ThrustSignal</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_main_board.html#ae6815145756f5931b17cc98ca7b43501">resultThrust</a></td></tr>
+<tr class="separator:ae6815145756f5931b17cc98ca7b43501"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock">
@@ -236,7 +244,7 @@ Here is the caller graph for this function:</div>
       </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="_main_board_8cs_source.html#l00064">64</a> of file <a class="el" href="_main_board_8cs_source.html">MainBoard.cs</a>.</p>
+<p>Definition at line <a class="el" href="_main_board_8cs_source.html#l00063">63</a> of file <a class="el" href="_main_board_8cs_source.html">MainBoard.cs</a>.</p>
 <div class="dynheader">
 Here is the caller graph for this function:</div>
 <div class="dyncontent">
@@ -264,7 +272,7 @@ Here is the caller graph for this function:</div>
       </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="_main_board_8cs_source.html#l00078">78</a> of file <a class="el" href="_main_board_8cs_source.html">MainBoard.cs</a>.</p>
+<p>Definition at line <a class="el" href="_main_board_8cs_source.html#l00077">77</a> of file <a class="el" href="_main_board_8cs_source.html">MainBoard.cs</a>.</p>
 
 </div>
 </div>
@@ -410,6 +418,54 @@ Here is the caller graph for this function:</div>
 </div><div class="memdoc">
 
 <p>Definition at line <a class="el" href="_main_board_8cs_source.html#l00033">33</a> of file <a class="el" href="_main_board_8cs_source.html">MainBoard.cs</a>.</p>
+
+</div>
+</div>
+<a id="ae5a08fc699aeb99984a531464834ebd8"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ae5a08fc699aeb99984a531464834ebd8">&sect;&nbsp;</a></span>resultControl</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="class_drone_1_1_hardware_1_1_control_signal.html">ControlSignal</a> MainBoard.resultControl</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Definition at line <a class="el" href="_main_board_8cs_source.html#l00035">35</a> of file <a class="el" href="_main_board_8cs_source.html">MainBoard.cs</a>.</p>
+
+</div>
+</div>
+<a id="ae6815145756f5931b17cc98ca7b43501"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ae6815145756f5931b17cc98ca7b43501">&sect;&nbsp;</a></span>resultThrust</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="class_drone_1_1_hardware_1_1_thrust_signal.html">ThrustSignal</a> MainBoard.resultThrust</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Definition at line <a class="el" href="_main_board_8cs_source.html#l00036">36</a> of file <a class="el" href="_main_board_8cs_source.html">MainBoard.cs</a>.</p>
 
 </div>
 </div>

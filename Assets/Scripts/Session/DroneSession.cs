@@ -17,9 +17,12 @@ namespace Lexmou.MachineLearning
 {
     public class DroneSession : Lexmou.MachineLearning.Session
     {
+        public bool directSignal = false;
 
         public bool _save = false;
         public bool save { get { return _save; } set { _save = value; } }
+        public string _fromTask = "Stabilization";
+        public string fromTask { get { return _fromTask; } set { _fromTask = value; } }
         public HUDManager hudManager;
         public StreamWriter writerSession;
         public StreamWriter writerEnv;
@@ -49,7 +52,7 @@ namespace Lexmou.MachineLearning
         public Vector3[] targetPosition;
 
         private ControlSignal signal;
-
+        private ThrustSignal tsignal;
 
 
         public override string GeneratePath(string task, bool withSeed = false)
@@ -68,6 +71,7 @@ namespace Lexmou.MachineLearning
         {
             UIO.CheckBeforeReplaceCommandLineArguments(this, "save");
             UIO.CheckBeforeReplaceCommandLineArguments(this, "task");
+            UIO.CheckBeforeReplaceCommandLineArguments(this, "fromTask");
             UIO.CheckBeforeReplaceCommandLineArguments(this, "seed");
             UIO.CheckBeforeReplaceCommandLineArguments(this, "intervalSave");
             UIO.CheckBeforeReplaceCommandLineArguments(this, "loadGeneration");
@@ -83,9 +87,10 @@ namespace Lexmou.MachineLearning
             }
             Debug.Log("Build DroneSession");
             signal = new ControlSignal();
+            tsignal = new ThrustSignal();
             tmpBuildCustomWeights = new List<Matrix<float>>();
             externalEvaluations = Vector<float>.Build.Dense(populationSize);
-            taskObject = (DroneTask)Activator.CreateInstance(Type.GetType("Lexmou.MachineLearning.Drone" + task), rndGenerator);
+            taskObject = (DroneTask)Activator.CreateInstance(Type.GetType("Lexmou.MachineLearning.Drone" + task), rndGenerator, fromTask);
             dronePopulation = new GameObject[populationSize];
             droneRigid = new Rigidbody[populationSize];
             targetPosition = new Vector3[populationSize];
@@ -95,6 +100,7 @@ namespace Lexmou.MachineLearning
             if (loadGeneration != 0)
             {
                 float[,] floatArr = new float[taskObject.individualSize - taskObject.rowIndex, populationSize];
+                Debug.Log(taskObject.fromTask);
                 gene.LoadGeneration(GeneratePath(taskObject.fromTask, true), loadGeneration, floatArr, taskObject.rowIndex);
                 gene.generation = loadGeneration;
             }
@@ -108,7 +114,6 @@ namespace Lexmou.MachineLearning
             if (save)
                 UIO.WriteLine(writerEnv, gene.generation + ";" + taskObject.AngleRandomRotation + ";" + taskObject.WindStrength);
         }
-
 
         private float MapEvaluate(int index, float value)
         {
@@ -124,12 +129,25 @@ namespace Lexmou.MachineLearning
                 //Ici se trouve la plus grosse allocation à chaque frame !!! Si falk est vrai un poil plus lent mais moins de garbage (13.5kB contre 55kB)
                 mlpPopulation[i].PropagateForward(taskObject.signal.input, true);
 
-                signal.Throttle = mlpPopulation[i].layers[taskObject.shapes.Count - 1][3, 0];
-                signal.Rudder = mlpPopulation[i].layers[taskObject.shapes.Count - 1][0, 0];
-                signal.Elevator = mlpPopulation[i].layers[taskObject.shapes.Count - 1][1, 0];
-                signal.Aileron = mlpPopulation[i].layers[taskObject.shapes.Count - 1][2, 0];
 
-                dronePopulation[i].GetComponent<MainBoard>().SendControlSignal(signal);
+                if (directSignal)
+                {
+                    tsignal.FRThrust = mlpPopulation[i].layers[taskObject.shapes.Count - 1][0, 0];
+                    tsignal.FLThrust = mlpPopulation[i].layers[taskObject.shapes.Count - 1][1, 0];
+                    tsignal.RRThrust = mlpPopulation[i].layers[taskObject.shapes.Count - 1][2, 0];
+                    tsignal.RLThrust = mlpPopulation[i].layers[taskObject.shapes.Count - 1][3, 0];
+
+                    dronePopulation[i].GetComponent<MainBoard>().SendThrustSignal(tsignal);
+                }
+                else {
+
+                    signal.Throttle = mlpPopulation[i].layers[taskObject.shapes.Count - 1][3, 0];
+                    signal.Rudder = mlpPopulation[i].layers[taskObject.shapes.Count - 1][0, 0];
+                    signal.Elevator = mlpPopulation[i].layers[taskObject.shapes.Count - 1][1, 0];
+                    signal.Aileron = mlpPopulation[i].layers[taskObject.shapes.Count - 1][2, 0];
+
+                    dronePopulation[i].GetComponent<MainBoard>().SendControlSignal(signal);
+                }
 
             }
             externalEvaluations.MapIndexedInplace(MapEvaluate);

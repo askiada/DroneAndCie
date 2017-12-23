@@ -3,10 +3,11 @@ var searchData=
   ['tanh',['Tanh',['../class_lexmou_1_1_utils_1_1_u_activation.html#a7dd07341fb7ced333d3d1399bd8a8b1f',1,'Lexmou::Utils::UActivation']]],
   ['target',['Target',['../class_lexmou_1_1_camera_1_1_camera_follow.html#a669649d311f6ebf53ae07e453ee54c54',1,'Lexmou::Camera::CameraFollow']]],
   ['targetangle',['targetAngle',['../class_gyro.html#a919d6b9b882b5b60b0945e3ed76376b8',1,'Gyro']]],
+  ['targetposition',['targetPosition',['../class_lexmou_1_1_machine_learning_1_1_drone_session.html#ac9b3f8b33060952a418c00f70bb3f02b',1,'Lexmou.MachineLearning.DroneSession.targetPosition()'],['../class_lexmou_1_1_manager_1_1_drone_manager.html#a5359b409f401a297dd663b4d6c3516d9',1,'Lexmou.Manager.DroneManager.targetPosition()']]],
   ['task',['Task',['../class_lexmou_1_1_machine_learning_1_1_task.html',1,'Lexmou::MachineLearning']]],
-  ['task',['task',['../class_lexmou_1_1_machine_learning_1_1_drone_session2_1_1_gene_session.html#a259b0eb9567144805cb565a0b4cdf76f',1,'Lexmou.MachineLearning.DroneSession2.GeneSession.task()'],['../class_lexmou_1_1_machine_learning_1_1_drone_session.html#ac2e3515f31baff271fd4874ea1ae3ff7',1,'Lexmou.MachineLearning.DroneSession.task()']]],
+  ['task',['task',['../class_lexmou_1_1_machine_learning_1_1_drone_session2_1_1_gene_session.html#a259b0eb9567144805cb565a0b4cdf76f',1,'Lexmou.MachineLearning.DroneSession2.GeneSession.task()'],['../class_lexmou_1_1_machine_learning_1_1_drone_session.html#ac2e3515f31baff271fd4874ea1ae3ff7',1,'Lexmou.MachineLearning.DroneSession.task()'],['../class_lexmou_1_1_manager_1_1_drone_manager.html#a471b96cf24b12a23550edb28697bd711',1,'Lexmou.Manager.DroneManager.task()'],['../class_lexmou_1_1_machine_learning_1_1_task.html#ab8710594a29025ec29802ad4d62632a6',1,'Lexmou.MachineLearning.Task.Task()']]],
   ['task_2ecs',['Task.cs',['../_task_8cs.html',1,'']]],
-  ['taskobject',['taskObject',['../class_lexmou_1_1_machine_learning_1_1_drone_session.html#a66ab589d2dc5144f3db7a1c997078f8c',1,'Lexmou::MachineLearning::DroneSession']]],
+  ['taskobject',['taskObject',['../class_lexmou_1_1_machine_learning_1_1_drone_session.html#a66ab589d2dc5144f3db7a1c997078f8c',1,'Lexmou.MachineLearning.DroneSession.taskObject()'],['../class_lexmou_1_1_manager_1_1_drone_manager.html#aeba4f6a76f5582fb12517137f5215961',1,'Lexmou.Manager.DroneManager.taskObject()']]],
   ['teardown',['TearDown',['../class_drone_session_test.html#ae448f84f2e76e467f2c1a4f1fe018f47',1,'DroneSessionTest.TearDown()'],['../class_gene_test.html#ab8462d21ae51445fa7e1ca4ca99e85b0',1,'GeneTest.TearDown()'],['../class_m_l_p_test.html#a9a3101079dfcff263ba5c96fde0a4318',1,'MLPTest.TearDown()'],['../class_u_matrix_test.html#a0b1760bb59c0b22d9ef7b74d15435768',1,'UMatrixTest.TearDown()']]],
   ['texture',['texture',['../class_texture_creator.html#a4adcc205d0c4b0520ac025586ed7e737',1,'TextureCreator']]],
   ['texturecreator',['TextureCreator',['../class_texture_creator.html',1,'']]],
@@ -31,6 +32,7 @@ var searchData=
   ['togglepausemenu',['TogglePauseMenu',['../class_lexmou_1_1_manager_1_1_game_manager.html#a807eddfde2f90bae87516dcf112833cb',1,'Lexmou::Manager::GameManager']]],
   ['transpose_2ecs',['Transpose.cs',['../_transpose_8cs.html',1,'']]],
   ['transposerowsandcolumns_3c_20t_20_3e',['TransposeRowsAndColumns&lt; T &gt;',['../class_extensions.html#a687af1986d883ea7518bfb13fa697a8b',1,'Extensions']]],
+  ['tsignal',['tsignal',['../class_lexmou_1_1_machine_learning_1_1_drone_session.html#a7f6166b54529f69c87aa7bbd3096114d',1,'Lexmou::MachineLearning::DroneSession']]],
   ['type',['type',['../class_texture_creator.html#a98667f2b10596847b5f4fe0c7675c349',1,'TextureCreator.type()'],['../class_lexmou_1_1_environment_1_1_floor_1_1_surface_creator.html#acd46470514f0b87fb56aab3ecec7da5e',1,'Lexmou.Environment.Floor.SurfaceCreator.type()']]],
   ['typerndgeneratortest',['TypeRndGeneratorTest',['../class_gene_test.html#a941c4bd3c2f28e92a325af1e28111def',1,'GeneTest']]]
 ];

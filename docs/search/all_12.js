@@ -4,7 +4,7 @@ var searchData=
   ['uactivation_2ecs',['UActivation.cs',['../_u_activation_8cs.html',1,'']]],
   ['uangle',['UAngle',['../class_lexmou_1_1_utils_1_1_u_angle.html',1,'Lexmou::Utils']]],
   ['uangle_2ecs',['UAngle.cs',['../_u_angle_8cs.html',1,'']]],
-  ['ucsignal',['UCSignal',['../class_u_c_signal.html',1,'UCSignal'],['../class_u_c_signal.html#a056cdf45b4d77315669c3c30d6460440',1,'UCSignal.UCSignal()'],['../class_lexmou_1_1_machine_learning_1_1_drone_stabilization.html#a3da37134f1cacd93ef5e7d6d5467b564',1,'Lexmou.MachineLearning.DroneStabilization.UCSignal()'],['../class_lexmou_1_1_machine_learning_1_1_task.html#a5d3767708c03a5a8a8132e9352ef0592',1,'Lexmou.MachineLearning.Task.UCSignal()']]],
+  ['ucsignal',['UCSignal',['../class_u_c_signal.html',1,'UCSignal'],['../class_u_c_signal.html#a056cdf45b4d77315669c3c30d6460440',1,'UCSignal.UCSignal()'],['../class_lexmou_1_1_machine_learning_1_1_drone_move.html#a6d705fa8756ad7606d1a2bf226f40b66',1,'Lexmou.MachineLearning.DroneMove.UCSignal()'],['../class_lexmou_1_1_machine_learning_1_1_drone_stabilization.html#aeab2c47efb795adfe1a44cfedb16c38e',1,'Lexmou.MachineLearning.DroneStabilization.UCSignal()'],['../class_lexmou_1_1_machine_learning_1_1_task.html#a95d18a52f08ee63e35a02410f41a3281',1,'Lexmou.MachineLearning.Task.UCSignal()']]],
   ['ucsignal_2ecs',['UCSignal.cs',['../_u_c_signal_8cs.html',1,'']]],
   ['ucsignalbus',['UCSignalBus',['../class_main_board.html#a19a3dd7f06b72b69391a58068a50d573',1,'MainBoard']]],
   ['ui',['UI',['../class_lexmou_1_1_manager_1_1_game_manager.html#a421a7f53f8282b9a615b76edf94248a8',1,'Lexmou::Manager::GameManager']]],

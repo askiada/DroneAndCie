@@ -1,5 +1,5 @@
 <map id="MotorsController" name="MotorsController">
-<area shape="rect" id="node2" href="$class_drone_1_1_hardware_1_1_component.html" title="{Drone::Hardware::Component\l\&lt; ThrustSignal \&gt;\n||+ ProcessSignal()\l}" alt="" coords="14,379,206,471"/>
+<area shape="rect" id="node2" href="$class_drone_1_1_hardware_1_1_component.html" title="{Component\&lt; ThrustSignal \&gt;\n||+ ProcessSignal()\l}" alt="" coords="17,393,201,471"/>
 <area shape="rect" id="node3" href="$class_drone_1_1_hardware_1_1_component.html" title="{Drone.Hardware.Component\&lt; S \&gt;\n||+ ProcessSignal()\l}" alt="" coords="5,132,223,209"/>
-<area shape="rect" id="node5" href="$class_motor_thrust.html" title="{MotorThrust\n|+ MaxThrust\l+ Thrust\l&#45; rigid\l|+ ApplyTorque()\l&#45; Start()\l}" alt="" coords="213,233,327,355"/>
+<area shape="rect" id="node5" href="$class_motor_thrust.html" title="{MotorThrust\n|+ MaxThrust\l+ Thrust\l&#45; rigid\l|+ ApplyTorque()\l&#45; Start()\l&#45; OnDrawGizmos()\l}" alt="" coords="209,233,339,369"/>
 </map>

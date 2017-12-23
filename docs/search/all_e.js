@@ -1,7 +1,7 @@
 var searchData=
 [
   ['particles',['particles',['../class_lexmou_1_1_environment_1_1_floor_1_1_surface_flow.html#a3b0b0e10cbcd6149552050da61941cab',1,'Lexmou::Environment::Floor::SurfaceFlow']]],
-  ['path',['path',['../class_lexmou_1_1_machine_learning_1_1_evolutionary_1_1_genetic.html#a693df15510c4194b4be5548c56832e72',1,'Lexmou::MachineLearning::Evolutionary::Genetic']]],
+  ['path',['path',['../class_lexmou_1_1_machine_learning_1_1_evolutionary_1_1_genetic.html#a693df15510c4194b4be5548c56832e72',1,'Lexmou.MachineLearning.Evolutionary.Genetic.path()'],['../class_lexmou_1_1_manager_1_1_drone_manager.html#afe234828618b699e73df5534ac422743',1,'Lexmou.Manager.DroneManager.path()']]],
   ['perlin',['Perlin',['../class_perlin.html',1,'Perlin'],['../_noise_8cs.html#a8222da85c31e15a3898509d02ec6c829a2859057909e216c33bd7903d2e5f7976',1,'Perlin():&#160;Noise.cs']]],
   ['perlin1d',['Perlin1D',['../class_noise.html#ac45d15ea33dd8d406cd1bb67fc43bdbc',1,'Noise']]],
   ['perlin2d',['Perlin2D',['../class_noise.html#afe901026bcfe637f3d4e52d75eae2def',1,'Noise']]],
@@ -18,7 +18,7 @@ var searchData=
   ['prefabtext',['prefabText',['../class_lexmou_1_1_manager_1_1_h_u_d_manager.html#ac5469fec846b7c34be4c310bc53485cf',1,'Lexmou::Manager::HUDManager']]],
   ['previousslidervalue',['previousSliderValue',['../class_slider_move_handler.html#a8237aa49d889abe230e137d4f38528ba',1,'SliderMoveHandler']]],
   ['processsignal',['ProcessSignal',['../class_compass_receiver.html#a75674a7c1f3cad81ad72f224413454c5',1,'CompassReceiver.ProcessSignal()'],['../class_drone_1_1_hardware_1_1_component.html#a0882271c46b9c17e5f3d6837d837d827',1,'Drone.Hardware.Component.ProcessSignal()'],['../class_control_receiver.html#ab378cda6565ee4f95e7da9e87b58263f',1,'ControlReceiver.ProcessSignal()'],['../class_motors_controller.html#a57aabb3191e34f251efeae77b6a6b26a',1,'MotorsController.ProcessSignal()']]],
-  ['propagateforward',['PropagateForward',['../class_multi_layer.html#a5cf43fd072d0b481ad66c6c81d40b781',1,'MultiLayer.PropagateForward()'],['../class_lexmou_1_1_machine_learning_1_1_neural_network_1_1_feed_forward_1_1_multi_layer_maths_net.html#a8513e88540a0c59a6e8113ada1e661d0',1,'Lexmou.MachineLearning.NeuralNetwork.FeedForward.MultiLayerMathsNet.PropagateForward()']]],
+  ['propagateforward',['PropagateForward',['../class_multi_layer.html#a5cf43fd072d0b481ad66c6c81d40b781',1,'MultiLayer.PropagateForward()'],['../class_lexmou_1_1_machine_learning_1_1_neural_network_1_1_feed_forward_1_1_multi_layer_maths_net.html#add40b66a3a3ebc09dd62957ff38c0c3c',1,'Lexmou.MachineLearning.NeuralNetwork.FeedForward.MultiLayerMathsNet.PropagateForward()']]],
   ['propagateforward2',['PropagateForward2',['../class_lexmou_1_1_machine_learning_1_1_neural_network_1_1_feed_forward_1_1_multi_layer_maths_net.html#a7b243c655f074f1368769f5d68c6ac15',1,'Lexmou::MachineLearning::NeuralNetwork::FeedForward::MultiLayerMathsNet']]],
   ['propagateforwardtest',['PropagateForwardTest',['../class_m_l_p_test.html#a17195550a8fd7c85887d51406faa13a0',1,'MLPTest']]]
 ];

@@ -4,6 +4,7 @@ var class_lexmou_1_1_machine_learning_1_1_evolutionary_1_1_genetic =
     [ "~Genetic", "class_lexmou_1_1_machine_learning_1_1_evolutionary_1_1_genetic.html#ac1ce58dd3d427c8b35683b409cae2314", null ],
     [ "Evaluation", "class_lexmou_1_1_machine_learning_1_1_evolutionary_1_1_genetic.html#ac6e0a21ca4f603f86811cee06b107591", null ],
     [ "SelectionOneElement", "class_lexmou_1_1_machine_learning_1_1_evolutionary_1_1_genetic.html#adb21aee48627d06d546c54288adba0b5", null ],
+    [ "SelectionOneElementIndex", "class_lexmou_1_1_machine_learning_1_1_evolutionary_1_1_genetic.html#af1ed9df4d5f91fc032e0764b8fa65d09", null ],
     [ "Selection", "class_lexmou_1_1_machine_learning_1_1_evolutionary_1_1_genetic.html#a90a173437ebfe074289a464e68d5bcf2", null ],
     [ "CrossoverSliceTwoIndividuals", "class_lexmou_1_1_machine_learning_1_1_evolutionary_1_1_genetic.html#a460f0c9a538e66bc9b6600cbd61a8806", null ],
     [ "CrossOver", "class_lexmou_1_1_machine_learning_1_1_evolutionary_1_1_genetic.html#af99a221879499f223fad8ae86032b219", null ],
@@ -16,8 +17,10 @@ var class_lexmou_1_1_machine_learning_1_1_evolutionary_1_1_genetic =
     [ "GetBestIndividualIndex", "class_lexmou_1_1_machine_learning_1_1_evolutionary_1_1_genetic.html#a8ed097db095cff5a0f234c8dcc318ad1", null ],
     [ "GeneratePath", "class_lexmou_1_1_machine_learning_1_1_evolutionary_1_1_genetic.html#a801ac016fd0c0609071736a91618075d", null ],
     [ "SaveGeneration", "class_lexmou_1_1_machine_learning_1_1_evolutionary_1_1_genetic.html#adbf0639ad9a85b926a2c9da0264cb0d9", null ],
+    [ "LoadGeneration", "class_lexmou_1_1_machine_learning_1_1_evolutionary_1_1_genetic.html#a508471326a6d24a8382482e32d0c3f23", null ],
     [ "LoadGeneration", "class_lexmou_1_1_machine_learning_1_1_evolutionary_1_1_genetic.html#a8824a4c4262c51c41c00c7d62b149815", null ],
     [ "LoadBest", "class_lexmou_1_1_machine_learning_1_1_evolutionary_1_1_genetic.html#a862b72d14caa564a0f37f0c469012f88", null ],
+    [ "LoadBest", "class_lexmou_1_1_machine_learning_1_1_evolutionary_1_1_genetic.html#a972405ede31432407960b00a228e025b", null ],
     [ "seed", "class_lexmou_1_1_machine_learning_1_1_evolutionary_1_1_genetic.html#a30ead3397751fb8193bae937adbd95d0", null ],
     [ "path", "class_lexmou_1_1_machine_learning_1_1_evolutionary_1_1_genetic.html#a693df15510c4194b4be5548c56832e72", null ],
     [ "initialValueWeights", "class_lexmou_1_1_machine_learning_1_1_evolutionary_1_1_genetic.html#a5d927f50c34ea5ba56b122515004afbf", null ],
@@ -43,7 +46,9 @@ var class_lexmou_1_1_machine_learning_1_1_evolutionary_1_1_genetic =
     [ "individualSize", "class_lexmou_1_1_machine_learning_1_1_evolutionary_1_1_genetic.html#a1e2ff9a5b339c6e5128c4c8bef9bcf68", null ],
     [ "bestScore", "class_lexmou_1_1_machine_learning_1_1_evolutionary_1_1_genetic.html#a1a1e31120f4c83068d8369e252a9df9c", null ],
     [ "sumEvaluations", "class_lexmou_1_1_machine_learning_1_1_evolutionary_1_1_genetic.html#a79d17ab780f50b50e4f9aacf46774689", null ],
-    [ "meanStd", "class_lexmou_1_1_machine_learning_1_1_evolutionary_1_1_genetic.html#aa2818ad0a5c8ecce7df3cfeee8cd5e94", null ],
+    [ "mean", "class_lexmou_1_1_machine_learning_1_1_evolutionary_1_1_genetic.html#a8c6a42fd455dbabff09ea22e2df4e06a", null ],
+    [ "stdDeviation", "class_lexmou_1_1_machine_learning_1_1_evolutionary_1_1_genetic.html#a51cbe7b62b10f9fe22baba75a6b040d2", null ],
     [ "median", "class_lexmou_1_1_machine_learning_1_1_evolutionary_1_1_genetic.html#a0abb298f2e968ab01a46788103a2acd5", null ],
-    [ "writer", "class_lexmou_1_1_machine_learning_1_1_evolutionary_1_1_genetic.html#aaafef3a9b8b41bb4249762bbeb5ebd19", null ]
+    [ "writer", "class_lexmou_1_1_machine_learning_1_1_evolutionary_1_1_genetic.html#aaafef3a9b8b41bb4249762bbeb5ebd19", null ],
+    [ "indexPermutation", "class_lexmou_1_1_machine_learning_1_1_evolutionary_1_1_genetic.html#a9b5693fa26c656badf53a84ccb1a1fbf", null ]
 ];

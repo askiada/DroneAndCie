@@ -1,7 +1,8 @@
 var searchData=
 [
-  ['gene',['gene',['../class_lexmou_1_1_machine_learning_1_1_drone_session2_1_1_gene_session.html#a23e6f3f981dd76abbe315df13478ed7f',1,'Lexmou.MachineLearning.DroneSession2.GeneSession.gene()'],['../class_lexmou_1_1_machine_learning_1_1_drone_session.html#aba651b0c2588908f87961f41bfe8bbb4',1,'Lexmou.MachineLearning.DroneSession.gene()'],['../class_lexmou_1_1_manager_1_1_drone_manager.html#a5b9ffa25bca4f2069e9b07b2134ed5f9',1,'Lexmou.Manager.DroneManager.gene()']]],
+  ['gene',['gene',['../class_lexmou_1_1_machine_learning_1_1_drone_session2_1_1_gene_session.html#a23e6f3f981dd76abbe315df13478ed7f',1,'Lexmou.MachineLearning.DroneSession2.GeneSession.gene()'],['../class_lexmou_1_1_machine_learning_1_1_drone_session.html#aba651b0c2588908f87961f41bfe8bbb4',1,'Lexmou.MachineLearning.DroneSession.gene()']]],
   ['generation',['generation',['../class_lexmou_1_1_machine_learning_1_1_evolutionary_1_1_genetic.html#a2c15e0fafa724ea70de79081364e13a5',1,'Lexmou::MachineLearning::Evolutionary::Genetic']]],
+  ['generationinfos',['generationInfos',['../class_lexmou_1_1_machine_learning_1_1_drone_session.html#a2943f7d2bfbf8b9421e6ab3e0e955d49',1,'Lexmou::MachineLearning::DroneSession']]],
   ['generndgenerator',['geneRndGenerator',['../class_gene_test.html#a68a3b0c6a9ee839a46855418bd31b2b3',1,'GeneTest']]],
   ['geneseed',['geneSeed',['../class_gene_test.html#a607524f34bf520e7e476642a21b6fdde',1,'GeneTest']]],
   ['gm',['GM',['../class_lexmou_1_1_manager_1_1_u_i_manager.html#acdcdfb76c548cedd1d7da247d084e2d9',1,'Lexmou::Manager::UIManager']]],

@@ -1,4 +1,4 @@
 <map id="MotorsController" name="MotorsController">
-<area shape="rect" id="node2" href="$class_drone_1_1_hardware_1_1_component.html" title="{Drone::Hardware::Component\l\&lt; ThrustSignal \&gt;\n||+ ProcessSignal()\l}" alt="" coords="18,272,210,364"/>
+<area shape="rect" id="node2" href="$class_drone_1_1_hardware_1_1_component.html" title="{Component\&lt; ThrustSignal \&gt;\n||+ ProcessSignal()\l}" alt="" coords="22,272,206,349"/>
 <area shape="rect" id="node3" href="$class_drone_1_1_hardware_1_1_component.html" title="{Drone.Hardware.Component\&lt; S \&gt;\n||+ ProcessSignal()\l}" alt="" coords="5,132,223,209"/>
 </map>

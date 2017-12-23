@@ -3,12 +3,13 @@ var searchData=
   ['mainboard',['MainBoard',['../class_control_receiver.html#aad6351ab1f6b5bfb6b224db34e19475b',1,'ControlReceiver.MainBoard()'],['../class_input_control.html#a87d6e903e7c260cce3ecca568e18a22b',1,'InputControl.MainBoard()'],['../class_input_control2.html#ae87604e2aa92bf99b6b981cd4b19e871',1,'InputControl2.MainBoard()']]],
   ['manual',['manual',['../class_input_control.html#a551ee5b9b84af1697e1efc9dd2db2469',1,'InputControl']]],
   ['maxthrust',['MaxThrust',['../class_motor_thrust.html#ae554dfd8bab2e7190bcc53321343c48d',1,'MotorThrust']]],
-  ['meanstd',['meanStd',['../class_lexmou_1_1_machine_learning_1_1_evolutionary_1_1_genetic.html#aa2818ad0a5c8ecce7df3cfeee8cd5e94',1,'Lexmou::MachineLearning::Evolutionary::Genetic']]],
+  ['mean',['mean',['../class_lexmou_1_1_machine_learning_1_1_evolutionary_1_1_genetic.html#a8c6a42fd455dbabff09ea22e2df4e06a',1,'Lexmou::MachineLearning::Evolutionary::Genetic']]],
   ['median',['median',['../class_lexmou_1_1_machine_learning_1_1_evolutionary_1_1_genetic.html#a0abb298f2e968ab01a46788103a2acd5',1,'Lexmou::MachineLearning::Evolutionary::Genetic']]],
   ['medianlimit',['medianLimit',['../class_lexmou_1_1_machine_learning_1_1_drone_session2_1_1_gene_session.html#a3b0ab662c8ac7aff0f03378e5c67503c',1,'Lexmou::MachineLearning::DroneSession2::GeneSession']]],
+  ['medianthreshold',['medianThreshold',['../class_lexmou_1_1_machine_learning_1_1_drone_task.html#a59a3a4a33f3653e283ff63c163f396a1',1,'Lexmou::MachineLearning::DroneTask']]],
   ['mesh',['mesh',['../class_lexmou_1_1_environment_1_1_floor_1_1_surface_creator.html#a44a9414a9d6e5f8a3ae4deba5d5ff3ad',1,'Lexmou::Environment::Floor::SurfaceCreator']]],
   ['methods',['methods',['../class_noise.html#a7cff7e7995960866f40a57c83c3e6aff',1,'Noise']]],
-  ['mlp',['mlp',['../class_m_l_p_test.html#a7715bf2f67101d6aaaa0b0ba70776cb6',1,'MLPTest.mlp()'],['../class_main_board.html#a4a2585f1b784a18250211c5061d66470',1,'MainBoard.mlp()']]],
+  ['mlp',['mlp',['../class_m_l_p_test.html#a7715bf2f67101d6aaaa0b0ba70776cb6',1,'MLPTest.mlp()'],['../class_main_board.html#a4a2585f1b784a18250211c5061d66470',1,'MainBoard.mlp()'],['../class_lexmou_1_1_manager_1_1_drone_manager.html#af438aff0fc2fa042aa80606790a578bb',1,'Lexmou.Manager.DroneManager.mlp()']]],
   ['mlpmn',['mlpMN',['../class_m_l_p_test.html#a48893539c501b2849302318541135059',1,'MLPTest']]],
   ['mlppopulation',['mlpPopulation',['../class_lexmou_1_1_machine_learning_1_1_drone_session2_1_1_gene_session.html#ac79824bb323ce2be0ea72d24857b1f9e',1,'Lexmou.MachineLearning.DroneSession2.GeneSession.mlpPopulation()'],['../class_lexmou_1_1_machine_learning_1_1_drone_session.html#a5727e6d49cbe17cbe8213772827040b3',1,'Lexmou.MachineLearning.DroneSession.mlpPopulation()']]],
   ['motorfl',['MotorFL',['../class_motors_controller.html#a746d1e9facc6d5eec9594742ad68601e',1,'MotorsController']]],
@@ -16,7 +17,5 @@ var searchData=
   ['motorrl',['MotorRL',['../class_motors_controller.html#ae35b59ba9e6893180b088c37ae04a80d',1,'MotorsController']]],
   ['motorrr',['MotorRR',['../class_motors_controller.html#a386c4b99ec977d13fe40b3b3d9188b15',1,'MotorsController']]],
   ['move',['move',['../class_input_control.html#a127ceefafaa2ccb5b35ea83370050796',1,'InputControl']]],
-  ['movegeneration',['moveGeneration',['../class_lexmou_1_1_manager_1_1_drone_manager.html#a1b31d524c40e014c3f36e7e9246bb543',1,'Lexmou::Manager::DroneManager']]],
-  ['moveseed',['moveSeed',['../class_lexmou_1_1_manager_1_1_drone_manager.html#a5643dd8a160bb2a2d40712ac9da6eb06',1,'Lexmou::Manager::DroneManager']]],
   ['mutationrate',['mutationRate',['../class_lexmou_1_1_machine_learning_1_1_evolutionary_1_1_genetic.html#af25ede6f9c6205d13304481b7cb057e8',1,'Lexmou.MachineLearning.Evolutionary.Genetic.mutationRate()'],['../class_lexmou_1_1_machine_learning_1_1_drone_session2_1_1_gene_session.html#a03c6fe35da6109c96a741f45aab7389a',1,'Lexmou.MachineLearning.DroneSession2.GeneSession.mutationRate()'],['../class_lexmou_1_1_machine_learning_1_1_drone_session.html#ab0a6871ce26e793cb247c098a3e76b4e',1,'Lexmou.MachineLearning.DroneSession.mutationRate()']]]
 ];

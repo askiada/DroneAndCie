@@ -1,11 +1,10 @@
 var class_lexmou_1_1_machine_learning_1_1_session =
 [
-    [ "Session", "class_lexmou_1_1_machine_learning_1_1_session.html#a5dcc9373d4e52ce74acd42307e2da055", null ],
     [ "Build", "class_lexmou_1_1_machine_learning_1_1_session.html#ae85593babd5aaeb036684f5759e159a2", null ],
     [ "BuildHUD", "class_lexmou_1_1_machine_learning_1_1_session.html#a9bd1c8b10d88699e90da294e705926e3", null ],
     [ "BuildSessionWriter", "class_lexmou_1_1_machine_learning_1_1_session.html#ae65c5a04d37fcc3a0cf2845aab1f6576", null ],
     [ "CloseSessionWriter", "class_lexmou_1_1_machine_learning_1_1_session.html#a81dafcc5a225cacb3216c74dee3a3534", null ],
-    [ "GeneratePath", "class_lexmou_1_1_machine_learning_1_1_session.html#a924cef627c45e33738bd9c50b25f63e6", null ],
+    [ "GeneratePath", "class_lexmou_1_1_machine_learning_1_1_session.html#a2786d5f6148f6d498fea585448709120", null ],
     [ "SetParametersFromCommandLine", "class_lexmou_1_1_machine_learning_1_1_session.html#a2879108ccd37c728a114a5450294479c", null ],
     [ "OnDestroy", "class_lexmou_1_1_machine_learning_1_1_session.html#ae923160086da6436c525891f42e56559", null ],
     [ "Reset", "class_lexmou_1_1_machine_learning_1_1_session.html#a5af3d90c0bed829fc17df6c9f0f779d3", null ],

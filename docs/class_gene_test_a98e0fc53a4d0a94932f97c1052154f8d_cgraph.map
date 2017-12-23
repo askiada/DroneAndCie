@@ -1,6 +1,7 @@
 <map id="GeneTest.EvaluationTest" name="GeneTest.EvaluationTest">
-<area shape="rect" id="node2" href="$class_lexmou_1_1_machine_learning_1_1_evolutionary_1_1_genetic.html#ac6e0a21ca4f603f86811cee06b107591" title="Lexmou.MachineLearning.Evolutionary.\lGenetic.Evaluation" alt="" coords="220,37,468,79"/>
-<area shape="rect" id="node5" href="$class_lexmou_1_1_machine_learning_1_1_evolutionary_1_1_genetic.html#a8ed097db095cff5a0f234c8dcc318ad1" title="Get the best individual index of the last generation. " alt="" coords="220,103,468,144"/>
-<area shape="rect" id="node3" href="$class_lexmou_1_1_utils_1_1_u_vector.html#a89095266e96dd0ca25061907fe940d43" title="Mean and standard deviation of a Vector. " alt="" coords="516,5,699,47"/>
-<area shape="rect" id="node4" href="$class_lexmou_1_1_utils_1_1_u_vector.html#a394110f8c664d9069dd661993f4a9511" title="Median of a Vector. " alt="" coords="516,71,699,112"/>
+<area shape="rect" id="node2" href="$class_lexmou_1_1_machine_learning_1_1_evolutionary_1_1_genetic.html#ac6e0a21ca4f603f86811cee06b107591" title="Lexmou.MachineLearning.Evolutionary.\lGenetic.Evaluation" alt="" coords="220,57,468,98"/>
+<area shape="rect" id="node6" href="$class_lexmou_1_1_machine_learning_1_1_evolutionary_1_1_genetic.html#a8ed097db095cff5a0f234c8dcc318ad1" title="Get the best individual index of the last generation. " alt="" coords="220,122,468,163"/>
+<area shape="rect" id="node3" href="$class_lexmou_1_1_utils_1_1_u_vector.html#a27761f54d9e4290795e60c4dbc0986b7" title="Mean of a Vector. " alt="" coords="516,5,731,32"/>
+<area shape="rect" id="node4" href="$class_lexmou_1_1_utils_1_1_u_vector.html#ae4fb34d5748c370d7d0b96073e2870ea" title="Standard deviation of a Vector. " alt="" coords="532,57,715,98"/>
+<area shape="rect" id="node5" href="$class_lexmou_1_1_utils_1_1_u_vector.html#a394110f8c664d9069dd661993f4a9511" title="Median of a Vector. " alt="" coords="532,122,715,163"/>
 </map>

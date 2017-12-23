@@ -160,9 +160,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   intervalUpdate: 5
-  _seed: 15
-  _timeScale: 3
+  _seed: 56
+  _timeScale: 2
+  directSignal: 0
   _save: 0
+  _fromTask: Stabilization
   hudManager: {fileID: 0}
   initialValueWeights: 1
   populationSize: 100

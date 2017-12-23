@@ -1,7 +1,8 @@
 <map id="GeneTest.SelectOneElementTest" name="GeneTest.SelectOneElementTest">
-<area shape="rect" id="node2" href="$class_lexmou_1_1_machine_learning_1_1_evolutionary_1_1_genetic.html#ac6e0a21ca4f603f86811cee06b107591" title="Lexmou.MachineLearning.Evolutionary.\lGenetic.Evaluation" alt="" coords="269,37,517,79"/>
-<area shape="rect" id="node5" href="$class_lexmou_1_1_machine_learning_1_1_evolutionary_1_1_genetic.html#adb21aee48627d06d546c54288adba0b5" title="Fitness proportionate selection of one element. " alt="" coords="269,103,517,144"/>
-<area shape="rect" id="node6" href="$class_lexmou_1_1_machine_learning_1_1_evolutionary_1_1_genetic.html#ab97494979da382d4c6ef031106eb01ab" title="Get a specific individual. " alt="" coords="269,168,517,209"/>
-<area shape="rect" id="node3" href="$class_lexmou_1_1_utils_1_1_u_vector.html#a89095266e96dd0ca25061907fe940d43" title="Mean and standard deviation of a Vector. " alt="" coords="565,5,748,47"/>
-<area shape="rect" id="node4" href="$class_lexmou_1_1_utils_1_1_u_vector.html#a394110f8c664d9069dd661993f4a9511" title="Median of a Vector. " alt="" coords="565,71,748,112"/>
+<area shape="rect" id="node2" href="$class_lexmou_1_1_machine_learning_1_1_evolutionary_1_1_genetic.html#ac6e0a21ca4f603f86811cee06b107591" title="Lexmou.MachineLearning.Evolutionary.\lGenetic.Evaluation" alt="" coords="269,57,517,98"/>
+<area shape="rect" id="node6" href="$class_lexmou_1_1_machine_learning_1_1_evolutionary_1_1_genetic.html#adb21aee48627d06d546c54288adba0b5" title="Fitness proportionate selection of one element. " alt="" coords="269,122,517,163"/>
+<area shape="rect" id="node7" href="$class_lexmou_1_1_machine_learning_1_1_evolutionary_1_1_genetic.html#ab97494979da382d4c6ef031106eb01ab" title="Get a specific individual. " alt="" coords="269,187,517,229"/>
+<area shape="rect" id="node3" href="$class_lexmou_1_1_utils_1_1_u_vector.html#a27761f54d9e4290795e60c4dbc0986b7" title="Mean of a Vector. " alt="" coords="565,5,780,32"/>
+<area shape="rect" id="node4" href="$class_lexmou_1_1_utils_1_1_u_vector.html#ae4fb34d5748c370d7d0b96073e2870ea" title="Standard deviation of a Vector. " alt="" coords="581,57,764,98"/>
+<area shape="rect" id="node5" href="$class_lexmou_1_1_utils_1_1_u_vector.html#a394110f8c664d9069dd661993f4a9511" title="Median of a Vector. " alt="" coords="581,122,764,163"/>
 </map>

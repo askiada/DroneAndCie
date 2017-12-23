@@ -21,9 +21,9 @@ public class MotorThrust : MonoBehaviour {
 		rigid.AddForce(-transform.forward * (Thrust * Physics.gravity.magnitude));
 	}
 	
-	/*void OnDrawGizmos() {
+	void OnDrawGizmos() {
 		Gizmos.color = Color.yellow;
 		Gizmos.DrawRay(transform.position, transform.forward);
-	}*/
+	}
 	
 }

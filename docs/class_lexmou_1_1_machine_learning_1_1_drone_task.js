@@ -1,10 +1,26 @@
 var class_lexmou_1_1_machine_learning_1_1_drone_task =
 [
+    [ "DroneTask", "class_lexmou_1_1_machine_learning_1_1_drone_task.html#afd15c7c3834f2fd7efb631f880c1f1dc", null ],
     [ "GetInitialposition", "class_lexmou_1_1_machine_learning_1_1_drone_task.html#a9474f67cd61740665d99265428541df8", null ],
-    [ "EvaluateIndividual", "class_lexmou_1_1_machine_learning_1_1_drone_task.html#acce47671b67d67e97157d374d27b86ee", null ],
+    [ "GetTargetPosition", "class_lexmou_1_1_machine_learning_1_1_drone_task.html#ace79f0060a6521abc4d6ce2e880c84a7", null ],
+    [ "GetTargetPosition", "class_lexmou_1_1_machine_learning_1_1_drone_task.html#adbf4ef098c6062b9cfedfd8603ed4f70", null ],
+    [ "EvaluateIndividual", "class_lexmou_1_1_machine_learning_1_1_drone_task.html#a7ed1c02aeb2f181168a0b04d0e7e6a35", null ],
+    [ "ResetOrientation", "class_lexmou_1_1_machine_learning_1_1_drone_task.html#ac12ea410036adb103f64833e55c55a16", null ],
+    [ "ResetOrientation", "class_lexmou_1_1_machine_learning_1_1_drone_task.html#a91be01b613b0313dcb852d42b6418227", null ],
     [ "spacing", "class_lexmou_1_1_machine_learning_1_1_drone_task.html#aa5a6aeb19de7cb41175bf93e44ff5419", null ],
     [ "initialY", "class_lexmou_1_1_machine_learning_1_1_drone_task.html#aaf92bec0d06f019daa486ea3572fcaba", null ],
     [ "individualSize", "class_lexmou_1_1_machine_learning_1_1_drone_task.html#a46c12dc9e85f568190ff1b8af7774c54", null ],
+    [ "fromTask", "class_lexmou_1_1_machine_learning_1_1_drone_task.html#a8d614c0ed02c4d2fe08e649f7f3347f6", null ],
+    [ "rowIndex", "class_lexmou_1_1_machine_learning_1_1_drone_task.html#a7a1823b61eec0a9956f9fc9ca3a5a988", null ],
     [ "shapes", "class_lexmou_1_1_machine_learning_1_1_drone_task.html#a4601024a74ade72c89fb463fb07eb2c2", null ],
-    [ "signal", "class_lexmou_1_1_machine_learning_1_1_drone_task.html#a71b1300fcca5420fe727e598b837eab1", null ]
+    [ "signal", "class_lexmou_1_1_machine_learning_1_1_drone_task.html#a71b1300fcca5420fe727e598b837eab1", null ],
+    [ "indexRRArr", "class_lexmou_1_1_machine_learning_1_1_drone_task.html#afd44c51a2e7824e53001283ed41c315c", null ],
+    [ "angleRandomRotation", "class_lexmou_1_1_machine_learning_1_1_drone_task.html#ae76357689b20aab406e8c0a209054caf", null ],
+    [ "medianThreshold", "class_lexmou_1_1_machine_learning_1_1_drone_task.html#a59a3a4a33f3653e283ff63c163f396a1", null ],
+    [ "bestThreshold", "class_lexmou_1_1_machine_learning_1_1_drone_task.html#a3613096705ae7f594c95619416f3823c", null ],
+    [ "_angleRandomRotation", "class_lexmou_1_1_machine_learning_1_1_drone_task.html#aec60c913d5e3e4ad8b66506c55e54f69", null ],
+    [ "_windStrength", "class_lexmou_1_1_machine_learning_1_1_drone_task.html#a61848493a37449602524feb91a93e78e", null ],
+    [ "distribution", "class_lexmou_1_1_machine_learning_1_1_drone_task.html#a5b104e051d20ffd8f8414e8dbd998430", null ],
+    [ "AngleRandomRotation", "class_lexmou_1_1_machine_learning_1_1_drone_task.html#a02fdf3ee901ecae71b1a60cb8942bbfd", null ],
+    [ "WindStrength", "class_lexmou_1_1_machine_learning_1_1_drone_task.html#aa079ad5307fdd3f4caa0b9bc0ef905b8", null ]
 ];

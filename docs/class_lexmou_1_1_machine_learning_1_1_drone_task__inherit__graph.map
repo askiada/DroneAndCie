@@ -1,4 +1,5 @@
 <map id="Lexmou.MachineLearning.DroneTask" name="Lexmou.MachineLearning.DroneTask">
-<area shape="rect" id="node3" href="$class_lexmou_1_1_machine_learning_1_1_drone_stabilization.html" title="{Lexmou.MachineLearning.Drone\lStabilization\n||+ DroneStabilization()\l+ GetInitialposition()\l+ EvaluateIndividual()\l+ UCSignal()\l}" alt="" coords="19,329,227,465"/>
-<area shape="rect" id="node2" href="$class_lexmou_1_1_machine_learning_1_1_task.html" title="{Task\n||+ UCSignal()\l}" alt="" coords="75,5,171,83"/>
+<area shape="rect" id="node3" href="$class_lexmou_1_1_machine_learning_1_1_drone_move.html" title="{Lexmou.MachineLearning.DroneMove\n|&#45; deltaDistribution\l|+ DroneMove()\l+ GetTargetPosition()\l+ GetTargetPosition()\l+ GetInitialposition()\l+ EvaluateIndividual()\l+ UCSignal()\l}" alt="" coords="5,586,244,737"/>
+<area shape="rect" id="node4" href="$class_lexmou_1_1_machine_learning_1_1_drone_stabilization.html" title="Implementation of the stabilization task for a drone using a genetic algorithm and a MLP..." alt="" coords="269,579,477,744"/>
+<area shape="rect" id="node2" href="$class_lexmou_1_1_machine_learning_1_1_task.html" title="Task interface used during a Session. " alt="" coords="194,5,303,97"/>
 </map>

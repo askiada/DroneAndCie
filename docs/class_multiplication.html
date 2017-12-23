@@ -114,14 +114,14 @@ Collaboration diagram for Multiplication:</div>
 Static Public Member Functions</h2></td></tr>
 <tr class="memitem:a30ac2aa5d89cca24c2fa894d88cb857a"><td class="memItemLeft" align="right" valign="top">static float [,]&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_multiplication.html#a30ac2aa5d89cca24c2fa894d88cb857a">FalkScheme</a> (float[,] Matrix1, float[,] Matrix2, bool reverse1=false, bool reverse2=false)</td></tr>
 <tr class="separator:a30ac2aa5d89cca24c2fa894d88cb857a"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a2db08c6f628ee80413eca065840646ca"><td class="memItemLeft" align="right" valign="top">static Matrix&lt; float &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_multiplication.html#a2db08c6f628ee80413eca065840646ca">FalkSchemeM</a> (Matrix&lt; float &gt; Matrix1, Matrix&lt; float &gt; Matrix2)</td></tr>
-<tr class="separator:a2db08c6f628ee80413eca065840646ca"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad8b419be38e6384a6c384742002d2165"><td class="memItemLeft" align="right" valign="top">static void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_multiplication.html#ad8b419be38e6384a6c384742002d2165">FalkSchemeM</a> (Matrix&lt; float &gt; Matrix1, Matrix&lt; float &gt; Matrix2, Matrix&lt; float &gt; result, Func&lt; float, float &gt; f)</td></tr>
+<tr class="separator:ad8b419be38e6384a6c384742002d2165"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ac78223b6b29863b1e04b48ca6f536e26"><td class="memItemLeft" align="right" valign="top">static float [,]&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_multiplication.html#ac78223b6b29863b1e04b48ca6f536e26">ElementWise</a> (float[,] A, float[,] B)</td></tr>
 <tr class="separator:ac78223b6b29863b1e04b48ca6f536e26"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock">
-<p>Definition at line <a class="el" href="_multiplication_8cs_source.html#l00006">6</a> of file <a class="el" href="_multiplication_8cs_source.html">Multiplication.cs</a>.</p>
+<p>Definition at line <a class="el" href="_multiplication_8cs_source.html#l00007">7</a> of file <a class="el" href="_multiplication_8cs_source.html">Multiplication.cs</a>.</p>
 </div><h2 class="groupheader">Member Function Documentation</h2>
 <a id="a30ac2aa5d89cca24c2fa894d88cb857a"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a30ac2aa5d89cca24c2fa894d88cb857a">&sect;&nbsp;</a></span>FalkScheme()</h2>
@@ -169,7 +169,7 @@ Static Public Member Functions</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="_multiplication_8cs_source.html#l00008">8</a> of file <a class="el" href="_multiplication_8cs_source.html">Multiplication.cs</a>.</p>
+<p>Definition at line <a class="el" href="_multiplication_8cs_source.html#l00009">9</a> of file <a class="el" href="_multiplication_8cs_source.html">Multiplication.cs</a>.</p>
 <div class="dynheader">
 Here is the caller graph for this function:</div>
 <div class="dyncontent">
@@ -185,8 +185,8 @@ Here is the caller graph for this function:</div>
 
 </div>
 </div>
-<a id="a2db08c6f628ee80413eca065840646ca"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a2db08c6f628ee80413eca065840646ca">&sect;&nbsp;</a></span>FalkSchemeM()</h2>
+<a id="ad8b419be38e6384a6c384742002d2165"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ad8b419be38e6384a6c384742002d2165">&sect;&nbsp;</a></span>FalkSchemeM()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -195,7 +195,7 @@ Here is the caller graph for this function:</div>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">static Matrix&lt;float&gt; Multiplication.FalkSchemeM </td>
+          <td class="memname">static void Multiplication.FalkSchemeM </td>
           <td>(</td>
           <td class="paramtype">Matrix&lt; float &gt;&#160;</td>
           <td class="paramname"><em>Matrix1</em>, </td>
@@ -204,7 +204,19 @@ Here is the caller graph for this function:</div>
           <td class="paramkey"></td>
           <td></td>
           <td class="paramtype">Matrix&lt; float &gt;&#160;</td>
-          <td class="paramname"><em>Matrix2</em>&#160;</td>
+          <td class="paramname"><em>Matrix2</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">Matrix&lt; float &gt;&#160;</td>
+          <td class="paramname"><em>result</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">Func&lt; float, float &gt;&#160;</td>
+          <td class="paramname"><em>f</em>&#160;</td>
         </tr>
         <tr>
           <td></td>
@@ -219,7 +231,21 @@ Here is the caller graph for this function:</div>
 </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="_multiplication_8cs_source.html#l00067">67</a> of file <a class="el" href="_multiplication_8cs_source.html">Multiplication.cs</a>.</p>
+<p>Definition at line <a class="el" href="_multiplication_8cs_source.html#l00071">71</a> of file <a class="el" href="_multiplication_8cs_source.html">Multiplication.cs</a>.</p>
+<div class="dynheader">
+Here is the caller graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_multiplication_ad8b419be38e6384a6c384742002d2165_icgraph.png" border="0" usemap="#class_multiplication_ad8b419be38e6384a6c384742002d2165_icgraph" alt=""/></div>
+<map name="class_multiplication_ad8b419be38e6384a6c384742002d2165_icgraph" id="class_multiplication_ad8b419be38e6384a6c384742002d2165_icgraph">
+<area shape="rect" id="node2" href="class_lexmou_1_1_machine_learning_1_1_neural_network_1_1_feed_forward_1_1_multi_layer_maths_net.html#add40b66a3a3ebc09dd62957ff38c0c3c" title="Lexmou.MachineLearning.Neural\lNetwork.FeedForward.MultiLayerMaths\lNet.PropagateForward" alt="" coords="240,83,488,139"/>
+<area shape="rect" id="node3" href="class_m_l_p_test.html#a17195550a8fd7c85887d51406faa13a0" title="MLPTest.PropagateForwardTest" alt="" coords="554,5,762,32"/>
+<area shape="rect" id="node4" href="class_lexmou_1_1_machine_learning_1_1_drone_session.html#a7035b9f59ebcf492479c0118c91b0fd4" title="Lexmou.MachineLearning.Drone\lSession.RunEachFixedUpdate" alt="" coords="554,57,762,98"/>
+<area shape="rect" id="node5" href="class_lexmou_1_1_manager_1_1_drone_manager.html#a3589f57b83a6f9295c444aa8715da961" title="Lexmou.Manager.DroneManager.\lStabilization" alt="" coords="551,122,765,163"/>
+<area shape="rect" id="node7" href="class_lexmou_1_1_manager_1_1_drone_manager.html#a8d59143772978fb00b0a3705615bd3f8" title="Lexmou.Manager.DroneManager.Move" alt="" coords="536,189,780,216"/>
+<area shape="rect" id="node6" href="class_lexmou_1_1_manager_1_1_u_i_manager.html#ad44b300d5a44a99dc1b304af177ae82c" title="Lexmou.Manager.UIManager.\lScanForKeyStabilization" alt="" coords="828,119,1020,161"/>
+<area shape="rect" id="node8" href="class_lexmou_1_1_manager_1_1_u_i_manager.html#a07adc25bc84df74cfbdb8f3e6e74f38a" title="Lexmou.Manager.UIManager.\lScanForKeyMove" alt="" coords="828,185,1020,226"/>
+</map>
+</div>
 
 </div>
 </div>
@@ -257,7 +283,7 @@ Here is the caller graph for this function:</div>
 </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="_multiplication_8cs_source.html#l00103">103</a> of file <a class="el" href="_multiplication_8cs_source.html">Multiplication.cs</a>.</p>
+<p>Definition at line <a class="el" href="_multiplication_8cs_source.html#l00102">102</a> of file <a class="el" href="_multiplication_8cs_source.html">Multiplication.cs</a>.</p>
 <div class="dynheader">
 Here is the caller graph for this function:</div>
 <div class="dyncontent">

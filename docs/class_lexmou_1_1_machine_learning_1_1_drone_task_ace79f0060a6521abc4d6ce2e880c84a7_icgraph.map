@@ -1,0 +1,5 @@
+<map id="Lexmou.MachineLearning.DroneTask.GetTargetPosition" name="Lexmou.MachineLearning.DroneTask.GetTargetPosition">
+<area shape="rect" id="node2" href="$class_lexmou_1_1_machine_learning_1_1_drone_session.html#ac3230ac2e3c24aa8a8ffeab2b27dcb17" title="Lexmou.MachineLearning.Drone\lSession.Reset" alt="" coords="265,5,473,47"/>
+<area shape="rect" id="node3" href="$class_lexmou_1_1_manager_1_1_drone_manager.html#a7ebc6fb1d5636374095e2a19a734f9f3" title="Lexmou.Manager.DroneManager.\lSetNewMovePosition" alt="" coords="261,71,476,112"/>
+<area shape="rect" id="node4" href="$class_lexmou_1_1_manager_1_1_u_i_manager.html#aadf27d2617893246ec7f2aa8ea6d8748" title="Lexmou.Manager.UIManager.\lUpdate" alt="" coords="524,71,716,112"/>
+</map>

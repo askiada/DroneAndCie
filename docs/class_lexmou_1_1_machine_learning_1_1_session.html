@@ -113,15 +113,13 @@ Inheritance diagram for Lexmou.MachineLearning.Session:</div>
 <div class="dyncontent">
 <div class="center"><img src="class_lexmou_1_1_machine_learning_1_1_session__inherit__graph.png" border="0" usemap="#_lexmou_8_machine_learning_8_session_inherit__map" alt="Inheritance graph"/></div>
 <map name="_lexmou_8_machine_learning_8_session_inherit__map" id="_lexmou_8_machine_learning_8_session_inherit__map">
-<area shape="rect" id="node3" href="class_lexmou_1_1_machine_learning_1_1_drone_session.html" title="{Lexmou.MachineLearning.Drone\lSession\n|+ hudManager\l+ writerSession\l+ tmpBuildCustomWeights\l+ initialValueWeights\l+ populationSize\l+ mutationRate\l+ randomIndividualsRate\l+ bestIndividualsRate\l+ emptyRate\l+ task\land 6 more...\l+ intervalSave\l+ loadGeneration\l&#45; theoricBestScore\l&#45; externalEvaluations\l&#45; gene\l&#45; signal\l|+ GeneratePath()\l+ SetParametersFromCommandLine()\l+ Build()\l+ RunEachIntervalUpdate()\l+ RunEachFixedUpdate()\l+ Reset()\l+ OnDestroy()\l+ Destroy()\l+ CloseSessionWriter()\l+ BuildSessionWriter()\l+ BuildHUD()\l&#45; BuildCustomWeights()\l}" alt="" coords="5,564,248,1052"/>
+<area shape="rect" id="node3" href="class_lexmou_1_1_machine_learning_1_1_drone_session.html" title="{Lexmou.MachineLearning.Drone\lSession\n|+ directSignal\l+ _save\l+ _fromTask\l+ hudManager\l+ writerSession\l+ writerEnv\l+ tmpBuildCustomWeights\l+ initialValueWeights\l+ populationSize\l+ mutationRate\land 11 more...\l+ save\l+ fromTask\l+ task\l+ intervalSave\l+ loadGeneration\l&#45; theoricBestScore\l&#45; externalEvaluations\l&#45; gene\l&#45; generationInfos\l&#45; signal\l&#45; tsignal\l|+ GeneratePath()\l+ SetParametersFromCommandLine()\l+ Build()\l+ RunEachIntervalUpdate()\l+ RunEachFixedUpdate()\l+ Reset()\l+ OnDestroy()\l+ Destroy()\l+ CloseSessionWriter()\l+ BuildSessionWriter()\l+ BuildHUD()\l&#45; MapEvaluate()\l&#45; BuildCustomWeights()\l}" alt="" coords="5,549,248,1125"/>
 </map>
 </div>
 <div class="dynheader">
 Collaboration diagram for Lexmou.MachineLearning.Session:</div>
 <div class="dyncontent">
 <div class="center"><img src="class_lexmou_1_1_machine_learning_1_1_session__coll__graph.png" border="0" usemap="#_lexmou_8_machine_learning_8_session_coll__map" alt="Collaboration graph"/></div>
-<map name="_lexmou_8_machine_learning_8_session_coll__map" id="_lexmou_8_machine_learning_8_session_coll__map">
-</map>
 </div>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
@@ -134,8 +132,8 @@ Public Member Functions</h2></td></tr>
 <tr class="separator:ae65c5a04d37fcc3a0cf2845aab1f6576"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a81dafcc5a225cacb3216c74dee3a3534"><td class="memItemLeft" align="right" valign="top">abstract void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_lexmou_1_1_machine_learning_1_1_session.html#a81dafcc5a225cacb3216c74dee3a3534">CloseSessionWriter</a> ()</td></tr>
 <tr class="separator:a81dafcc5a225cacb3216c74dee3a3534"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a924cef627c45e33738bd9c50b25f63e6"><td class="memItemLeft" align="right" valign="top">abstract string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_lexmou_1_1_machine_learning_1_1_session.html#a924cef627c45e33738bd9c50b25f63e6">GeneratePath</a> (bool withSeed=false)</td></tr>
-<tr class="separator:a924cef627c45e33738bd9c50b25f63e6"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a2786d5f6148f6d498fea585448709120"><td class="memItemLeft" align="right" valign="top">abstract string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_lexmou_1_1_machine_learning_1_1_session.html#a2786d5f6148f6d498fea585448709120">GeneratePath</a> (string task, bool withSeed=false)</td></tr>
+<tr class="separator:a2786d5f6148f6d498fea585448709120"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a2879108ccd37c728a114a5450294479c"><td class="memItemLeft" align="right" valign="top">abstract void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_lexmou_1_1_machine_learning_1_1_session.html#a2879108ccd37c728a114a5450294479c">SetParametersFromCommandLine</a> ()</td></tr>
 <tr class="separator:a2879108ccd37c728a114a5450294479c"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ae923160086da6436c525891f42e56559"><td class="memItemLeft" align="right" valign="top">abstract void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_lexmou_1_1_machine_learning_1_1_session.html#ae923160086da6436c525891f42e56559">OnDestroy</a> ()</td></tr>
@@ -148,8 +146,6 @@ Public Member Functions</h2></td></tr>
 <tr class="separator:ae819b884978b53780404f3f96fdf7ba6"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:afeb541eb470c7f527f82c369f3ba5d0a"><td class="memItemLeft" align="right" valign="top">abstract void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_lexmou_1_1_machine_learning_1_1_session.html#afeb541eb470c7f527f82c369f3ba5d0a">RunEachIntervalUpdate</a> ()</td></tr>
 <tr class="separator:afeb541eb470c7f527f82c369f3ba5d0a"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a5dcc9373d4e52ce74acd42307e2da055"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_lexmou_1_1_machine_learning_1_1_session.html#a5dcc9373d4e52ce74acd42307e2da055">Session</a> ()</td></tr>
-<tr class="separator:a5dcc9373d4e52ce74acd42307e2da055"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-attribs"></a>
 Public Attributes</h2></td></tr>
@@ -187,28 +183,8 @@ Private Attributes</h2></td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock">
-<p>Definition at line <a class="el" href="_session_8cs_source.html#l00011">11</a> of file <a class="el" href="_session_8cs_source.html">Session.cs</a>.</p>
-</div><h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
-<a id="a5dcc9373d4e52ce74acd42307e2da055"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a5dcc9373d4e52ce74acd42307e2da055">&sect;&nbsp;</a></span>Session()</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">Lexmou.MachineLearning.Session.Session </td>
-          <td>(</td>
-          <td class="paramname"></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-<p>Definition at line <a class="el" href="_session_8cs_source.html#l00055">55</a> of file <a class="el" href="_session_8cs_source.html">Session.cs</a>.</p>
-
-</div>
-</div>
-<h2 class="groupheader">Member Function Documentation</h2>
+<p>Definition at line <a class="el" href="_session_8cs_source.html#l00012">12</a> of file <a class="el" href="_session_8cs_source.html">Session.cs</a>.</p>
+</div><h2 class="groupheader">Member Function Documentation</h2>
 <a id="ae85593babd5aaeb036684f5759e159a2"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#ae85593babd5aaeb036684f5759e159a2">&sect;&nbsp;</a></span>Build()</h2>
 
@@ -317,8 +293,8 @@ Private Attributes</h2></td></tr>
 
 </div>
 </div>
-<a id="a924cef627c45e33738bd9c50b25f63e6"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a924cef627c45e33738bd9c50b25f63e6">&sect;&nbsp;</a></span>GeneratePath()</h2>
+<a id="a2786d5f6148f6d498fea585448709120"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a2786d5f6148f6d498fea585448709120">&sect;&nbsp;</a></span>GeneratePath()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -329,9 +305,19 @@ Private Attributes</h2></td></tr>
         <tr>
           <td class="memname">abstract string Lexmou.MachineLearning.Session.GeneratePath </td>
           <td>(</td>
-          <td class="paramtype">bool&#160;</td>
-          <td class="paramname"><em>withSeed</em> = <code>false</code></td><td>)</td>
+          <td class="paramtype">string&#160;</td>
+          <td class="paramname"><em>task</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
           <td></td>
+          <td class="paramtype">bool&#160;</td>
+          <td class="paramname"><em>withSeed</em> = <code>false</code>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
         </tr>
       </table>
   </td>
@@ -341,7 +327,7 @@ Private Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p>Implemented in <a class="el" href="class_lexmou_1_1_machine_learning_1_1_drone_session.html#a25b1108883e7b30b7b9bfc656f7f7d09">Lexmou.MachineLearning.DroneSession</a>.</p>
+<p>Implemented in <a class="el" href="class_lexmou_1_1_machine_learning_1_1_drone_session.html#a84bd3c3afd120a3472c7340b9807d054">Lexmou.MachineLearning.DroneSession</a>.</p>
 
 </div>
 </div>
@@ -530,7 +516,7 @@ Private Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="_session_8cs_source.html#l00063">63</a> of file <a class="el" href="_session_8cs_source.html">Session.cs</a>.</p>
+<p>Definition at line <a class="el" href="_session_8cs_source.html#l00057">57</a> of file <a class="el" href="_session_8cs_source.html">Session.cs</a>.</p>
 
 </div>
 </div>
@@ -557,7 +543,7 @@ Private Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="_session_8cs_source.html#l00076">76</a> of file <a class="el" href="_session_8cs_source.html">Session.cs</a>.</p>
+<p>Definition at line <a class="el" href="_session_8cs_source.html#l00071">71</a> of file <a class="el" href="_session_8cs_source.html">Session.cs</a>.</p>
 
 </div>
 </div>
@@ -584,7 +570,7 @@ Private Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="_session_8cs_source.html#l00086">86</a> of file <a class="el" href="_session_8cs_source.html">Session.cs</a>.</p>
+<p>Definition at line <a class="el" href="_session_8cs_source.html#l00081">81</a> of file <a class="el" href="_session_8cs_source.html">Session.cs</a>.</p>
 
 </div>
 </div>
@@ -609,7 +595,7 @@ Private Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="_session_8cs_source.html#l00014">14</a> of file <a class="el" href="_session_8cs_source.html">Session.cs</a>.</p>
+<p>Definition at line <a class="el" href="_session_8cs_source.html#l00015">15</a> of file <a class="el" href="_session_8cs_source.html">Session.cs</a>.</p>
 
 </div>
 </div>
@@ -625,7 +611,7 @@ Private Attributes</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="_session_8cs_source.html#l00015">15</a> of file <a class="el" href="_session_8cs_source.html">Session.cs</a>.</p>
+<p>Definition at line <a class="el" href="_session_8cs_source.html#l00016">16</a> of file <a class="el" href="_session_8cs_source.html">Session.cs</a>.</p>
 
 </div>
 </div>
@@ -641,7 +627,7 @@ Private Attributes</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="_session_8cs_source.html#l00017">17</a> of file <a class="el" href="_session_8cs_source.html">Session.cs</a>.</p>
+<p>Definition at line <a class="el" href="_session_8cs_source.html#l00018">18</a> of file <a class="el" href="_session_8cs_source.html">Session.cs</a>.</p>
 
 </div>
 </div>
@@ -657,7 +643,7 @@ Private Attributes</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="_session_8cs_source.html#l00018">18</a> of file <a class="el" href="_session_8cs_source.html">Session.cs</a>.</p>
+<p>Definition at line <a class="el" href="_session_8cs_source.html#l00019">19</a> of file <a class="el" href="_session_8cs_source.html">Session.cs</a>.</p>
 
 </div>
 </div>
@@ -673,7 +659,7 @@ Private Attributes</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="_session_8cs_source.html#l00021">21</a> of file <a class="el" href="_session_8cs_source.html">Session.cs</a>.</p>
+<p>Definition at line <a class="el" href="_session_8cs_source.html#l00022">22</a> of file <a class="el" href="_session_8cs_source.html">Session.cs</a>.</p>
 
 </div>
 </div>
@@ -698,7 +684,7 @@ Private Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="_session_8cs_source.html#l00019">19</a> of file <a class="el" href="_session_8cs_source.html">Session.cs</a>.</p>
+<p>Definition at line <a class="el" href="_session_8cs_source.html#l00020">20</a> of file <a class="el" href="_session_8cs_source.html">Session.cs</a>.</p>
 
 </div>
 </div>
@@ -722,7 +708,7 @@ Private Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="_session_8cs_source.html#l00022">22</a> of file <a class="el" href="_session_8cs_source.html">Session.cs</a>.</p>
+<p>Definition at line <a class="el" href="_session_8cs_source.html#l00023">23</a> of file <a class="el" href="_session_8cs_source.html">Session.cs</a>.</p>
 
 </div>
 </div>
@@ -746,7 +732,7 @@ Private Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="_session_8cs_source.html#l00037">37</a> of file <a class="el" href="_session_8cs_source.html">Session.cs</a>.</p>
+<p>Definition at line <a class="el" href="_session_8cs_source.html#l00038">38</a> of file <a class="el" href="_session_8cs_source.html">Session.cs</a>.</p>
 
 </div>
 </div>

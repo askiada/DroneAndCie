@@ -39,6 +39,9 @@ namespace Lexmou.Manager
         Vector3 targetPosition;
         private ControlSignal signalControl;
 
+        /*RaycastHit hit;
+        Ray downRay;*/
+
         void BuildCustomWeights(Vector<float> individual)
         {
             tmpBuildCustomWeights.Clear();
@@ -62,35 +65,11 @@ namespace Lexmou.Manager
             door = Instantiate(prefabDoor, new Vector3(0.0f, initialY + 0.02f, -10.0f), Quaternion.identity) as GameObject;
             drone = Instantiate(prefabDrone, new Vector3(0.0f, initialY, -10.0f), Quaternion.identity) as GameObject;
 
+            //downRay = new Ray(drone.GetComponent<MainBoard>().GetComponentInChildren<Rigidbody>().transform.position, -Vector3.up);
+
             drone.GetComponent<InputControl>().manual = true;
 
-
-
-
-            /*if (stabilizationGeneration != 0)
-            {
-                shapes = new List<int>() { 9, 4 };
-                //drone.GetComponent<MainBoard>().inputSize = 9;
-                float[] floatArr = new float[40];
-                gene.LoadBest(stabilizationGeneration, floatArr);
-                gene.generation = stabilizationGeneration;
-                drone.GetComponent<MainBoard>().mlp = new MultiLayerMathsNet(stabilizationSeed, null, shapes, 1, 0);
-                BuildCustomWeights(Vector<float>.Build.DenseOfArray(floatArr));
-                drone.GetComponent<MainBoard>().mlp.Reset(false, tmpBuildCustomWeights);
-            }
-
-            if (moveGeneration != 0)
-            {
-
-                shapes = new List<int>() { 12, 4 };
-                //drone.GetComponent<MainBoard>().inputSize = 12;
-                float[] floatArr = new float[52];
-                gene.LoadBest(moveGeneration, floatArr);
-                gene.generation = moveGeneration;
-                drone.GetComponent<MainBoard>().mlp = new MultiLayerMathsNet(moveSeed, null, shapes, 1, 0);
-                BuildCustomWeights(Vector<float>.Build.DenseOfArray(floatArr));
-                drone.GetComponent<MainBoard>().mlp.Reset(false, tmpBuildCustomWeights);
-            }*/
+            targetPosition = door.transform.position;
 
 
             drone.name = "Drone";
@@ -98,9 +77,6 @@ namespace Lexmou.Manager
             if (mass >= 0 && drag >= 0 && maxThrust >= 0)
             {
                 Debug.Log(mass + " " + drag + " " + maxThrust);
-                /*drone.GetComponent<MainBoard>().GetComponentInChildren<Rigidbody>().mass = mass;
-                drone.GetComponent<MainBoard>().GetComponentInChildren<Rigidbody>().drag = mass;
-                */
                 SetMass(mass);
                 SetDrag(drag);
                 setMaxThrust(maxThrust);
@@ -114,9 +90,9 @@ namespace Lexmou.Manager
             /*drone.GetComponent<MainBoard>().deltaPosition = new Vector3(rigid.transform.localPosition.x - drone.GetComponent<MainBoard>().initDeltaPosition.x, rigid.transform.localPosition.y - drone.GetComponent<MainBoard>().initDeltaPosition.y, rigid.transform.localPosition.z - drone.GetComponent<MainBoard>().initDeltaPosition.z);
             drone.GetComponent<MainBoard>().mlp.PropagateForward(drone.GetComponent<MainBoard>().inputMLP);*/
             taskObject.UCSignal(rigid, targetPosition);
-            Debug.Log(taskObject.signal.input);
+            //Debug.Log(taskObject.signal.input);
             mlp.PropagateForward(taskObject.signal.input, true);
-            Debug.Log(mlp.layers[taskObject.shapes.Count - 1]);
+            //Debug.Log(mlp.layers[taskObject.shapes.Count - 1]);
             signalControl.Throttle = mlp.layers[taskObject.shapes.Count - 1][3, 0];
             signalControl.Rudder = mlp.layers[taskObject.shapes.Count - 1][0, 0];
             signalControl.Elevator = mlp.layers[taskObject.shapes.Count - 1][1, 0];
@@ -127,18 +103,31 @@ namespace Lexmou.Manager
 
         public void SetNewMovePosition()
         {
-            targetPosition = taskObject.GetTargetPosition();
+            Rigidbody rigid = drone.GetComponent<MainBoard>().GetComponentInChildren<Rigidbody>();
+            /*Debug.Log(rigid.centerOfMass);
+            rigid.centerOfMass = new Vector3(0.5f, 0f, 0f);*/
+            //Debug.Log("Init target pos : " + rigid.transform.localPosition);
+            //Debug.Log("Rigid position : " + rigid.transform.position);
+            targetPosition = taskObject.GetTargetPosition(rigid.transform.position);
             //drone.GetComponent<MainBoard>().initDeltaPosition = new Vector3((float)deltaDistribution.Sample(), (float)deltaDistribution.Sample(), (float)deltaDistribution.Sample());
-            door.transform.position = new Vector3(drone.transform.position.x + targetPosition.x, drone.transform.position.y + targetPosition.y, drone.transform.position.z + targetPosition.z);
+            //Debug.Log("drone Pos : " + targetPosition);
+            //Debug.Log("drone local Pos" + drone.transform.localPosition);
+            door.transform.position = targetPosition;
         }
 
         public void Move()
         {
             Rigidbody rigid = drone.GetComponent<MainBoard>().GetComponentInChildren<Rigidbody>();
+            /*if (Physics.Raycast(downRay, out hit))
+            {
+                //float hoverError = hoverHeight - hit.distance;
+                Debug.Log(hit.distance);
+            }*/
             //Debug.Log(drone.GetComponent<MainBoard>().inputMLP);
             /*drone.GetComponent<MainBoard>().deltaPosition = new Vector3(rigid.transform.localPosition.x - drone.GetComponent<MainBoard>().initDeltaPosition.x, rigid.transform.localPosition.y - drone.GetComponent<MainBoard>().initDeltaPosition.y, rigid.transform.localPosition.z - drone.GetComponent<MainBoard>().initDeltaPosition.z);
             drone.GetComponent<MainBoard>().mlp.PropagateForward(drone.GetComponent<MainBoard>().inputMLP);*/
             taskObject.UCSignal(rigid, targetPosition);
+            //Debug.Log(taskObject.signal.input);
             mlp.PropagateForward(taskObject.signal.input, true);
             signalControl.Throttle = mlp.layers[taskObject.shapes.Count - 1][3, 0];
             signalControl.Rudder = mlp.layers[taskObject.shapes.Count - 1][0, 0];
@@ -168,7 +157,7 @@ namespace Lexmou.Manager
             signalControl = new ControlSignal();
             path = "Save/DroneSession/" + "Task-" + task + "/Seed-" + fromSeed + "/";
             rndGenerator = new SystemRandomSource(fromSeed);
-            taskObject = (DroneTask)Activator.CreateInstance(Type.GetType("Lexmou.MachineLearning.Drone" + task), rndGenerator);
+            taskObject = (DroneTask)Activator.CreateInstance(Type.GetType("Lexmou.MachineLearning.Drone" + task), rndGenerator, task);
 
             mlp = new MultiLayerMathsNet(fromSeed, null, taskObject.shapes, 1, 0);
             float[] floatArr = new float[taskObject.individualSize];
