@@ -1,6 +1,6 @@
 <map id="Lexmou.Manager.DroneManager.Stabilization" name="Lexmou.Manager.DroneManager.Stabilization">
 <area shape="rect" id="node2" href="$class_lexmou_1_1_machine_learning_1_1_task.html#a95d18a52f08ee63e35a02410f41a3281" title="Define the UCSignal of the task. This UCSignal is a vector containing specific task info..." alt="" coords="289,5,495,47"/>
-<area shape="rect" id="node3" href="$class_lexmou_1_1_machine_learning_1_1_neural_network_1_1_feed_forward_1_1_multi_layer_maths_net.html#add40b66a3a3ebc09dd62957ff38c0c3c" title="Lexmou.MachineLearning.Neural\lNetwork.FeedForward.MultiLayerMaths\lNet.PropagateForward" alt="" coords="268,71,516,127"/>
+<area shape="rect" id="node3" href="$class_lexmou_1_1_machine_learning_1_1_neural_network_1_1_feed_forward_1_1_multi_layer_maths_net.html#add40b66a3a3ebc09dd62957ff38c0c3c" title="Forward Propagation to get the output. " alt="" coords="268,71,516,127"/>
 <area shape="rect" id="node4" href="$class_lexmou_1_1_utils_1_1_u_activation.html#a7dd07341fb7ced333d3d1399bd8a8b1f" title="Lexmou.Utils.UActivation.Tanh" alt="" coords="564,61,763,87"/>
 <area shape="rect" id="node5" href="$class_multiplication.html#ad8b419be38e6384a6c384742002d2165" title="Multiplication.FalkSchemeM" alt="" coords="570,111,757,138"/>
 </map>

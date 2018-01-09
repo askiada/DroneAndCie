@@ -490,7 +490,6 @@ namespace Lexmou.MachineLearning.Evolutionary
         public static void LoadBest(string path, int generationIndex, float[] floatArr)
         {
             UIO.LoadFloatArray(path + generationIndex, "/best.gene", floatArr);
-
         }
 
         ~Genetic()

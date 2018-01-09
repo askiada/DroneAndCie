@@ -5,7 +5,7 @@
 <area shape="rect" id="node5" href="$class_lexmou_1_1_machine_learning_1_1_task.html" title="Task interface used during a Session. " alt="" coords="440,5,549,97"/>
 <area shape="rect" id="node6" href="$class_u_c_signal.html" title="{UCSignal\n|+ input\l|+ UCSignal()\l}" alt="" coords="573,13,669,90"/>
 <area shape="rect" id="node8" href="$class_lexmou_1_1_machine_learning_1_1_evolutionary_1_1_genetic.html" title="Classic implementation of a genetic algorithm. " alt="" coords="760,160,1008,736"/>
-<area shape="rect" id="node9" href="$class_lexmou_1_1_machine_learning_1_1_neural_network_1_1_feed_forward_1_1_multi_layer_maths_net.html" title="{Lexmou.MachineLearning.Neural\lNetwork.FeedForward.MultiLayerMathsNet\n|+ layers\l+ weights\l+ shapes\l+ shapesSize\l&#45; dw\l&#45; save\l&#45; seed\l&#45; batchSize\l&#45; rndGenerator\l&#45; cu\l&#45; initialValueWeights\l|+ MultiLayerMathsNet()\l+ Reset()\l+ PropagateForward()\l+ PropagateForward2()\l&#45; fillWeights()\l}" alt="" coords="1033,299,1301,597"/>
+<area shape="rect" id="node9" href="$class_lexmou_1_1_machine_learning_1_1_neural_network_1_1_feed_forward_1_1_multi_layer_maths_net.html" title="Partial implementation of a Multilayer perceptron. " alt="" coords="1033,299,1301,597"/>
 <area shape="rect" id="node10" href="$class_drone_1_1_hardware_1_1_thrust_signal.html" title="{Drone.Hardware.ThrustSignal\n|+ FRThrust\l+ FLThrust\l+ RRThrust\l+ RLThrust\l|+ ThrustSignal()\l}" alt="" coords="1325,387,1515,509"/>
 <area shape="rect" id="node11" href="$class_drone_1_1_hardware_1_1_control_signal.html" title="{Drone.Hardware.ControlSignal\n|+ Throttle\l+ Rudder\l+ Elevator\l+ Aileron\l|+ ControlSignal()\l}" alt="" coords="1540,387,1735,509"/>
 </map>

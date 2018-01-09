@@ -1,5 +1,6 @@
 <map id="Lexmou.MachineLearning.Task" name="Lexmou.MachineLearning.Task">
-<area shape="rect" id="node2" href="$class_lexmou_1_1_machine_learning_1_1_drone_task.html" title="DroneTask interface used during a DroneSession. " alt="" coords="131,145,367,531"/>
+<area shape="rect" id="node2" href="$class_lexmou_1_1_machine_learning_1_1_drone_task.html" title="DroneTask interface used during a DroneSession. " alt="" coords="255,145,491,531"/>
 <area shape="rect" id="node3" href="$class_lexmou_1_1_machine_learning_1_1_drone_move.html" title="{Lexmou.MachineLearning.DroneMove\n|&#45; deltaDistribution\l|+ DroneMove()\l+ GetTargetPosition()\l+ GetTargetPosition()\l+ GetInitialposition()\l+ EvaluateIndividual()\l+ UCSignal()\l}" alt="" coords="5,586,244,737"/>
 <area shape="rect" id="node4" href="$class_lexmou_1_1_machine_learning_1_1_drone_stabilization.html" title="Implementation of the stabilization task for a drone using a genetic algorithm and a MLP..." alt="" coords="269,579,477,744"/>
+<area shape="rect" id="node5" href="$class_lexmou_1_1_machine_learning_1_1_drone_stabilization_no_velocity.html" title="{Lexmou.MachineLearning.Drone\lStabilizationNoVelocity\n||+ DroneStabilizationNoVelocity()\l+ GetInitialposition()\l+ GetTargetPosition()\l+ GetTargetPosition()\l+ EvaluateIndividual()\l+ UCSignal()\l}" alt="" coords="501,579,711,744"/>
 </map>

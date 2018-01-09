@@ -142,10 +142,16 @@ Public Member Functions</h2></td></tr>
 <tr class="memdesc:af6f9605751a571f79f48540defda6986"><td class="mdescLeft">&#160;</td><td class="mdescRight">The target position of each individual during the task is the initial position. The objective is to stabilize the drone without moving it.  <a href="#af6f9605751a571f79f48540defda6986">More...</a><br /></td></tr>
 <tr class="separator:af6f9605751a571f79f48540defda6986"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a05bde727ad3464cf02c5d129bcb2dcd7"><td class="memItemLeft" align="right" valign="top">override float&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_lexmou_1_1_machine_learning_1_1_drone_stabilization.html#a05bde727ad3464cf02c5d129bcb2dcd7">EvaluateIndividual</a> (int i, Rigidbody rigid, Vector3 targetPosition)</td></tr>
-<tr class="memdesc:a05bde727ad3464cf02c5d129bcb2dcd7"><td class="mdescLeft">&#160;</td><td class="mdescRight">Define the objective function of the stabilization task. This version is perfectly working but not really realistic. \( evaluation = \frac{1}{1+(|v_y| + |\theta| + |\phi| + |\psi| + |v_{\theta}| + |v_{\phi}| + |v_{\psi}| )} \) Technically it is very difficult to use the speed of the drone because a standard IMU provides linear acceleration.  <a href="#a05bde727ad3464cf02c5d129bcb2dcd7">More...</a><br /></td></tr>
+<tr class="memdesc:a05bde727ad3464cf02c5d129bcb2dcd7"><td class="mdescLeft">&#160;</td><td class="mdescRight">Define the objective function of the stabilization task. This version is perfectly working but not really realistic. </p><p class="formulaDsp">
+\[ evaluation = \frac{1}{1+(|v_y| + |\theta| + |\phi| + |\psi| + |v_{\theta}| + |v_{\phi}| + |v_{\psi}| )} \]
+</p>
+<p> Technically it is very difficult to use the speed of the drone because a standard IMU provides linear acceleration.  <a href="#a05bde727ad3464cf02c5d129bcb2dcd7">More...</a><br /></td></tr>
 <tr class="separator:a05bde727ad3464cf02c5d129bcb2dcd7"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aeab2c47efb795adfe1a44cfedb16c38e"><td class="memItemLeft" align="right" valign="top">override void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_lexmou_1_1_machine_learning_1_1_drone_stabilization.html#aeab2c47efb795adfe1a44cfedb16c38e">UCSignal</a> (Rigidbody rigid, Vector3 targetPosition)</td></tr>
-<tr class="memdesc:aeab2c47efb795adfe1a44cfedb16c38e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Define the inputs of the MLP for the stabilization task. \( \begin{pmatrix} \theta &amp; \phi &amp; \psi &amp; v_{\theta} &amp; v_{\phi} &amp; v_{\psi} &amp; v_x &amp; v_y &amp; v_z \\ \end{pmatrix} \) Like the objective funtion, it's not very realistic. Technically it is very difficult to use the speed of the drone because a standard IMU provides linear acceleration.  <a href="#aeab2c47efb795adfe1a44cfedb16c38e">More...</a><br /></td></tr>
+<tr class="memdesc:aeab2c47efb795adfe1a44cfedb16c38e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Define the inputs of the MLP for the stabilization task. </p><p class="formulaDsp">
+\[ \begin{pmatrix} \theta &amp; \phi &amp; \psi &amp; v_{\theta} &amp; v_{\phi} &amp; v_{\psi} &amp; v_x &amp; v_y &amp; v_z \\ \end{pmatrix} \]
+</p>
+<p> Like the objective funtion, it's not very realistic. Technically it is very difficult to use the speed of the drone because a standard IMU provides linear acceleration.  <a href="#aeab2c47efb795adfe1a44cfedb16c38e">More...</a><br /></td></tr>
 <tr class="separator:aeab2c47efb795adfe1a44cfedb16c38e"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="inherit_header pub_methods_class_lexmou_1_1_machine_learning_1_1_drone_task"><td colspan="2" onclick="javascript:toggleInherit('pub_methods_class_lexmou_1_1_machine_learning_1_1_drone_task')"><img src="closed.png" alt="-"/>&#160;Public Member Functions inherited from <a class="el" href="class_lexmou_1_1_machine_learning_1_1_drone_task.html">Lexmou.MachineLearning.DroneTask</a></td></tr>
 <tr class="memitem:afd15c7c3834f2fd7efb631f880c1f1dc inherit pub_methods_class_lexmou_1_1_machine_learning_1_1_drone_task"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_lexmou_1_1_machine_learning_1_1_drone_task.html#afd15c7c3834f2fd7efb631f880c1f1dc">DroneTask</a> (SystemRandomSource <a class="el" href="class_lexmou_1_1_machine_learning_1_1_task.html#a622f68ae31f5bdf94123dc56863c770a">rndGenerator</a>)</td></tr>
@@ -213,7 +219,9 @@ Additional Inherited Members</h2></td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p>Implementation of the stabilization task for a drone using a genetic algorithm and a MLP. </p>
+<p>Implementation of the stabilization task for a drone using a genetic algorithm and a MLP without using velocity of the drone.</p>
 <dl class="todo"><dt><b><a class="el" href="todo.html#_todo000002">Todo:</a></b></dt><dd>Replace the velocities parameters with the linear acceleration. </dd></dl>
+<dl class="todo"><dt><b><a class="el" href="todo.html#_todo000003">Todo:</a></b></dt><dd>Replace the velocities parameters with the linear acceleration. </dd></dl>
 
 <p>Definition at line <a class="el" href="_drone_stabilization_8cs_source.html#l00021">21</a> of file <a class="el" href="_drone_stabilization_8cs_source.html">DroneStabilization.cs</a>.</p>
 </div><h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
@@ -396,7 +404,10 @@ Additional Inherited Members</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p>Define the objective function of the stabilization task. This version is perfectly working but not really realistic. \( evaluation = \frac{1}{1+(|v_y| + |\theta| + |\phi| + |\psi| + |v_{\theta}| + |v_{\phi}| + |v_{\psi}| )} \) Technically it is very difficult to use the speed of the drone because a standard IMU provides linear acceleration. </p>
+<p>Define the objective function of the stabilization task. This version is perfectly working but not really realistic. </p><p class="formulaDsp">
+\[ evaluation = \frac{1}{1+(|v_y| + |\theta| + |\phi| + |\psi| + |v_{\theta}| + |v_{\phi}| + |v_{\psi}| )} \]
+</p>
+<p> Technically it is very difficult to use the speed of the drone because a standard IMU provides linear acceleration. </p>
 
 <p>Implements <a class="el" href="class_lexmou_1_1_machine_learning_1_1_drone_task.html#a7ed1c02aeb2f181168a0b04d0e7e6a35">Lexmou.MachineLearning.DroneTask</a>.</p>
 
@@ -446,7 +457,10 @@ Here is the call graph for this function:</div>
 </table>
 </div><div class="memdoc">
 
-<p>Define the inputs of the MLP for the stabilization task. \( \begin{pmatrix} \theta &amp; \phi &amp; \psi &amp; v_{\theta} &amp; v_{\phi} &amp; v_{\psi} &amp; v_x &amp; v_y &amp; v_z \\ \end{pmatrix} \) Like the objective funtion, it's not very realistic. Technically it is very difficult to use the speed of the drone because a standard IMU provides linear acceleration. </p>
+<p>Define the inputs of the MLP for the stabilization task. </p><p class="formulaDsp">
+\[ \begin{pmatrix} \theta &amp; \phi &amp; \psi &amp; v_{\theta} &amp; v_{\phi} &amp; v_{\psi} &amp; v_x &amp; v_y &amp; v_z \\ \end{pmatrix} \]
+</p>
+<p> Like the objective funtion, it's not very realistic. Technically it is very difficult to use the speed of the drone because a standard IMU provides linear acceleration. </p>
 
 <p>Implements <a class="el" href="class_lexmou_1_1_machine_learning_1_1_task.html#a95d18a52f08ee63e35a02410f41a3281">Lexmou.MachineLearning.Task</a>.</p>
 

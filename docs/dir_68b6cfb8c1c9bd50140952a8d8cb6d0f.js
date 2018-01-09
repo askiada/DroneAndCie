@@ -6,6 +6,9 @@ var dir_68b6cfb8c1c9bd50140952a8d8cb6d0f =
     [ "DroneStabilization.cs", "_drone_stabilization_8cs.html", [
       [ "DroneStabilization", "class_lexmou_1_1_machine_learning_1_1_drone_stabilization.html", "class_lexmou_1_1_machine_learning_1_1_drone_stabilization" ]
     ] ],
+    [ "DroneStabilizationNoVelocity.cs", "_drone_stabilization_no_velocity_8cs.html", [
+      [ "DroneStabilizationNoVelocity", "class_lexmou_1_1_machine_learning_1_1_drone_stabilization_no_velocity.html", "class_lexmou_1_1_machine_learning_1_1_drone_stabilization_no_velocity" ]
+    ] ],
     [ "DroneTask.cs", "_drone_task_8cs.html", [
       [ "DroneTask", "class_lexmou_1_1_machine_learning_1_1_drone_task.html", "class_lexmou_1_1_machine_learning_1_1_drone_task" ]
     ] ],

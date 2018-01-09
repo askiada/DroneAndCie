@@ -107,6 +107,9 @@ $(document).ready(function(){initNavTree('class_lexmou_1_1_machine_learning_1_1_
 <div class="title">Lexmou.MachineLearning.NeuralNetwork.FeedForward.MultiLayerMathsNet Class Reference</div>  </div>
 </div><!--header-->
 <div class="contents">
+
+<p>Partial implementation of a Multilayer perceptron.  
+ <a href="class_lexmou_1_1_machine_learning_1_1_neural_network_1_1_feed_forward_1_1_multi_layer_maths_net.html#details">More...</a></p>
 <div class="dynheader">
 Collaboration diagram for Lexmou.MachineLearning.NeuralNetwork.FeedForward.MultiLayerMathsNet:</div>
 <div class="dyncontent">
@@ -118,8 +121,10 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:ab62da059ed45d9bb03d5779ed8cd8285"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_lexmou_1_1_machine_learning_1_1_neural_network_1_1_feed_forward_1_1_multi_layer_maths_net.html#ab62da059ed45d9bb03d5779ed8cd8285">MultiLayerMathsNet</a> (int <a class="el" href="class_lexmou_1_1_machine_learning_1_1_neural_network_1_1_feed_forward_1_1_multi_layer_maths_net.html#aa8b0781e086d1d55ffa07f8633d46b8c">seed</a>, SystemRandomSource <a class="el" href="class_lexmou_1_1_machine_learning_1_1_neural_network_1_1_feed_forward_1_1_multi_layer_maths_net.html#aebb025fa47b420ee3a112c9b85b4f2da">rndGenerator</a>, List&lt; int &gt; <a class="el" href="class_lexmou_1_1_machine_learning_1_1_neural_network_1_1_feed_forward_1_1_multi_layer_maths_net.html#ac6c2652b4cc7eef5f34deffbd8a7ab9a">shapes</a>, int <a class="el" href="class_lexmou_1_1_machine_learning_1_1_neural_network_1_1_feed_forward_1_1_multi_layer_maths_net.html#a6a0c70b28011ba41423281c1b7883d2e">batchSize</a>, float <a class="el" href="class_lexmou_1_1_machine_learning_1_1_neural_network_1_1_feed_forward_1_1_multi_layer_maths_net.html#a4fa9ac560a9e8f664968f1b898762390">initialValueWeights</a>, bool <a class="el" href="class_lexmou_1_1_machine_learning_1_1_neural_network_1_1_feed_forward_1_1_multi_layer_maths_net.html#a543dd427d48f4ad71e2767735e9b5807">save</a>=false)</td></tr>
 <tr class="separator:ab62da059ed45d9bb03d5779ed8cd8285"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a1f5aaaab655216f49d5ef1c57a561bf3"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_lexmou_1_1_machine_learning_1_1_neural_network_1_1_feed_forward_1_1_multi_layer_maths_net.html#a1f5aaaab655216f49d5ef1c57a561bf3">Reset</a> (bool firstReset, List&lt; Matrix&lt; float &gt;&gt; customWeights=null)</td></tr>
+<tr class="memdesc:a1f5aaaab655216f49d5ef1c57a561bf3"><td class="mdescLeft">&#160;</td><td class="mdescRight">Set the weights of the MLP under conditions.  <a href="#a1f5aaaab655216f49d5ef1c57a561bf3">More...</a><br /></td></tr>
 <tr class="separator:a1f5aaaab655216f49d5ef1c57a561bf3"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:add40b66a3a3ebc09dd62957ff38c0c3c"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_lexmou_1_1_machine_learning_1_1_neural_network_1_1_feed_forward_1_1_multi_layer_maths_net.html#add40b66a3a3ebc09dd62957ff38c0c3c">PropagateForward</a> (Vector&lt; float &gt; data, bool falk=false)</td></tr>
+<tr class="memdesc:add40b66a3a3ebc09dd62957ff38c0c3c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Forward Propagation to get the output.  <a href="#add40b66a3a3ebc09dd62957ff38c0c3c">More...</a><br /></td></tr>
 <tr class="separator:add40b66a3a3ebc09dd62957ff38c0c3c"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a7b243c655f074f1368769f5d68c6ac15"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_lexmou_1_1_machine_learning_1_1_neural_network_1_1_feed_forward_1_1_multi_layer_maths_net.html#a7b243c655f074f1368769f5d68c6ac15">PropagateForward2</a> (Vector&lt; float &gt; data)</td></tr>
 <tr class="separator:a7b243c655f074f1368769f5d68c6ac15"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -127,17 +132,22 @@ Public Member Functions</h2></td></tr>
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-attribs"></a>
 Public Attributes</h2></td></tr>
 <tr class="memitem:a1287a564bed4fc15c8364aa6cdc05ef3"><td class="memItemLeft" align="right" valign="top">List&lt; Matrix&lt; float &gt; &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_lexmou_1_1_machine_learning_1_1_neural_network_1_1_feed_forward_1_1_multi_layer_maths_net.html#a1287a564bed4fc15c8364aa6cdc05ef3">layers</a></td></tr>
+<tr class="memdesc:a1287a564bed4fc15c8364aa6cdc05ef3"><td class="mdescLeft">&#160;</td><td class="mdescRight">List of layers. Each element represents the values of the neurons in the layer for each element of the batch (Dimension \( layerSize \times batchSize\))  <a href="#a1287a564bed4fc15c8364aa6cdc05ef3">More...</a><br /></td></tr>
 <tr class="separator:a1287a564bed4fc15c8364aa6cdc05ef3"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ac8ad1c51684d345766b34185c92add86"><td class="memItemLeft" align="right" valign="top">List&lt; Matrix&lt; float &gt; &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_lexmou_1_1_machine_learning_1_1_neural_network_1_1_feed_forward_1_1_multi_layer_maths_net.html#ac8ad1c51684d345766b34185c92add86">weights</a></td></tr>
+<tr class="memdesc:ac8ad1c51684d345766b34185c92add86"><td class="mdescLeft">&#160;</td><td class="mdescRight">List of weights ( \( shapeSize - 1 elements \)). the i-th element represents the values of the weights between the i-th layer and the (i+1)-th (Dimension \( layers[i + 1].RowCount \times layers[i].RowCount\))  <a href="#ac8ad1c51684d345766b34185c92add86">More...</a><br /></td></tr>
 <tr class="separator:ac8ad1c51684d345766b34185c92add86"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ac6c2652b4cc7eef5f34deffbd8a7ab9a"><td class="memItemLeft" align="right" valign="top">List&lt; int &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_lexmou_1_1_machine_learning_1_1_neural_network_1_1_feed_forward_1_1_multi_layer_maths_net.html#ac6c2652b4cc7eef5f34deffbd8a7ab9a">shapes</a></td></tr>
+<tr class="memdesc:ac6c2652b4cc7eef5f34deffbd8a7ab9a"><td class="mdescLeft">&#160;</td><td class="mdescRight">List of the size of the layers. The first element represents the input layer.  <a href="#ac6c2652b4cc7eef5f34deffbd8a7ab9a">More...</a><br /></td></tr>
 <tr class="separator:ac6c2652b4cc7eef5f34deffbd8a7ab9a"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ab87ba92e90a449430b4396ceccfa2adf"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_lexmou_1_1_machine_learning_1_1_neural_network_1_1_feed_forward_1_1_multi_layer_maths_net.html#ab87ba92e90a449430b4396ceccfa2adf">shapesSize</a></td></tr>
+<tr class="memdesc:ab87ba92e90a449430b4396ceccfa2adf"><td class="mdescLeft">&#160;</td><td class="mdescRight">Total number of layers (include input and output layers)  <a href="#ab87ba92e90a449430b4396ceccfa2adf">More...</a><br /></td></tr>
 <tr class="separator:ab87ba92e90a449430b4396ceccfa2adf"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pri-methods"></a>
 Private Member Functions</h2></td></tr>
 <tr class="memitem:ad30e833c510825f29def1492bcd332dc"><td class="memItemLeft" align="right" valign="top">float&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_lexmou_1_1_machine_learning_1_1_neural_network_1_1_feed_forward_1_1_multi_layer_maths_net.html#ad30e833c510825f29def1492bcd332dc">fillWeights</a> (float value)</td></tr>
+<tr class="memdesc:ad30e833c510825f29def1492bcd332dc"><td class="mdescLeft">&#160;</td><td class="mdescRight">Return a float from a continous uniform distribution. This function take a float argument in order to be use with a MapInPlace function.  <a href="#ad30e833c510825f29def1492bcd332dc">More...</a><br /></td></tr>
 <tr class="separator:ad30e833c510825f29def1492bcd332dc"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pri-attribs"></a>
@@ -147,19 +157,27 @@ Private Attributes</h2></td></tr>
 <tr class="memitem:a543dd427d48f4ad71e2767735e9b5807"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_lexmou_1_1_machine_learning_1_1_neural_network_1_1_feed_forward_1_1_multi_layer_maths_net.html#a543dd427d48f4ad71e2767735e9b5807">save</a></td></tr>
 <tr class="separator:a543dd427d48f4ad71e2767735e9b5807"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aa8b0781e086d1d55ffa07f8633d46b8c"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_lexmou_1_1_machine_learning_1_1_neural_network_1_1_feed_forward_1_1_multi_layer_maths_net.html#aa8b0781e086d1d55ffa07f8633d46b8c">seed</a></td></tr>
+<tr class="memdesc:aa8b0781e086d1d55ffa07f8633d46b8c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Seed number to generate a random sequence with a random generator <a class="el" href="class_lexmou_1_1_machine_learning_1_1_neural_network_1_1_feed_forward_1_1_multi_layer_maths_net.html#aebb025fa47b420ee3a112c9b85b4f2da" title="Random Generator. Allow the generation of a repeatable random number sequence for each seed value...">rndGenerator</a>.  <a href="#aa8b0781e086d1d55ffa07f8633d46b8c">More...</a><br /></td></tr>
 <tr class="separator:aa8b0781e086d1d55ffa07f8633d46b8c"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a6a0c70b28011ba41423281c1b7883d2e"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_lexmou_1_1_machine_learning_1_1_neural_network_1_1_feed_forward_1_1_multi_layer_maths_net.html#a6a0c70b28011ba41423281c1b7883d2e">batchSize</a></td></tr>
+<tr class="memdesc:a6a0c70b28011ba41423281c1b7883d2e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Size of the batch for MiniBatch/Batch Learning.  <a href="#a6a0c70b28011ba41423281c1b7883d2e">More...</a><br /></td></tr>
 <tr class="separator:a6a0c70b28011ba41423281c1b7883d2e"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aebb025fa47b420ee3a112c9b85b4f2da"><td class="memItemLeft" align="right" valign="top">SystemRandomSource&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_lexmou_1_1_machine_learning_1_1_neural_network_1_1_feed_forward_1_1_multi_layer_maths_net.html#aebb025fa47b420ee3a112c9b85b4f2da">rndGenerator</a></td></tr>
+<tr class="memdesc:aebb025fa47b420ee3a112c9b85b4f2da"><td class="mdescLeft">&#160;</td><td class="mdescRight">Random Generator. Allow the generation of a repeatable random number sequence for each seed value.  <a href="#aebb025fa47b420ee3a112c9b85b4f2da">More...</a><br /></td></tr>
 <tr class="separator:aebb025fa47b420ee3a112c9b85b4f2da"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a09dd88bf1e2bc81ff7d09fe4d9cb1f56"><td class="memItemLeft" align="right" valign="top">ContinuousUniform&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_lexmou_1_1_machine_learning_1_1_neural_network_1_1_feed_forward_1_1_multi_layer_maths_net.html#a09dd88bf1e2bc81ff7d09fe4d9cb1f56">cu</a></td></tr>
 <tr class="separator:a09dd88bf1e2bc81ff7d09fe4d9cb1f56"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a4fa9ac560a9e8f664968f1b898762390"><td class="memItemLeft" align="right" valign="top">float&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_lexmou_1_1_machine_learning_1_1_neural_network_1_1_feed_forward_1_1_multi_layer_maths_net.html#a4fa9ac560a9e8f664968f1b898762390">initialValueWeights</a> = 1.0f</td></tr>
+<tr class="memdesc:a4fa9ac560a9e8f664968f1b898762390"><td class="mdescLeft">&#160;</td><td class="mdescRight">Initial value range of the distribution to build the weights.  <a href="#a4fa9ac560a9e8f664968f1b898762390">More...</a><br /></td></tr>
 <tr class="separator:a4fa9ac560a9e8f664968f1b898762390"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
-<div class="textblock">
-<p>Definition at line <a class="el" href="_multi_layer_maths_net_8cs_source.html#l00015">15</a> of file <a class="el" href="_multi_layer_maths_net_8cs_source.html">MultiLayerMathsNet.cs</a>.</p>
+<div class="textblock"><p>Partial implementation of a Multilayer perceptron. </p>
+<p>Class <a class="el" href="class_lexmou_1_1_machine_learning_1_1_neural_network_1_1_feed_forward_1_1_multi_layer_maths_net.html" title="Partial implementation of a Multilayer perceptron. ">MultiLayerMathsNet</a> is an "optimized" unity3D implementation of a Multilayer perceptron. The following picture shows the general principle. For more details, Wikipedia is a good start. </p><div class="image">
+<img src="./media/MLP/scheme.png" alt="MLP Scheme"/>
+</div>
+ 
+<p>Definition at line <a class="el" href="_multi_layer_maths_net_8cs_source.html#l00021">21</a> of file <a class="el" href="_multi_layer_maths_net_8cs_source.html">MultiLayerMathsNet.cs</a>.</p>
 </div><h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
 <a id="ab62da059ed45d9bb03d5779ed8cd8285"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#ab62da059ed45d9bb03d5779ed8cd8285">&sect;&nbsp;</a></span>MultiLayerMathsNet()</h2>
@@ -211,7 +229,7 @@ Private Attributes</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="_multi_layer_maths_net_8cs_source.html#l00030">30</a> of file <a class="el" href="_multi_layer_maths_net_8cs_source.html">MultiLayerMathsNet.cs</a>.</p>
+<p>Definition at line <a class="el" href="_multi_layer_maths_net_8cs_source.html#l00063">63</a> of file <a class="el" href="_multi_layer_maths_net_8cs_source.html">MultiLayerMathsNet.cs</a>.</p>
 
 </div>
 </div>
@@ -240,7 +258,9 @@ Private Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="_multi_layer_maths_net_8cs_source.html#l00082">82</a> of file <a class="el" href="_multi_layer_maths_net_8cs_source.html">MultiLayerMathsNet.cs</a>.</p>
+<p>Return a float from a continous uniform distribution. This function take a float argument in order to be use with a MapInPlace function. </p>
+
+<p>Definition at line <a class="el" href="_multi_layer_maths_net_8cs_source.html#l00118">118</a> of file <a class="el" href="_multi_layer_maths_net_8cs_source.html">MultiLayerMathsNet.cs</a>.</p>
 
 </div>
 </div>
@@ -270,7 +290,16 @@ Private Attributes</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="_multi_layer_maths_net_8cs_source.html#l00088">88</a> of file <a class="el" href="_multi_layer_maths_net_8cs_source.html">MultiLayerMathsNet.cs</a>.</p>
+<p>Set the weights of the MLP under conditions. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">firstReset</td><td>fill the weights with random values </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">customWeights</td><td>Custom list of Matrix containing the weights used. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p>Definition at line <a class="el" href="_multi_layer_maths_net_8cs_source.html#l00129">129</a> of file <a class="el" href="_multi_layer_maths_net_8cs_source.html">MultiLayerMathsNet.cs</a>.</p>
 <div class="dynheader">
 Here is the caller graph for this function:</div>
 <div class="dyncontent">
@@ -278,7 +307,6 @@ Here is the caller graph for this function:</div>
 <map name="class_lexmou_1_1_machine_learning_1_1_neural_network_1_1_feed_forward_1_1_multi_layer_maths_net_a1f5aaaab655216f49d5ef1c57a561bf3_icgraph" id="class_lexmou_1_1_machine_learning_1_1_neural_network_1_1_feed_forward_1_1_multi_layer_maths_net_a1f5aaaab655216f49d5ef1c57a561bf3_icgraph">
 <area shape="rect" id="node2" href="class_m_l_p_test.html#aebecf6e2256490ba1afc70dc217af60b" title="MLPTest.ResetSpeedTest" alt="" coords="323,5,498,32"/>
 <area shape="rect" id="node3" href="class_m_l_p_test.html#a7ea1a2e97a5b266bb3c552105ac192c6" title="MLPTest.CustomResetSpeedTest" alt="" coords="301,56,520,83"/>
-<area shape="rect" id="node4" href="class_lexmou_1_1_machine_learning_1_1_drone_session2_1_1_gene_session.html#a668ea567b80c7e77f99e013a934a1420" title="Lexmou.MachineLearning.Drone\lSession2.GeneSession.ResetAll" alt="" coords="305,107,516,149"/>
 </map>
 </div>
 
@@ -310,7 +338,15 @@ Here is the caller graph for this function:</div>
       </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="_multi_layer_maths_net_8cs_source.html#l00113">113</a> of file <a class="el" href="_multi_layer_maths_net_8cs_source.html">MultiLayerMathsNet.cs</a>.</p>
+<p>Forward Propagation to get the output. </p>
+<p>In this example, there is only one output neuron (/f$ y /f$) like on the picture (the biasis are not represented) </p><p class="formulaDsp">
+\[ y = a(\sum_{j=0}^{M}w^{(y)}_{j}\times h_j + b_{H}) \]
+</p>
+ <p class="formulaDsp">
+\[ h_j = a(\sum_{i=0}^{N}w^{(h_j)}_{i}\times x_i + b_{X}) \]
+</p>
+ 
+<p>Definition at line <a class="el" href="_multi_layer_maths_net_8cs_source.html#l00164">164</a> of file <a class="el" href="_multi_layer_maths_net_8cs_source.html">MultiLayerMathsNet.cs</a>.</p>
 <div class="dynheader">
 Here is the call graph for this function:</div>
 <div class="dyncontent">
@@ -352,7 +388,7 @@ Here is the caller graph for this function:</div>
       </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="_multi_layer_maths_net_8cs_source.html#l00139">139</a> of file <a class="el" href="_multi_layer_maths_net_8cs_source.html">MultiLayerMathsNet.cs</a>.</p>
+<p>Definition at line <a class="el" href="_multi_layer_maths_net_8cs_source.html#l00190">190</a> of file <a class="el" href="_multi_layer_maths_net_8cs_source.html">MultiLayerMathsNet.cs</a>.</p>
 <div class="dynheader">
 Here is the call graph for this function:</div>
 <div class="dyncontent">
@@ -385,7 +421,9 @@ Here is the caller graph for this function:</div>
       </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="_multi_layer_maths_net_8cs_source.html#l00018">18</a> of file <a class="el" href="_multi_layer_maths_net_8cs_source.html">MultiLayerMathsNet.cs</a>.</p>
+<p>List of layers. Each element represents the values of the neurons in the layer for each element of the batch (Dimension \( layerSize \times batchSize\)) </p>
+
+<p>Definition at line <a class="el" href="_multi_layer_maths_net_8cs_source.html#l00026">26</a> of file <a class="el" href="_multi_layer_maths_net_8cs_source.html">MultiLayerMathsNet.cs</a>.</p>
 
 </div>
 </div>
@@ -401,7 +439,9 @@ Here is the caller graph for this function:</div>
       </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="_multi_layer_maths_net_8cs_source.html#l00019">19</a> of file <a class="el" href="_multi_layer_maths_net_8cs_source.html">MultiLayerMathsNet.cs</a>.</p>
+<p>List of weights ( \( shapeSize - 1 elements \)). the i-th element represents the values of the weights between the i-th layer and the (i+1)-th (Dimension \( layers[i + 1].RowCount \times layers[i].RowCount\)) </p>
+
+<p>Definition at line <a class="el" href="_multi_layer_maths_net_8cs_source.html#l00032">32</a> of file <a class="el" href="_multi_layer_maths_net_8cs_source.html">MultiLayerMathsNet.cs</a>.</p>
 
 </div>
 </div>
@@ -425,7 +465,7 @@ Here is the caller graph for this function:</div>
 </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="_multi_layer_maths_net_8cs_source.html#l00020">20</a> of file <a class="el" href="_multi_layer_maths_net_8cs_source.html">MultiLayerMathsNet.cs</a>.</p>
+<p>Definition at line <a class="el" href="_multi_layer_maths_net_8cs_source.html#l00033">33</a> of file <a class="el" href="_multi_layer_maths_net_8cs_source.html">MultiLayerMathsNet.cs</a>.</p>
 
 </div>
 </div>
@@ -441,7 +481,9 @@ Here is the caller graph for this function:</div>
       </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="_multi_layer_maths_net_8cs_source.html#l00021">21</a> of file <a class="el" href="_multi_layer_maths_net_8cs_source.html">MultiLayerMathsNet.cs</a>.</p>
+<p>List of the size of the layers. The first element represents the input layer. </p>
+
+<p>Definition at line <a class="el" href="_multi_layer_maths_net_8cs_source.html#l00038">38</a> of file <a class="el" href="_multi_layer_maths_net_8cs_source.html">MultiLayerMathsNet.cs</a>.</p>
 
 </div>
 </div>
@@ -457,7 +499,9 @@ Here is the caller graph for this function:</div>
       </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="_multi_layer_maths_net_8cs_source.html#l00022">22</a> of file <a class="el" href="_multi_layer_maths_net_8cs_source.html">MultiLayerMathsNet.cs</a>.</p>
+<p>Total number of layers (include input and output layers) </p>
+
+<p>Definition at line <a class="el" href="_multi_layer_maths_net_8cs_source.html#l00042">42</a> of file <a class="el" href="_multi_layer_maths_net_8cs_source.html">MultiLayerMathsNet.cs</a>.</p>
 
 </div>
 </div>
@@ -481,7 +525,7 @@ Here is the caller graph for this function:</div>
 </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="_multi_layer_maths_net_8cs_source.html#l00023">23</a> of file <a class="el" href="_multi_layer_maths_net_8cs_source.html">MultiLayerMathsNet.cs</a>.</p>
+<p>Definition at line <a class="el" href="_multi_layer_maths_net_8cs_source.html#l00043">43</a> of file <a class="el" href="_multi_layer_maths_net_8cs_source.html">MultiLayerMathsNet.cs</a>.</p>
 
 </div>
 </div>
@@ -505,7 +549,9 @@ Here is the caller graph for this function:</div>
 </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="_multi_layer_maths_net_8cs_source.html#l00024">24</a> of file <a class="el" href="_multi_layer_maths_net_8cs_source.html">MultiLayerMathsNet.cs</a>.</p>
+<p>Seed number to generate a random sequence with a random generator <a class="el" href="class_lexmou_1_1_machine_learning_1_1_neural_network_1_1_feed_forward_1_1_multi_layer_maths_net.html#aebb025fa47b420ee3a112c9b85b4f2da" title="Random Generator. Allow the generation of a repeatable random number sequence for each seed value...">rndGenerator</a>. </p>
+
+<p>Definition at line <a class="el" href="_multi_layer_maths_net_8cs_source.html#l00047">47</a> of file <a class="el" href="_multi_layer_maths_net_8cs_source.html">MultiLayerMathsNet.cs</a>.</p>
 
 </div>
 </div>
@@ -529,7 +575,9 @@ Here is the caller graph for this function:</div>
 </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="_multi_layer_maths_net_8cs_source.html#l00025">25</a> of file <a class="el" href="_multi_layer_maths_net_8cs_source.html">MultiLayerMathsNet.cs</a>.</p>
+<p>Size of the batch for MiniBatch/Batch Learning. </p>
+
+<p>Definition at line <a class="el" href="_multi_layer_maths_net_8cs_source.html#l00051">51</a> of file <a class="el" href="_multi_layer_maths_net_8cs_source.html">MultiLayerMathsNet.cs</a>.</p>
 
 </div>
 </div>
@@ -553,7 +601,9 @@ Here is the caller graph for this function:</div>
 </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="_multi_layer_maths_net_8cs_source.html#l00026">26</a> of file <a class="el" href="_multi_layer_maths_net_8cs_source.html">MultiLayerMathsNet.cs</a>.</p>
+<p>Random Generator. Allow the generation of a repeatable random number sequence for each seed value. </p>
+
+<p>Definition at line <a class="el" href="_multi_layer_maths_net_8cs_source.html#l00056">56</a> of file <a class="el" href="_multi_layer_maths_net_8cs_source.html">MultiLayerMathsNet.cs</a>.</p>
 
 </div>
 </div>
@@ -577,7 +627,7 @@ Here is the caller graph for this function:</div>
 </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="_multi_layer_maths_net_8cs_source.html#l00027">27</a> of file <a class="el" href="_multi_layer_maths_net_8cs_source.html">MultiLayerMathsNet.cs</a>.</p>
+<p>Definition at line <a class="el" href="_multi_layer_maths_net_8cs_source.html#l00057">57</a> of file <a class="el" href="_multi_layer_maths_net_8cs_source.html">MultiLayerMathsNet.cs</a>.</p>
 
 </div>
 </div>
@@ -601,7 +651,9 @@ Here is the caller graph for this function:</div>
 </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="_multi_layer_maths_net_8cs_source.html#l00028">28</a> of file <a class="el" href="_multi_layer_maths_net_8cs_source.html">MultiLayerMathsNet.cs</a>.</p>
+<p>Initial value range of the distribution to build the weights. </p>
+
+<p>Definition at line <a class="el" href="_multi_layer_maths_net_8cs_source.html#l00061">61</a> of file <a class="el" href="_multi_layer_maths_net_8cs_source.html">MultiLayerMathsNet.cs</a>.</p>
 
 </div>
 </div>

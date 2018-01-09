@@ -1,0 +1,5 @@
+<map id="Lexmou.MachineLearning.DroneStabilizationNoVelocity" name="Lexmou.MachineLearning.DroneStabilizationNoVelocity">
+<area shape="rect" id="node2" href="$class_lexmou_1_1_machine_learning_1_1_drone_task.html" title="DroneTask interface used during a DroneSession. " alt="" coords="39,160,207,531"/>
+<area shape="rect" id="node3" href="$class_lexmou_1_1_machine_learning_1_1_task.html" title="Task interface used during a Session. " alt="" coords="5,5,115,97"/>
+<area shape="rect" id="node4" href="$class_u_c_signal.html" title="{UCSignal\n|+ input\l|+ UCSignal()\l}" alt="" coords="139,13,235,90"/>
+</map>

@@ -134,10 +134,10 @@ namespace Lexmou.Environment.Wind
                         Vector3 wind = WindFunction.linear(windDirection + tmp, windStrength * coeff);
 
 
-                        if (rigid.tag == "FrameBest")
+                        /*if (rigid.tag == "FrameBest")
                         {
                             GameObject.Find("GeneSession").GetComponent<Lexmou.MachineLearning.DroneSession2.GeneSession>().hudManager.UpdateTextLayout("Wind", wind.ToString());
-                        }
+                        }*/
 
                         //Debug.Log("a : " + a);
                         //Debug.Log("wind : " + wind);

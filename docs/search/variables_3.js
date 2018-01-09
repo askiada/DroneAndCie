@@ -12,6 +12,5 @@ var searchData=
   ['creator',['creator',['../class_texture_creator_inspector.html#a444405a811943a24b894a516ab09702a',1,'TextureCreatorInspector.creator()'],['../class_lexmou_1_1_environment_1_1_floor_1_1_surface_creator_inspector.html#a88206e9498d07e4dadccb2acab693e2b',1,'Lexmou.Environment.Floor.SurfaceCreatorInspector.creator()']]],
   ['cu',['cu',['../class_lexmou_1_1_machine_learning_1_1_neural_network_1_1_feed_forward_1_1_multi_layer_maths_net.html#a09dd88bf1e2bc81ff7d09fe4d9cb1f56',1,'Lexmou::MachineLearning::NeuralNetwork::FeedForward::MultiLayerMathsNet']]],
   ['cubedepth',['cubeDepth',['../class_lexmou_1_1_environment_1_1_wind_1_1_wind_area.html#a867c1f5567fb25be32f8f4356b8806fb',1,'Lexmou::Environment::Wind::WindArea']]],
-  ['currentangle',['currentAngle',['../class_gyro.html#a8d00ad051ba2d782d03b17906b1d74a5',1,'Gyro']]],
   ['currentresolution',['currentResolution',['../class_lexmou_1_1_environment_1_1_floor_1_1_surface_creator.html#a5228a47d551fbe3d53cf66b60d2d07f8',1,'Lexmou::Environment::Floor::SurfaceCreator']]]
 ];

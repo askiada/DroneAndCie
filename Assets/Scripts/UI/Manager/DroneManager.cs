@@ -139,15 +139,21 @@ namespace Lexmou.Manager
 
         void BuildCustomWeights(List<Matrix<float>> newWeights, List<int> shapes, Vector<float> individual)
         {
+            int bias = 1;
             for (int i = 0; i < shapes.Count - 1; i++)
             {
+                if (i == shapes.Count - 2)
+                    bias = 0;
                 if (i == 0)
                 {
-                    UMatrix.Make2DMatrix(newWeights[i], individual.SubVector(0, (shapes[i] + 1) * shapes[i + 1]), shapes[i + 1], shapes[i] + 1);
+                    // Debug.Log(newWeights[i]);
+                    // Debug.Log(individual.SubVector(0, (shapes[i] + 1) * (shapes[i + 1] + bias)));
+
+                    UMatrix.Make2DMatrix(newWeights[i], individual.SubVector(0, (shapes[i] + 1) * (shapes[i + 1] + bias)), (shapes[i + 1] + bias), shapes[i] + 1);
                 }
                 else
                 {
-                    UMatrix.Make2DMatrix(newWeights[i], individual.SubVector((shapes[i - 1] + 1) * shapes[i], (shapes[i] + 1) * shapes[i + 1]), shapes[i + 1], shapes[i] + 1);
+                    UMatrix.Make2DMatrix(newWeights[i], individual.SubVector((shapes[i - 1] + 1) * shapes[i], (shapes[i] + 1) * (shapes[i + 1] + bias)), (shapes[i + 1] + bias), shapes[i] + 1);
                 }
             }
         }
@@ -163,7 +169,8 @@ namespace Lexmou.Manager
             float[] floatArr = new float[taskObject.individualSize];
             Genetic.LoadBest(path, fromGeneration, floatArr);
             BuildCustomWeights(mlp.weights, taskObject.shapes, Vector<float>.Build.DenseOfArray(floatArr));
-            
+            //Debug.Log(mlp.weights[0]);
+
             /*if (stabilizationGeneration != 0)
             {
                 Debug.Log("Gene Move");

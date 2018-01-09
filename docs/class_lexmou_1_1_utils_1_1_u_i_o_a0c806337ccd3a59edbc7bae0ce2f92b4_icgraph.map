@@ -1,8 +1,7 @@
 <map id="Lexmou.Utils.UIO.LoadFloatArray" name="Lexmou.Utils.UIO.LoadFloatArray">
-<area shape="rect" id="node2" href="$class_lexmou_1_1_machine_learning_1_1_evolutionary_1_1_genetic.html#a508471326a6d24a8382482e32d0c3f23" title="Load the generation. " alt="" coords="239,71,487,112"/>
-<area shape="rect" id="node6" href="$class_lexmou_1_1_machine_learning_1_1_evolutionary_1_1_genetic.html#a862b72d14caa564a0f37f0c469012f88" title="Load the best individual. " alt="" coords="239,136,487,177"/>
-<area shape="rect" id="node3" href="$class_gene_test.html#aca287e0498cf8ad67fb013c14f8e5132" title="GeneTest.SaveTest" alt="" coords="575,137,709,163"/>
-<area shape="rect" id="node4" href="$class_lexmou_1_1_machine_learning_1_1_drone_session2_1_1_gene_session.html#a00ee9b68f6bf9336416714dcb3243c05" title="Lexmou.MachineLearning.Drone\lSession2.GeneSession.Awake" alt="" coords="538,5,746,47"/>
-<area shape="rect" id="node5" href="$class_lexmou_1_1_machine_learning_1_1_drone_session.html#a549170dcc427ffbfa6fe7e384ebd452f" title="Lexmou.MachineLearning.Drone\lSession.Build" alt="" coords="538,71,746,112"/>
-<area shape="rect" id="node7" href="$class_lexmou_1_1_manager_1_1_drone_manager.html#a94df463cf44e72ead2f76f9b2f68b6a3" title="Lexmou.Manager.DroneManager.\lAwake" alt="" coords="535,188,749,229"/>
+<area shape="rect" id="node2" href="$class_lexmou_1_1_machine_learning_1_1_evolutionary_1_1_genetic.html#a508471326a6d24a8382482e32d0c3f23" title="Load the generation. " alt="" coords="239,32,487,73"/>
+<area shape="rect" id="node5" href="$class_lexmou_1_1_machine_learning_1_1_evolutionary_1_1_genetic.html#a862b72d14caa564a0f37f0c469012f88" title="Load the best individual. " alt="" coords="239,97,487,139"/>
+<area shape="rect" id="node3" href="$class_gene_test.html#aca287e0498cf8ad67fb013c14f8e5132" title="GeneTest.SaveTest" alt="" coords="575,71,709,98"/>
+<area shape="rect" id="node4" href="$class_lexmou_1_1_machine_learning_1_1_drone_session.html#a549170dcc427ffbfa6fe7e384ebd452f" title="Lexmou.MachineLearning.Drone\lSession.Build" alt="" coords="538,5,746,47"/>
+<area shape="rect" id="node6" href="$class_lexmou_1_1_manager_1_1_drone_manager.html#a94df463cf44e72ead2f76f9b2f68b6a3" title="Lexmou.Manager.DroneManager.\lAwake" alt="" coords="535,123,749,164"/>
 </map>

@@ -117,7 +117,8 @@ Inheritance diagram for Lexmou.MachineLearning.DroneTask:</div>
 <map name="_lexmou_8_machine_learning_8_drone_task_inherit__map" id="_lexmou_8_machine_learning_8_drone_task_inherit__map">
 <area shape="rect" id="node3" href="class_lexmou_1_1_machine_learning_1_1_drone_move.html" title="{Lexmou.MachineLearning.DroneMove\n|&#45; deltaDistribution\l|+ DroneMove()\l+ GetTargetPosition()\l+ GetTargetPosition()\l+ GetInitialposition()\l+ EvaluateIndividual()\l+ UCSignal()\l}" alt="" coords="5,586,244,737"/>
 <area shape="rect" id="node4" href="class_lexmou_1_1_machine_learning_1_1_drone_stabilization.html" title="Implementation of the stabilization task for a drone using a genetic algorithm and a MLP..." alt="" coords="269,579,477,744"/>
-<area shape="rect" id="node2" href="class_lexmou_1_1_machine_learning_1_1_task.html" title="Task interface used during a Session. " alt="" coords="194,5,303,97"/>
+<area shape="rect" id="node5" href="class_lexmou_1_1_machine_learning_1_1_drone_stabilization_no_velocity.html" title="{Lexmou.MachineLearning.Drone\lStabilizationNoVelocity\n||+ DroneStabilizationNoVelocity()\l+ GetInitialposition()\l+ GetTargetPosition()\l+ GetTargetPosition()\l+ EvaluateIndividual()\l+ UCSignal()\l}" alt="" coords="501,579,711,744"/>
+<area shape="rect" id="node2" href="class_lexmou_1_1_machine_learning_1_1_task.html" title="Task interface used during a Session. " alt="" coords="318,5,427,97"/>
 </map>
 </div>
 <div class="dynheader">
@@ -222,9 +223,9 @@ Private Attributes</h2></td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p><a class="el" href="class_lexmou_1_1_machine_learning_1_1_drone_task.html" title="DroneTask interface used during a DroneSession. ">DroneTask</a> interface used during a <a class="el" href="class_lexmou_1_1_machine_learning_1_1_drone_session.html">DroneSession</a>. </p>
-<p>This interface define the global structure of a drone task </p>
+<p>This interface define the global structure of a drone task </p><dl class="todo"><dt><b><a class="el" href="todo.html#_todo000004">Todo:</a></b></dt><dd>Redefine the subtask with the maximum euler angle orientation. </dd></dl>
 
-<p>Definition at line <a class="el" href="_drone_task_8cs_source.html#l00017">17</a> of file <a class="el" href="_drone_task_8cs_source.html">DroneTask.cs</a>.</p>
+<p>Definition at line <a class="el" href="_drone_task_8cs_source.html#l00018">18</a> of file <a class="el" href="_drone_task_8cs_source.html">DroneTask.cs</a>.</p>
 </div><h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
 <a id="afd15c7c3834f2fd7efb631f880c1f1dc"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#afd15c7c3834f2fd7efb631f880c1f1dc">&sect;&nbsp;</a></span>DroneTask()</h2>
@@ -242,7 +243,7 @@ Private Attributes</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="_drone_task_8cs_source.html#l00124">124</a> of file <a class="el" href="_drone_task_8cs_source.html">DroneTask.cs</a>.</p>
+<p>Definition at line <a class="el" href="_drone_task_8cs_source.html#l00125">125</a> of file <a class="el" href="_drone_task_8cs_source.html">DroneTask.cs</a>.</p>
 
 </div>
 </div>
@@ -273,7 +274,7 @@ Private Attributes</h2></td></tr>
 
 <p>Define a initial position for the drone i. </p>
 
-<p>Implemented in <a class="el" href="class_lexmou_1_1_machine_learning_1_1_drone_move.html#a817edb26e9a37fc43e3c4d78a6d3de97">Lexmou.MachineLearning.DroneMove</a>, and <a class="el" href="class_lexmou_1_1_machine_learning_1_1_drone_stabilization.html#a9605bda09047e4f7c6d6ff3ae081bcfa">Lexmou.MachineLearning.DroneStabilization</a>.</p>
+<p>Implemented in <a class="el" href="class_lexmou_1_1_machine_learning_1_1_drone_move.html#a817edb26e9a37fc43e3c4d78a6d3de97">Lexmou.MachineLearning.DroneMove</a>, <a class="el" href="class_lexmou_1_1_machine_learning_1_1_drone_stabilization.html#a9605bda09047e4f7c6d6ff3ae081bcfa">Lexmou.MachineLearning.DroneStabilization</a>, and <a class="el" href="class_lexmou_1_1_machine_learning_1_1_drone_stabilization_no_velocity.html#a6694ee89efe6adcaeded62161ecb644e">Lexmou.MachineLearning.DroneStabilizationNoVelocity</a>.</p>
 <div class="dynheader">
 Here is the caller graph for this function:</div>
 <div class="dyncontent">
@@ -311,7 +312,7 @@ Here is the caller graph for this function:</div>
 
 <p>Define a target position from another position. </p>
 
-<p>Implemented in <a class="el" href="class_lexmou_1_1_machine_learning_1_1_drone_stabilization.html#aa70a5145b4ca32d7293411bb566168ca">Lexmou.MachineLearning.DroneStabilization</a>, and <a class="el" href="class_lexmou_1_1_machine_learning_1_1_drone_move.html#ae2ef1d892b5ce7db0a64351bb722cd79">Lexmou.MachineLearning.DroneMove</a>.</p>
+<p>Implemented in <a class="el" href="class_lexmou_1_1_machine_learning_1_1_drone_stabilization.html#aa70a5145b4ca32d7293411bb566168ca">Lexmou.MachineLearning.DroneStabilization</a>, <a class="el" href="class_lexmou_1_1_machine_learning_1_1_drone_stabilization_no_velocity.html#aa822619639d202dc587f6c00b88ee65d">Lexmou.MachineLearning.DroneStabilizationNoVelocity</a>, and <a class="el" href="class_lexmou_1_1_machine_learning_1_1_drone_move.html#ae2ef1d892b5ce7db0a64351bb722cd79">Lexmou.MachineLearning.DroneMove</a>.</p>
 <div class="dynheader">
 Here is the caller graph for this function:</div>
 <div class="dyncontent">
@@ -361,7 +362,7 @@ Here is the caller graph for this function:</div>
 
 <p>Define a target position for the drone num index. </p>
 
-<p>Implemented in <a class="el" href="class_lexmou_1_1_machine_learning_1_1_drone_stabilization.html#af6f9605751a571f79f48540defda6986">Lexmou.MachineLearning.DroneStabilization</a>, and <a class="el" href="class_lexmou_1_1_machine_learning_1_1_drone_move.html#a3aaad6820a224f090b858b680ae7a518">Lexmou.MachineLearning.DroneMove</a>.</p>
+<p>Implemented in <a class="el" href="class_lexmou_1_1_machine_learning_1_1_drone_stabilization.html#af6f9605751a571f79f48540defda6986">Lexmou.MachineLearning.DroneStabilization</a>, <a class="el" href="class_lexmou_1_1_machine_learning_1_1_drone_stabilization_no_velocity.html#ae339901c9da9b4713ac05a6dd9eeb034">Lexmou.MachineLearning.DroneStabilizationNoVelocity</a>, and <a class="el" href="class_lexmou_1_1_machine_learning_1_1_drone_move.html#a3aaad6820a224f090b858b680ae7a518">Lexmou.MachineLearning.DroneMove</a>.</p>
 
 </div>
 </div>
@@ -407,7 +408,7 @@ Here is the caller graph for this function:</div>
 
 <p>Define an objective function. Ideally this function is concave. </p>
 
-<p>Implemented in <a class="el" href="class_lexmou_1_1_machine_learning_1_1_drone_stabilization.html#a05bde727ad3464cf02c5d129bcb2dcd7">Lexmou.MachineLearning.DroneStabilization</a>, and <a class="el" href="class_lexmou_1_1_machine_learning_1_1_drone_move.html#a40037c871aa5c9f99927482d056a6df0">Lexmou.MachineLearning.DroneMove</a>.</p>
+<p>Implemented in <a class="el" href="class_lexmou_1_1_machine_learning_1_1_drone_stabilization.html#a05bde727ad3464cf02c5d129bcb2dcd7">Lexmou.MachineLearning.DroneStabilization</a>, <a class="el" href="class_lexmou_1_1_machine_learning_1_1_drone_stabilization_no_velocity.html#a9eddb5872048ccc1bc5c5b41f99fdaf8">Lexmou.MachineLearning.DroneStabilizationNoVelocity</a>, and <a class="el" href="class_lexmou_1_1_machine_learning_1_1_drone_move.html#a40037c871aa5c9f99927482d056a6df0">Lexmou.MachineLearning.DroneMove</a>.</p>
 <div class="dynheader">
 Here is the caller graph for this function:</div>
 <div class="dyncontent">
@@ -465,7 +466,7 @@ Here is the caller graph for this function:</div>
 
 <p>Reset the orientation of the drone define by an index. Take care of the maximum euler angle subtask. </p>
 
-<p>Definition at line <a class="el" href="_drone_task_8cs_source.html#l00133">133</a> of file <a class="el" href="_drone_task_8cs_source.html">DroneTask.cs</a>.</p>
+<p>Definition at line <a class="el" href="_drone_task_8cs_source.html#l00134">134</a> of file <a class="el" href="_drone_task_8cs_source.html">DroneTask.cs</a>.</p>
 <div class="dynheader">
 Here is the caller graph for this function:</div>
 <div class="dyncontent">
@@ -505,7 +506,7 @@ Here is the caller graph for this function:</div>
 
 <p>Reset the orientation of the drone define by an index. Take care of a specific condition to define a specific orientation. </p>
 
-<p>Definition at line <a class="el" href="_drone_task_8cs_source.html#l00143">143</a> of file <a class="el" href="_drone_task_8cs_source.html">DroneTask.cs</a>.</p>
+<p>Definition at line <a class="el" href="_drone_task_8cs_source.html#l00144">144</a> of file <a class="el" href="_drone_task_8cs_source.html">DroneTask.cs</a>.</p>
 <div class="dynheader">
 Here is the call graph for this function:</div>
 <div class="dyncontent">
@@ -532,7 +533,7 @@ Here is the call graph for this function:</div>
 
 <p>Space along a direction between two instances of a drone. </p>
 
-<p>Definition at line <a class="el" href="_drone_task_8cs_source.html#l00022">22</a> of file <a class="el" href="_drone_task_8cs_source.html">DroneTask.cs</a>.</p>
+<p>Definition at line <a class="el" href="_drone_task_8cs_source.html#l00023">23</a> of file <a class="el" href="_drone_task_8cs_source.html">DroneTask.cs</a>.</p>
 
 </div>
 </div>
@@ -550,7 +551,7 @@ Here is the call graph for this function:</div>
 
 <p>Initial height of each drone along Y axis. </p>
 
-<p>Definition at line <a class="el" href="_drone_task_8cs_source.html#l00026">26</a> of file <a class="el" href="_drone_task_8cs_source.html">DroneTask.cs</a>.</p>
+<p>Definition at line <a class="el" href="_drone_task_8cs_source.html#l00027">27</a> of file <a class="el" href="_drone_task_8cs_source.html">DroneTask.cs</a>.</p>
 
 </div>
 </div>
@@ -568,7 +569,7 @@ Here is the call graph for this function:</div>
 
 <p>Number of parameters to evaluate for each drone (number of neurons, number of alleles ...) </p>
 
-<p>Definition at line <a class="el" href="_drone_task_8cs_source.html#l00030">30</a> of file <a class="el" href="_drone_task_8cs_source.html">DroneTask.cs</a>.</p>
+<p>Definition at line <a class="el" href="_drone_task_8cs_source.html#l00031">31</a> of file <a class="el" href="_drone_task_8cs_source.html">DroneTask.cs</a>.</p>
 
 </div>
 </div>
@@ -586,7 +587,7 @@ Here is the call graph for this function:</div>
 
 <p>Build the pramaters of a task from another one. </p>
 
-<p>Definition at line <a class="el" href="_drone_task_8cs_source.html#l00034">34</a> of file <a class="el" href="_drone_task_8cs_source.html">DroneTask.cs</a>.</p>
+<p>Definition at line <a class="el" href="_drone_task_8cs_source.html#l00035">35</a> of file <a class="el" href="_drone_task_8cs_source.html">DroneTask.cs</a>.</p>
 
 </div>
 </div>
@@ -604,7 +605,7 @@ Here is the call graph for this function:</div>
 
 <p>Build the matrix of paramaters with an offset (index of the row) </p>
 
-<p>Definition at line <a class="el" href="_drone_task_8cs_source.html#l00038">38</a> of file <a class="el" href="_drone_task_8cs_source.html">DroneTask.cs</a>.</p>
+<p>Definition at line <a class="el" href="_drone_task_8cs_source.html#l00039">39</a> of file <a class="el" href="_drone_task_8cs_source.html">DroneTask.cs</a>.</p>
 
 </div>
 </div>
@@ -622,7 +623,7 @@ Here is the call graph for this function:</div>
 
 <p>Shape of the MLP for each drone. </p>
 
-<p>Definition at line <a class="el" href="_drone_task_8cs_source.html#l00042">42</a> of file <a class="el" href="_drone_task_8cs_source.html">DroneTask.cs</a>.</p>
+<p>Definition at line <a class="el" href="_drone_task_8cs_source.html#l00043">43</a> of file <a class="el" href="_drone_task_8cs_source.html">DroneTask.cs</a>.</p>
 
 </div>
 </div>
@@ -640,7 +641,7 @@ Here is the call graph for this function:</div>
 
 <p><a class="el" href="class_lexmou_1_1_machine_learning_1_1_task.html" title="Task interface used during a Session. ">Task</a> specific signal containing a vector of the inputs. </p>
 
-<p>Definition at line <a class="el" href="_drone_task_8cs_source.html#l00047">47</a> of file <a class="el" href="_drone_task_8cs_source.html">DroneTask.cs</a>.</p>
+<p>Definition at line <a class="el" href="_drone_task_8cs_source.html#l00048">48</a> of file <a class="el" href="_drone_task_8cs_source.html">DroneTask.cs</a>.</p>
 
 </div>
 </div>
@@ -666,7 +667,7 @@ Here is the call graph for this function:</div>
 
 <p>Bad implementation of random orientation subtask. This index define the progress with this subtask. </p>
 
-<p>Definition at line <a class="el" href="_drone_task_8cs_source.html#l00069">69</a> of file <a class="el" href="_drone_task_8cs_source.html">DroneTask.cs</a>.</p>
+<p>Definition at line <a class="el" href="_drone_task_8cs_source.html#l00070">70</a> of file <a class="el" href="_drone_task_8cs_source.html">DroneTask.cs</a>.</p>
 
 </div>
 </div>
@@ -684,7 +685,7 @@ Here is the call graph for this function:</div>
 
 <p>Define the maximum of each euler angle during the progress of the subtask. </p>
 
-<p>Definition at line <a class="el" href="_drone_task_8cs_source.html#l00074">74</a> of file <a class="el" href="_drone_task_8cs_source.html">DroneTask.cs</a>.</p>
+<p>Definition at line <a class="el" href="_drone_task_8cs_source.html#l00075">75</a> of file <a class="el" href="_drone_task_8cs_source.html">DroneTask.cs</a>.</p>
 
 </div>
 </div>
@@ -702,7 +703,7 @@ Here is the call graph for this function:</div>
 
 <p>Define the median threshold (of the objective function) before changing the maximum angle. </p>
 
-<p>Definition at line <a class="el" href="_drone_task_8cs_source.html#l00078">78</a> of file <a class="el" href="_drone_task_8cs_source.html">DroneTask.cs</a>.</p>
+<p>Definition at line <a class="el" href="_drone_task_8cs_source.html#l00079">79</a> of file <a class="el" href="_drone_task_8cs_source.html">DroneTask.cs</a>.</p>
 
 </div>
 </div>
@@ -720,7 +721,7 @@ Here is the call graph for this function:</div>
 
 <p>Define the best score threshold (of the objective function) before changing the maximum angle. </p>
 
-<p>Definition at line <a class="el" href="_drone_task_8cs_source.html#l00082">82</a> of file <a class="el" href="_drone_task_8cs_source.html">DroneTask.cs</a>.</p>
+<p>Definition at line <a class="el" href="_drone_task_8cs_source.html#l00083">83</a> of file <a class="el" href="_drone_task_8cs_source.html">DroneTask.cs</a>.</p>
 
 </div>
 </div>
@@ -738,7 +739,7 @@ Here is the call graph for this function:</div>
 
 <p>Define the actual maximum angle. </p>
 
-<p>Definition at line <a class="el" href="_drone_task_8cs_source.html#l00086">86</a> of file <a class="el" href="_drone_task_8cs_source.html">DroneTask.cs</a>.</p>
+<p>Definition at line <a class="el" href="_drone_task_8cs_source.html#l00087">87</a> of file <a class="el" href="_drone_task_8cs_source.html">DroneTask.cs</a>.</p>
 
 </div>
 </div>
@@ -756,7 +757,7 @@ Here is the call graph for this function:</div>
 
 <p>Define the actual wind value. </p>
 
-<p>Definition at line <a class="el" href="_drone_task_8cs_source.html#l00105">105</a> of file <a class="el" href="_drone_task_8cs_source.html">DroneTask.cs</a>.</p>
+<p>Definition at line <a class="el" href="_drone_task_8cs_source.html#l00106">106</a> of file <a class="el" href="_drone_task_8cs_source.html">DroneTask.cs</a>.</p>
 
 </div>
 </div>
@@ -782,7 +783,7 @@ Here is the call graph for this function:</div>
 
 <p>Continue uniform distribution for the maximum euler angle subtask. </p>
 
-<p>Definition at line <a class="el" href="_drone_task_8cs_source.html#l00122">122</a> of file <a class="el" href="_drone_task_8cs_source.html">DroneTask.cs</a>.</p>
+<p>Definition at line <a class="el" href="_drone_task_8cs_source.html#l00123">123</a> of file <a class="el" href="_drone_task_8cs_source.html">DroneTask.cs</a>.</p>
 
 </div>
 </div>
@@ -809,7 +810,7 @@ Here is the call graph for this function:</div>
 
 <p>Define the property of the maximum angle. Set this angle change the boundaries of the random distibution used. </p>
 
-<p>Definition at line <a class="el" href="_drone_task_8cs_source.html#l00091">91</a> of file <a class="el" href="_drone_task_8cs_source.html">DroneTask.cs</a>.</p>
+<p>Definition at line <a class="el" href="_drone_task_8cs_source.html#l00092">92</a> of file <a class="el" href="_drone_task_8cs_source.html">DroneTask.cs</a>.</p>
 
 </div>
 </div>
@@ -835,7 +836,7 @@ Here is the call graph for this function:</div>
 
 <p>Define the property of the maximum wind value. </p>
 
-<p>Definition at line <a class="el" href="_drone_task_8cs_source.html#l00110">110</a> of file <a class="el" href="_drone_task_8cs_source.html">DroneTask.cs</a>.</p>
+<p>Definition at line <a class="el" href="_drone_task_8cs_source.html#l00111">111</a> of file <a class="el" href="_drone_task_8cs_source.html">DroneTask.cs</a>.</p>
 
 </div>
 </div>

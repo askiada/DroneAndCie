@@ -12,19 +12,52 @@ using Lexmou.Utils;
 namespace Lexmou.MachineLearning.NeuralNetwork.FeedForward
 {
 
+    /**
+     * \class MultiLayerMathsNet
+     * \brief Partial implementation of a Multilayer perceptron
+     * \details Class MultiLayerMathsNet is an "optimized" unity3D implementation of a Multilayer perceptron. The following picture shows the general principle. For more details, Wikipedia is a good start.
+     *          ![MLP Scheme](./media/MLP/scheme.png)
+     */
     public class MultiLayerMathsNet
     {
-
+        /**
+         * \brief List of layers. Each element represents the values of the neurons in the layer for each element of the batch (Dimension \f$ layerSize \times batchSize\f$)
+         */
         public List<Matrix<float>> layers;
+
+        /**
+         * \brief List of weights (\f$ shapeSize - 1 elements \f$). the i-th element represents the values of the weights between the i-th layer and the (i+1)-th (Dimension \f$ layers[i + 1].RowCount \times layers[i].RowCount\f$)
+         */
+
         public List<Matrix<float>> weights;
         List<Matrix<float>> dw;
+
+        /**
+         * \brief List of the size of the layers. The first element represents the input layer.
+         */
         public List<int> shapes;
+        /**
+         * \brief Total number of layers (include input and output layers)
+         */
         public int shapesSize;
         bool save;
+        /**
+         * \brief Seed number to generate a random sequence with a random generator #rndGenerator
+         */
         int seed;
+        /**
+         * \brief Size of the batch for MiniBatch/Batch Learning.
+         */
         int batchSize;
+
+        /**
+         * \brief Random Generator. Allow the generation of a repeatable random number sequence for each seed value.
+         */
         SystemRandomSource rndGenerator;
         ContinuousUniform cu;
+        /**
+         * \brief Initial value range of the distribution to build the weights
+         */
         float initialValueWeights = 1.0f;
 
         public MultiLayerMathsNet(int seed, SystemRandomSource rndGenerator, List<int> shapes, int batchSize, float initialValueWeights, bool save = false)
@@ -78,12 +111,20 @@ namespace Lexmou.MachineLearning.NeuralNetwork.FeedForward
 
 
 
+        /**
+         *  \brief Return a float from a continous uniform distribution. This function take a float argument in order to be use with a MapInPlace function.
+         */
 
         float fillWeights(float value)
         {
             return (float)cu.Sample();
         }
 
+        /**
+         * \brief Set the weights of the MLP under conditions.
+         * \param[in] firstReset fill the weights with random values
+         * \param[in] customWeights Custom list of Matrix containing the weights used.
+         */
 
         public void Reset(bool firstReset, List<Matrix<float>> customWeights = null)
         {
@@ -108,7 +149,17 @@ namespace Lexmou.MachineLearning.NeuralNetwork.FeedForward
 
 
 
-
+        /**
+         * \brief Forward Propagation to get the output.
+         * \details In this example, there is only one output neuron (/f$ y /f$) like on the picture (the biasis are not represented)
+         * \f[
+         * 
+         *  y = a(\sum_{j=0}^{M}w^{(y)}_{j}\times h_j + b_{H})
+         *  \f]
+         *  \f[
+         *  h_j = a(\sum_{i=0}^{N}w^{(h_j)}_{i}\times x_i + b_{X})
+         *  \f]
+         */
 
         public void PropagateForward(Vector<float> data, bool falk = false)
         {

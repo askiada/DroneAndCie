@@ -1,3 +1,7 @@
 <map id="Graphical Class Hierarchy" name="Graphical Class Hierarchy">
-<area shape="rect" id="node1" href="$class_lexmou_1_1_machine_learning_1_1_evolutionary_1_1_genetic.html" title="Classic implementation of a genetic algorithm. " alt="" coords="5,5,253,47"/>
+<area shape="rect" id="node1" href="$class_lexmou_1_1_machine_learning_1_1_task.html" title="Task interface used during a Session. " alt="" coords="5,64,208,91"/>
+<area shape="rect" id="node2" href="$class_lexmou_1_1_machine_learning_1_1_drone_task.html" title="DroneTask interface used during a DroneSession. " alt="" coords="256,64,492,91"/>
+<area shape="rect" id="node3" href="$class_lexmou_1_1_machine_learning_1_1_drone_move.html" title="Lexmou.MachineLearning.DroneMove" alt="" coords="540,5,779,32"/>
+<area shape="rect" id="node4" href="$class_lexmou_1_1_machine_learning_1_1_drone_stabilization.html" title="Implementation of the stabilization task for a drone using a genetic algorithm and a MLP..." alt="" coords="555,57,763,98"/>
+<area shape="rect" id="node5" href="$class_lexmou_1_1_machine_learning_1_1_drone_stabilization_no_velocity.html" title="Lexmou.MachineLearning.Drone\lStabilizationNoVelocity" alt="" coords="555,122,763,163"/>
 </map>

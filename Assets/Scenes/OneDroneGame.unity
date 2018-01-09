@@ -304,17 +304,17 @@ Prefab:
     - target: {fileID: 114000014040321786, guid: 1ef898e54e6a66346ae52aad7c35a690,
         type: 2}
       propertyPath: task
-      value: Move
+      value: Stabilization
       objectReference: {fileID: 0}
     - target: {fileID: 114000014040321786, guid: 1ef898e54e6a66346ae52aad7c35a690,
         type: 2}
       propertyPath: fromSeed
-      value: 42
+      value: 8030
       objectReference: {fileID: 0}
     - target: {fileID: 114000014040321786, guid: 1ef898e54e6a66346ae52aad7c35a690,
         type: 2}
       propertyPath: fromGeneration
-      value: 2100
+      value: 900
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 1ef898e54e6a66346ae52aad7c35a690, type: 2}

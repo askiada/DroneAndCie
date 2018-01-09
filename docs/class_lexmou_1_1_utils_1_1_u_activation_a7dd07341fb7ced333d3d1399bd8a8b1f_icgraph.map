@@ -1,5 +1,5 @@
 <map id="Lexmou.Utils.UActivation.Tanh" name="Lexmou.Utils.UActivation.Tanh">
-<area shape="rect" id="node2" href="$class_lexmou_1_1_machine_learning_1_1_neural_network_1_1_feed_forward_1_1_multi_layer_maths_net.html#add40b66a3a3ebc09dd62957ff38c0c3c" title="Lexmou.MachineLearning.Neural\lNetwork.FeedForward.MultiLayerMaths\lNet.PropagateForward" alt="" coords="252,83,500,139"/>
+<area shape="rect" id="node2" href="$class_lexmou_1_1_machine_learning_1_1_neural_network_1_1_feed_forward_1_1_multi_layer_maths_net.html#add40b66a3a3ebc09dd62957ff38c0c3c" title="Forward Propagation to get the output. " alt="" coords="252,83,500,139"/>
 <area shape="rect" id="node3" href="$class_m_l_p_test.html#a17195550a8fd7c85887d51406faa13a0" title="MLPTest.PropagateForwardTest" alt="" coords="566,5,774,32"/>
 <area shape="rect" id="node4" href="$class_lexmou_1_1_machine_learning_1_1_drone_session.html#a7035b9f59ebcf492479c0118c91b0fd4" title="Lexmou.MachineLearning.Drone\lSession.RunEachFixedUpdate" alt="" coords="566,57,774,98"/>
 <area shape="rect" id="node5" href="$class_lexmou_1_1_manager_1_1_drone_manager.html#a3589f57b83a6f9295c444aa8715da961" title="Lexmou.Manager.DroneManager.\lStabilization" alt="" coords="563,122,777,163"/>

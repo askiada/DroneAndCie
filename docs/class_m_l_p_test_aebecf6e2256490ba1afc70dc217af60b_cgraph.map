@@ -1,5 +1,5 @@
 <map id="MLPTest.ResetSpeedTest" name="MLPTest.ResetSpeedTest">
-<area shape="rect" id="node2" href="$class_lexmou_1_1_machine_learning_1_1_neural_network_1_1_feed_forward_1_1_multi_layer_maths_net.html#a1f5aaaab655216f49d5ef1c57a561bf3" title="Lexmou.MachineLearning.Neural\lNetwork.FeedForward.MultiLayerMaths\lNet.Reset" alt="" coords="228,5,476,61"/>
+<area shape="rect" id="node2" href="$class_lexmou_1_1_machine_learning_1_1_neural_network_1_1_feed_forward_1_1_multi_layer_maths_net.html#a1f5aaaab655216f49d5ef1c57a561bf3" title="Set the weights of the MLP under conditions. " alt="" coords="228,5,476,61"/>
 <area shape="rect" id="node3" href="$class_multi_layer.html#a7faebfc8be99293b6652aa241091052b" title="MultiLayer.Reset" alt="" coords="292,85,412,112"/>
 <area shape="rect" id="node4" href="$class_multi_layer.html#ad062f2b5edf5dd15599d4c689348cb86" title="MultiLayer.WriteListArray" alt="" coords="524,85,693,112"/>
 </map>

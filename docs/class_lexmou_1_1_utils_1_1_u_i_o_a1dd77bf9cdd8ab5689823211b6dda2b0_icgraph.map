@@ -1,7 +1,5 @@
 <map id="Lexmou.Utils.UIO.CloseStreamWriter" name="Lexmou.Utils.UIO.CloseStreamWriter">
 <area shape="rect" id="node2" href="$class_lexmou_1_1_machine_learning_1_1_evolutionary_1_1_genetic.html#ac1ce58dd3d427c8b35683b409cae2314" title="Lexmou.MachineLearning.Evolutionary.\lGenetic.~Genetic" alt="" coords="256,5,504,47"/>
-<area shape="rect" id="node3" href="$class_lexmou_1_1_machine_learning_1_1_drone_session2_1_1_gene_session.html#a0bcfed834fcb74464045679a6a418c56" title="Lexmou.MachineLearning.Drone\lSession2.GeneSession.OnDestroy" alt="" coords="268,71,492,112"/>
-<area shape="rect" id="node4" href="$class_lexmou_1_1_machine_learning_1_1_drone_session2_1_1_gene_session.html#a00ee9b68f6bf9336416714dcb3243c05" title="Lexmou.MachineLearning.Drone\lSession2.GeneSession.Awake" alt="" coords="276,136,484,177"/>
-<area shape="rect" id="node5" href="$class_lexmou_1_1_machine_learning_1_1_drone_session.html#a305c27f7ca4be459a531fddea75f8527" title="Lexmou.MachineLearning.Drone\lSession.OnDestroy" alt="" coords="276,201,484,243"/>
-<area shape="rect" id="node6" href="$class_lexmou_1_1_machine_learning_1_1_drone_session.html#a678358de5b39732fb1014beffb8bf9d8" title="Lexmou.MachineLearning.Drone\lSession.CloseSessionWriter" alt="" coords="276,267,484,308"/>
+<area shape="rect" id="node3" href="$class_lexmou_1_1_machine_learning_1_1_drone_session.html#a305c27f7ca4be459a531fddea75f8527" title="Lexmou.MachineLearning.Drone\lSession.OnDestroy" alt="" coords="276,71,484,112"/>
+<area shape="rect" id="node4" href="$class_lexmou_1_1_machine_learning_1_1_drone_session.html#a678358de5b39732fb1014beffb8bf9d8" title="Lexmou.MachineLearning.Drone\lSession.CloseSessionWriter" alt="" coords="276,136,484,177"/>
 </map>

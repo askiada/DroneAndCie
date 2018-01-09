@@ -1,7 +1,6 @@
 var searchData=
 [
   ['camera',['Camera',['../namespace_lexmou_1_1_camera.html',1,'Lexmou']]],
-  ['dronesession2',['DroneSession2',['../namespace_lexmou_1_1_machine_learning_1_1_drone_session2.html',1,'Lexmou::MachineLearning']]],
   ['environment',['Environment',['../namespace_lexmou_1_1_environment.html',1,'Lexmou']]],
   ['evolutionary',['Evolutionary',['../namespace_lexmou_1_1_machine_learning_1_1_evolutionary.html',1,'Lexmou::MachineLearning']]],
   ['feedforward',['FeedForward',['../namespace_lexmou_1_1_machine_learning_1_1_neural_network_1_1_feed_forward.html',1,'Lexmou::MachineLearning::NeuralNetwork']]],
