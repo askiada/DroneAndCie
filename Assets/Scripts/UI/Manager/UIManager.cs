@@ -112,7 +112,7 @@ namespace Lexmou.Manager
         void ScanForKeyStabilization()
         {
             //DM.Stabilization();
-            if (Input.GetKey("joystick 1 button 5"))
+            if (Input.GetKey("joystick 1 button 5") || Input.GetKey("s"))
             {
                 DM.Stabilization();
             }

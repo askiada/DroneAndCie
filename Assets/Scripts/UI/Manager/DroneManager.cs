@@ -97,7 +97,7 @@ namespace Lexmou.Manager
             signalControl.Rudder = mlp.layers[taskObject.shapes.Count - 1][0, 0];
             signalControl.Elevator = mlp.layers[taskObject.shapes.Count - 1][1, 0];
             signalControl.Aileron = mlp.layers[taskObject.shapes.Count - 1][2, 0];
-
+            Debug.Log(mlp.weights[0]);
             drone.GetComponent<MainBoard>().SendControlSignal(signalControl);
         }
 
@@ -167,6 +167,9 @@ namespace Lexmou.Manager
 
             mlp = new MultiLayerMathsNet(fromSeed, null, taskObject.shapes, 1, 0);
             float[] floatArr = new float[taskObject.individualSize];
+
+           //float[] floatArr = new float[] {0,-0.33f,0,0,-0.33f,0,0,0,0,0,0.5f,0,0,-1,0,0,-1,0,0,0.5f,0,1,0,0,0,0,0,0,0,0,0,-1,0,0,0,0,0,0,0,0.5f};
+
             Genetic.LoadBest(path, fromGeneration, floatArr);
             BuildCustomWeights(mlp.weights, taskObject.shapes, Vector<float>.Build.DenseOfArray(floatArr));
             //Debug.Log(mlp.weights[0]);
